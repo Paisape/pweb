@@ -204,7 +204,7 @@
               <p class="text-[12px] text-body/70">Head of Payments Engineering &middot; 24 July 2026</p>
             </div>
           </div>
-          <a href="#articles" class="mt-7 inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-[14px] font-semibold text-white shadow-lg shadow-brand/25 transition hover:-translate-y-1 hover:bg-brandDk">
+          <a href="/blog/upi-success-rate-drops" class="mt-7 inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-[14px] font-semibold text-white shadow-lg shadow-brand/25 transition hover:-translate-y-1 hover:bg-brandDk">
             Read article <span class="arrow">&rarr;</span>
           </a>
         </div>
@@ -555,6 +555,7 @@
 <script src="/js/main.js"></script>
 </body>
 </html>
+
 
 
 
