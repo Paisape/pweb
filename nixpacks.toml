@@ -1,0 +1,4 @@
+﻿providers = ["php"]
+
+[build]
+cmd = "echo 'No build step required for static PHP'"
