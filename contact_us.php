@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 include "include.php";
 
 if($_POST['updte'] == 1){
@@ -18,6 +18,6 @@ if($_POST['updte'] == 1){
 	include "contact_autoreply_mail.php";
 	send_smtp_mail($email, "We have received your request - Paisape", $auto_reply_message);
 
-	header("location:contact.html");
+	header("location:/contact");
 }
 ?>

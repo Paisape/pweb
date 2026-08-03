@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php
+require_once '../core/errors.php';
+$msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
+?>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
 <meta charset="UTF-8" />
@@ -209,7 +213,7 @@
       <h2 class="font-display text-[22px] font-extrabold tracking-tight text-ink">Send us a message</h2>
       <p class="mt-2 text-[14px] text-body">Fields marked with an asterisk are required.</p>
 
-      <form id="" action="contact_us.php" method="POST" class="mt-8 space-y-5" >
+      <form id="" action="/contact_us.php" method="POST" class="mt-8 space-y-5" >
         <div class="grid gap-5 sm:grid-cols-2">
           <div>
             <label for="name" class="mb-2 block text-[13px] font-semibold text-ink">Full name *</label>
@@ -457,6 +461,7 @@
 <script src="/js/main.js"></script>
 </body>
 </html>
+
 
 
 
