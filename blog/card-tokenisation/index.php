@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
 <meta charset="UTF-8" />
@@ -176,8 +176,48 @@
       </div>
     </div>
 
+        <div class="mt-10 overflow-hidden rounded-3xl bg-slate-100 shadow-xl">
+      <img src="/assets/blog/blog_tokenisation.jpg" alt="Blog Hero Image" class="w-full object-cover max-h-[500px]" />
+    </div>
+
     <div class="prose prose-lg prose-slate mt-10 max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight prose-a:text-brand prose-a:font-semibold hover:prose-a:text-brandDk prose-h2:text-[24px] prose-h2:mt-12 prose-h2:mb-4 prose-p:text-[16px] prose-p:leading-loose prose-p:text-body prose-li:text-[16px]">
-      <h2>The End of Saved Cards</h2><p>In the past, merchants stored actual 16-digit credit card numbers on their servers. Following massive data breaches globally, the RBI issued the Card-on-File Tokenisation (CoFT) mandate. Merchants are no longer allowed to store actual card data.</p><h2>How Tokenisation Works</h2><p>When a customer chooses to 'Save this card', the merchant requests a network token from Visa, Mastercard, or RuPay. The network returns a unique token specific to that exact merchant and that exact card. If the merchant's database is hacked, the tokens are useless to the hackers because they cannot be used on any other website.</p><h2>The Authentication Step</h2><p>Tokenisation requires an Additional Factor of Authentication (AFA), usually an OTP, during the initial saving process. Subsequent transactions use the token along with the CVV and OTP to process the payment securely.</p>
+      <h2>The End of Saved Cards: A Paradigm Shift in Payments</h2>
+      <p>In the past, the standard operating procedure for most digital merchants was to store the actual 16-digit Primary Account Number (PAN) of credit and debit cards directly on their servers. This made repeat transactions frictionless, but it also created massive honeypots of highly sensitive financial data. Following a series of severe, global data breaches that exposed millions of cardholders to fraud and identity theft, the Reserve Bank of India (RBI) took decisive action. They issued the Card-on-File Tokenisation (CoFT) mandate, radically altering the landscape of digital payments in India. Under this mandate, merchants, payment aggregators (PAs), and payment gateways (PGs) are strictly prohibited from storing actual card data. Instead, they must rely on tokenisation to facilitate seamless, secure transactions for repeat customers.</p>
+      
+      <h2>What is Tokenisation and How Does it Work?</h2>
+      <p>Tokenisation is the process of replacing sensitive data—in this case, the 16-digit PAN—with a non-sensitive equivalent, referred to as a "token." This token is a unique, randomly generated surrogate value that has no extrinsic or exploitable meaning or value. When a customer chooses the "Save this card" option during checkout, the merchant's system does not save the card number. Instead, it securely transmits the card details to the card network (such as Visa, Mastercard, or RuPay) via the payment gateway.</p>
+      <p>The card network acts as the Token Service Provider (TSP). It validates the request and generates a unique token that is mathematically tied to three specific elements: the specific card, the specific merchant (or token requestor), and the specific device (in some implementations, though CoFT primarily focuses on the merchant-card binding). The network returns this token to the merchant to be stored on their servers. The key security benefit here is domain restriction. If a malicious actor manages to breach the merchant's database and steal these tokens, the stolen data is entirely useless. The tokens cannot be used to execute transactions on any other website or platform, effectively neutralizing the threat of large-scale card data theft.</p>
+
+      <h2>The Architecture of Network Tokens</h2>
+      <p>The architecture of a CoFT implementation involves several key players interacting in real-time. Let's break down the flow of a typical tokenisation request and subsequent transaction:</p>
+      <ul>
+        <li><strong>Token Requestor (TR):</strong> Typically the merchant, PA, or PG that initiates the tokenisation request on behalf of the customer.</li>
+        <li><strong>Token Service Provider (TSP):</strong> The entity responsible for generating and managing the tokens. Under the RBI mandate, this is generally the card network or the issuer bank.</li>
+        <li><strong>Issuer Bank:</strong> The bank that issued the credit or debit card to the customer. They play a crucial role in authorizing the tokenisation and the transactions.</li>
+        <li><strong>Acquirer Bank:</strong> The bank that processes the transaction on behalf of the merchant.</li>
+      </ul>
+      <p>When a transaction is initiated using a saved token, the merchant sends the token, along with the cryptogram and other transaction details, to the acquirer. The acquirer forwards this to the card network. The card network (TSP) receives the token, looks up the actual PAN in its secure token vault, and forwards the transaction request with the actual PAN to the issuer bank for authorization. Once authorized, the approval flows back through the chain. This entire process happens in milliseconds, ensuring that the customer experiences the same frictionless checkout as before, but with significantly enhanced security.</p>
+
+      <h2>Additional Factor of Authentication (AFA) and Consent</h2>
+      <p>One of the cornerstone requirements of the RBI's CoFT mandate is explicit customer consent and Additional Factor of Authentication (AFA). Tokenisation cannot happen silently in the background. When a customer opts to save their card, they must provide explicit consent for the tokenisation process. This consent must be validated by an AFA, which in the Indian context is predominantly an OTP (One-Time Password) sent to the customer's registered mobile number.</p>
+      <p>This initial AFA step proves that the person attempting to save the card is indeed the legitimate cardholder. Once the card is tokenised and the token is stored, subsequent transactions also require authentication. While the PAN is replaced by the token, the customer must still enter their CVV and complete the AFA (OTP) process for every transaction, ensuring that even if a device is compromised, a transaction cannot be completed without the second factor.</p>
+
+      <h2>Handling Edge Cases and Complex Routing</h2>
+      <p>While the happy path of tokenisation is straightforward, the reality of payment infrastructure is far more complex, requiring sophisticated routing strategies and the ability to handle various edge cases.</p>
+      <p><strong>1. Token Life Cycle Management:</strong> Tokens are not static. They have a life cycle that must be managed carefully. What happens when a card expires? Or when a card is lost or stolen and replaced by the issuer? The CoFT architecture includes mechanisms for Token Life Cycle Management (TLCM). When an issuer updates a card (e.g., issues a new PAN due to loss), they communicate this to the TSP. The TSP can then map the existing token to the new PAN, ensuring that the customer's saved cards across various merchants continue to function without them needing to re-enter their details everywhere.</p>
+      <p><strong>2. Multi-Acquirer Routing:</strong> Large merchants often use multiple payment gateways or acquirers to optimize for cost, success rates, and redundancy. With CoFT, if a merchant is the Token Requestor, they receive the token and can route the transaction through any of their integrated PAs or acquirers. This flexibility is crucial for maintaining high success rates. The routing logic must take into account which acquirer performs best for specific token types (Visa vs. Mastercard) or issuer banks, dynamically routing the tokenized transaction to the optimal path.</p>
+      <p><strong>3. Cryptogram Generation:</strong> A critical security component of network tokens is the cryptogram. For every transaction using a token, a unique, single-use cryptogram (often called a Token Cryptogram or TAVV) must be generated. This cryptogram proves that the transaction was initiated by the legitimate token requestor. Managing the generation and validation of these cryptograms adds computational overhead but is essential for preventing replay attacks.</p>
+
+      <h2>The Mathematical Impact on Authorization Rates</h2>
+      <p>A common concern during the transition to CoFT was the potential impact on transaction success rates. However, data has shown that network tokens often experience higher authorization rates compared to PAN-based transactions. This improvement is mathematically grounded in risk assessment models used by issuer banks.</p>
+      <p>When an issuer receives an authorization request containing a network token and a valid cryptogram, their fraud detection algorithms can assign a lower risk score to the transaction. The presence of the token proves that the card was previously authenticated (via AFA during tokenisation) and that the transaction is originating from a bound, trusted domain (the specific merchant). This cryptographic proof of provenance reduces the probability of fraud, allowing issuers to approve more transactions, particularly for recurring payments and large ticket sizes. Over a large volume of transactions, a 1-2% increase in authorization rates translates to substantial revenue gains for merchants.</p>
+
+      <h2>RBI Guidelines and Compliance Complexity</h2>
+      <p>Compliance with the RBI's CoFT guidelines is non-negotiable and incredibly rigorous. The guidelines specify strict parameters for data storage, token generation, and the exact roles of different entities in the ecosystem. PAs and PGs had to undergo massive infrastructural overhauls to build secure token vaults, implement TSPs APIs, and ensure they were completely purged of any legacy clear-text PAN data.</p>
+      <p>Auditing is a continuous requirement. Entities must prove that their systems cannot reconstruct the PAN from the token and that their token requestor APIs are robust against brute-force attacks or manipulation. Furthermore, the handling of Guest Checkout flows—where customers choose not to save their card—requires a delicate balance. In these cases, the merchant still cannot touch the PAN; the data must flow directly from the customer's browser or app to the PG, often using client-side encryption or secure iframes to bypass the merchant's servers entirely.</p>
+
+      <h2>Conclusion: Building a Resilient Payment Ecosystem</h2>
+      <p>The Card-on-File Tokenisation mandate represents a monumental leap forward for payment security in India. By removing the most valuable target—the PAN—from merchant servers, the ecosystem has become significantly more resilient against data breaches. While the technical implementation required massive effort, complex routing math, and careful handling of edge cases, the result is a safer, more robust infrastructure. For engineering teams, the challenge now lies in optimizing these tokenized flows, managing the lifecycle of millions of tokens efficiently, and leveraging the inherent security of network tokens to drive higher authorization rates and better customer experiences.</p>
     </div>
   </div>
 </article><footer class="bg-night text-slate-300">
@@ -254,6 +294,7 @@
 <script src="/js/main.js"></script>
 </body>
 </html>
+
 
 
 

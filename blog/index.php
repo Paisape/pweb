@@ -264,8 +264,8 @@
 
     <div id="grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="orchestration" data-reveal data-delay="0">
-        <a href="/blog/payment-orchestration" class="block overflow-hidden bg-gradient-to-br from-[#102A43] to-[#0E9BEE]">
-          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        <a href="/blog/payment-orchestration" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_orchestration.jpg" alt="The Ultimate Guide to Payment Orchestration in India" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
         </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
@@ -280,8 +280,8 @@
         </div>
       </article>
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="80">
-        <a href="/blog/aeps-mechanics" class="block overflow-hidden bg-gradient-to-br from-[#0D1B2A] to-[#1B4A6E]">
-          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        <a href="/blog/aeps-mechanics" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_aeps.jpg" alt="Decoding AEPS: The Aadhaar Enabled Payment System" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
         </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
@@ -296,8 +296,8 @@
         </div>
       </article>
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="160">
-        <a href="/blog/bbps-integration" class="block overflow-hidden bg-gradient-to-br from-[#0D1B2A] to-[#1B4A6E]">
-          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        <a href="/blog/bbps-integration" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_bbps.jpg" alt="BBPS (Bharat Bill Payment System) Integration Guide" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
         </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
@@ -312,8 +312,8 @@
         </div>
       </article>
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="upi" data-reveal data-delay="0">
-        <a href="/blog/upi-autopay" class="block overflow-hidden bg-gradient-to-br from-[#0D1B2A] to-[#1B4A6E]">
-          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        <a href="/blog/upi-autopay" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_upi_autopay.jpg" alt="Mastering UPI Autopay for Recurring Subscriptions" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
         </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
@@ -328,8 +328,8 @@
         </div>
       </article>
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="orchestration" data-reveal data-delay="80">
-        <a href="/blog/automated-reconciliation" class="block overflow-hidden bg-gradient-to-br from-[#102A43] to-[#0E9BEE]">
-          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        <a href="/blog/automated-reconciliation" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_reconciliation.jpg" alt="Automated Reconciliation in Multi-Gateway Setups" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
         </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
@@ -344,8 +344,8 @@
         </div>
       </article>
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="upi" data-reveal data-delay="160">
-        <a href="/blog/upi-decline-codes" class="block overflow-hidden bg-gradient-to-br from-[#0D1B2A] to-[#1B4A6E]">
-          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        <a href="/blog/upi-decline-codes" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_decline_codes.jpg" alt="Reading a UPI Decline Code Without Guessing" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
         </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
@@ -360,8 +360,8 @@
         </div>
       </article>
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
-        <a href="/blog/failover-design" class="block overflow-hidden bg-gradient-to-br from-[#0D1B2A] to-[#1B4A6E]">
-          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        <a href="/blog/failover-design" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_failover.jpg" alt="Designing Failover That Doesn't Double-Charge" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
         </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
@@ -376,8 +376,8 @@
         </div>
       </article>
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="80">
-        <a href="/blog/nodal-accounts" class="block overflow-hidden bg-gradient-to-br from-[#2E2C42] to-[#4A4766]">
-          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        <a href="/blog/nodal-accounts" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_nodal.jpg" alt="Nodal Accounts and Settlement Cycles" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
         </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
@@ -392,8 +392,8 @@
         </div>
       </article>
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="160">
-        <a href="/blog/card-tokenisation" class="block overflow-hidden bg-gradient-to-br from-[#2E2C42] to-[#4A4766]">
-          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        <a href="/blog/card-tokenisation" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_tokenisation.jpg" alt="Card Tokenisation (CoFT) Explained" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
         </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
@@ -408,8 +408,8 @@
         </div>
       </article>
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
-        <a href="/blog/audit-trails" class="block overflow-hidden bg-gradient-to-br from-[#2E2C42] to-[#4A4766]">
-          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        <a href="/blog/audit-trails" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_audit.jpg" alt="Audit Trails Your Regulator Will Actually Accept" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
         </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
@@ -555,6 +555,7 @@
 <script src="/js/main.js"></script>
 </body>
 </html>
+
 
 
 
