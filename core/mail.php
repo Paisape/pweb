@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 function send_smtp_mail($email_to, $email_subject, $email_message) { 
     require_once 'PHPMailerAutoload.php'; 
     @include_once __DIR__ . '/../config.php'; 
