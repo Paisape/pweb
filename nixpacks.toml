@@ -1,5 +1,0 @@
-[providers]
-    php = {}
-
-[build]
-    cmd = "echo 'No build required'"
