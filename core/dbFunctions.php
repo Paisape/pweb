@@ -568,8 +568,8 @@ function send_smtp_mail($email_to, $email_subject, $email_message) {
     $mail->isSMTP();
     $mail->Host = 'smtp.resend.com';
     $mail->SMTPAuth = true;
-    $mail->Username = defined('RESEND_USER') ? RESEND_USER : 'resend';
-    $mail->Password = defined('RESEND_API_KEY') ? RESEND_API_KEY : '';
+    $mail->Username = getenv('RESEND_USER') ?: (defined('RESEND_USER') ? RESEND_USER : 'resend');
+    $mail->Password = getenv('RESEND_API_KEY') ?: (defined('RESEND_API_KEY') ? RESEND_API_KEY : '');
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
     $mail->setFrom('paispe@mail.paisape.in', 'Paisape Support');
@@ -580,4 +580,5 @@ function send_smtp_mail($email_to, $email_subject, $email_message) {
     $mail->Body = $email_message;
     return $mail->send();
 }
+
 
