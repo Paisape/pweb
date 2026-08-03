@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -7,6 +7,7 @@ error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE & ~E_DEPRECATED);
 include "core/dbFunctions.php";
 include_once "core/errors.php";
 include_once 'core/PHPMailerAutoload.php';
+include_once 'core/mail.php';
 
 $o = new stdClass();
 $o1 = new stdClass();
