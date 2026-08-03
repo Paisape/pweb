@@ -1,4 +1,5 @@
-﻿providers = ["php"]
+[providers]
+    php = {}
 
 [build]
-cmd = "echo 'No build step required for static PHP'"
+    cmd = "echo 'No build required'"
