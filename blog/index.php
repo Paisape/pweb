@@ -263,147 +263,163 @@
     </div>
 
     <div id="grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="upi" data-reveal data-delay="0">
-        <div class="overflow-hidden bg-gradient-to-br from-[#0D1B2A] to-[#1B4A6E]">
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="orchestration" data-reveal data-delay="0">
+        <a href="/blog/payment-orchestration" class="block overflow-hidden bg-gradient-to-br from-[#102A43] to-[#0E9BEE]">
           <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
-        </div>
+        </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
-            <span class="text-brand">UPI</span><span class="text-body/50">7 min</span>
+            <span class="text-brand">orchestration</span><span class="text-body/50">12 min</span>
           </div>
-          <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink">Reading a UPI decline code without guessing</h3>
-          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">The eleven codes that account for most failures, what each one really means at the bank, and which are worth retrying.</p>
+          <a href="/blog/payment-orchestration"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">The Ultimate Guide to Payment Orchestration in India</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">How dynamic routing saves MDR, boosts success rates, and prevents massive revenue leaks during PSP downtimes.</p>
           <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="text-[12px] text-body/70">18 July 2026</span>
-            <span class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></span>
+            <span class="text-[12px] text-body/70">03 Aug 2026</span>
+            <a href="/blog/payment-orchestration" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
           </div>
         </div>
       </article>
-      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="orchestration" data-reveal data-delay="80">
-        <div class="overflow-hidden bg-gradient-to-br from-[#102A43] to-[#0E9BEE]">
-          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#fff" stroke-width="1.3" fill="none" opacity=".55"><path d="M40 80 C140 80 140 30 360 30"/><path d="M40 80 C140 80 140 80 360 80"/><path d="M40 80 C140 80 140 130 360 130"/></g><circle cx="40" cy="80" r="9" fill="#fff"/></svg>
-        </div>
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="80">
+        <a href="/blog/aeps-mechanics" class="block overflow-hidden bg-gradient-to-br from-[#0D1B2A] to-[#1B4A6E]">
+          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
-            <span class="text-brand">Orchestration</span><span class="text-body/50">9 min</span>
+            <span class="text-brand">engineering</span><span class="text-body/50">9 min</span>
           </div>
-          <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink">Designing failover that doesn't double-charge</h3>
-          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">Idempotency keys, settlement windows and the reconciliation checks that make automatic retries safe to run.</p>
+          <a href="/blog/aeps-mechanics"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Decoding AEPS: The Aadhaar Enabled Payment System</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">Architecture, challenges, and implementation strategies for rural FinTechs utilizing biometric authentication.</p>
           <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="text-[12px] text-body/70">11 July 2026</span>
-            <span class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></span>
-          </div>
-        </div>
-      </article>
-      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="160">
-        <div class="overflow-hidden bg-gradient-to-br from-[#0D1B2A] to-[#123B52]">
-          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#2ECFB4" stroke-width="1.4" fill="none" opacity=".75"><rect x="80" y="40" width="240" height="80" rx="8"/><path d="M104 66h60M104 86h120"/></g></svg>
-        </div>
-        <div class="flex flex-1 flex-col p-6">
-          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
-            <span class="text-brand">Engineering</span><span class="text-body/50">6 min</span>
-          </div>
-          <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink">Testing routing rules like application code</h3>
-          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">Version your routing config, run it against replayed traffic, and catch a bad rule before it reaches production.</p>
-          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="text-[12px] text-body/70">4 July 2026</span>
-            <span class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></span>
-          </div>
-        </div>
-      </article>
-      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
-        <div class="overflow-hidden bg-gradient-to-br from-[#2E2C42] to-[#4A4766]">
-          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#2ECFB4" stroke-width="1.4" fill="none" opacity=".8"><path d="M200 25 L255 50 v40 c0 30 -25 48 -55 60 c-30 -12 -55 -30 -55 -60 V50 Z"/><path d="M178 88 l16 16 32 -34"/></g></svg>
-        </div>
-        <div class="flex flex-1 flex-col p-6">
-          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
-            <span class="text-brand">Compliance</span><span class="text-body/50">8 min</span>
-          </div>
-          <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink">Audit trails your regulator will actually accept</h3>
-          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">What to log at each hop, how long to keep it, and the gaps that turn a routine inspection into a long quarter.</p>
-          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="text-[12px] text-body/70">27 June 2026</span>
-            <span class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></span>
-          </div>
-        </div>
-      </article>
-      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="orchestration" data-reveal data-delay="80">
-        <div class="overflow-hidden bg-gradient-to-br from-[#0D1B2A] to-[#146C94]">
-          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g fill="#0E9BEE" opacity=".85"><rect x="60" y="90" width="26" height="50" rx="4"/><rect x="110" y="60" width="26" height="80" rx="4"/><rect x="160" y="105" width="26" height="35" rx="4"/><rect x="210" y="40" width="26" height="100" rx="4"/><rect x="260" y="75" width="26" height="65" rx="4"/><rect x="310" y="55" width="26" height="85" rx="4"/></g></svg>
-        </div>
-        <div class="flex flex-1 flex-col p-6">
-          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
-            <span class="text-brand">Orchestration</span><span class="text-body/50">10 min</span>
-          </div>
-          <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink">The real cost of a single-PSP setup</h3>
-          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">We modelled a &#8377;40 crore per month merchant across three outage scenarios. The lost revenue is bigger than the MDR saving.</p>
-          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="text-[12px] text-body/70">20 June 2026</span>
-            <span class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></span>
+            <span class="text-[12px] text-body/70">01 Aug 2026</span>
+            <a href="/blog/aeps-mechanics" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
           </div>
         </div>
       </article>
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="160">
-        <div class="overflow-hidden bg-gradient-to-br from-[#123B52] to-[#2ECFB4]">
-          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#fff" stroke-width="1.5" fill="none" opacity=".65"><rect x="70" y="45" width="110" height="70" rx="8"/><rect x="220" y="45" width="110" height="70" rx="8"/><path d="M180 80 h40"/><path d="M206 72 l14 8 -14 8"/></g></svg>
-        </div>
+        <a href="/blog/bbps-integration" class="block overflow-hidden bg-gradient-to-br from-[#0D1B2A] to-[#1B4A6E]">
+          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
-            <span class="text-brand">Engineering</span><span class="text-body/50">5 min</span>
+            <span class="text-brand">engineering</span><span class="text-body/50">7 min</span>
           </div>
-          <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink">Webhooks that survive your consumer going down</h3>
-          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">Retry curves, signature verification and replay endpoints &mdash; the three things that keep event delivery honest.</p>
+          <a href="/blog/bbps-integration"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">BBPS (Bharat Bill Payment System) Integration Guide</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">How to integrate and earn commissions on utility payments through the centralized BBPS network.</p>
           <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="text-[12px] text-body/70">13 June 2026</span>
-            <span class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></span>
+            <span class="text-[12px] text-body/70">28 Jul 2026</span>
+            <a href="/blog/bbps-integration" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
           </div>
         </div>
       </article>
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="upi" data-reveal data-delay="0">
-        <div class="overflow-hidden bg-gradient-to-br from-[#0D1B2A] to-[#0E9BEE]">
-          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#fff" stroke-width="1.4" fill="none" opacity=".6"><circle cx="200" cy="80" r="45"/><circle cx="200" cy="80" r="26"/><path d="M155 80 h90M200 35 v90"/></g></svg>
-        </div>
+        <a href="/blog/upi-autopay" class="block overflow-hidden bg-gradient-to-br from-[#0D1B2A] to-[#1B4A6E]">
+          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
-            <span class="text-brand">UPI</span><span class="text-body/50">11 min</span>
+            <span class="text-brand">upi</span><span class="text-body/50">11 min</span>
           </div>
-          <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink">Autopay mandates: where subscriptions quietly leak</h3>
-          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">Pre-debit notifications, mandate expiry and the dunning sequence that recovers the most failed renewals.</p>
+          <a href="/blog/upi-autopay"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Mastering UPI Autopay for Recurring Subscriptions</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">The technical flow of mandates, pre-debit notifications, and subscription management.</p>
           <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="text-[12px] text-body/70">6 June 2026</span>
-            <span class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></span>
+            <span class="text-[12px] text-body/70">24 Jul 2026</span>
+            <a href="/blog/upi-autopay" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="orchestration" data-reveal data-delay="80">
+        <a href="/blog/automated-reconciliation" class="block overflow-hidden bg-gradient-to-br from-[#102A43] to-[#0E9BEE]">
+          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">orchestration</span><span class="text-body/50">14 min</span>
+          </div>
+          <a href="/blog/automated-reconciliation"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Automated Reconciliation in Multi-Gateway Setups</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">Math and strategies for matching T+1 settlements across multiple payment aggregators.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">20 Jul 2026</span>
+            <a href="/blog/automated-reconciliation" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="upi" data-reveal data-delay="160">
+        <a href="/blog/upi-decline-codes" class="block overflow-hidden bg-gradient-to-br from-[#0D1B2A] to-[#1B4A6E]">
+          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">upi</span><span class="text-body/50">7 min</span>
+          </div>
+          <a href="/blog/upi-decline-codes"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Reading a UPI Decline Code Without Guessing</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">The 11 most common NPCI/bank decline codes and how to handle them gracefully.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">18 Jul 2026</span>
+            <a href="/blog/upi-decline-codes" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
+        <a href="/blog/failover-design" class="block overflow-hidden bg-gradient-to-br from-[#0D1B2A] to-[#1B4A6E]">
+          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">engineering</span><span class="text-body/50">9 min</span>
+          </div>
+          <a href="/blog/failover-design"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Designing Failover That Doesn't Double-Charge</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">Idempotency keys, settlement windows and the reconciliation checks that make automatic retries safe.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">11 Jul 2026</span>
+            <a href="/blog/failover-design" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
           </div>
         </div>
       </article>
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="80">
-        <div class="overflow-hidden bg-gradient-to-br from-[#2E2C42] to-[#146C94]">
-          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#2ECFB4" stroke-width="1.4" fill="none" opacity=".8"><rect x="140" y="35" width="120" height="90" rx="8"/><path d="M165 62h70M165 82h70M165 102h45"/></g></svg>
-        </div>
+        <a href="/blog/nodal-accounts" class="block overflow-hidden bg-gradient-to-br from-[#2E2C42] to-[#4A4766]">
+          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
-            <span class="text-brand">Compliance</span><span class="text-body/50">7 min</span>
+            <span class="text-brand">compliance</span><span class="text-body/50">8 min</span>
           </div>
-          <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink">Card tokenisation, two years on</h3>
-          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">What the mandate changed for conversion, and the token lifecycle edge cases teams still get wrong.</p>
+          <a href="/blog/nodal-accounts"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Nodal Accounts and Settlement Cycles</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">Understanding the RBI guidelines on merchant payouts and money flow.</p>
           <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="text-[12px] text-body/70">30 May 2026</span>
-            <span class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></span>
+            <span class="text-[12px] text-body/70">08 Jul 2026</span>
+            <a href="/blog/nodal-accounts" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
           </div>
         </div>
       </article>
-      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="orchestration" data-reveal data-delay="160">
-        <div class="overflow-hidden bg-gradient-to-br from-[#123B52] to-[#0E9BEE]">
-          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#fff" stroke-width="1.4" fill="none" opacity=".6"><path d="M50 130 C130 130 130 40 200 40 C270 40 270 130 350 130"/></g><circle cx="200" cy="40" r="6" fill="#2ECFB4"/></svg>
-        </div>
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="160">
+        <a href="/blog/card-tokenisation" class="block overflow-hidden bg-gradient-to-br from-[#2E2C42] to-[#4A4766]">
+          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
-            <span class="text-brand">Orchestration</span><span class="text-body/50">8 min</span>
+            <span class="text-brand">compliance</span><span class="text-body/50">10 min</span>
           </div>
-          <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink">Three-way reconciliation, explained simply</h3>
-          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">Order, gateway and bank statement &mdash; how the three sources drift apart and how to close the gap automatically.</p>
+          <a href="/blog/card-tokenisation"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Card Tokenisation (CoFT) Explained</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">How the RBI mandate changes saved card flows and secured the ecosystem.</p>
           <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="text-[12px] text-body/70">23 May 2026</span>
-            <span class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></span>
+            <span class="text-[12px] text-body/70">27 Jun 2026</span>
+            <a href="/blog/card-tokenisation" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
+        <a href="/blog/audit-trails" class="block overflow-hidden bg-gradient-to-br from-[#2E2C42] to-[#4A4766]">
+          <svg class="thumb-art h-40 w-full" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#0E9BEE" stroke-width="1.4" fill="none" opacity=".7"><path d="M0 120 L60 100 L120 130 L180 60 L240 90 L300 40 L400 70"/></g><g fill="#2ECFB4"><circle cx="180" cy="60" r="4"/><circle cx="300" cy="40" r="4"/></g></svg>
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">compliance</span><span class="text-body/50">8 min</span>
+          </div>
+          <a href="/blog/audit-trails"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Audit Trails Your Regulator Will Actually Accept</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">What to log at each hop, how long to keep it, and the gaps that turn a routine inspection into a long quarter.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">15 Jun 2026</span>
+            <a href="/blog/audit-trails" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
           </div>
         </div>
       </article>
@@ -539,6 +555,7 @@
 <script src="/js/main.js"></script>
 </body>
 </html>
+
 
 
 
