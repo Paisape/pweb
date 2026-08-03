@@ -1,45 +1,41 @@
 <?php
-$request = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
-$path = parse_url($request, PHP_URL_PATH);
-$path = ltrim($path, '/');
-$base_dir = __DIR__ . '/';
+// Get the requested URL
+$uri = $_SERVER['REQUEST_URI'];
+$path = parse_url($uri, PHP_URL_PATH);
 
+// Remove leading/trailing slashes
+$path = trim($path, '/');
+
+// If empty, serve index.html
 if ($path === '' || $path === 'index' || $path === 'index.html') {
-    include $base_dir . 'index.html';
-    exit;
+    if (file_exists('index.html')) {
+        include 'index.html';
+        exit;
+    }
 }
 
-$html_file = $base_dir . $path . '.html';
-if (file_exists($html_file)) {
-    include $html_file;
-    exit;
+// Check if an HTML file exists for this path
+if ($path !== '') {
+    $html_file = $path . '.html';
+    
+    // Check current directory
+    if (file_exists(__DIR__ . '/' . $html_file)) {
+        include __DIR__ . '/' . $html_file;
+        exit;
+    }
+    
+    // Fallback without __DIR__
+    if (file_exists($html_file)) {
+        include $html_file;
+        exit;
+    }
 }
 
-$php_file = $base_dir . $path . '.php';
-if (file_exists($php_file)) {
-    include $php_file;
-    exit;
-}
-
-// Check for absolute fallback
-if (file_exists($base_dir . $path) && !is_dir($base_dir . $path)) {
-    $mime = mime_content_type($base_dir . $path);
-    if ($mime) header("Content-Type: $mime");
-    readfile($base_dir . $path);
-    exit;
-}
-
-header("HTTP/1.0 200 OK");
-echo "<h2>DEBUG MODE ENABLED</h2>";
-echo "<strong>REQUEST_URI:</strong> " . htmlspecialchars($request) . "<br>";
-echo "<strong>Parsed path:</strong> " . htmlspecialchars($path) . "<br>";
-echo "<strong>Looking for:</strong> " . htmlspecialchars($html_file) . "<br>";
-echo "<strong>Does HTML exist?</strong> " . (file_exists($html_file) ? 'YES' : 'NO') . "<br>";
-echo "<strong>Current DIR (__DIR__):</strong> " . htmlspecialchars(__DIR__) . "<br>";
-echo "<hr><h3>Files in " . htmlspecialchars(__DIR__) . "</h3><ul>";
-$files = scandir(__DIR__);
-foreach($files as $f) {
-    echo "<li>" . htmlspecialchars($f) . "</li>";
-}
-echo "</ul>";
+// If we reach here, output a friendly fallback or 404
+header("HTTP/1.1 404 Not Found");
+echo "<!DOCTYPE html><html><head><title>Page Not Found</title></head><body style='font-family:sans-serif; text-align:center; padding:50px;'>";
+echo "<h2>404 - Page Not Found</h2>";
+echo "<p>The requested page <strong>/" . htmlspecialchars($path) . "</strong> could not be found.</p>";
+echo "<p><a href='/'>Return to Home</a></p>";
+echo "</body></html>";
 ?>
