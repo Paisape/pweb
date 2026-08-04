@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once '../core/errors.php';
 $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
 ?>
@@ -232,7 +232,7 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
           </div>
           <div>
             <label for="phone" class="mb-2 block text-[13px] font-semibold text-ink">Phone</label>
-            <input type="number" id="Phone" name="Phone" type="tel" placeholder="+91 98765 43210" class="field w-full rounded-xl border border-slate-200 bg-mist/60 px-4 py-3 text-[14px] text-ink placeholder:text-slate-400">
+            <input type="tel" id="Phone" name="Phone" pattern="[0-9]{10}" maxlength="10" title="Please enter a valid 10-digit mobile number" placeholder="9876543210" class="field w-full rounded-xl border border-slate-200 bg-mist/60 px-4 py-3 text-[14px] text-ink placeholder:text-slate-400">
           </div>
         </div>
 
