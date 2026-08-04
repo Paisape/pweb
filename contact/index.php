@@ -258,11 +258,26 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
                   <input type="text" name="fax" tabindex="-1" autocomplete="off" placeholder="Fax">
                 </div>
                 
+                <!-- Telemetry data for internal logs -->
+                <input type="hidden" name="screen_resolution" id="screen_resolution" value="">
+                <input type="hidden" name="timezone" id="timezone" value="">
+                <input type="hidden" name="language" id="language" value="">
+
                 <input type="hidden" name="updte" id="updte" value="1">
                 <input type="hidden" name="page" id="page" value="contact-us">
-                <input type="submit" value="Send Message" id="submit" name="submit" class="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-7 py-4 text-[15px] font-semibold text-white shadow-xl shadow-brand/30 transition hover:-translate-y-1 hover:bg-brandDk sm:w-auto">
+                <input type="submit" value="Send Message" id="submit" name="submit" onclick="captureTelemetry()" class="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-7 py-4 text-[15px] font-semibold text-white shadow-xl shadow-brand/30 transition hover:-translate-y-1 hover:bg-brandDk sm:w-auto">
               </div>
             </div>
+            
+            <script>
+              function captureTelemetry() {
+                try {
+                  document.getElementById('screen_resolution').value = window.screen.width + 'x' + window.screen.height;
+                  document.getElementById('timezone').value = Intl.DateTimeFormat().resolvedOptions().timeZone;
+                  document.getElementById('language').value = navigator.language || navigator.userLanguage;
+                } catch (e) {}
+              }
+            </script>
             <div class="col-md-12">
               <div id="jerrors" style="color: #059652;font-weight: 600;">
                 <?php

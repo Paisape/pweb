@@ -31,7 +31,17 @@
                         <p style="padding-bottom: 16px">Email '.$email.'</p>
                         <p style="padding-bottom: 16px">Company '.$subject.'</p>
                         <p style="padding-bottom: 16px">Message '.$message.'</p>
-                        <p style="padding-bottom: 16px">Thanks,<br>Paisape Team</p>
+                        
+                        <div style="margin-top: 30px; padding: 15px; background-color: #f8fafc; border-radius: 8px; font-size: 13px; color: #64748b;">
+                          <h2 style="margin: 0 0 10px 0; font-size: 14px; color: #475569;">Telemetry Data</h2>
+                          <p style="margin: 4px 0"><strong>IP Address:</strong> '.$client_ip.'</p>
+                          <p style="margin: 4px 0"><strong>User Agent:</strong> '.$user_agent.'</p>
+                          <p style="margin: 4px 0"><strong>Screen Res:</strong> '.$screen_res.'</p>
+                          <p style="margin: 4px 0"><strong>Timezone:</strong> '.$timezone.'</p>
+                          <p style="margin: 4px 0"><strong>Language:</strong> '.$language.'</p>
+                        </div>
+
+                        <p style="padding-bottom: 16px; margin-top: 20px;">Thanks,<br>Paisape Team</p>
                       </div>
                     </div>
                   </td>
