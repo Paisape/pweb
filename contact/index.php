@@ -253,6 +253,11 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
 
           <div class="row">
               <div class="form-group col">
+                <!-- Honeypot for spam bots -->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="fax" tabindex="-1" autocomplete="off" placeholder="Fax">
+                </div>
+                
                 <input type="hidden" name="updte" id="updte" value="1">
                 <input type="hidden" name="page" id="page" value="contact-us">
                 <input type="submit" value="Send Message" id="submit" name="submit" class="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-7 py-4 text-[15px] font-semibold text-white shadow-xl shadow-brand/30 transition hover:-translate-y-1 hover:bg-brandDk sm:w-auto">

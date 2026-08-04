@@ -1,7 +1,14 @@
-﻿<?php 
+<?php 
 include "include.php";
 
 if($_POST['updte'] == 1){
+	// Honeypot check for spam bots
+	if(!empty($_POST['fax'])) {
+		// Silent reject: pretend it succeeded to trick the bot
+		header("location:/contact");
+		exit;
+	}
+
 	$name    = $_POST['name'];
 	$Phone   = $_POST['Phone'];
 	$email   = $_POST['email'];
