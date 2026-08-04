@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Paisape â€” Payment Orchestration Platform for India</title>
+<title>Paisape — Payment Orchestration Platform for India</title>
 <meta name="description" content="A unified financial API layer for payments, payouts and reconciliation, with smart dynamic routing built in." />
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
 
@@ -47,7 +47,7 @@
   <div class="mx-auto max-w-site px-5">
     <div id="navInner" class="mt-4 flex items-center justify-between rounded-2xl border border-transparent px-5 py-3 transition-all duration-500">
 
-      <!-- LOGO â€” replace assets/logo.svg with your own file -->
+      <!-- LOGO — replace assets/logo.svg with your own file -->
       <a href="/" class="flex items-center" aria-label="Paisape home">
         <img src="/assets/logo.svg" alt="Paisape" class="h-9 w-auto" width="200" height="52">
       </a>
@@ -337,7 +337,7 @@
           <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 21h18M4 21V10l8-6 8 6v11M9 21v-6h6v6"/></svg>
         </div>
         <h3 class="font-display text-[15px] font-bold text-ink">TSP for Banks &amp; NBFCs</h3>
-        <p class="mt-2 text-[13px] leading-relaxed text-body">NPCI-certified UPI switch, IMPS &amp; CBS middleware</p>
+        <p class="mt-2 text-[13px] leading-relaxed text-body">Enterprise-grade UPI switch, IMPS &amp; CBS middleware</p>
         <a href="/switching-solution" class="mt-5 inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Learn more <span class="arrow">&rarr;</span></a>
       </article>
       <article data-reveal data-delay="0" class="card-lift rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
@@ -519,7 +519,7 @@
     <div class="grid gap-12 md:grid-cols-[1.4fr_repeat(3,1fr)]">
 
       <div data-reveal>
-        <!-- LOGO â€” replace assets/logo-white.svg with your own file -->
+        <!-- LOGO — replace assets/logo-white.svg with your own file -->
         <img src="/assets/logo-white.svg" alt="Paisape" class="h-9 w-auto" width="200" height="52">
         <p class="mt-5 max-w-xs text-[13px] leading-relaxed text-slate-400">
           Payments. Everytime. Everywhere. Paisape Techfin Private Limited provides comprehensive payment

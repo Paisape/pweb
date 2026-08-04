@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Aadhaar Enabled Payment System (AEPS) â€” Paisape</title>
+<title>Aadhaar Enabled Payment System (AEPS) — Paisape</title>
 <meta name="description" content="Turn any retail store into a micro-ATM. Allow customers to withdraw cash, check balances, and transfer funds securely using just their Aadhaar number and b" />
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
 
@@ -47,7 +47,7 @@
   <div class="mx-auto max-w-site px-5">
     <div id="navInner" class="mt-4 flex items-center justify-between rounded-2xl border border-transparent px-5 py-3 transition-all duration-500">
 
-      <!-- LOGO â€” replace assets/logo.svg with your own file -->
+      <!-- LOGO — replace assets/logo.svg with your own file -->
       <a href="/" class="flex items-center" aria-label="Paisape home">
         <img src="/assets/logo.svg" alt="Paisape" class="h-9 w-auto" width="200" height="52">
       </a>
@@ -298,7 +298,7 @@
     <div class="grid gap-12 md:grid-cols-[1.4fr_repeat(3,1fr)]">
 
       <div data-reveal>
-        <!-- LOGO â€” replace assets/logo-white.svg with your own file -->
+        <!-- LOGO — replace assets/logo-white.svg with your own file -->
         <img src="/assets/logo-white.svg" alt="Paisape" class="h-9 w-auto" width="200" height="52">
         <p class="mt-5 max-w-xs text-[13px] leading-relaxed text-slate-400">
           Payments. Everytime. Everywhere. Paisape Techfin Private Limited provides comprehensive payment
