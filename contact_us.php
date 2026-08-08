@@ -40,6 +40,9 @@ if($_POST['updte'] == 1){
 	include "contact_autoreply_mail.php";
 	send_smtp_mail($email, "We have received your request - Paisape", $auto_reply_message);
 
-	header("location:/contact");
+	echo "<script>
+		alert('Thank you for contacting us. We will get back to you shortly.');
+		window.location.href = '/contact';
+	</script>";
 }
 ?>

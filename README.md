@@ -1,43 +1,78 @@
-# Paisape — website
+﻿# Paisape — Website & CMS
 
-13 pages, single folder, no build step. Open `index.html` in a browser and it works.
+This is the Paisape corporate website and Content Management System (CMS). It is built using PHP, Tailwind CSS, and a MariaDB database to manage dynamic content like Blogs and Settings.
 
 ---
 
-## 1. Folder structure
+## 1. Local Development (Docker Setup)
+
+The easiest way to run this project on your local machine is using Docker. You do not need to install PHP, Apache, or MySQL locally.
+
+### Prerequisites:
+- **Docker Desktop** installed and running on your PC.
+
+### Installation Steps:
+1. Open your terminal (PowerShell, CMD, or VS Code Terminal) in the project folder (`paisape-website`).
+2. Run the following command to build and start the servers:
+   ```bash
+   docker-compose up -d --build
+   ```
+3. Docker will automatically:
+   - Start an Apache web server with PHP 8.2 on port 8000.
+   - Start a MariaDB database and automatically create the required tables and default admin user using `admin/init.sql`.
+
+### Viewing the Site:
+- **Public Website:** Open `http://localhost:8000` in your browser.
+- **Admin Panel:** Open `http://localhost:8000/admin/login.php`
+  - **Username:** `admin`
+  - **Password:** `admin123`
+
+To stop the servers when you are done, run:
+```bash
+docker-compose down
+```
+
+---
+
+## 2. Server Deployment (Coolify)
+
+When deploying to a production server (like Coolify using Nixpacks):
+1. The platform will automatically detect `index.php` and serve the site.
+2. You must provision a **MariaDB Database** on your server.
+3. Set the following Environment Variables in your Coolify project settings so the website can connect to the database:
+   - `DB_HOST` (e.g., your database container IP or hostname)
+   - `DB_NAME` (e.g., paisape_db)
+   - `DB_USER` (e.g., root)
+   - `DB_PASS` (Your database password)
+4. Execute the SQL script located in `admin/init.sql` inside your production database to create the tables.
+
+---
+
+## 3. Folder Structure
 
 ```
 paisape-website/
-├── index.html                      Home / landing
-├── blog.html                       Blog listing (filter + search)
-├── contact.html                    Contact (form + FAQ)
-│
-├── neobanking.html                 Issuing Solution
-├── qr-code-solution.html           Merchant Acquiring
-├── soundbox.html                   Merchant Acquiring
-├── bbps.html                       Transaction Banking
-├── upi.html                        Transaction Banking
-├── aeps.html                       Transaction Banking
-├── onboarding-solution.html        Value Added
-├── reconciliation-solution.html    Value Added
-├── switching-solution.html         Value Added
-├── pos-solution.html               Payments
-│
-├── assets/
-│   ├── logo.svg                    Nav logo        ← REPLACE
-│   ├── logo-white.svg              Footer logo     ← REPLACE
-│   └── favicon.svg                 Favicon         ← REPLACE
-├── css/style.css                   All custom CSS (animations, mega menu, forms)
-└── js/
-    ├── tailwind.config.js          Colour + font tokens
-    └── main.js                     All behaviour
+├── index.php                       Home / landing
+├── config.php                      Global configuration & DB credentials
+├── core/
+│   ├── db.php                      Database connection logic (PDO)
+│   ├── mail.php                    Email sending logic
+├── admin/                          CMS Dashboard
+│   ├── init.sql                    Database schema and default data
+│   ├── login.php                   Admin authentication
+│   ├── dashboard.php               Stats overview
+│   └── blogs.php                   Blog manager with Quill.js
+├── blog/                           Public blog folder
+├── contact/                        Contact Us page
+├── contact_us.php                  Form processor (sends emails)
+├── css/style.css                   Custom CSS (animations, mega menu)
+├── docker/                         Local Docker environment files
+└── docker-compose.yml              Docker service configuration
 ```
-
-All pages sit at the same level, so every link is a plain filename. No path juggling.
 
 ---
 
-## 2. Replacing the logo
+## 4. Replacing the Logo
 
 Drop your files in `assets/` using the same names and nothing else changes:
 
@@ -47,34 +82,24 @@ Drop your files in `assets/` using the same names and nothing else changes:
 | `assets/logo-white.svg` | Footer (dark background) | white/light version |
 | `assets/paisape-logo.png` | Browser tab | square |
 
-Using a PNG instead? Change the extension in the `<img>` tag — nav is near the top of each page, footer near the bottom:
-
-```html
-<img src="assets/logo.png" alt="Paisape" class="h-9 w-auto">
-```
-
-Logo too small or too big? Change `h-9` → `h-8` (smaller) or `h-11` (bigger).
-
 ---
 
-## 3. Changing colours and fonts
+## 5. Changing colours and fonts
 
-Everything lives in `js/tailwind.config.js`. Change one value, all 13 pages update:
+Everything lives in `js/tailwind.config.js`. Change one value, all pages update:
 
 ```js
 brand:   '#0E9BEE',   // primary blue — buttons, links, highlights
-mint:    '#2ECFB4',   // secondary — mega menu arrows, Subscribe
+mint:    '#2ECFB4',   // secondary — mega menu arrows
 ink:     '#16233B',   // headings
 body:    '#5C6B84',   // paragraphs
-night:   '#302E45',   // footer
-deep:    '#111B2E',   // dark CTA band
 ```
 
 Fonts are loaded from Google Fonts in each page's `<head>` — Plus Jakarta Sans (headings), Inter (body), JetBrains Mono (terminal).
 
 ---
 
-## 4. Animations
+## 6. Animations
 
 | Effect | How to use it |
 |---|---|
@@ -82,62 +107,18 @@ Fonts are loaded from Google Fonts in each page's `<head>` — Plus Jakarta Sans
 | Slide in from left/right | `data-reveal="left"` / `data-reveal="right"` |
 | Zoom in | `data-reveal="zoom"` |
 | Stagger | `data-delay="120"` (milliseconds) |
-| Marquee right → left | `<div class="track animate-marquee-l">` |
-| Marquee left → right | `<div class="track animate-marquee-r">` |
 
-Marquees loop seamlessly because `js/main.js` clones the `[data-mq-group]` block into `[data-mq-clone]`. Add or remove items in the group only — the clone fills itself. Hovering pauses the scroll.
-
-Speed: change `38s` in `css/style.css` under `.animate-marquee-l` / `.animate-marquee-r`.
-
-Everything respects `prefers-reduced-motion`, so animations switch off for users who ask their OS for that.
+Marquees loop seamlessly because `js/main.js` clones the `[data-mq-group]` block into `[data-mq-clone]`. Hovering pauses the scroll.
 
 ---
 
-## 5. Adding a new product page
+## 7. Contact Form Telemetry
 
-1. Copy any existing product page, e.g. `soundbox.html`.
-2. Edit the hero eyebrow, `<h1>`, description, pills, six feature cards, spec list and CTA.
-3. Add it to the mega menu on **every** page — search for `mega-panel` and add one line inside the right category:
+The Contact Us form (`contact_us.php`) includes built-in telemetry tracking. When a user submits the form, it captures:
+- Screen Resolution
+- Timezone
+- Browser Language
+- User IP Address
+- User-Agent
 
-```html
-<a class="mega-link" href="your-page.html"><span>Your Product</span>
-  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-</a>
-```
-
-Also add it to `#mobileProductsPanel` in the same file.
-
----
-
-## 6. Wiring up the forms
-
-Three forms are front-end only right now and need a backend:
-
-- **Contact form** (`contact.html`, `id="contactForm"`) — validates and shows a success message, but does not send. Handler is in `js/main.js` section 10.
-- **Newsletter** (footer, every page) and the blog **Thursday note** — both are `onsubmit="return false"`.
-
-Point them at your API, or a service like Formspree, and remove the `return false`.
-
----
-
-## 7. Notes on what I changed from the current site
-
-Two small things in the screenshots looked like bugs, so they're fixed here — say the word if you want them exactly as-is:
-
-1. **The dark CTA band said "Ready to launch your digital bank?" on every product page**, including QR codes, Soundbox and POS. Each page now has a heading and sub-line that matches its own product.
-2. **The POS page had three feature cards with headings but no body text.** I wrote one line for each. Replace with your own copy when you have it.
-
-Also added, since the pages felt thin at the bottom: an "Explore the rest of the stack" marquee that cross-links the other nine products.
-
----
-
-## 8. Production note
-
-Tailwind loads from the CDN, which is perfect for editing but prints a console warning in production and adds a network request. When you're ready to ship, compile it once:
-
-```bash
-npm i -D tailwindcss@3
-npx tailwindcss -i input.css -o css/tailwind.css --minify
-```
-
-Then in each page, replace the two CDN script tags with `<link rel="stylesheet" href="css/tailwind.css">`. Keep `css/style.css` — it's separate from Tailwind.
+This data is automatically appended to the internal notification email sent to the sales team, helping you understand your leads better.
