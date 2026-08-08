@@ -1,4 +1,4 @@
-﻿# Paisape — Website & CMS
+# Paisape — Website & CMS
 
 This is the Paisape corporate website and Content Management System (CMS). It is built using PHP, Tailwind CSS, and a MariaDB database to manage dynamic content like Blogs and Settings.
 
@@ -10,6 +10,8 @@ The easiest way to run this project on your local machine is using Docker. You d
 
 ### Prerequisites:
 - **Docker Desktop** installed and running on your PC.
+> [!WARNING]
+> **Drive Installation Note:** Do NOT install Docker, your IDE, or clone this repository into the `C:\` drive. The `C:\` drive is reserved strictly for Windows system files. Please install Docker and clone this project onto your `D:\` drive (or `F:\` drive) for all development work.
 
 ### Installation Steps:
 1. Open your terminal (PowerShell, CMD, or VS Code Terminal) in the project folder (`paisape-website`).
