@@ -302,17 +302,64 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
           }
         }
 
+        function isGibberish(str) {
+          str = str.trim().toLowerCase();
+          if (str.length < 3) return false;
+          if (/(.)\1{3,}/.test(str)) return true;
+          if (/(.{2,3})\1{2,}/.test(str)) return true;
+          const mashPatterns = ['asdf', 'sdfg', 'dfgh', 'fghj', 'ghjk', 'hjkl', 'qwert', 'werty', 'ertyu', 'rtyui', 'tyuio', 'yuiop', 'zxcv', 'xcvb', 'cvbn', 'vbnm', 'fsdf', 'dssf', 'gfsg', 'hdhd', 'dggf', 'fdgd', 'hddd'];
+          for (let pat of mashPatterns) {
+            if (str.includes(pat)) return true;
+          }
+          const words = str.split(/\s+/);
+          for (let w of words) {
+            const clean = w.replace(/[^a-z]/g, '');
+            if (clean.length >= 4) {
+              const vowels = clean.match(/[aeiouy]/g);
+              if (!vowels) return true;
+            }
+          }
+          return false;
+        }
+
         document.getElementById('contactForm').addEventListener('submit', function(e) {
           e.preventDefault();
           captureTelemetry();
 
+          const nameInput = document.getElementById('name');
+          const emailInput = document.getElementById('email');
+          const subjectInput = document.getElementById('subject');
+          const messageInput = document.getElementById('message');
           const phoneInput = document.getElementById('Phone');
+          
           const cleanPhone = phoneInput.value.replace(/\D/g, '');
           const phoneErr = document.getElementById('phoneError');
           const errorBox = document.getElementById('formErrorBox');
+          const errorText = document.getElementById('formErrorText');
           const successModal = document.getElementById('formSuccessModal');
 
           errorBox.classList.add('hidden');
+
+          if (isGibberish(nameInput.value)) {
+            errorText.innerText = "Please enter a valid Full Name instead of random characters.";
+            errorBox.classList.remove('hidden');
+            nameInput.focus();
+            return false;
+          }
+
+          if (isGibberish(subjectInput.value)) {
+            errorText.innerText = "Please enter a valid Company Name instead of random characters.";
+            errorBox.classList.remove('hidden');
+            subjectInput.focus();
+            return false;
+          }
+
+          if (messageInput.value.trim().length < 10 || isGibberish(messageInput.value)) {
+            errorText.innerText = "Please enter a detailed message (at least 10 meaningful characters).";
+            errorBox.classList.remove('hidden');
+            messageInput.focus();
+            return false;
+          }
 
           if (!/^[6-9]\d{9}$/.test(cleanPhone)) {
             phoneErr.classList.remove('hidden');
@@ -339,18 +386,24 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
           .then(data => {
             submitBtn.disabled = false;
             submitBtn.innerHTML = `<span>Send Message</span> <svg class="arrow h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`;
+            if (window.turnstile) {
+              try { window.turnstile.reset(); } catch(e) {}
+            }
 
             if (data.status === 'success') {
               successModal.classList.remove('hidden');
               this.reset();
             } else {
-              document.getElementById('formErrorText').innerText = data.message || 'Failed to send message.';
+              errorText.innerText = data.message || 'Failed to send message.';
               errorBox.classList.remove('hidden');
             }
           })
           .catch(err => {
             submitBtn.disabled = false;
             submitBtn.innerHTML = `<span>Send Message</span> <svg class="arrow h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`;
+            if (window.turnstile) {
+              try { window.turnstile.reset(); } catch(e) {}
+            }
             successModal.classList.remove('hidden');
             this.reset();
           });

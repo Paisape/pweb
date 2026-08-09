@@ -10,6 +10,7 @@ function send_smtp_mail($email_to, $email_subject, $email_message) {
     $mail->Password = getenv('RESEND_API_KEY') ?: (defined('RESEND_API_KEY') ? RESEND_API_KEY : ''); 
     $mail->SMTPSecure = 'tls'; 
     $mail->Port = 587; 
+    $mail->Timeout = 3;
     $mail->setFrom('paispe@mail.paisape.in', 'Paisape Support'); 
     $mail->addAddress($email_to); 
     $mail->addReplyTo('hello@paisape.in', 'Paisape Support'); 
