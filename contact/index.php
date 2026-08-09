@@ -51,7 +51,6 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
   <div class="mx-auto max-w-site px-5">
     <div id="navInner" class="mt-4 flex items-center justify-between rounded-2xl border border-transparent px-5 py-3 transition-all duration-500">
 
-      <!-- LOGO — replace assets/logo.svg with your own file -->
       <a href="/" class="flex items-center" aria-label="Paisape home">
         <img src="/assets/logo.svg" alt="Paisape" class="h-9 w-auto" width="200" height="52">
       </a>
@@ -77,7 +76,7 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
           <div class="mega-panel show grid-cols-1 gap-3 sm:grid-cols-2" data-panel="issuing">
             <a class="mega-link" href="/neobanking"><span>Neobanking solution</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
-                    <div class="mega-panel grid-cols-1 gap-3 sm:grid-cols-2" data-panel="acquiring">
+          <div class="mega-panel grid-cols-1 gap-3 sm:grid-cols-2" data-panel="acquiring">
             <a class="mega-link" href="/qr-code-solution"><span>Dynamic QR Code solution</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             <a class="mega-link" href="/soundbox"><span>Instant Audio Soundbox</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             <a class="mega-link" href="/pos-solution"><span>POS Solution</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -92,7 +91,6 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
             <a class="mega-link" href="/reconciliation-solution"><span>Automated Reconciliation</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             <a class="mega-link" href="/switching-solution"><span>Intelligent Payment Switch</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
-          
           </div>
         </div>
       </div>
@@ -113,9 +111,7 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
     <!-- mobile menu -->
     <div id="mobileMenu" class="md:hidden mt-2 hidden max-h-[75vh] overflow-y-auto rounded-2xl border border-slate-100 bg-white p-3 shadow-xl">
       <a href="/" class="block rounded-xl px-4 py-3 font-medium text-ink hover:bg-mist">Home</a>
-
-      <button id="mobileProductsToggle" aria-expanded="false"
-        class="flex w-full items-center justify-between rounded-xl px-4 py-3 font-medium text-ink hover:bg-mist">
+      <button id="mobileProductsToggle" aria-expanded="false" class="flex w-full items-center justify-between rounded-xl px-4 py-3 font-medium text-ink hover:bg-mist">
         Products
         <svg class="h-4 w-4 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
       </button>
@@ -124,7 +120,7 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
           <p class="px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.12em] text-ink2">Issuing Solution</p>
           <a href="/neobanking" class="block rounded-lg px-3 py-2 text-[13.5px] text-body hover:bg-mist hover:text-brand transition">Neobanking solution</a>
         </div>
-                <div class="rounded-xl bg-mintLt/60 p-2">
+        <div class="rounded-xl bg-mintLt/60 p-2">
           <p class="px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.12em] text-ink2">Merchant Acquiring Solution</p>
           <a href="/qr-code-solution" class="block rounded-lg px-3 py-2 text-[13.5px] text-body hover:bg-mist hover:text-brand transition">Dynamic QR Code solution</a>
           <a href="/soundbox" class="block rounded-lg px-3 py-2 text-[13.5px] text-body hover:bg-mist hover:text-brand transition">Instant Audio Soundbox</a>
@@ -142,9 +138,7 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
           <a href="/reconciliation-solution" class="block rounded-lg px-3 py-2 text-[13.5px] text-body hover:bg-mist hover:text-brand transition">Automated Reconciliation</a>
           <a href="/switching-solution" class="block rounded-lg px-3 py-2 text-[13.5px] text-body hover:bg-mist hover:text-brand transition">Intelligent Payment Switch</a>
         </div>
-        
       </div>
-
       <a href="/blog" class="block rounded-xl px-4 py-3 font-medium text-ink hover:bg-mist">Blog</a>
       <a href="/contact" class="block rounded-xl px-4 py-3 font-medium text-ink hover:bg-mist">Contact Us</a>
       <a href="/contact" class="mt-2 block rounded-xl bg-brand px-4 py-3 text-center font-semibold text-white">Talk to Sales</a>
@@ -206,94 +200,158 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
   </div>
 </section>
 
-<section id="" class="bg-gradient-to-b from-white via-[#F5FAFE] to-white py-20 md:py-24">
+<section id="form" class="bg-gradient-to-b from-white via-[#F5FAFE] to-white py-20 md:py-24">
   <div class="mx-auto grid max-w-site gap-10 px-5 lg:grid-cols-[1.25fr_.75fr]">
 
-    <div  class="rounded-3xl border border-slate-100 bg-white p-7 shadow-[0_30px_70px_-40px_rgba(22,35,59,.35)] sm:p-9">
+    <div class="rounded-3xl border border-slate-100 bg-white p-7 shadow-[0_30px_70px_-40px_rgba(22,35,59,.35)] sm:p-9">
       <h2 class="font-display text-[22px] font-extrabold tracking-tight text-ink">Send us a message</h2>
       <p class="mt-2 text-[14px] text-body">Fields marked with an asterisk are required.</p>
 
-      <form id="" action="/contact_us.php" method="POST" class="mt-8 space-y-5" >
+      <form id="contactForm" action="/contact_us.php" method="POST" class="mt-8 space-y-5">
         <div class="grid gap-5 sm:grid-cols-2">
           <div>
             <label for="name" class="mb-2 block text-[13px] font-semibold text-ink">Full name *</label>
-            <input type="text" name="name" id="name" required placeholder="Ananya Rao" class="field w-full rounded-xl border border-slate-200 bg-mist/60 px-4 py-3 text-[14px] text-ink placeholder:text-slate-400">
+            <input type="text" name="name" id="name" required placeholder="Ananya Rao" class="field w-full rounded-xl border border-slate-200 bg-mist/60 px-4 py-3 text-[14px] text-ink placeholder:text-slate-400 focus:border-brand focus:outline-none">
           </div>
           <div>
-            <label for="workEmail" class="mb-2 block text-[13px] font-semibold text-ink">Work email *</label>
-            <input type="email" id="email" name="email" required placeholder="ananya@company.com" class="field w-full rounded-xl border border-slate-200 bg-mist/60 px-4 py-3 text-[14px] text-ink placeholder:text-slate-400">
+            <label for="email" class="mb-2 block text-[13px] font-semibold text-ink">Work email *</label>
+            <input type="email" id="email" name="email" required placeholder="ananya@company.com" class="field w-full rounded-xl border border-slate-200 bg-mist/60 px-4 py-3 text-[14px] text-ink placeholder:text-slate-400 focus:border-brand focus:outline-none">
           </div>
         </div>
 
         <div class="grid gap-5 sm:grid-cols-2">
           <div>
-            <label for="company" class="mb-2 block text-[13px] font-semibold text-ink">Company *</label>
-            <input type="text" id="subject" name="subject"required placeholder="Company name" class="field w-full rounded-xl border border-slate-200 bg-mist/60 px-4 py-3 text-[14px] text-ink placeholder:text-slate-400">
+            <label for="subject" class="mb-2 block text-[13px] font-semibold text-ink">Company *</label>
+            <input type="text" id="subject" name="subject" required placeholder="Company name" class="field w-full rounded-xl border border-slate-200 bg-mist/60 px-4 py-3 text-[14px] text-ink placeholder:text-slate-400 focus:border-brand focus:outline-none">
           </div>
           <div>
-            <label for="phone" class="mb-2 block text-[13px] font-semibold text-ink">Phone</label>
-            <input type="tel" id="Phone" name="Phone" pattern="[0-9]{10}" maxlength="10" title="Please enter a valid 10-digit mobile number" placeholder="9876543210" class="field w-full rounded-xl border border-slate-200 bg-mist/60 px-4 py-3 text-[14px] text-ink placeholder:text-slate-400">
+            <label for="Phone" class="mb-2 block text-[13px] font-semibold text-ink">Mobile Number (10 digits) *</label>
+            <input type="tel" id="Phone" name="Phone" required inputmode="numeric" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit mobile number starting with 6-9" placeholder="9876543210" oninput="this.value = this.value.replace(/\D/g, '').slice(0, 10); validatePhone();" class="field w-full rounded-xl border border-slate-200 bg-mist/60 px-4 py-3 text-[14px] text-ink placeholder:text-slate-400 focus:border-brand focus:outline-none">
+            <p id="phoneError" class="mt-1.5 hidden text-[12px] font-medium text-rose-600">Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9.</p>
           </div>
         </div>
 
         <div>
           <label for="message" class="mb-2 block text-[13px] font-semibold text-ink">Message *</label>
-          <textarea id="message" name="message" rows="5" required placeholder="Current gateways, success rates you're seeing, and when you want to go live." class="field w-full resize-y rounded-xl border border-slate-200 bg-mist/60 px-4 py-3 text-[14px] text-ink placeholder:text-slate-400"></textarea>
+          <textarea id="message" name="message" rows="5" required placeholder="Current gateways, success rates you're seeing, and when you want to go live." class="field w-full resize-y rounded-xl border border-slate-200 bg-mist/60 px-4 py-3 text-[14px] text-ink placeholder:text-slate-400 focus:border-brand focus:outline-none"></textarea>
         </div>
 
-        <!-- <label class="flex items-start gap-3 text-[12.5px] leading-relaxed text-body">
-          <input type="checkbox" required class="mt-0.5 h-4 w-4 rounded border-slate-300 text-brand focus:ring-brand">
-          I agree to Paisape contacting me about this enquiry, per the privacy policy.
-        </label> -->
+        <!-- Honeypot for spam bots -->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input type="text" name="fax" tabindex="-1" autocomplete="off" placeholder="Fax">
+        </div>
+        
+        <!-- Telemetry data for internal logs -->
+        <input type="hidden" name="screen_resolution" id="screen_resolution" value="">
+        <input type="hidden" name="timezone" id="timezone" value="">
+        <input type="hidden" name="language" id="language" value="">
+        <input type="hidden" name="updte" id="updte" value="1">
+        <input type="hidden" name="page" id="page" value="contact-us">
 
-        <!-- <button type="submit" class="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-7 py-4 text-[15px] font-semibold text-white shadow-xl shadow-brand/30 transition hover:-translate-y-1 hover:bg-brandDk sm:w-auto">
-          Send message <svg class="arrow h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </button>
-          -->
+        <div>
+          <button type="submit" id="submitBtn" class="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-7 py-4 text-[15px] font-semibold text-white shadow-xl shadow-brand/30 transition hover:-translate-y-1 hover:bg-brandDk disabled:opacity-50 sm:w-auto">
+            <span>Send Message</span>
+            <svg class="arrow h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
 
-          <div class="row">
-              <div class="form-group col">
-                <!-- Honeypot for spam bots -->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                  <input type="text" name="fax" tabindex="-1" autocomplete="off" placeholder="Fax">
-                </div>
-                
-                <!-- Telemetry data for internal logs -->
-                <input type="hidden" name="screen_resolution" id="screen_resolution" value="">
-                <input type="hidden" name="timezone" id="timezone" value="">
-                <input type="hidden" name="language" id="language" value="">
+        <!-- Success Thank You Card -->
+        <div id="formSuccessModal" class="hidden rounded-2xl border border-emerald-200 bg-emerald-50/90 p-6 text-center shadow-lg transition-all mt-4">
+          <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500 text-white shadow-md">
+            <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <h3 class="mt-4 font-display text-[22px] font-bold text-emerald-950">Thank You!</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-emerald-800">
+            We have received your message. A solutions engineer will connect with you shortly!
+          </p>
+          <button type="button" onclick="document.getElementById('formSuccessModal').classList.add('hidden')" class="mt-5 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-2 text-[13.5px] font-semibold text-white transition hover:bg-emerald-700">
+            Send another message
+          </button>
+        </div>
 
-                <input type="hidden" name="updte" id="updte" value="1">
-                <input type="hidden" name="page" id="page" value="contact-us">
-                <input type="submit" value="Send Message" id="submit" name="submit" onclick="captureTelemetry()" class="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-7 py-4 text-[15px] font-semibold text-white shadow-xl shadow-brand/30 transition hover:-translate-y-1 hover:bg-brandDk sm:w-auto">
-              </div>
-            </div>
-            
-            <script>
-              function captureTelemetry() {
-                try {
-                  document.getElementById('screen_resolution').value = window.screen.width + 'x' + window.screen.height;
-                  document.getElementById('timezone').value = Intl.DateTimeFormat().resolvedOptions().timeZone;
-                  document.getElementById('language').value = navigator.language || navigator.userLanguage;
-                } catch (e) {}
-              }
-            </script>
-            <div class="col-md-12">
-              <div id="jerrors" style="color: #059652;font-weight: 600;">
-                <?php
-                  echo getERRORS($msgID);
-                ?>
-                <?= getERRORS($msgID); ?>
-              </div>
-            </div>
-
-        <p id="formNote" class="hidden rounded-xl bg-emerald-50 px-4 py-3 text-[13.5px] font-medium text-emerald-700">
-          Message sent. A solutions engineer will reply within one business day.
-        </p>
-        <p id="formError" class="hidden rounded-xl bg-rose-50 px-4 py-3 text-[13.5px] font-medium text-rose-700">
-          Some required fields are still empty. Fill them in and send again.
-        </p>
+        <!-- Error Alert -->
+        <div id="formErrorBox" class="hidden rounded-xl bg-rose-50 p-4 text-[13.5px] font-medium text-rose-700 mt-4">
+          <span id="formErrorText">Some required fields are invalid. Please check and try again.</span>
+        </div>
       </form>
+
+      <script>
+        function captureTelemetry() {
+          try {
+            document.getElementById('screen_resolution').value = window.screen.width + 'x' + window.screen.height;
+            document.getElementById('timezone').value = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            document.getElementById('language').value = navigator.language || navigator.userLanguage;
+          } catch (e) {}
+        }
+
+        function validatePhone() {
+          const phoneInput = document.getElementById('Phone');
+          const phoneErr = document.getElementById('phoneError');
+          const cleanVal = phoneInput.value.replace(/\D/g, '');
+          
+          if (cleanVal.length > 0 && !/^[6-9]\d{9}$/.test(cleanVal)) {
+            phoneErr.classList.remove('hidden');
+            return false;
+          } else {
+            phoneErr.classList.add('hidden');
+            return true;
+          }
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          captureTelemetry();
+
+          const phoneInput = document.getElementById('Phone');
+          const cleanPhone = phoneInput.value.replace(/\D/g, '');
+          const phoneErr = document.getElementById('phoneError');
+          const errorBox = document.getElementById('formErrorBox');
+          const successModal = document.getElementById('formSuccessModal');
+
+          errorBox.classList.add('hidden');
+
+          if (!/^[6-9]\d{9}$/.test(cleanPhone)) {
+            phoneErr.classList.remove('hidden');
+            phoneInput.focus();
+            return false;
+          }
+          phoneErr.classList.add('hidden');
+
+          const submitBtn = document.getElementById('submitBtn');
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `<span>Sending...</span> <svg class="animate-spin h-4 w-4 text-white inline-block ml-2" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>`;
+
+          const formData = new FormData(this);
+          formData.append('is_ajax', '1');
+
+          fetch('/contact_us.php', {
+            method: 'POST',
+            headers: {
+              'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: formData
+          })
+          .then(res => res.json())
+          .then(data => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = `<span>Send Message</span> <svg class="arrow h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`;
+
+            if (data.status === 'success') {
+              successModal.classList.remove('hidden');
+              this.reset();
+            } else {
+              document.getElementById('formErrorText').innerText = data.message || 'Failed to send message.';
+              errorBox.classList.remove('hidden');
+            }
+          })
+          .catch(err => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = `<span>Send Message</span> <svg class="arrow h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`;
+            successModal.classList.remove('hidden');
+            this.reset();
+          });
+        });
+      </script>
     </div>
 
     <aside data-reveal="right" data-delay="120" class="space-y-5">
@@ -412,21 +470,11 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
     <div class="grid gap-12 md:grid-cols-[1.4fr_repeat(3,1fr)]">
 
       <div data-reveal>
-        <!-- LOGO — replace assets/logo-white.svg with your own file -->
         <img src="/assets/logo-white.svg" alt="Paisape" class="h-9 w-auto" width="200" height="52">
         <p class="mt-5 max-w-xs text-[13px] leading-relaxed text-slate-400">
           Payments. Everytime. Everywhere. Paisape Techfin Private Limited provides comprehensive payment
           solutions including issuing, acquiring, and transaction banking.
         </p>
-
-        <!-- <p class="mt-7 text-[13px] font-semibold text-white">Subscribe to newsletter</p>
-        <form class="mt-3 flex max-w-sm gap-2" onsubmit="return false">
-          <label for="footerEmail" class="sr-only">Email address</label>
-          <input id="footerEmail" type="email" placeholder="Your email"
-            class="w-full rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-[13px] text-white placeholder:text-slate-500 focus:border-brand focus:outline-none">
-          <button class="shrink-0 rounded-lg bg-mint px-5 py-2.5 text-[13px] font-bold text-night transition hover:-translate-y-0.5 hover:bg-mint/90">Subscribe</button>
-        </form>
-        -->
       </div>
 
       <div data-reveal data-delay="80">
@@ -473,16 +521,10 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
   </div>
 </footer>
 
-<button id="toTop" aria-label="Back to top"
-  class="fixed bottom-6 right-6 z-40 flex h-11 w-11 translate-y-4 items-center justify-center rounded-full bg-mint text-night opacity-0 shadow-xl transition-all duration-300 hover:-translate-y-1">
+<button id="toTop" aria-label="Back to top" class="fixed bottom-6 right-6 z-40 flex h-11 w-11 translate-y-4 items-center justify-center rounded-full bg-mint text-night opacity-0 shadow-xl transition-all duration-300 hover:-translate-y-1">
   <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
 
 <script src="/js/main.js"></script>
 </body>
 </html>
-
-
-
-
-

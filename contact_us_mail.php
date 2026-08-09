@@ -25,12 +25,12 @@
                       <div style="text-align: center;">
                       </div>
                       <div style="color: rgb(0, 0, 0); text-align: left;">
-                        <h1 style="margin: 1rem 0">This Mail From Paisape Website Contact Us Page</h1>
-                        <p style="padding-bottom: 16px">Name '.$name.'</p>
-                        <p style="padding-bottom: 16px">Phone '.$Phone.'</p>
-                        <p style="padding-bottom: 16px">Email '.$email.'</p>
-                        <p style="padding-bottom: 16px">Company '.$subject.'</p>
-                        <p style="padding-bottom: 16px">Message '.$message.'</p>
+                        <h1 style="margin: 1rem 0; font-size: 20px; color: #0E9BEE;">New Lead From Paisape Website Contact Us Page</h1>
+                        <p style="padding-bottom: 8px"><strong>Name:</strong> '.htmlspecialchars($name).'</p>
+                        <p style="padding-bottom: 8px"><strong>Phone:</strong> '.htmlspecialchars($Phone).'</p>
+                        <p style="padding-bottom: 8px"><strong>Email:</strong> '.htmlspecialchars($email).'</p>
+                        <p style="padding-bottom: 8px"><strong>Company:</strong> '.htmlspecialchars($subject).'</p>
+                        <p style="padding-bottom: 16px"><strong>Message:</strong><br>'.nl2br(htmlspecialchars($message_body)).'</p>
                         
                         <div style="margin-top: 30px; padding: 15px; background-color: #f8fafc; border-radius: 8px; font-size: 13px; color: #64748b;">
                           <h2 style="margin: 0 0 10px 0; font-size: 14px; color: #475569;">Telemetry Data</h2>
