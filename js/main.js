@@ -247,35 +247,64 @@
   }
 
   /* ---------------------------------------------------------------------
-     11. Blog filter + search
+     11. Blog filter + search + 6-per-page pagination
      --------------------------------------------------------------------- */
   var posts = Array.prototype.slice.call(document.querySelectorAll('.post'));
   if (posts.length) {
     var filterButtons = Array.prototype.slice.call(document.querySelectorAll('.filter-btn'));
     var search = document.getElementById('search');
     var empty  = document.getElementById('empty');
+    var loadMore = document.getElementById('loadMore');
     var activeCat = 'all';
+    var visibleLimit = 6; // Start with 6 posts
 
     var applyFilters = function () {
       var q = search ? search.value.trim().toLowerCase() : '';
-      var shown = 0;
+      var matchingCount = 0;
+      var displayedCount = 0;
 
       posts.forEach(function (post) {
         var catOk  = activeCat === 'all' || post.dataset.cat === activeCat;
         var textOk = !q || post.textContent.toLowerCase().indexOf(q) !== -1;
-        var show   = catOk && textOk;
+        var isMatch = catOk && textOk;
 
-        post.classList.toggle('hidden', !show);
-        if (show) {
-          shown++;
-          post.style.animation = 'none';
-          void post.offsetWidth;               // force reflow to restart it
-          post.style.animation = 'pop .5s cubic-bezier(.22,1,.36,1) both';
-          post.style.animationDelay = (shown * 45) + 'ms';
+        if (isMatch) {
+          matchingCount++;
+          if (matchingCount <= visibleLimit) {
+            post.classList.remove('hidden');
+            displayedCount++;
+            post.style.animation = 'none';
+            void post.offsetWidth;               // force reflow to restart it
+            post.style.animation = 'pop .5s cubic-bezier(.22,1,.36,1) both';
+            post.style.animationDelay = (displayedCount * 45) + 'ms';
+          } else {
+            post.classList.add('hidden');
+          }
+        } else {
+          post.classList.add('hidden');
         }
       });
 
-      if (empty) empty.classList.toggle('hidden', shown > 0);
+      if (empty) empty.classList.toggle('hidden', matchingCount > 0);
+
+      // Handle Load More button state & visibility
+      if (loadMore) {
+        if (matchingCount > visibleLimit) {
+          loadMore.style.display = 'inline-flex';
+          loadMore.textContent = 'Load older posts';
+          loadMore.disabled = false;
+          loadMore.classList.remove('opacity-60', 'cursor-default');
+        } else {
+          if (matchingCount > 0 && matchingCount <= 6) {
+            loadMore.style.display = 'none';
+          } else {
+            loadMore.style.display = 'inline-flex';
+            loadMore.textContent = 'No more articles';
+            loadMore.disabled = true;
+            loadMore.classList.add('opacity-60', 'cursor-default');
+          }
+        }
+      }
     };
 
     filterButtons.forEach(function (btn) {
@@ -283,6 +312,7 @@
         filterButtons.forEach(function (b) { b.setAttribute('aria-pressed', 'false'); });
         btn.setAttribute('aria-pressed', 'true');
         activeCat = btn.dataset.filter;
+        visibleLimit = 6; // Reset limit to 6 on filter change
         applyFilters();
       });
     });
@@ -291,18 +321,20 @@
       var timer;
       search.addEventListener('input', function () {
         clearTimeout(timer);
+        visibleLimit = 6; // Reset limit to 6 on search
         timer = setTimeout(applyFilters, 180);
       });
     }
 
-    var loadMore = document.getElementById('loadMore');
     if (loadMore) {
       loadMore.addEventListener('click', function () {
-        loadMore.textContent = 'That\u2019s everything for now';
-        loadMore.disabled = true;
-        loadMore.classList.add('opacity-60', 'cursor-default');
+        visibleLimit += 6; // Load 6 more posts (6 -> 12 -> 18)
+        applyFilters();
       });
     }
+
+    // Initial render: show first 6 posts
+    applyFilters();
   }
 
 })();
