@@ -121,6 +121,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['updte']) && $_POST['u
 	$timezone   = $_POST['timezone'] ?? 'Unknown';
 	$language   = $_POST['language'] ?? 'Unknown';
 
+	// GeoLocation Detection for Telemetry
+	$location = 'Unknown';
+	$cf_city    = $_SERVER['HTTP_CF_IPCITY'] ?? '';
+	$cf_region  = $_SERVER['HTTP_CF_IPREGION'] ?? '';
+	$cf_country = $_SERVER['HTTP_CF_IPCOUNTRY'] ?? '';
+
+	if (!empty($cf_city) || !empty($cf_country)) {
+		$loc_parts = array_filter([$cf_city, $cf_region, $cf_country]);
+		$location = implode(', ', $loc_parts);
+	} else {
+		if (!empty($client_ip) && $client_ip !== '127.0.0.1' && $client_ip !== 'Unknown') {
+			$geo_ctx = stream_context_create(['http' => ['timeout' => 2]]);
+			$geo_json = @file_get_contents("http://ip-api.com/json/{$client_ip}?fields=status,city,regionName,country", false, $geo_ctx);
+			if ($geo_json !== false) {
+				$geo_data = json_decode($geo_json, true);
+				if (($geo_data['status'] ?? '') === 'success') {
+					$loc_parts = array_filter([$geo_data['city'] ?? '', $geo_data['regionName'] ?? '', $geo_data['country'] ?? '']);
+					if (!empty($loc_parts)) {
+						$location = implode(', ', $loc_parts);
+					}
+				}
+			}
+		}
+	}
+	if ($location === 'Unknown' && !empty($_POST['location'])) {
+		$location = trim($_POST['location']);
+	}
+
 	// 3. Canonical Cloudflare Turnstile Verification
 	$turnstile_secret = getenv('TURNSTILE_SECRET') ?: ($_ENV['TURNSTILE_SECRET'] ?? $_SERVER['TURNSTILE_SECRET'] ?? '');
 	if (!empty($turnstile_secret)) {

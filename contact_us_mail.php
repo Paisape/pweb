@@ -34,6 +34,7 @@
                         
                         <div style="margin-top: 30px; padding: 15px; background-color: #f8fafc; border-radius: 8px; font-size: 13px; color: #64748b;">
                           <h2 style="margin: 0 0 10px 0; font-size: 14px; color: #475569;">Telemetry Data</h2>
+                          <p style="margin: 4px 0"><strong>Location:</strong> '.htmlspecialchars($location).'</p>
                           <p style="margin: 4px 0"><strong>IP Address:</strong> '.$client_ip.'</p>
                           <p style="margin: 4px 0"><strong>User Agent:</strong> '.$user_agent.'</p>
                           <p style="margin: 4px 0"><strong>Screen Res:</strong> '.$screen_res.'</p>

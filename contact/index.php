@@ -246,6 +246,7 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
         <input type="hidden" name="screen_resolution" id="screen_resolution" value="">
         <input type="hidden" name="timezone" id="timezone" value="">
         <input type="hidden" name="language" id="language" value="">
+        <input type="hidden" name="location" id="location" value="">
         <input type="hidden" name="updte" id="updte" value="1">
         <input type="hidden" name="page" id="page" value="contact-us">
 
@@ -285,6 +286,9 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
             document.getElementById('screen_resolution').value = window.screen.width + 'x' + window.screen.height;
             document.getElementById('timezone').value = Intl.DateTimeFormat().resolvedOptions().timeZone;
             document.getElementById('language').value = navigator.language || navigator.userLanguage;
+            if (Intl.DateTimeFormat().resolvedOptions().timeZone) {
+              document.getElementById('location').value = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            }
           } catch (e) {}
         }
 
