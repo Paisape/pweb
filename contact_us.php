@@ -52,6 +52,52 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['updte']) && $_POST['u
 	$timezone   = isset($_POST['timezone']) ? $_POST['timezone'] : 'Unknown';
 	$language   = isset($_POST['language']) ? $_POST['language'] : 'Unknown';
 
+	// Canonical Cloudflare Turnstile Server-Side Siteverify Verification
+	$turnstile_secret = getenv('TURNSTILE_SECRET') ?: ($_ENV['TURNSTILE_SECRET'] ?? $_SERVER['TURNSTILE_SECRET'] ?? '');
+	if (!empty($turnstile_secret)) {
+		$turnstile_token = $_POST['cf-turnstile-response'] ?? '';
+		if (empty($turnstile_token)) {
+			$error_msg = "Please complete the human verification challenge.";
+			if ($is_ajax) {
+				header('Content-Type: application/json');
+				echo json_encode(['status' => 'error', 'message' => $error_msg]);
+				exit;
+			}
+			header("Location: /contact?error=" . urlencode($error_msg));
+			exit;
+		}
+
+		$verify_url = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
+		$post_fields = http_build_query([
+			'secret'   => $turnstile_secret,
+			'response' => $turnstile_token,
+			'remoteip' => $client_ip
+		]);
+
+		$options = [
+			'http' => [
+				'header'  => "Content-Type: application/x-www-form-urlencoded\r\n",
+				'method'  => 'POST',
+				'content' => $post_fields,
+				'timeout' => 10
+			]
+		];
+		$context  = stream_context_create($options);
+		$raw_result = @file_get_contents($verify_url, false, $context);
+		$parsed_result = json_decode($raw_result, true);
+
+		if (empty($parsed_result['success'])) {
+			$error_msg = "Security verification failed. Please try again.";
+			if ($is_ajax) {
+				header('Content-Type: application/json');
+				echo json_encode(['status' => 'error', 'message' => $error_msg]);
+				exit;
+			}
+			header("Location: /contact?error=" . urlencode($error_msg));
+			exit;
+		}
+	}
+
 	// 1. Send notification to the internal team
 	include "contact_us_mail.php";
 	send_smtp_mail("info@paisape.in", "Paisape Contact Us Mail", $message);

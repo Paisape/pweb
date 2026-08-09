@@ -18,6 +18,7 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="/js/tailwind.config.js"></script>
 <link rel="stylesheet" href="/css/style.css">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <style>
     body {
       -webkit-user-select: none;
@@ -247,6 +248,9 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
         <input type="hidden" name="language" id="language" value="">
         <input type="hidden" name="updte" id="updte" value="1">
         <input type="hidden" name="page" id="page" value="contact-us">
+
+        <!-- Cloudflare Turnstile Verification -->
+        <div class="cf-turnstile my-4" data-sitekey="0x4AAAAAAEK5xfziz4tzXcoo" data-action="turnstile-spin-v2"></div>
 
         <div>
           <button type="submit" id="submitBtn" class="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-7 py-4 text-[15px] font-semibold text-white shadow-xl shadow-brand/30 transition hover:-translate-y-1 hover:bg-brandDk disabled:opacity-50 sm:w-auto">
