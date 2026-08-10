@@ -193,6 +193,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['updte']) && $_POST['u
 			header("Location: /contact?error=" . urlencode($error_msg));
 			exit;
 		}
+	// Save lead to database
+	if (function_exists('getDB')) {
+		try {
+			$pdo = getDB();
+			$stmt = $pdo->prepare("INSERT INTO leads (name, email, phone, company, message, location, ip_address) VALUES (?, ?, ?, ?, ?, ?, ?)");
+			$stmt->execute([$name, $email, $phone, $company, $message, $location, $client_ip]);
+		} catch (Exception $e) {
+			error_log("Lead Save Exception: " . $e->getMessage());
+		}
 	}
 
 	// 4. Fast Response to Client before background email dispatch

@@ -502,11 +502,51 @@
         <p class="mx-auto mt-4 max-w-md text-[14.5px] leading-relaxed text-slate-400">
           Short, technical, no product pitch. Read by engineering and finance teams at 900+ Indian businesses.
         </p>
-        <form class="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row" onsubmit="return false">
+        <form id="subscribeForm" class="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row" onsubmit="handleSubscribe(event)">
           <label for="nl" class="sr-only">Email address</label>
-          <input id="nl" type="email" placeholder="you@company.com" class="w-full rounded-full border border-white/15 bg-white/5 px-5 py-3.5 text-[14px] text-white placeholder:text-slate-500 focus:border-brand focus:outline-none">
-          <button class="shrink-0 rounded-full bg-mint px-7 py-3.5 text-[14px] font-bold text-night transition hover:-translate-y-1 hover:bg-mint/90">Subscribe</button>
+          <input id="nl" name="email" type="email" required placeholder="you@company.com" class="w-full rounded-full border border-white/15 bg-white/5 px-5 py-3.5 text-[14px] text-white placeholder:text-slate-500 focus:border-brand focus:outline-none">
+          <button type="submit" id="subBtn" class="shrink-0 rounded-full bg-mint px-7 py-3.5 text-[14px] font-bold text-night transition hover:-translate-y-1 hover:bg-mint/90">Subscribe</button>
         </form>
+        <p id="subMsg" class="mt-3 text-sm hidden font-medium"></p>
+        <script>
+        function handleSubscribe(e) {
+          e.preventDefault();
+          const input = document.getElementById('nl');
+          const btn = document.getElementById('subBtn');
+          const msg = document.getElementById('subMsg');
+          if(!input.value) return;
+
+          btn.disabled = true;
+          btn.innerText = 'Subscribing...';
+          
+          fetch('/core/subscribe.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: 'email=' + encodeURIComponent(input.value) + '&source=blog'
+          })
+          .then(res => res.json())
+          .then(data => {
+            msg.classList.remove('hidden');
+            if(data.status === 'success') {
+              msg.className = 'mt-3 text-sm text-emerald-400 font-semibold';
+              msg.innerText = data.message;
+              input.value = '';
+            } else {
+              msg.className = 'mt-3 text-sm text-rose-400 font-semibold';
+              msg.innerText = data.message;
+            }
+          })
+          .catch(() => {
+            msg.classList.remove('hidden');
+            msg.className = 'mt-3 text-sm text-rose-400 font-semibold';
+            msg.innerText = 'Something went wrong. Please try again.';
+          })
+          .finally(() => {
+            btn.disabled = false;
+            btn.innerText = 'Subscribe';
+          });
+        }
+        </script>
       </div>
     </div>
   </div>
