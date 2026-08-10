@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Paisape — Payment Orchestration Platform for India</title>
 <meta name="description" content="A unified financial API layer for payments, payouts and reconciliation, with smart dynamic routing built in." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Paisape — Payment Orchestration Platform for India" />
+<meta property="og:description" content="A unified financial API layer for payments, payouts and reconciliation, with smart dynamic routing built in." />
+<meta property="og:image" content="https://paisape.in/assets/paisape-og-banner.png" />
+<meta property="og:url" content="https://paisape.in/" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -543,7 +549,7 @@
       <div data-reveal data-delay="80">
         <h2 class="font-display text-[13.5px] font-bold text-white">Company</h2>
         <ul class="mt-5 space-y-3 text-[13px]">
-          <li><a href="#" class="transition hover:text-brand">About Us</a></li>
+          <li><a href="/contact" class="transition hover:text-brand">About Us</a></li>
           <li><a href="/blog" class="transition hover:text-brand">Blog</a></li>
           <li><a href="/contact" class="transition hover:text-brand">Contact Us</a></li>
           <li><a href="/contact" class="transition hover:text-brand">Partnership</a></li>

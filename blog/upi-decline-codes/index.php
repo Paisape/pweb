@@ -250,7 +250,7 @@
       <div data-reveal data-delay="80">
         <h2 class="font-display text-[13.5px] font-bold text-white">Company</h2>
         <ul class="mt-5 space-y-3 text-[13px]">
-          <li><a href="#" class="transition hover:text-brand">About Us</a></li>
+          <li><a href="/contact" class="transition hover:text-brand">About Us</a></li>
           <li><a href="/blog" class="transition hover:text-brand">Blog</a></li>
           <li><a href="/contact" class="transition hover:text-brand">Contact Us</a></li>
           <li><a href="/contact" class="transition hover:text-brand">Partnership</a></li>
