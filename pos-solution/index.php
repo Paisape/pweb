@@ -1,9 +1,9 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>POS Solution â€” Paisape</title>
+<title>POS Solution — Paisape</title>
 <meta name="description" content="Transform your retail business with our advanced Point of Sale (POS) solution. Accept payments anywhere, anytime with secure and lightning-fast transaction" />
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
 
@@ -47,7 +47,7 @@
   <div class="mx-auto max-w-site px-5">
     <div id="navInner" class="mt-4 flex items-center justify-between rounded-2xl border border-transparent px-5 py-3 transition-all duration-500">
 
-      <!-- LOGO â€” replace assets/logo.svg with your own file -->
+      <!-- LOGO — replace assets/logo.svg with your own file -->
       <a href="/" class="flex items-center" aria-label="Paisape home">
         <img src="/assets/logo.svg" alt="Paisape" class="h-9 w-auto" width="200" height="52">
       </a>
@@ -87,6 +87,8 @@
             <a class="mega-link" href="/onboarding-solution"><span>Digital Merchant Onboarding</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             <a class="mega-link" href="/reconciliation-solution"><span>Automated Reconciliation</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             <a class="mega-link" href="/switching-solution"><span>Intelligent Payment Switch</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="mega-link" href="/sms-solution"><span>SMS Solution</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="mega-link" href="/waba-solution"><span>WABA Solution</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
           
           </div>
@@ -137,6 +139,8 @@
           <a href="/onboarding-solution" class="block rounded-lg px-3 py-2 text-[13.5px] text-body hover:bg-mist hover:text-brand transition">Digital Merchant Onboarding</a>
           <a href="/reconciliation-solution" class="block rounded-lg px-3 py-2 text-[13.5px] text-body hover:bg-mist hover:text-brand transition">Automated Reconciliation</a>
           <a href="/switching-solution" class="block rounded-lg px-3 py-2 text-[13.5px] text-body hover:bg-mist hover:text-brand transition">Intelligent Payment Switch</a>
+          <a href="/sms-solution" class="block rounded-lg px-3 py-2 text-[13.5px] text-body hover:bg-mist hover:text-brand transition">SMS Solution</a>
+          <a href="/waba-solution" class="block rounded-lg px-3 py-2 text-[13.5px] text-body hover:bg-mist hover:text-brand transition">WABA Solution</a>
         </div>
         
       </div>
@@ -273,7 +277,7 @@
     <div class="grid gap-12 md:grid-cols-[1.4fr_repeat(3,1fr)]">
 
       <div data-reveal>
-        <!-- LOGO â€” replace assets/logo-white.svg with your own file -->
+        <!-- LOGO — replace assets/logo-white.svg with your own file -->
         <img src="/assets/logo-white.svg" alt="Paisape" class="h-9 w-auto" width="200" height="52">
         <p class="mt-5 max-w-xs text-[13px] leading-relaxed text-slate-400">
           Payments. Everytime. Everywhere. Paisape Techfin Private Limited provides comprehensive payment

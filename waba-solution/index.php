@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Contact Us — Paisape</title>
-<meta name="description" content="Talk to Paisape about routing architecture, pricing and sandbox access. Replies within one business day." />
+<title>WABA Solution â€” WhatsApp Business API Infrastructure | Paisape</title>
+<meta name="description" content="Official WhatsApp Business API infrastructure. Automated interactive messages, broadcast notifications, chatbot workflows, and green-tick verified customer messaging." />
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,7 +47,7 @@
   <div class="mx-auto max-w-site px-5">
     <div id="navInner" class="mt-4 flex items-center justify-between rounded-2xl border border-transparent px-5 py-3 transition-all duration-500">
 
-      <!-- LOGO — replace assets/logo.svg with your own file -->
+      <!-- LOGO -->
       <a href="/" class="flex items-center" aria-label="Paisape home">
         <img src="/assets/logo.svg" alt="Paisape" class="h-9 w-auto" width="200" height="52">
       </a>
@@ -56,24 +56,24 @@
         <a href="/" class="nav-link hover:text-brand transition-colors">Home</a>
 
         <div class="relative mega-parent">
-          <button id="megaTrigger" class="nav-link hover:text-brand transition-colors flex items-center gap-1" aria-haspopup="true" aria-expanded="false">
+          <button id="megaTrigger" class="nav-link active text-brand hover:text-brand transition-colors flex items-center gap-1" aria-haspopup="true" aria-expanded="false">
             Products
             <svg class="h-3.5 w-3.5 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
           </button>
       <div class="mega-wrap w-[720px] lg:w-[780px]">
         <div class="grid grid-cols-[250px_1fr] overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-[0_40px_80px_-30px_rgba(22,35,59,.35)]">
           <div class="space-y-1 bg-mintLt p-3" role="tablist" aria-label="Product categories">
-          <button class="mega-cat" data-cat="issuing" role="tab" aria-selected="true"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg><span>Issuing Solution</span></button>
+          <button class="mega-cat" data-cat="issuing" role="tab" aria-selected="false"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg><span>Issuing Solution</span></button>
           <button class="mega-cat" data-cat="acquiring" role="tab" aria-selected="false"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><span>Merchant Acquiring Solution</span></button>
           <button class="mega-cat" data-cat="banking" role="tab" aria-selected="false"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M4 10h16M5 10V21M19 10V21M9 10V21M15 10V21M12 3l9 5H3z"/></svg><span>Transaction Banking Solution</span></button>
-          <button class="mega-cat" data-cat="value" role="tab" aria-selected="false"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Value Added Solution</span></button>
+          <button class="mega-cat" data-cat="value" role="tab" aria-selected="true"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Value Added Solution</span></button>
           <button class="mega-cat" data-cat="payments" role="tab" aria-selected="false"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 2 9 5v10l-9 5-9-5V7z"/><path d="m3 7 9 5 9-5M12 12v10"/></svg><span>Payments</span></button>
           </div>
           <div class="p-5">
-          <div class="mega-panel show grid-cols-1 gap-3 sm:grid-cols-2" data-panel="issuing">
+          <div class="mega-panel grid-cols-1 gap-3 sm:grid-cols-2" data-panel="issuing">
             <a class="mega-link" href="/neobanking"><span>Neobanking solution</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
-                              <div class="mega-panel grid-cols-1 gap-3 sm:grid-cols-2" data-panel="acquiring">
+          <div class="mega-panel grid-cols-1 gap-3 sm:grid-cols-2" data-panel="acquiring">
             <a class="mega-link" href="/qr-code-solution"><span>Dynamic QR Code solution</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             <a class="mega-link" href="/soundbox"><span>Instant Audio Soundbox</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             <a class="mega-link" href="/pos-solution"><span>POS Solution</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -83,7 +83,7 @@
             <a class="mega-link" href="/upi"><span>Enterprise UPI Stack</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             <a class="mega-link" href="/aeps"><span>Aadhaar Enabled Payment System</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
-          <div class="mega-panel grid-cols-1 gap-3 sm:grid-cols-2" data-panel="value">
+          <div class="mega-panel show grid-cols-1 gap-3 sm:grid-cols-2" data-panel="value">
             <a class="mega-link" href="/onboarding-solution"><span>Digital Merchant Onboarding</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             <a class="mega-link" href="/reconciliation-solution"><span>Automated Reconciliation</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             <a class="mega-link" href="/switching-solution"><span>Intelligent Payment Switch</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -97,7 +97,7 @@
         </div>
 
         <a href="/blog" class="nav-link hover:text-brand transition-colors">Blog</a>
-        <a href="/contact" class="nav-link active text-brand">Contact Us</a>
+        <a href="/contact" class="nav-link hover:text-brand transition-colors">Contact Us</a>
       </nav>
 
       <div class="flex items-center gap-3">
@@ -122,7 +122,7 @@
           <p class="px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.12em] text-ink2">Issuing Solution</p>
           <a href="/neobanking" class="block rounded-lg px-3 py-2 text-[13.5px] text-body hover:bg-mist hover:text-brand transition">Neobanking solution</a>
         </div>
-                        <div class="rounded-xl bg-mintLt/60 p-2">
+        <div class="rounded-xl bg-mintLt/60 p-2">
           <p class="px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.12em] text-ink2">Merchant Acquiring Solution</p>
           <a href="/qr-code-solution" class="block rounded-lg px-3 py-2 text-[13.5px] text-body hover:bg-mist hover:text-brand transition">Dynamic QR Code solution</a>
           <a href="/soundbox" class="block rounded-lg px-3 py-2 text-[13.5px] text-body hover:bg-mist hover:text-brand transition">Instant Audio Soundbox</a>
@@ -153,53 +153,124 @@
 </header>
 
 <main id="main">
-  <section class="relative overflow-hidden bg-gradient-to-b from-[#EAF4FD] via-[#F4FAFE] to-white pt-36 pb-14 md:pt-44 md:pb-20">
-    <div class="relative mx-auto max-w-3xl px-5 text-center">
-      <h1 class="font-display text-[36px] font-extrabold leading-[1.12] tracking-tight text-ink sm:text-[46px]">
-        Privacy Policy
-      </h1>
-      <p class="mt-4 text-slate-500">Last updated: August 2026</p>
+
+<section class="relative overflow-hidden bg-gradient-to-b from-[#EAF4FD] via-[#F4FAFE] to-white pt-36 pb-14 md:pt-44 md:pb-20">
+  <div class="pointer-events-none absolute right-0 top-24 hidden h-[300px] w-[46%] rounded-3xl bg-gradient-to-br from-brand/15 via-brand/5 to-transparent blur-2xl lg:block"></div>
+  <div class="pointer-events-none absolute -left-32 top-40 h-[380px] w-[380px] rounded-full bg-brand/[0.06] blur-3xl"></div>
+
+  <div class="relative mx-auto max-w-site px-5">
+    <p data-reveal class="mb-4 text-[11px] font-bold uppercase tracking-[0.18em] text-brand">Value Added Solution &bull; WhatsApp API</p>
+
+    <h1 class="max-w-3xl font-display text-[36px] font-extrabold leading-[1.14] tracking-tight text-ink sm:text-[44px]">
+      <span data-reveal data-delay="80">Enterprise</span> <span data-reveal data-delay="180" class="text-brand">WABA Solution</span>
+    </h1>
+
+    <p data-reveal data-delay="300" class="mt-5 max-w-2xl text-[15.5px] leading-relaxed text-body">Official WhatsApp Business API infrastructure. Automated interactive messages, broadcast notifications, chatbot workflows, and green-tick verified customer messaging powered by Textzi.</p>
+
+    <!-- ONLY Explore Now button linking to https://textzi.in/ (No Talk to Sales, No Read Documentation) -->
+    <div data-reveal data-delay="420" class="mt-8 flex flex-wrap items-center gap-3">
+      <a href="https://textzi.in/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[15px] font-semibold text-white shadow-xl shadow-brand/30 transition hover:-translate-y-1 hover:bg-brandDk">
+        <span>Explore Now</span>
+        <svg class="arrow h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     </div>
-  </section>
-  <section class="bg-white pb-14">
-    <div class="mx-auto max-w-3xl px-5 text-[15px] leading-relaxed text-body space-y-6">
-      <p>At <strong>Paisape Techfin Private Limited ("Paisape")</strong>, we are committed to protecting your personal data and respecting your privacy. This Privacy Policy explains how we collect, use, and share information when you use our payment gateway, neo-banking, and merchant acquiring services.</p>
-      
-      <h2 class="text-xl font-bold text-ink">1. Information We Collect</h2>
-      <p>To provide you with secure payment services, we collect the following types of information:</p>
-      <ul class="list-disc pl-5 space-y-2">
-        <li><strong>Identity & KYC Data:</strong> Name, address, PAN, Aadhaar, business registration details, and director information required for regulatory compliance.</li>
-        <li><strong>Financial Information:</strong> Bank account details, transaction history, and payment instrument details (stored securely and encrypted as per PCI-DSS guidelines).</li>
-        <li><strong>Technical Data:</strong> IP address, device ID, browser type, and operating system used to detect and prevent fraud.</li>
-      </ul>
 
-      <h2 class="text-xl font-bold text-ink">2. How We Use Your Information</h2>
-      <p>We use your data strictly for legitimate business and regulatory purposes, including:</p>
-      <ul class="list-disc pl-5 space-y-2">
-        <li>Processing payments and settling funds to your account.</li>
-        <li>Performing Risk, Fraud, and Anti-Money Laundering (AML) checks.</li>
-        <li>Complying with directives from the Reserve Bank of India (RBI) and other statutory authorities.</li>
-        <li>Improving our payment routing and switching algorithms.</li>
-      </ul>
-
-      <h2 class="text-xl font-bold text-ink">3. Data Sharing and Disclosure</h2>
-      <p>We do not sell your personal data. We may share your information with:</p>
-      <ul class="list-disc pl-5 space-y-2">
-        <li>Acquiring banks, card networks (Visa, Mastercard, RuPay), and NPCI to process transactions.</li>
-        <li>Law enforcement agencies and regulatory bodies when mandated by law.</li>
-        <li>Authorized third-party service providers bound by strict data processing agreements.</li>
-      </ul>
-
-      <h2 class="text-xl font-bold text-ink">4. Data Security</h2>
-      <p>Paisape employs bank-grade security measures. We are PCI-DSS compliant and utilize industry-standard encryption (AES-256 and TLS 1.2+) to safeguard your data in transit and at rest.</p>
-
-      <h2 class="text-xl font-bold text-ink">5. Your Rights</h2>
-      <p>Subject to applicable Indian laws and RBI data retention mandates, you have the right to access, correct, or request the deletion of your personal data. Please note that financial transaction records must be retained for a minimum of 10 years as per AML laws.</p>
-
-      <h2 class="text-xl font-bold text-ink">6. Contact Us</h2>
-      <p>For any privacy-related concerns or to contact our Grievance Officer, please email us at <a href="mailto:support@paisape.in" class="text-brand hover:underline">support@paisape.in</a>.</p>
+    <div class="mt-8 flex flex-wrap gap-2.5">
+        <span data-reveal data-delay="560" class="flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-[11.5px] font-medium text-ink2 transition hover:-translate-y-0.5 hover:border-brand"><span class="h-1.5 w-1.5 rounded-full bg-brand"></span>Official Meta Partner APIs</span>
+        <span data-reveal data-delay="620" class="flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-[11.5px] font-medium text-ink2 transition hover:-translate-y-0.5 hover:border-brand"><span class="h-1.5 w-1.5 rounded-full bg-brand"></span>Interactive CTA &amp; List Messages</span>
+        <span data-reveal data-delay="680" class="flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-[11.5px] font-medium text-ink2 transition hover:-translate-y-0.5 hover:border-brand"><span class="h-1.5 w-1.5 rounded-full bg-brand"></span>Green Tick Verification</span>
+        <span data-reveal data-delay="740" class="flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-[11.5px] font-medium text-ink2 transition hover:-translate-y-0.5 hover:border-brand"><span class="h-1.5 w-1.5 rounded-full bg-brand"></span>Automated Chatbot Workflows</span>
+        <span data-reveal data-delay="800" class="flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-[11.5px] font-medium text-ink2 transition hover:-translate-y-0.5 hover:border-brand"><span class="h-1.5 w-1.5 rounded-full bg-brand"></span>High Conversion Broadcasts</span>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Features Grid -->
+<section id="features" class="bg-white py-16 md:py-24">
+  <div class="mx-auto max-w-site px-5">
+    <div class="mx-auto max-w-2xl text-center">
+      <p data-reveal class="text-[11px] font-bold uppercase tracking-[0.2em] text-brand">Core Capabilities</p>
+      <h2 data-reveal data-delay="100" class="mt-3 font-display text-[28px] font-extrabold tracking-tight text-ink sm:text-[36px]">Scale Customer Engagement on WhatsApp</h2>
+      <p data-reveal data-delay="200" class="mt-4 text-[15px] leading-relaxed text-body">Leverage official Meta WhatsApp Business APIs with 98%+ open rates and rich interactive messaging capabilities.</p>
+    </div>
+
+    <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div data-reveal data-delay="0" class="card-lift rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brandLt text-brand">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </div>
+        <h3 class="mt-6 font-display text-[18px] font-bold text-ink">Official WhatsApp Cloud API</h3>
+        <p class="mt-3 text-[14px] leading-relaxed text-body">Direct Meta Cloud API infrastructure ensuring ultra-low latency message delivery, high rate limits, and enterprise SLAs.</p>
+      </div>
+
+      <div data-reveal data-delay="80" class="card-lift rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brandLt text-brand">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><path d="M9 12h6M12 9v6"/></svg>
+        </div>
+        <h3 class="mt-6 font-display text-[18px] font-bold text-ink">Interactive Buttons &amp; Lists</h3>
+        <p class="mt-3 text-[14px] leading-relaxed text-body">Send rich quick-reply buttons, call-to-action links, catalog carousels, and multi-option selection lists for higher conversions.</p>
+      </div>
+
+      <div data-reveal data-delay="160" class="card-lift rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brandLt text-brand">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3 class="mt-6 font-display text-[18px] font-bold text-ink">Green Tick Verification</h3>
+        <p class="mt-3 text-[14px] leading-relaxed text-body">Assistance with official Meta business verification and Green Tick badge approval to build ultimate brand trust.</p>
+      </div>
+
+      <div data-reveal data-delay="240" class="card-lift rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brandLt text-brand">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="mt-6 font-display text-[18px] font-bold text-ink">Broadcast Campaigns</h3>
+        <p class="mt-3 text-[14px] leading-relaxed text-body">Send opt-in marketing notifications, order tracking alerts, and promotional announcements with high response rates.</p>
+      </div>
+
+      <div data-reveal data-delay="320" class="card-lift rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brandLt text-brand">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM4 12a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2 2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm12 0a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2zM12 18a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2z"/></svg>
+        </div>
+        <h3 class="mt-6 font-display text-[18px] font-bold text-ink">Automated Chatbot Workflows</h3>
+        <p class="mt-3 text-[14px] leading-relaxed text-body">Build no-code chatbot decision trees, auto-replies, and customer support routing for 24/7 instant resolution.</p>
+      </div>
+
+      <div data-reveal data-delay="400" class="card-lift rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brandLt text-brand">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        </div>
+        <h3 class="mt-6 font-display text-[18px] font-bold text-ink">Multi-Agent Support Inbox</h3>
+        <p class="mt-3 text-[14px] leading-relaxed text-body">Equip your customer support team with a shared multi-agent inbox, chat transfers, automated tagging, and SLA monitoring.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Banner -->
+<section class="bg-white pb-20 md:pb-24">
+  <div class="mx-auto max-w-site px-5">
+    <div data-reveal="zoom" class="relative overflow-hidden rounded-3xl bg-night px-8 py-14 text-center sm:px-14">
+      <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand/20 blur-3xl"></div>
+      <div class="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-mint/10 blur-3xl"></div>
+      <div class="relative">
+        <p class="text-[11px] font-bold uppercase tracking-[0.24em] text-mint">Get Started Today</p>
+        <h2 class="mx-auto mt-4 max-w-lg font-display text-[26px] font-extrabold leading-tight tracking-tight text-white sm:text-[34px]">
+          Ready to launch your WhatsApp Business API?
+        </h2>
+        <p class="mx-auto mt-4 max-w-md text-[14.5px] leading-relaxed text-slate-400">
+          Transform customer engagement with automated WhatsApp messaging powered by Textzi.
+        </p>
+        <div class="mt-8 flex justify-center">
+          <a href="https://textzi.in/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 rounded-full bg-mint px-8 py-4 text-[15px] font-bold text-night transition hover:-translate-y-1 hover:bg-mint/90">
+            <span>Explore Now</span>
+            <svg class="arrow h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer class="bg-night text-slate-300">
@@ -207,21 +278,11 @@
     <div class="grid gap-12 md:grid-cols-[1.4fr_repeat(3,1fr)]">
 
       <div data-reveal>
-        <!-- LOGO — replace assets/logo-white.svg with your own file -->
         <img src="/assets/logo-white.svg" alt="Paisape" class="h-9 w-auto" width="200" height="52">
         <p class="mt-5 max-w-xs text-[13px] leading-relaxed text-slate-400">
           Payments. Everytime. Everywhere. Paisape Techfin Private Limited provides comprehensive payment
           solutions including issuing, acquiring, and transaction banking.
         </p>
-
-        <!-- <p class="mt-7 text-[13px] font-semibold text-white">Subscribe to newsletter</p>
-        <form class="mt-3 flex max-w-sm gap-2" onsubmit="return false">
-          <label for="footerEmail" class="sr-only">Email address</label>
-          <input id="footerEmail" type="email" placeholder="Your email"
-            class="w-full rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-[13px] text-white placeholder:text-slate-500 focus:border-brand focus:outline-none">
-          <button class="shrink-0 rounded-lg bg-mint px-5 py-2.5 text-[13px] font-bold text-night transition hover:-translate-y-0.5 hover:bg-mint/90">Subscribe</button>
-        </form>
-        -->
       </div>
 
       <div data-reveal data-delay="80">
@@ -230,7 +291,6 @@
           <li><a href="#" class="transition hover:text-brand">About Us</a></li>
           <li><a href="/blog" class="transition hover:text-brand">Blog</a></li>
           <li><a href="/contact" class="transition hover:text-brand">Contact Us</a></li>
-          <li><a href="/contact" class="transition hover:text-brand">Partnership</a></li>
         </ul>
       </div>
 
@@ -249,7 +309,8 @@
           <li><a href="/neobanking" class="transition hover:text-brand">Issuing Solution</a></li>
           <li><a href="/qr-code-solution" class="transition hover:text-brand">Merchant Acquiring</a></li>
           <li><a href="/upi" class="transition hover:text-brand">Transaction Banking</a></li>
-          <li><a href="/reconciliation-solution" class="transition hover:text-brand">Value Added Services</a></li>
+          <li><a href="/sms-solution" class="transition hover:text-brand">SMS Solution</a></li>
+          <li><a href="/waba-solution" class="transition hover:text-brand">WABA Solution</a></li>
         </ul>
       </div>
 
@@ -259,11 +320,6 @@
   <div class="border-t border-white/10 bg-night2">
     <div class="mx-auto flex max-w-site flex-col items-center justify-between gap-4 px-5 py-5 text-[12.5px] text-slate-400 sm:flex-row">
       <p>&copy; 2026, Paisape Techfin Private Limited. All rights reserved.</p>
-      <div class="flex items-center gap-5">
-        <a href="#" aria-label="Facebook" class="transition hover:text-brand"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5h1.65V4.6A22 22 0 0 0 14.3 4.5c-2.4 0-4 1.45-4 4.1v2.3H7.6V14h2.7v8z"/></svg></a>
-        <a href="#" aria-label="Twitter" class="transition hover:text-brand"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.9c-.7.3-1.5.5-2.4.6.9-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5 0 2 1.4 3.7 3.3 4.1-.6.2-1.2.2-1.8.1a4.1 4.1 0 0 0 3.8 2.9A8.2 8.2 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1z"/></svg></a>
-        <a href="#" aria-label="LinkedIn" class="transition hover:text-brand"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M6.9 21H3.4V9h3.5zM5.15 7.4A2.05 2.05 0 1 1 5.15 3.3a2.05 2.05 0 0 1 0 4.1M21 21h-3.5v-5.9c0-1.4 0-3.2-2-3.2s-2.25 1.5-2.25 3.1V21H9.75V9h3.35v1.6h.05c.5-.9 1.65-1.85 3.4-1.85 3.6 0 4.45 2.4 4.45 5.5z"/></svg></a>
-      </div>
     </div>
   </div>
 </footer>
@@ -276,10 +332,3 @@
 <script src="/js/main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
