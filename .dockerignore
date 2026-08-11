@@ -1,0 +1,6 @@
+admin/
+.git/
+.gitignore
+.agents/
+GEMINI.md
+*.log
