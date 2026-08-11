@@ -209,6 +209,21 @@
     }
   }
 
+  /* Simple dropdown parent click & tap support */
+  var dropdownParents = document.querySelectorAll('.dropdown-parent');
+  dropdownParents.forEach(function (parent) {
+    var btn = parent.querySelector('button');
+    if (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        parent.classList.toggle('open');
+      });
+      document.addEventListener('click', function (e) {
+        if (!parent.contains(e.target)) parent.classList.remove('open');
+      });
+    }
+  });
+
   /* ---------------------------------------------------------------------
      9. FAQ accordion — one open at a time
      --------------------------------------------------------------------- */

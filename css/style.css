@@ -111,6 +111,21 @@ button:hover > .arrow { transform: translateX(6px); }
   transform: translateX(-50%) translateY(0);
 }
 
+/* Simple Dropdown Menu (Free Tools) */
+.dropdown-wrap {
+  position: absolute; left: 0; top: 100%; z-index: 40;
+  padding-top: 12px;
+  opacity: 0; pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+.dropdown-parent:hover .dropdown-wrap,
+.dropdown-wrap:focus-within,
+.dropdown-parent.open .dropdown-wrap {
+  opacity: 1; pointer-events: auto;
+  transform: translateY(0);
+}
+
 .mega-cat {
   display: flex; align-items: center; gap: 10px;
   width: 100%; padding: 11px 16px; border-radius: 12px;

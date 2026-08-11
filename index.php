@@ -107,11 +107,13 @@
             Free Tools
             <svg class="h-3.5 w-3.5 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
           </button>
-          <div class="dropdown-menu absolute left-0 top-full mt-2 w-60 rounded-2xl border border-slate-100 bg-white p-2.5 shadow-xl opacity-0 invisible transition-all duration-200">
-            <a href="/upi-qr-generator" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-medium text-ink hover:bg-mist hover:text-brand transition">
-              <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-              UPI QR Code Generator
-            </a>
+          <div class="dropdown-wrap w-64">
+            <div class="rounded-2xl border border-slate-100 bg-white p-2.5 shadow-xl">
+              <a href="/upi-qr-generator" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-medium text-ink hover:bg-mist hover:text-brand transition">
+                <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                UPI QR Code Generator
+              </a>
+            </div>
           </div>
         </div>
         <a href="/blog" class="nav-link hover:text-brand transition-colors">Blog</a>
