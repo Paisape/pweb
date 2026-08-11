@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Free UPI QR Code Generator — Create Custom Paisape UPI QR Codes</title>
-<meta name="description" content="Generate free, instant, and customized UPI QR codes for your business. Accept payments directly via GPay, PhonePe, Paytm, BHIM, and any UPI app." />
+<title>Free UPI QR Code Generator — Create Custom Paisape UPI QR Standees</title>
+<meta name="description" content="Generate free, instant, customized UPI QR code standees for your store. Accept payments directly via GPay, PhonePe, Paytm, BHIM, and any UPI app." />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Free UPI QR Code Generator — Paisape" />
-<meta property="og:description" content="Generate instant customized UPI QR codes with your business name and Paisape branding." />
+<meta property="og:description" content="Generate instant customized UPI QR code standees with your merchant name and Paisape branding." />
 <meta property="og:image" content="https://paisape.in/assets/paisape-og-banner.png" />
 <meta property="og:url" content="https://paisape.in/upi-qr-generator" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -22,8 +22,9 @@
 <script src="/js/tailwind.config.js"></script>
 <link rel="stylesheet" href="/css/style.css">
 
-<!-- QRCode.js Library -->
+<!-- QRCode.js & html2canvas Libraries -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 <style>
   body {
@@ -32,12 +33,10 @@
     -ms-user-select: none;
     user-select: none;
   }
-  .dropdown-menu {
-    transform-origin: top left;
-  }
-  .dropdown-parent:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
+  @media print {
+    body * { visibility: hidden; }
+    #qrPrintArea, #qrPrintArea * { visibility: visible; }
+    #qrPrintArea { position: absolute; left: 0; top: 0; width: 100%; display: flex; justify-content: center; }
   }
 </style>
 </head>
@@ -103,11 +102,13 @@
             Free Tools
             <svg class="h-3.5 w-3.5 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
           </button>
-          <div class="dropdown-menu absolute left-0 top-full mt-2 w-60 rounded-2xl border border-slate-100 bg-white p-2.5 shadow-xl opacity-0 invisible transition-all duration-200">
-            <a href="/upi-qr-generator" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-semibold text-brand bg-brandLt/60">
-              <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-              UPI QR Code Generator
-            </a>
+          <div class="dropdown-wrap w-64">
+            <div class="rounded-2xl border border-slate-100 bg-white p-2.5 shadow-xl">
+              <a href="/upi-qr-generator" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-semibold text-brand bg-brandLt/60">
+                <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                UPI QR Code Generator
+              </a>
+            </div>
           </div>
         </div>
 
@@ -145,7 +146,7 @@
     <div class="mb-10 text-center max-w-2xl mx-auto">
       <span class="inline-block px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-brandLt text-brand mb-3">Free Merchant Tool</span>
       <h1 class="font-display text-3xl sm:text-4xl font-extrabold text-ink tracking-tight">Free UPI QR Code Generator</h1>
-      <p class="mt-3 text-body text-[15px] leading-relaxed">Generate zero-fee custom UPI QR codes for your business. Works seamlessly with Google Pay, PhonePe, Paytm, BHIM, and any UPI app.</p>
+      <p class="mt-3 text-body text-[15px] leading-relaxed">Generate zero-fee custom UPI QR code standees for your business. Works seamlessly with Google Pay, PhonePe, Paytm, BHIM, and all UPI apps.</p>
     </div>
 
     <!-- Generator Interface Grid -->
@@ -157,7 +158,7 @@
         <!-- Tabs -->
         <div class="flex border-b border-slate-200 mb-6 gap-6">
           <button id="tabDetails" onclick="switchTab('details')" class="pb-3 text-sm font-bold border-b-2 border-brand text-brand transition">Payment Details</button>
-          <button id="tabCustom" onclick="switchTab('custom')" class="pb-3 text-sm font-semibold border-b-2 border-transparent text-slate-500 hover:text-slate-800 transition">Customize QR Code</button>
+          <button id="tabCustom" onclick="switchTab('custom')" class="pb-3 text-sm font-semibold border-b-2 border-transparent text-slate-500 hover:text-slate-800 transition">Customize Design</button>
         </div>
 
         <!-- Details Tab Content -->
@@ -169,7 +170,7 @@
 
           <div>
             <label for="upiId" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">UPI ID (VPA) <span class="text-rose-500">*</span></label>
-            <input type="text" id="upiId" value="merchant@paisape" placeholder="e.g. amit.gilra48@kotak" oninput="updateQR()" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-sm font-medium focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition">
+            <input type="text" id="upiId" value="merchant@paisape" placeholder="e.g. 9529160004@ybl" oninput="updateQR()" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-sm font-medium focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition">
             <p class="mt-1 text-[11.5px] text-slate-400">Accepts any VPA from Kotak, Paytm, PhonePe, ICICI, HDFC, SBI, Google Pay.</p>
           </div>
 
@@ -190,8 +191,8 @@
           <div>
             <label for="headerColor" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Header Banner Color</label>
             <div class="flex items-center gap-3">
-              <input type="color" id="headerColor" value="#0066FF" onchange="updateColors()" class="h-10 w-16 cursor-pointer rounded-lg border border-slate-300 p-1">
-              <span class="text-xs font-mono text-slate-500" id="headerHex">#0066FF</span>
+              <input type="color" id="headerColor" value="#0080FF" onchange="updateColors()" class="h-10 w-16 cursor-pointer rounded-lg border border-slate-300 p-1">
+              <span class="text-xs font-mono text-slate-500" id="headerHex">#0080FF</span>
             </div>
           </div>
 
@@ -216,23 +217,23 @@
             <li>Verify your UPI ID before printing or sharing the QR code</li>
             <li>Add a pre-filled amount for faster static billing counter payments</li>
             <li>Test your QR code with any UPI app (GPay, PhonePe, Paytm, BHIM)</li>
-            <li>Use high resolution download for physical shop counter standees</li>
+            <li>Click <strong>Download Standee</strong> to export the complete custom QR card</li>
           </ul>
         </div>
       </div>
 
-      <!-- RIGHT: Live QR Preview Card (Matching Reference Design) -->
+      <!-- RIGHT: Live QR Preview Card (Exact Reference Design) -->
       <div class="lg:col-span-5 flex flex-col items-center">
         
-        <!-- Standee / Preview Card Frame -->
-        <div id="qrCardFrame" class="w-full max-w-sm bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden text-center transition">
+        <!-- Standee / Preview Card Frame (Exported on Download/Print/Share) -->
+        <div id="qrCardFrame" class="w-full max-w-sm bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden text-center transition bg-white p-0">
           
           <!-- Dynamic Header Banner -->
-          <div id="cardHeader" class="bg-brand text-white py-4 px-6 font-extrabold text-lg uppercase tracking-wider truncate shadow-inner">
+          <div id="cardHeader" class="bg-[#0080FF] text-white py-4 px-6 font-extrabold text-lg uppercase tracking-wider truncate shadow-inner">
             <span id="previewName">PAISAPE STORE</span>
           </div>
 
-          <div class="p-6 flex flex-col items-center">
+          <div class="p-6 flex flex-col items-center bg-white">
             
             <!-- Canvas Container -->
             <div id="qrcodeRaw" class="hidden"></div>
@@ -246,22 +247,22 @@
             </div>
 
             <!-- Callout -->
-            <p class="mt-4 text-[13px] font-bold text-brand">Scan and pay with any UPI app</p>
+            <p class="mt-4 text-[13.5px] font-bold text-[#0080FF]">Scan and pay with any UPI app</p>
 
-            <!-- UPI App Badges Row -->
-            <div class="mt-3 flex flex-wrap items-center justify-center gap-3 border-t border-b border-slate-100 py-3 px-2 w-full">
-              <span class="text-[10px] font-black text-slate-500 tracking-tighter border px-1.5 py-0.5 rounded bg-slate-50">BHIM</span>
-              <span class="text-[10px] font-black text-blue-600 tracking-tighter border px-1.5 py-0.5 rounded bg-slate-50">UPI</span>
-              <span class="text-[10.5px] font-bold text-slate-700">G Pay</span>
-              <span class="text-[10.5px] font-bold text-purple-700">PhonePe</span>
-              <span class="text-[10.5px] font-bold text-cyan-600">Paytm</span>
-              <span class="text-[10.5px] font-bold text-amber-600">amazon pay</span>
+            <!-- PSP App Badges Row (Authentic Logos) -->
+            <div class="mt-4 flex items-center justify-center gap-2.5 border-t border-b border-slate-100 py-3.5 px-2 w-full">
+              <span class="text-[11px] font-black text-slate-600 border border-slate-200 px-2 py-0.5 rounded bg-slate-50 tracking-tighter">BHIM</span>
+              <span class="text-[11px] font-black text-blue-600 border border-blue-100 px-2 py-0.5 rounded bg-blue-50/50 tracking-tighter">UPI</span>
+              <span class="text-[11.5px] font-bold text-slate-700">G Pay</span>
+              <span class="text-[11.5px] font-bold text-purple-700">PhonePe</span>
+              <span class="text-[11.5px] font-bold text-cyan-600">Paytm</span>
+              <span class="text-[11.5px] font-bold text-amber-600">amazon pay</span>
             </div>
 
-            <!-- Powered By Paisape Footer (Replacing generic footer) -->
-            <div class="mt-4 flex items-center justify-center gap-2">
-              <span class="text-[11.5px] font-medium text-slate-400">Powered by</span>
-              <img src="/assets/logo.svg" alt="Paisape" class="h-4.5 w-auto">
+            <!-- Powered By Paisape Footer (Perfectly Centered Alignment) -->
+            <div class="mt-5 pt-2 flex flex-col items-center justify-center w-full">
+              <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-widest">Powered by</span>
+              <img src="/assets/logo.svg" alt="Paisape" class="h-6 w-auto mt-1.5 object-contain" width="140" height="36">
             </div>
           </div>
         </div>
@@ -272,11 +273,11 @@
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
             Print
           </button>
-          <button onclick="shareQRLink()" class="flex items-center justify-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-3 rounded-xl transition shadow-sm">
+          <button onclick="shareQRCard()" class="flex items-center justify-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-3 rounded-xl transition shadow-sm">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
             Share
           </button>
-          <button onclick="downloadQRImage()" class="flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-3 rounded-xl transition shadow-sm">
+          <button onclick="downloadQRCard()" class="flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-3 rounded-xl transition shadow-sm">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
             Download
           </button>
@@ -287,6 +288,8 @@
     </div>
   </div>
 </main>
+
+<div id="qrPrintArea" class="hidden"></div>
 
 <footer class="bg-night text-slate-300">
   <div class="mx-auto max-w-site px-5 py-16">
@@ -416,17 +419,17 @@ function updateQR() {
         ctx.drawImage(img, 0, 0, 280, 280);
 
         if (embedLogo && paisapeLogo.complete && paisapeLogo.naturalWidth !== 0) {
-          const logoSize = 54;
+          const logoSize = 46;
           const logoX = (280 - logoSize) / 2;
           const logoY = (280 - logoSize) / 2;
 
           // Background white circle behind center logo
           ctx.beginPath();
-          ctx.arc(140, 140, 30, 0, 2 * Math.PI, false);
+          ctx.arc(140, 140, 26, 0, 2 * Math.PI, false);
           ctx.fillStyle = '#FFFFFF';
           ctx.fill();
-          ctx.lineWidth = 3;
-          ctx.strokeStyle = '#0066FF';
+          ctx.lineWidth = 2.5;
+          ctx.strokeStyle = '#0080FF';
           ctx.stroke();
 
           // Draw center logo
@@ -438,19 +441,32 @@ function updateQR() {
   }, 100);
 }
 
-function downloadQRImage() {
-  const canvas = document.getElementById('qrCanvas');
-  const link = document.createElement('a');
-  link.download = 'paisape-upi-qr-' + (document.getElementById('merchantName').value.trim().toLowerCase().replace(/[^a-z0-9]/g, '-') || 'qr') + '.png';
-  link.href = canvas.toDataURL('image/png');
-  link.click();
+// Full Standee Export via html2canvas
+function downloadQRCard() {
+  const card = document.getElementById('qrCardFrame');
+  html2canvas(card, { scale: 3, useCORS: true, backgroundColor: '#ffffff' }).then(canvas => {
+    const link = document.createElement('a');
+    link.download = 'paisape-upi-standee-' + (document.getElementById('merchantName').value.trim().toLowerCase().replace(/[^a-z0-9]/g, '-') || 'qr') + '.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  });
 }
 
 function printQRCard() {
-  window.print();
+  const card = document.getElementById('qrCardFrame');
+  html2canvas(card, { scale: 3, useCORS: true, backgroundColor: '#ffffff' }).then(canvas => {
+    const printArea = document.getElementById('qrPrintArea');
+    printArea.innerHTML = '';
+    const img = document.createElement('img');
+    img.src = canvas.toDataURL('image/png');
+    img.style.maxWidth = '380px';
+    img.style.width = '100%';
+    printArea.appendChild(img);
+    window.print();
+  });
 }
 
-function shareQRLink() {
+function shareQRCard() {
   const name = document.getElementById('merchantName').value;
   const upiId = document.getElementById('upiId').value;
   const shareText = `Pay to ${name} (${upiId}) using Paisape UPI QR Code: ${window.location.href}`;
