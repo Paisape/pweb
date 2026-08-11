@@ -96,6 +96,18 @@
       </div>
         </div>
 
+        <div class="relative dropdown-parent">
+          <button class="nav-link hover:text-brand transition-colors flex items-center gap-1">
+            Free Tools
+            <svg class="h-3.5 w-3.5 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="dropdown-menu absolute left-0 top-full mt-2 w-60 rounded-2xl border border-slate-100 bg-white p-2.5 shadow-xl opacity-0 invisible transition-all duration-200">
+            <a href="/upi-qr-generator" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-medium text-ink hover:bg-mist hover:text-brand transition">
+              <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              UPI QR Code Generator
+            </a>
+          </div>
+        </div>
         <a href="/blog" class="nav-link hover:text-brand transition-colors">Blog</a>
         <a href="/contact" class="nav-link hover:text-brand transition-colors">Contact Us</a>
       </nav>
@@ -145,6 +157,10 @@
         
       </div>
 
+      <div class="rounded-xl bg-blue-50/60 p-2 my-1">
+        <p class="px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.12em] text-brand">Free Tools</p>
+        <a href="/upi-qr-generator" class="block rounded-lg px-3 py-2 text-[13.5px] font-semibold text-brand hover:bg-white transition">UPI QR Code Generator</a>
+      </div>
       <a href="/blog" class="block rounded-xl px-4 py-3 font-medium text-ink hover:bg-mist">Blog</a>
       <a href="/contact" class="block rounded-xl px-4 py-3 font-medium text-ink hover:bg-mist">Contact Us</a>
       <a href="/contact" class="mt-2 block rounded-xl bg-brand px-4 py-3 text-center font-semibold text-white">Talk to Sales</a>
