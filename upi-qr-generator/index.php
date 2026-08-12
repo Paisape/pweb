@@ -33,10 +33,39 @@
     -ms-user-select: none;
     user-select: none;
   }
+  /* Strict Print Enforcement Rules for UPI Standee (No Blank Screen, Exact Colors & Borders) */
   @media print {
-    body * { visibility: hidden; }
-    #qrPrintArea, #qrPrintArea * { visibility: visible; }
-    #qrPrintArea { position: absolute; left: 0; top: 0; width: 100%; display: flex; justify-content: center; }
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+    body {
+      background: #ffffff !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    body * {
+      visibility: hidden;
+    }
+    #qrCardFrame, #qrCardFrame * {
+      visibility: visible;
+    }
+    #qrCardFrame {
+      position: absolute !important;
+      left: 50% !important;
+      top: 20px !important;
+      transform: translateX(-50%) !important;
+      width: 380px !important;
+      margin: 0 auto !important;
+      box-shadow: none !important;
+      border: 2px solid #0f172a !important;
+      border-radius: 20px !important;
+      box-sizing: border-box !important;
+    }
+    .no-print {
+      display: none !important;
+    }
   }
 </style>
 </head>
@@ -98,15 +127,35 @@
 
         <!-- Free Tools Menu Dropdown -->
         <div class="relative dropdown-parent">
-          <button class="nav-link active text-brand flex items-center gap-1">
+          <button class="nav-link hover:text-brand transition-colors flex items-center gap-1">
             Free Tools
             <svg class="h-3.5 w-3.5 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
           </button>
           <div class="dropdown-wrap w-64">
-            <div class="rounded-2xl border border-slate-100 bg-white p-2.5 shadow-xl">
-              <a href="/upi-qr-generator" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-semibold text-brand bg-brandLt/60">
+            <div class="rounded-2xl border border-slate-100 bg-white p-2.5 shadow-xl space-y-1">
+              <a href="/upi-qr-generator" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-medium text-ink hover:bg-mist hover:text-brand transition">
                 <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
                 UPI QR Code Generator
+              </a>
+              <a href="/card-bin-lookup" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-medium text-ink hover:bg-mist hover:text-brand transition">
+                <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg>
+                Card BIN Lookup Tool
+              </a>
+              <a href="/ifsc-finder" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-medium text-ink hover:bg-mist hover:text-brand transition">
+                <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M4 10h16M5 10V21M19 10V21M9 10V21M15 10V21M12 3l9 5H3z"/></svg>
+                IFSC Code &amp; Branch Finder
+              </a>
+              <a href="/hsn-sac-finder" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-medium text-ink hover:bg-mist hover:text-brand transition">
+                <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10M7 12h10M7 17h10"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                HSN &amp; SAC GST Rate Finder
+              </a>
+              <a href="/gst-invoice-generator" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-medium text-ink hover:bg-mist hover:text-brand transition">
+                <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                Free GST Invoice Generator
+              </a>
+              <a href="/mcc-finder" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-medium text-ink hover:bg-mist hover:text-brand transition">
+                <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                Merchant Category (MCC) Finder
               </a>
             </div>
           </div>
@@ -127,10 +176,15 @@
     <!-- mobile menu -->
     <div id="mobileMenu" class="md:hidden mt-2 hidden max-h-[75vh] overflow-y-auto rounded-2xl border border-slate-100 bg-white p-3 shadow-xl">
       <a href="/" class="block rounded-xl px-4 py-3 font-medium text-ink hover:bg-mist">Home</a>
-      
-      <div class="rounded-xl bg-blue-50/60 p-2 my-1">
-        <p class="px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.12em] text-brand">Free Tools</p>
-        <a href="/upi-qr-generator" class="block rounded-lg px-3 py-2 text-[13.5px] font-semibold text-brand bg-white shadow-sm">UPI QR Code Generator</a>
+
+      <div class="rounded-xl bg-blue-50/60 p-2 my-1 space-y-1">
+        <p class="px-3 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-brand">Free Tools</p>
+        <a href="/upi-qr-generator" class="block rounded-lg px-3 py-2 text-[13.5px] font-medium text-ink hover:bg-white transition">UPI QR Code Generator</a>
+        <a href="/card-bin-lookup" class="block rounded-lg px-3 py-2 text-[13.5px] font-medium text-ink hover:bg-white transition">Card BIN Lookup Tool</a>
+        <a href="/ifsc-finder" class="block rounded-lg px-3 py-2 text-[13.5px] font-medium text-ink hover:bg-white transition">IFSC Code &amp; Branch Finder</a>
+        <a href="/hsn-sac-finder" class="block rounded-lg px-3 py-2 text-[13.5px] font-medium text-ink hover:bg-white transition">HSN &amp; SAC GST Rate Finder</a>
+        <a href="/gst-invoice-generator" class="block rounded-lg px-3 py-2 text-[13.5px] font-medium text-ink hover:bg-white transition">Free GST Invoice Generator</a>
+        <a href="/mcc-finder" class="block rounded-lg px-3 py-2 text-[13.5px] font-medium text-ink hover:bg-white transition">Merchant Category (MCC) Finder</a>
       </div>
 
       <a href="/blog" class="block rounded-xl px-4 py-3 font-medium text-ink hover:bg-mist">Blog</a>
@@ -293,29 +347,43 @@
 
 <footer class="bg-night text-slate-300">
   <div class="mx-auto max-w-site px-5 py-16">
-    <div class="grid gap-12 md:grid-cols-[1.4fr_repeat(3,1fr)]">
+    <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-5">
 
-      <div>
+      <div class="sm:col-span-2 md:col-span-1">
         <img src="/assets/logo-white.svg" alt="Paisape" class="h-9 w-auto" width="200" height="52">
         <p class="mt-5 max-w-xs text-[13px] leading-relaxed text-slate-400">
-          Payments. Everytime. Everywhere. Paisape Techfin Private Limited provides comprehensive payment
-          solutions including issuing, acquiring, and transaction banking.
+          Payments. Everytime. Everywhere. Paisape provides comprehensive payment solutions including issuing, acquiring, transaction banking, and payment orchestration.
         </p>
       </div>
 
       <div>
         <h2 class="font-display text-[13.5px] font-bold text-white">Company</h2>
         <ul class="mt-5 space-y-3 text-[13px]">
-          <li><a href="/contact" class="transition hover:text-brand">About Us</a></li>
+          <li><a href="/about-us" class="transition hover:text-brand">About Us</a></li>
           <li><a href="/blog" class="transition hover:text-brand">Blog</a></li>
           <li><a href="/contact" class="transition hover:text-brand">Contact Us</a></li>
+          <li><a href="/contact" class="transition hover:text-brand">Partnership</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-display text-[13.5px] font-bold text-white">Legal</h2>
+        <ul class="mt-5 space-y-3 text-[13px]">
+          <li><a href="/privacy" class="transition hover:text-brand">Privacy Policy</a></li>
+          <li><a href="/refund-policy" class="transition hover:text-brand">Refund Policy</a></li>
+          <li><a href="/terms-and-conditions" class="transition hover:text-brand">Terms &amp; Conditions</a></li>
         </ul>
       </div>
 
       <div>
         <h2 class="font-display text-[13.5px] font-bold text-white">Free Tools</h2>
         <ul class="mt-5 space-y-3 text-[13px]">
-          <li><a href="/upi-qr-generator" class="transition hover:text-brand text-mint font-semibold">UPI QR Code Generator</a></li>
+          <li><a href="/upi-qr-generator" class="transition hover:text-brand">UPI QR Code Generator</a></li>
+          <li><a href="/card-bin-lookup" class="transition hover:text-brand">Card BIN Lookup Tool</a></li>
+          <li><a href="/ifsc-finder" class="transition hover:text-brand">IFSC Code &amp; Branch Finder</a></li>
+          <li><a href="/hsn-sac-finder" class="transition hover:text-brand">HSN &amp; SAC GST Rate Finder</a></li>
+          <li><a href="/gst-invoice-generator" class="transition hover:text-brand">Free GST Invoice Generator</a></li>
+          <li><a href="/mcc-finder" class="transition hover:text-brand">Merchant Category (MCC) Finder</a></li>
         </ul>
       </div>
 
@@ -371,12 +439,15 @@ paisapeLogo.src = '/assets/paisape-logo.png';
 paisapeLogo.onload = () => { updateQR(); };
 
 function updateQR() {
-  const name = document.getElementById('merchantName').value.trim() || 'PAISAPE STORE';
-  const upiId = document.getElementById('upiId').value.trim() || 'merchant@paisape';
+  const nameInput = document.getElementById('merchantName').value.trim();
+  const upiIdInput = document.getElementById('upiId').value.trim();
   const amount = document.getElementById('amount').value.trim();
   const note = document.getElementById('note').value.trim();
   const colorDark = document.getElementById('qrColor').value || '#000000';
   const embedLogo = document.getElementById('showCenterLogo').checked;
+
+  const name = nameInput || 'PAISAPE STORE';
+  const upiId = upiIdInput || 'merchant@paisape';
 
   document.getElementById('previewName').innerText = name.toUpperCase();
 
@@ -399,46 +470,54 @@ function updateQR() {
   rawDiv.innerHTML = '';
   new QRCode(rawDiv, {
     text: upiUri,
-    width: 260,
-    height: 260,
+    width: 280,
+    height: 280,
     colorDark: colorDark,
     colorLight: "#ffffff",
     correctLevel: QRCode.CorrectLevel.H
   });
 
-  // Render onto Canvas with Logo Center Overlay
-  setTimeout(() => {
-    const qrImg = rawDiv.querySelector('img');
-    const canvas = document.getElementById('qrCanvas');
-    const ctx = canvas.getContext('2d');
+  // Synchronously / instantly render onto target canvas with center logo
+  const renderCanvas = () => {
+    const sourceCanvas = rawDiv.querySelector('canvas');
+    const sourceImg = rawDiv.querySelector('img');
+    const targetCanvas = document.getElementById('qrCanvas');
+    const ctx = targetCanvas.getContext('2d');
 
-    if (qrImg && qrImg.src) {
-      const img = new Image();
-      img.onload = () => {
-        ctx.clearRect(0, 0, 280, 280);
-        ctx.drawImage(img, 0, 0, 280, 280);
+    const drawFinal = (imgSource) => {
+      ctx.clearRect(0, 0, 280, 280);
+      ctx.drawImage(imgSource, 0, 0, 280, 280);
 
-        if (embedLogo && paisapeLogo.complete && paisapeLogo.naturalWidth !== 0) {
-          const logoSize = 46;
-          const logoX = (280 - logoSize) / 2;
-          const logoY = (280 - logoSize) / 2;
+      if (embedLogo && paisapeLogo.complete && paisapeLogo.naturalWidth !== 0) {
+        const logoSize = 44;
+        const logoX = (280 - logoSize) / 2;
+        const logoY = (280 - logoSize) / 2;
 
-          // Background white circle behind center logo
-          ctx.beginPath();
-          ctx.arc(140, 140, 26, 0, 2 * Math.PI, false);
-          ctx.fillStyle = '#FFFFFF';
-          ctx.fill();
-          ctx.lineWidth = 2.5;
-          ctx.strokeStyle = '#0080FF';
-          ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(140, 140, 25, 0, 2 * Math.PI, false);
+        ctx.fillStyle = '#FFFFFF';
+        ctx.fill();
+        ctx.lineWidth = 2.5;
+        ctx.strokeStyle = colorDark !== '#000000' ? colorDark : '#0080FF';
+        ctx.stroke();
 
-          // Draw center logo
-          ctx.drawImage(paisapeLogo, logoX, logoY, logoSize, logoSize);
-        }
-      };
-      img.src = qrImg.src;
+        ctx.drawImage(paisapeLogo, logoX, logoY, logoSize, logoSize);
+      }
+    };
+
+    if (sourceCanvas && sourceCanvas.width > 0) {
+      drawFinal(sourceCanvas);
+    } else if (sourceImg && sourceImg.src && sourceImg.src.length > 50) {
+      const tempImg = new Image();
+      tempImg.onload = () => drawFinal(tempImg);
+      tempImg.src = sourceImg.src;
     }
-  }, 100);
+  };
+
+  // Immediate + short delay backup to handle async qrcode.js rendering
+  renderCanvas();
+  setTimeout(renderCanvas, 40);
+  setTimeout(renderCanvas, 150);
 }
 
 // Full Standee Export via html2canvas
@@ -453,30 +532,38 @@ function downloadQRCard() {
 }
 
 function printQRCard() {
-  const card = document.getElementById('qrCardFrame');
-  html2canvas(card, { scale: 3, useCORS: true, backgroundColor: '#ffffff' }).then(canvas => {
-    const printArea = document.getElementById('qrPrintArea');
-    printArea.innerHTML = '';
-    const img = document.createElement('img');
-    img.src = canvas.toDataURL('image/png');
-    img.style.maxWidth = '380px';
-    img.style.width = '100%';
-    printArea.appendChild(img);
-    window.print();
-  });
+  window.print();
 }
 
 function shareQRCard() {
-  const name = document.getElementById('merchantName').value;
-  const upiId = document.getElementById('upiId').value;
-  const shareText = `Pay to ${name} (${upiId}) using Paisape UPI QR Code: ${window.location.href}`;
-  
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(shareText);
-    const msg = document.getElementById('shareStatus');
-    msg.classList.remove('hidden');
-    setTimeout(() => msg.classList.add('hidden'), 3000);
-  }
+  const card = document.getElementById('qrCardFrame');
+  const name = document.getElementById('merchantName').value.trim() || 'Paisape Merchant';
+  const upiId = document.getElementById('upiId').value.trim() || 'vpa@upi';
+
+  html2canvas(card, { scale: 3, useCORS: true, backgroundColor: '#ffffff' }).then(canvas => {
+    canvas.toBlob(blob => {
+      if (!blob) return;
+      const fileName = `paisape-upi-qr-${name.toLowerCase().replace(/[^a-z0-9]/g, '-')}.png`;
+      const file = new File([blob], fileName, { type: 'image/png' });
+
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        navigator.share({
+          files: [file],
+          title: `UPI QR Code - ${name}`,
+          text: `Scan & Pay to ${name} (${upiId}) via UPI`
+        }).catch(err => console.log('Share dismissed:', err));
+      } else {
+        // Fallback: download PNG file & open WhatsApp link
+        const link = document.createElement('a');
+        link.download = fileName;
+        link.href = URL.createObjectURL(blob);
+        link.click();
+
+        const shareText = `Pay to ${name} (${upiId}) using Paisape UPI QR Code.`;
+        window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`, '_blank');
+      }
+    }, 'image/png');
+  });
 }
 
 // Initial draw on page load

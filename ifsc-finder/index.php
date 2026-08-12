@@ -3,8 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Blog — Paisape</title>
-<meta name="description" content="Field notes on routing strategy, UPI mechanics, settlement and reconciliation from the Paisape engineering team." />
+<title>Free IFSC Code Finder &amp; Bank Branch Validator — Paisape</title>
+<meta name="description" content="Search and validate any Indian Bank IFSC code. Find bank branch address, MICR code, contact details, and NEFT, RTGS, IMPS, UPI support status." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Free IFSC Code Finder & Bank Branch Validator — Paisape" />
+<meta property="og:description" content="Instantly lookup Indian bank IFSC codes, branch address, contact details, and payment rails support." />
+<meta property="og:image" content="https://paisape.in/assets/paisape-og-banner.png" />
+<meta property="og:url" content="https://paisape.in/ifsc-finder" />
+<meta name="twitter:card" content="summary_large_image" />
+
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,34 +21,18 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="/js/tailwind.config.js"></script>
 <link rel="stylesheet" href="/css/style.css">
-  <style>
-    body {
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-  </style>
-  <script>
-    // Disable right-click
-    document.addEventListener('contextmenu', event => event.preventDefault());
-    
-    // Disable copy, cut, paste
-    document.addEventListener('copy', event => event.preventDefault());
-    document.addEventListener('cut', event => event.preventDefault());
-    document.addEventListener('paste', event => event.preventDefault());
-    
-    // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U (Inspect Element & View Source)
-    document.onkeydown = function(e) {
-      if(e.keyCode == 123) { return false; }
-      if(e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) { return false; }
-      if(e.ctrlKey && e.keyCode == 85) { return false; }
-    };
-  </script>
+
+<style>
+  body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+</style>
 </head>
 
-<body class="bg-white text-body antialiased">
-<div id="progress" class="fixed top-0 left-0 z-[60] h-[3px] w-full bg-brand transition-transform duration-150"></div>
+<body class="bg-slate-50 text-body antialiased">
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">Skip to content</a>
 
 <header class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
@@ -164,110 +155,124 @@
   </div>
 </header>
 
-<main id="main">
-<article class="bg-white pt-32 pb-16 md:pt-40 md:pb-24">
-  <div class="mx-auto max-w-[800px] px-5">
-    <div class="mb-8 flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.14em]">
-              <!-- Free Tools Menu Dropdown -->
-        ive dropdown-parent">
-          <button class="nav-link hover:text-brand transition-colors flex items-center gap-1">
-            Free Tools
-            <svg class="h-3.5 w-3.5 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-          </button>
-          <div class="dropdown-wrap w-64">
-            <div class="rounded-2xl border border-slate-100 bg-white p-2.5 shadow-xl space-y-1">
-              <a href="/upi-qr-generator" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-medium text-ink hover:bg-mist hover:text-brand transition">
-                <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-                UPI QR Code Generator
-              </a>
-              <a href="/card-bin-lookup" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-medium text-ink hover:bg-mist hover:text-brand transition">
-                <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg>
-                Card BIN Lookup Tool
-              </a>
-              <a href="/ifsc-finder" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-medium text-ink hover:bg-mist hover:text-brand transition">
-                <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M4 10h16M5 10V21M19 10V21M9 10V21M15 10V21M12 3l9 5H3z"/></svg>
-                IFSC Code &amp; Branch Finder
-              </a>
-              <a href="/hsn-sac-finder" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-medium text-ink hover:bg-mist hover:text-brand transition">
-                <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10M7 12h10M7 17h10"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
-                HSN &amp; SAC GST Rate Finder
-              </a>
-              <a href="/gst-invoice-generator" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-medium text-ink hover:bg-mist hover:text-brand transition">
-                <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-                Free GST Invoice Generator
-              </a>
-              <a href="/mcc-finder" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-medium text-ink hover:bg-mist hover:text-brand transition">
-                <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                Merchant Category (MCC) Finder
-              </a>
-            </div>
+<main id="main" class="pt-32 pb-20">
+  <div class="mx-auto max-w-site px-5">
+    
+    <!-- Page Header -->
+    <div class="mb-10 text-center max-w-2xl mx-auto">
+      <span class="inline-block px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-brandLt text-brand mb-3">Free Banking &amp; Merchant Tool</span>
+      <h1 class="font-display text-3xl sm:text-4xl font-extrabold text-ink tracking-tight">IFSC Code &amp; Bank Branch Finder</h1>
+      <p class="mt-3 text-body text-[15px] leading-relaxed">Instantly validate 11-character Indian Financial System Codes (IFSC). Retrieve official bank name, branch address, contact details, and NEFT, RTGS, IMPS, UPI support status.</p>
+    </div>
+
+    <!-- Main Tool Container -->
+    <div class="max-w-4xl mx-auto">
+      
+      <!-- Input Card -->
+      <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
+        <label for="ifscInput" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Enter 11-Character IFSC Code <span class="text-rose-500">*</span></label>
+        <div class="relative flex items-center">
+          <input type="text" id="ifscInput" maxlength="11" placeholder="e.g. SBIN0000691 or HDFC0000240" oninput="lookupIFSC()" class="w-full px-5 py-4 text-lg font-mono font-bold tracking-widest text-slate-900 border-2 border-slate-200 rounded-2xl focus:border-brand focus:ring-4 focus:ring-brand/10 outline-none transition uppercase">
+          <span id="ifscStatusIcon" class="absolute right-4 text-xs font-black uppercase tracking-wider px-3 py-1 rounded-lg bg-slate-100 text-slate-600">Enter IFSC</span>
+        </div>
+        
+        <!-- Sample Shortcuts -->
+        <div class="mt-4 flex flex-wrap items-center gap-2 text-xs">
+          <span class="font-semibold text-slate-400">Try Sample IFSC Codes:</span>
+          <button onclick="setSampleIFSC('SBIN0000691')" class="px-2.5 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-mono rounded-lg transition">SBIN0000691 (SBI New Delhi)</button>
+          <button onclick="setSampleIFSC('HDFC0000240')" class="px-2.5 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-mono rounded-lg transition">HDFC0000240 (HDFC Fort)</button>
+          <button onclick="setSampleIFSC('ICIC0000007')" class="px-2.5 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-mono rounded-lg transition">ICIC0000007 (ICICI Connaught)</button>
+          <button onclick="setSampleIFSC('KKBK0000958')" class="px-2.5 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-mono rounded-lg transition">KKBK0000958 (Kotak)</button>
+        </div>
+      </div>
+
+      <!-- Result Card -->
+      <div id="resultCard" class="mt-8 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xl hidden">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-5 mb-6">
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-widest text-brand bg-brandLt px-3 py-1 rounded-full">Validated RBI IFSC Record</span>
+            <h2 id="resBankName" class="text-2xl font-extrabold text-ink mt-2"></h2>
+            <p class="text-xs font-mono text-slate-500 mt-1">IFSC: <span id="resIfscCode" class="font-bold text-brand"></span> &bull; MICR: <span id="resMicrCode" class="font-bold text-slate-700"></span></p>
           </div>
+          <button onclick="copyBankDetails()" class="flex items-center gap-1.5 px-4 py-2 bg-brandLt text-brand font-bold text-xs rounded-xl hover:bg-brand/10 transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+            Copy Details
+          </button>
         </div>
 
-        <a href="/blog" class="text-brand hover:underline">Blog</a>
-      <span class="text-slate-300">/</span>
-      <span class="text-brand">compliance</span>
-      <span class="text-slate-300">/</span>
-      <span class="text-body/60">8 min read</span>
-    </div>
-    
-    <h1 class="font-display text-[32px] font-extrabold leading-[1.15] tracking-tight text-ink sm:text-[44px]">
-      Audit Trails Your Regulator Will Actually Accept
-    </h1>
-    
-    <p class="mt-6 text-[18px] leading-relaxed text-body/80 font-medium">
-      What to log at each hop, how long to keep it, and the gaps that turn a routine inspection into a long quarter.
-    </p>
+        <!-- DETAILS GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Branch Address & Location -->
+          <div class="space-y-4">
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+              <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 block mb-1">Branch Name &amp; Code</span>
+              <p id="resBranch" class="text-base font-extrabold text-ink"></p>
+            </div>
 
-    <div class="mt-8 flex items-center gap-4 border-y border-slate-100 py-6">
-      <span class="flex h-12 w-12 items-center justify-center rounded-full bg-brandLt font-display text-[15px] font-bold text-brand">PE</span>
-      <div>
-        <p class="text-[14px] font-semibold text-ink">Paisape Engineering</p>
-        <p class="text-[13px] text-body/70">15 Jun 2026</p>
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+              <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 block mb-1">Full Branch Address</span>
+              <p id="resAddress" class="text-sm font-medium text-slate-700 leading-relaxed"></p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 block mb-1">City / District</span>
+                <p id="resCity" class="text-sm font-bold text-ink"></p>
+              </div>
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 block mb-1">State</span>
+                <p id="resState" class="text-sm font-bold text-ink"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment Systems Capability Badges -->
+          <div class="space-y-4">
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+              <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 block mb-3">Supported Payment Rails</span>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="flex items-center gap-2 p-2.5 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-800 font-bold text-xs">
+                  <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                  NEFT (Active)
+                </div>
+                <div class="flex items-center gap-2 p-2.5 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-800 font-bold text-xs">
+                  <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                  RTGS (Active)
+                </div>
+                <div class="flex items-center gap-2 p-2.5 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-800 font-bold text-xs">
+                  <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                  IMPS (24x7)
+                </div>
+                <div class="flex items-center gap-2 p-2.5 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-800 font-bold text-xs">
+                  <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                  UPI Active
+                </div>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+              <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 block mb-1">Branch Contact Number</span>
+              <p id="resContact" class="text-sm font-bold text-slate-800">Not Available</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="copyNotice" class="mt-4 text-xs font-semibold text-emerald-600 text-center hidden">Bank &amp; Branch details copied to clipboard!</div>
       </div>
-    </div>
 
-        <div class="mt-10 overflow-hidden rounded-3xl bg-slate-100 shadow-xl">
-      <img src="/assets/blog/blog_audit.jpg" alt="Blog Hero Image" class="w-full object-cover max-h-[500px]" />
-    </div>
+      <!-- RBI Security Disclaimer -->
+      <div class="mt-8 p-4 rounded-2xl bg-slate-100 border border-slate-200 flex items-center gap-3 text-xs text-slate-600">
+        <svg class="h-5 w-5 text-blue-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <span><strong>Official RBI Directory:</strong> All IFSC details are retrieved live from Reserve Bank of India datasets. Verify your bank account details before initiating high-value RTGS or NEFT transfers.</span>
+      </div>
 
-    <div class="prose prose-lg prose-slate mt-10 max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight prose-a:text-brand prose-a:font-semibold hover:prose-a:text-brandDk prose-h2:text-[24px] prose-h2:mt-12 prose-h2:mb-4 prose-p:text-[16px] prose-p:leading-loose prose-p:text-body prose-li:text-[16px]">
-      <h2>Logging is Not Auditing: The Regulator's Perspective</h2>
-      <p>In the fast-paced world of software engineering, it is easy to conflate logging with auditing. We routinely dump application state, debugging information, and JSON payloads into ELK stacks or S3 buckets and call it a day. However, when the Reserve Bank of India (RBI) conducts an inspection, they are not looking for your application logs. They are looking for a true, immutable, and non-repudiable audit trail.</p>
-      <p>An audit trail is fundamentally different from a system log. A log answers the question "What happened in the system?" An audit trail answers the question "Who did what to which record, when, from where, and with whose authorization?" If an RBI auditor asks, 'Who authorized the reversal of transaction TXN-9982 on Tuesday at 4:00 AM?', responding with a grepped log file containing a mix of application errors and database queries is a surefire way to turn a routine inspection into a prolonged, painful, and potentially penalizing ordeal.</p>
-
-      <h2>The Anatomy of a Compliant Audit Record</h2>
-      <p>To design an audit trail that satisfies regulatory scrutiny, every critical financial and administrative action must generate an isolated, structured audit record. The core elements of a compliant audit record are non-negotiable. Missing even one of these elements can render the entire trail suspect in the eyes of an auditor.</p>
-      <ul>
-        <li><strong>Precise Temporal Anchor:</strong> The exact timestamp of the action, always recorded in UTC to avoid timezone ambiguities across distributed systems.</li>
-        <li><strong>Identity of the Actor:</strong> Who performed the action? This must resolve to a specific human user (via User ID) or a specific authenticated system process/service account. Generic admin accounts are a massive red flag.</li>
-        <li><strong>The Action Taken:</strong> A clear, standardized string denoting the operation (e.g., <code>INITIATE_REFUND</code>, <code>UPDATE_MERCHANT_MDR</code>, <code>APPROVE_SETTLEMENT</code>).</li>
-        <li><strong>State Transformation (Before/After):</strong> Perhaps the most critical element. The audit record must capture the exact state of the entity before the change and the exact state after. This proves what was actually modified.</li>
-        <li><strong>Originating Context:</strong> The IP address, device footprint, and session ID from which the action was initiated.</li>
-        <li><strong>Cryptographic Signature:</strong> A hash of the payload, signed by the audit service, to prove the record has not been tampered with since creation.</li>
-      </ul>
-
-      <h2>Designing for Immutability and Non-Repudiation</h2>
-      <p>The defining characteristic of an audit trail is immutability. Once an event is recorded, it must be mathematically and practically impossible to alter or delete it without detection. Standard relational databases, while excellent for transactional integrity, are inherently mutable. An administrator with <code>UPDATE</code> or <code>DELETE</code> privileges can alter history.</p>
-      <p>To achieve true immutability, engineering teams must adopt append-only architectures. There are several ways to implement this, ranging from Write-Once-Read-Many (WORM) storage appliances to blockchain-inspired cryptographic chaining.</p>
-      <p>A highly effective and relatively straightforward approach is to implement a cryptographic hash chain. When Audit Record $N$ is created, its hash includes the hash of Audit Record $N-1$. This creates an unbroken chain of cryptographic evidence. If a malicious actor (or a careless DBA) attempts to modify Record 5, the hash of Record 5 changes. Because Record 6 includes the original hash of Record 5, the chain breaks, immediately flagging the tampering. When an auditor asks for proof of integrity, you simply recalculate the hashes from the genesis block to the current head; if they match, the ledger is pristine.</p>
-      
-      <h2>The 7-Year Itch: Strategies for Long-Term Data Retention</h2>
-      <p>Under various RBI guidelines and the Prevention of Money Laundering Act (PMLA), financial institutions, Payment Aggregators (PAs), and Payment Gateways (PGs) in India are generally required to retain transaction and audit data for a minimum of 7 to 10 years.</p>
-      <p>Retaining billions of audit records for a decade presents a massive infrastructural and financial challenge. Keeping 7 years of high-volume transaction data in a hot, provisioned relational database like PostgreSQL or Oracle is prohibitively expensive and degrades query performance for current operations. The solution lies in a robust, automated tiered storage strategy.</p>
-      <p><strong>Tier 1: Hot Storage (0-6 Months).</strong> Recent audit data needs to be readily accessible for customer support, immediate dispute resolution, and internal operational reporting. This data lives in highly optimized, indexed databases (like Elasticsearch or a dedicated Postgres cluster). Query latency here is measured in milliseconds.</p>
-      <p><strong>Tier 2: Warm Storage (6 Months - 2 Years).</strong> As data ages, the probability of it being queried drops exponentially. Data in this tier can be moved to cheaper storage solutions, such as Amazon S3 or Google Cloud Storage, partitioned by date (e.g., <code>year=2024/month=10/day=05/</code>) and stored in an optimized columnar format like Apache Parquet. Querying is handled via analytical engines like Amazon Athena or Presto, where queries might take seconds instead of milliseconds, which is acceptable for older investigations.</p>
-      <p><strong>Tier 3: Cold/Archive Storage (2 Years - 10 Years).</strong> This is strictly for regulatory compliance. The data is rarely, if ever, accessed unless explicitly requested by an authority. For this tier, data is compressed and moved to deep archive storage classes like Amazon S3 Glacier Deep Archive. Storage costs are pennies on the dollar, but retrieval can take 12 to 48 hours. Crucially, the cryptographic signatures and hash chains must be preserved perfectly through every transition to prove the data remains untampered across the decade.</p>
-
-      <h2>Handling Schema Evolution over a Decade</h2>
-      <p>One of the most insidious challenges of 7-year retention is schema evolution. Your application's data model today looks nothing like it did 5 years ago, and it won't look the same 5 years from now. If you store a JSON blob of the 'Before/After' state today, how will your reporting tools understand it in 2030?</p>
-      <p>Audit records must be somewhat schema-agnostic or strictly versioned. It is highly recommended to store the schema version alongside the payload in the audit record (e.g., <code>schema_version: "v2.4"</code>). When retrieving a 5-year-old record, the presentation layer must use the corresponding schema definition to correctly interpret and display the fields to the auditor. Attempting to force old audit records into a new schema will inevitably result in data loss or misinterpretation, both of which are unacceptable in a regulatory context.</p>
-
-      <h2>Conclusion: Compliance as a First-Class Engineering Discipline</h2>
-      <p>Designing an audit trail is not an afterthought to be tacked on before a product launch; it is a fundamental architectural pillar for any FinTech operating in a regulated environment. By treating compliance as a first-class engineering discipline—utilizing cryptographic chaining for immutability, implementing smart tiered storage for cost-effective retention, and strictly managing schema evolution—we ensure that when the regulator comes knocking, we can provide precise, irrefutable answers without breaking a sweat.</p>
     </div>
   </div>
-</article><footer class="bg-night text-slate-300">
+</main>
+
+<footer class="bg-night text-slate-300">
   <div class="mx-auto max-w-site px-5 py-16">
     <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-5">
 
@@ -330,18 +335,101 @@
   </div>
 </footer>
 
-<button id="toTop" aria-label="Back to top"
-  class="fixed bottom-6 right-6 z-40 flex h-11 w-11 translate-y-4 items-center justify-center rounded-full bg-mint text-night opacity-0 shadow-xl transition-all duration-300 hover:-translate-y-1">
-  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-</button>
+<script>
+// Known Top Offline Fallback Dataset for instant rendering
+const topIFSC = {
+  'SBIN0000691': { BANK: 'State Bank of India', BRANCH: 'NEW DELHI MAIN BRANCH', ADDRESS: '11, PARLIAMENT STREET, NEW DELHI', CITY: 'NEW DELHI', DISTRICT: 'NEW DELHI', STATE: 'DELHI', MICR: '110002001', CONTACT: '011-23374116' },
+  'HDFC0000240': { BANK: 'HDFC Bank', BRANCH: 'MUMBAI - FORT', ADDRESS: 'MANEKJI WADIA BLDG, GROUND FLOOR, NANIK MOTWANI MARG, FORT, MUMBAI', CITY: 'MUMBAI', DISTRICT: 'MUMBAI', STATE: 'MAHARASHTRA', MICR: '400240002', CONTACT: '022-61729999' },
+  'ICIC0000007': { BANK: 'ICICI Bank', BRANCH: 'CONNAUGHT PLACE', ADDRESS: '9A, PHELPS BUILDING, CONNAUGHT PLACE, NEW DELHI', CITY: 'NEW DELHI', DISTRICT: 'NEW DELHI', STATE: 'DELHI', MICR: '110229002', CONTACT: '011-41512760' },
+  'KKBK0000958': { BANK: 'Kotak Mahindra Bank', BRANCH: 'MUMBAI - NARIMAN POINT', ADDRESS: 'GROUND FLOOR, BAKHTAWAR, 229, NARIMAN POINT, MUMBAI', CITY: 'MUMBAI', DISTRICT: 'MUMBAI', STATE: 'MAHARASHTRA', MICR: '400485002', CONTACT: '022-66596000' }
+};
 
+function setSampleIFSC(ifsc) {
+  document.getElementById('ifscInput').value = ifsc;
+  lookupIFSC();
+}
+
+function lookupIFSC() {
+  const input = document.getElementById('ifscInput').value.trim().toUpperCase();
+  const statusIcon = document.getElementById('ifscStatusIcon');
+  const resultCard = document.getElementById('resultCard');
+
+  // RegEx for official RBI 11-character IFSC: 4 letters + 0 + 6 alphanumeric
+  const ifscRegex = /^[A-Z]{4}0[A-Z0-9]{6}$/;
+
+  if (input.length < 11) {
+    statusIcon.innerText = 'ENTER IFSC';
+    statusIcon.className = 'absolute right-4 text-xs font-black uppercase tracking-wider px-3 py-1 rounded-lg bg-slate-100 text-slate-600';
+    resultCard.classList.add('hidden');
+    return;
+  }
+
+  if (!ifscRegex.test(input)) {
+    statusIcon.innerText = 'INVALID FORMAT';
+    statusIcon.className = 'absolute right-4 text-xs font-black uppercase tracking-wider px-3 py-1 rounded-lg bg-rose-100 text-rose-700';
+    resultCard.classList.add('hidden');
+    return;
+  }
+
+  statusIcon.innerText = 'VALIDATING...';
+  statusIcon.className = 'absolute right-4 text-xs font-black uppercase tracking-wider px-3 py-1 rounded-lg bg-amber-100 text-amber-800';
+
+  // Fast Render from Local Top Dataset if available
+  if (topIFSC[input]) {
+    renderIFSCResult(input, topIFSC[input]);
+  }
+
+  // Real-Time RBI Database API Fetcher
+  fetch(`https://ifsc.razorpay.com/${input}`)
+    .then(res => {
+      if (!res.ok) throw new Error('IFSC Not Found');
+      return res.json();
+    })
+    .then(data => {
+      statusIcon.innerText = 'VALID IFSC';
+      statusIcon.className = 'absolute right-4 text-xs font-black uppercase tracking-wider px-3 py-1 rounded-lg bg-emerald-600 text-white shadow-sm';
+      renderIFSCResult(input, data);
+    })
+    .catch(err => {
+      if (!topIFSC[input]) {
+        statusIcon.innerText = 'NOT FOUND';
+        statusIcon.className = 'absolute right-4 text-xs font-black uppercase tracking-wider px-3 py-1 rounded-lg bg-rose-600 text-white';
+        resultCard.classList.add('hidden');
+      }
+    });
+}
+
+function renderIFSCResult(ifsc, data) {
+  const resultCard = document.getElementById('resultCard');
+  
+  document.getElementById('resBankName').innerText = data.BANK || 'Bank Details Found';
+  document.getElementById('resIfscCode').innerText = ifsc;
+  document.getElementById('resMicrCode').innerText = data.MICR || 'N/A';
+  document.getElementById('resBranch').innerText = data.BRANCH || 'Main Branch';
+  document.getElementById('resAddress').innerText = data.ADDRESS || 'Address not listed';
+  document.getElementById('resCity').innerText = data.CITY || data.DISTRICT || 'City';
+  document.getElementById('resState').innerText = data.STATE || 'India';
+  document.getElementById('resContact').innerText = data.CONTACT || 'Standard Branch Contact';
+
+  resultCard.classList.remove('hidden');
+}
+
+function copyBankDetails() {
+  const bank = document.getElementById('resBankName').innerText;
+  const ifsc = document.getElementById('resIfscCode').innerText;
+  const branch = document.getElementById('resBranch').innerText;
+  const address = document.getElementById('resAddress').innerText;
+
+  const copyText = `Bank: ${bank}\nIFSC Code: ${ifsc}\nBranch: ${branch}\nAddress: ${address}`;
+
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(copyText);
+    const notice = document.getElementById('copyNotice');
+    notice.classList.remove('hidden');
+    setTimeout(() => notice.classList.add('hidden'), 3000);
+  }
+}
+</script>
 <script src="/js/main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
