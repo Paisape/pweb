@@ -20,7 +20,7 @@ folders.forEach(folder => {
   let title = folder;
   const titleMatch = content.match(/<title>(.*?)<\/title>/i);
   if (titleMatch) {
-    title = titleMatch[1].replace(' � Paisape Blog', '').trim();
+    title = titleMatch[1].replace(' — Paisape Blog', '').trim();
   }
   
   let desc = '';
@@ -57,7 +57,7 @@ rss += '  </channel>\n';
 rss += '</rss>\n';
 
 fs.writeFileSync(rssPath, rss, 'utf8');
-console.log('? Generated rss.xml');
+console.log('✅ Generated rss.xml');
 
 // Update Sitemap
 if (fs.existsSync(sitemapPath)) {
@@ -74,5 +74,5 @@ if (fs.existsSync(sitemapPath)) {
   
   sitemap += newUrls + '\n</urlset>\n';
   fs.writeFileSync(sitemapPath, sitemap, 'utf8');
-  console.log('? Updated sitemap.xml');
+  console.log('✅ Updated sitemap.xml');
 }
