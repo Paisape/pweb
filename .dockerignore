@@ -1,6 +1,26 @@
-admin/
+# Version control
 .git/
 .gitignore
+
+# Admin and internal
+admin/
+core/
+paisape-website/
+scratch/
+docker/
 .agents/
+
+# Artifacts & Scripts
 GEMINI.md
+README.md
+task.md
+implementation_plan.md
+walkthrough.md
 *.log
+*.py
+*.js
+
+# Configs
+composer.json
+package.json
+config.php
