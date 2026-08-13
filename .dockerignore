@@ -19,8 +19,3 @@ walkthrough.md
 *.log
 *.py
 *.js
-
-# Configs
-composer.json
-package.json
-config.php
