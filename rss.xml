@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Paisape Blog</title>
+    <link>https://paisape.in/blog</link>
+    <description>Latest updates, engineering notes, and news from Paisape.</description>
+    <item>
+      <title>Why your UPI success rate drops at 9 PM � and what routing can do about it — Paisape Blog</title>
+      <link>https://paisape.in/blog/upi-success-rate-drops</link>
+      <description>Peak-hour declines are rarely a customer problem. We pulled 40 million transactions across eight acquirers to show where the failures actually originate.</description>
+      <pubDate>Thu, 13 Aug 2026 04:46:12 GMT</pubDate>
+    </item>
+    <item>
+      <title>Designing Zero-Downtime Payment Switches for 50,000 TPS Flash Sales — Paisape Blog</title>
+      <link>https://paisape.in/blog/zero-downtime-payment-switch</link>
+      <description>Architecting active-active multi-region switches, circuit breakers, and sub-second failover paths for high-concurrency e-commerce spikes.</description>
+      <pubDate>Thu, 13 Aug 2026 04:46:12 GMT</pubDate>
+    </item>
+    <item>
+      <title>Reading a UPI Decline Code Without Guessing — Paisape Blog</title>
+      <link>https://paisape.in/blog/upi-decline-codes</link>
+      <description>The 11 most common NPCI/bank decline codes and how to handle them gracefully.</description>
+      <pubDate>Thu, 13 Aug 2026 04:46:12 GMT</pubDate>
+    </item>
+    <item>
+      <title>Mastering UPI Autopay for Recurring Subscriptions — Paisape Blog</title>
+      <link>https://paisape.in/blog/upi-autopay</link>
+      <description>The technical flow of mandates, pre-debit notifications, and subscription management.</description>
+      <pubDate>Thu, 13 Aug 2026 04:46:12 GMT</pubDate>
+    </item>
+    <item>
+      <title>SMS vs WhatsApp Business API: High-Throughput Payment &amp;amp; OTP Rails — Paisape Blog</title>
+      <link>https://paisape.in/blog/textzi-sms-waba-notification-rails</link>
+      <description>Comparing TRAI DLT-compliant SMS routing against Meta WhatsApp Cloud API webhooks for sub-2 second OTP delivery, transaction alerts, and interactive paymen...</description>
+      <pubDate>Thu, 13 Aug 2026 04:46:12 GMT</pubDate>
+    </item>
+    <item>
+      <title>Soundbox vs POS Terminals: Acoustic Verification in High-Velocity Indian Retail — Paisape Blog</title>
+      <link>https://paisape.in/blog/soundbox-vs-pos-retail</link>
+      <description>An architectural comparison between instant IoT audio notification devices and traditional POS hardware for high-frequency micro-transactions.</description>
+      <pubDate>Thu, 13 Aug 2026 04:46:12 GMT</pubDate>
+    </item>
+    <item>
+      <title>The Ultimate Guide to Payment Orchestration in India — Paisape Blog</title>
+      <link>https://paisape.in/blog/payment-orchestration</link>
+      <description>How dynamic routing saves MDR, boosts success rates, and prevents massive revenue leaks during PSP downtimes.</description>
+      <pubDate>Thu, 13 Aug 2026 04:46:12 GMT</pubDate>
+    </item>
+    <item>
+      <title>Nodal Accounts and Settlement Cycles — Paisape Blog</title>
+      <link>https://paisape.in/blog/nodal-accounts</link>
+      <description>Understanding the RBI guidelines on merchant payouts and money flow.</description>
+      <pubDate>Thu, 13 Aug 2026 04:46:12 GMT</pubDate>
+    </item>
+    <item>
+      <title>Designing Failover That Doesn't Double-Charge — Paisape Blog</title>
+      <link>https://paisape.in/blog/failover-design</link>
+      <description>Idempotency keys, settlement windows and the reconciliation checks that make automatic retries safe.</description>
+      <pubDate>Thu, 13 Aug 2026 04:46:12 GMT</pubDate>
+    </item>
+    <item>
+      <title>Card Tokenisation (CoFT) Explained — Paisape Blog</title>
+      <link>https://paisape.in/blog/card-tokenisation</link>
+      <description>How the RBI mandate changes saved card flows and secured the ecosystem.</description>
+      <pubDate>Thu, 13 Aug 2026 04:46:12 GMT</pubDate>
+    </item>
+    <item>
+      <title>BBPS (Bharat Bill Payment System) Integration Guide — Paisape Blog</title>
+      <link>https://paisape.in/blog/bbps-integration</link>
+      <description>How to integrate and earn commissions on utility payments through the centralized BBPS network.</description>
+      <pubDate>Thu, 13 Aug 2026 04:46:12 GMT</pubDate>
+    </item>
+    <item>
+      <title>Automated Reconciliation in Multi-Gateway Setups — Paisape Blog</title>
+      <link>https://paisape.in/blog/automated-reconciliation</link>
+      <description>Math and strategies for matching T+1 settlements across multiple payment aggregators.</description>
+      <pubDate>Thu, 13 Aug 2026 04:46:12 GMT</pubDate>
+    </item>
+    <item>
+      <title>Audit Trails Your Regulator Will Actually Accept — Paisape Blog</title>
+      <link>https://paisape.in/blog/audit-trails</link>
+      <description>What to log at each hop, how long to keep it, and the gaps that turn a routine inspection into a long quarter.</description>
+      <pubDate>Thu, 13 Aug 2026 04:46:12 GMT</pubDate>
+    </item>
+    <item>
+      <title>AePS 2.0 Security Mandates: Biometric L1 Upgrades &amp; 2FA Agent Authentication — Paisape Blog</title>
+      <link>https://paisape.in/blog/aeps-security-update-2026</link>
+      <description>An engineering breakdown of NPCI &amp; RBI's updated AePS directives — mandatory L1 biometric device migration, agent 2-Factor Authentication, and real-time fr...</description>
+      <pubDate>Thu, 13 Aug 2026 04:46:12 GMT</pubDate>
+    </item>
+    <item>
+      <title>Decoding AEPS: The Aadhaar Enabled Payment System — Paisape Blog</title>
+      <link>https://paisape.in/blog/aeps-mechanics</link>
+      <description>Architecture, challenges, and implementation strategies for rural FinTechs utilizing biometric authentication.</description>
+      <pubDate>Thu, 13 Aug 2026 04:46:12 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
