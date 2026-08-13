@@ -33,12 +33,29 @@ folders.forEach(folder => {
   const pubDate = new Date(stat.mtime).toUTCString();
   const url = 'https://paisape.in/blog/' + folder;
   
-  posts.push({ title, desc, url, pubDate, folder, date: stat.mtime });
+  let img = '/assets/blog/blog_textzi_waba.jpg';
+  const imgMatch = content.match(/<meta\s+property="og:image"\s+content="https:\/\/paisape.in([^"]+)"/i);
+  if (imgMatch) {
+    img = imgMatch[1];
+  }
+  
+  let articleContent = '';
+  let proseStart = content.indexOf('<div class="prose');
+  if (proseStart !== -1) {
+    let contentStart = content.indexOf('>', proseStart) + 1;
+    let contentEnd = content.indexOf('</div>\n    </div>\n  </article>');
+    if (contentEnd === -1) contentEnd = content.indexOf('</article>') - 15;
+    if (contentEnd > 0) {
+      articleContent = content.substring(contentStart, contentEnd).trim();
+    }
+  }
+
+  posts.push({ title, desc, img, articleContent, url, pubDate, folder, date: stat.mtime });
 });
 
 // Generate RSS
 let rss = '<?xml version="1.0" encoding="UTF-8" ?>\n';
-rss += '<rss version="2.0">\n';
+rss += '<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">\n';
 rss += '  <channel>\n';
 rss += '    <title>Paisape Blog</title>\n';
 rss += '    <link>https://paisape.in/blog</link>\n';
@@ -49,6 +66,8 @@ posts.sort((a, b) => b.date - a.date).forEach(post => {
   rss += '      <title>' + post.title.replace(/&/g, '&amp;') + '</title>\n';
   rss += '      <link>' + post.url + '</link>\n';
   rss += '      <description>' + post.desc.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</description>\n';
+  rss += '      <enclosure url="https://paisape.in' + post.img + '" type="image/jpeg" />\n';
+  rss += '      <content:encoded><![CDATA[' + post.articleContent + ']]></content:encoded>\n';
   rss += '      <pubDate>' + post.pubDate + '</pubDate>\n';
   rss += '    </item>\n';
 });
