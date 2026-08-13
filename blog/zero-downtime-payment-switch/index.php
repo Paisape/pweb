@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Designing Zero-Downtime Payment Switches for 50,000 TPS Flash Sales — Paisape Blog</title>
-<meta name="description" content="How multi-region active-active architectures handle high-concurrency payment spikes, sub-second failover paths, and distributed state consistency." />
+<meta name="description" content="Architecting active-active multi-region switches, circuit breakers, and sub-second failover paths for high-concurrency e-commerce spikes." />
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

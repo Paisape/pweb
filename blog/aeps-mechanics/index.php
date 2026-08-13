@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Blog — Paisape</title>
-<meta name="description" content="Field notes on routing strategy, UPI mechanics, settlement and reconciliation from the Paisape engineering team." />
+<title>Decoding AEPS: The Aadhaar Enabled Payment System — Paisape Blog</title>
+<meta name="description" content="Architecture, challenges, and implementation strategies for rural FinTechs utilizing biometric authentication." />
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

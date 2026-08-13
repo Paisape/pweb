@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AePS 2.0 Security Mandates: Biometric L1 Upgrades & 2FA Agent Authentication — Paisape Blog</title>
-<meta name="description" content="NPCI & RBI's latest AePS security directives — mandatory L1 biometric authentication, daily agent 2FA verification, real-time fraud monitoring, and micro-ATM spoofing prevention." />
+<meta name="description" content="An engineering breakdown of NPCI & RBI's updated AePS directives — mandatory L1 biometric device migration, agent 2-Factor Authentication, and real-time fr..." />
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

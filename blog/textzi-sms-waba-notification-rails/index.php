@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>SMS vs WhatsApp Business API: High-Throughput Payment &amp; OTP Rails — Paisape</title>
-<meta name="description" content="Technical comparison of DLT-compliant SMS vs WhatsApp Cloud API infrastructure for payment OTPs, alerts, and customer notifications." />
+<title>SMS vs WhatsApp Business API: High-Throughput Payment &amp; OTP Rails — Paisape Blog</title>
+<meta name="description" content="Comparing TRAI DLT-compliant SMS routing against Meta WhatsApp Cloud API webhooks for sub-2 second OTP delivery, transaction alerts, and interactive paymen..." />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="SMS vs WhatsApp Business API: High-Throughput Payment & OTP Rails" />
 <meta property="og:description" content="Analyzing DLT SMS routing latency vs Meta WhatsApp Cloud API webhooks for enterprise payment alerts." />

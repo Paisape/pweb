@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Blog — Paisape</title>
-<meta name="description" content="Field notes on routing strategy, UPI mechanics, settlement and reconciliation from the Paisape engineering team." />
+<title>Designing Failover That Doesn't Double-Charge — Paisape Blog</title>
+<meta name="description" content="Idempotency keys, settlement windows and the reconciliation checks that make automatic retries safe." />
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

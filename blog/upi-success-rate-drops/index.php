@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Blog — Paisape</title>
-<meta name="description" content="Field notes on routing strategy, UPI mechanics, settlement and reconciliation from the Paisape engineering team." />
+<title>Why your UPI success rate drops at 9 PM ï¿½ and what routing can do about it â€” Paisape Blog</title>
+<meta name="description" content="Peak-hour declines are rarely a customer problem. We pulled 40 million transactions across eight acquirers to show where the failures actually originate." />
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -212,7 +212,7 @@
     </div>
     
     <h1 class="font-display text-[32px] font-extrabold leading-[1.15] tracking-tight text-ink sm:text-[44px]">
-      Why your UPI success rate drops at 9 PM — and what routing can do about it
+      Why your UPI success rate drops at 9 PM ï¿½ and what routing can do about it
     </h1>
     
     <p class="mt-6 text-[18px] leading-relaxed text-body/80 font-medium">

@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Soundbox vs POS Terminals: Acoustic Verification in High-Velocity Indian Retail — Paisape Blog</title>
-<meta name="description" content="Acoustic instant voice alerts vs traditional card terminals — analyzing network latency, merchant trust, hardware unit economics, and QR fraud prevention." />
+<meta name="description" content="An architectural comparison between instant IoT audio notification devices and traditional POS hardware for high-frequency micro-transactions." />
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
