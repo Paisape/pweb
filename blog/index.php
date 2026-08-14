@@ -324,6 +324,43 @@
     </div>
 
     <div id="grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+<!-- Independence Day Post -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
+        <a href="/blog/independence-day-2026" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_independence_day.jpg" alt="Celebrating Financial Independence" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">engineering</span><span class="text-body/50">4 min</span>
+          </div>
+          <a href="/blog/independence-day-2026"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Celebrating Financial Independence: India's Digital Payment Revolution</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">Reflecting on India's incredible journey towards true financial independence through Digital Public Infrastructure.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">15 Aug 2026</span>
+            <a href="/blog/independence-day-2026" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Soundbox Post -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="80">
+        <a href="/blog/soundbox-retail-revolution" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_soundbox_retail.jpg" alt="The Rise of Soundbox Technology" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">engineering</span><span class="text-body/50">5 min</span>
+          </div>
+          <a href="/blog/soundbox-retail-revolution"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">The Rise of Soundbox Technology: Why Every Retailer Needs Audio Alerts</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">Exploring the psychology and security benefits of audio confirmations in busy retail environments.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">14 Aug 2026</span>
+            <a href="/blog/soundbox-retail-revolution" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
         <a href="/blog/textzi-sms-waba-notification-rails" class="block overflow-hidden h-48 bg-slate-100">
           <img src="/assets/blog/blog_textzi_waba.jpg" alt="SMS vs WhatsApp Business API: High-Throughput Payment & OTP Rails" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
@@ -717,6 +754,7 @@
 <script src="/js/main.js"></script>
 </body>
 </html>
+
 
 
 
