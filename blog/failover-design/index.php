@@ -40,7 +40,7 @@
   </script>
 </head>
 <body class="bg-white text-body antialiased">
-<div class="fixed top-0 left-0 z-[100] w-full bg-gradient-to-r from-[#FF9933] via-white to-[#138808] px-4 py-2.5 text-center shadow-md">
+<div class="fixed top-0 left-0 z-[100] w-full px-4 py-2.5 text-center shadow-md border-b border-black/10" style="background-image: url('/assets/hand_painted_tricolor.jpg'); background-size: cover; background-position: center;">
   <div class="flex items-center justify-center gap-4">
     <div class="animate-[bounce_2s_infinite]">
       <svg class="h-6 w-9 rounded-sm shadow-sm drop-shadow-md" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
