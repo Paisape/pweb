@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <!-- SEO Canonical & Robots Tags -->
+  <link rel="canonical" href="https://paisape.in/blog/upi-success-rate-drops">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Why your UPI success rate drops at 9 PM � and what routing can do about it — Paisape Blog</title>

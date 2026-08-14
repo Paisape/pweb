@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <!-- SEO Canonical & Robots Tags -->
+  <link rel="canonical" href="https://paisape.in/mcc-finder">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Free Merchant Category Code (MCC) Finder & PG Risk Classifier — Paisape</title>

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <!-- SEO Canonical & Robots Tags -->
+  <link rel="canonical" href="https://paisape.in/blog/failover-design">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Designing Failover That Doesn't Double-Charge — Paisape Blog</title>
