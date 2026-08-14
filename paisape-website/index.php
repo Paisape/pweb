@@ -17,6 +17,7 @@
 </head>
 
 <body class="bg-white text-body antialiased">
+<div class="h-1.5 w-full bg-gradient-to-r from-[#FF9933] via-white to-[#138808] z-[100] relative"></div>
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">Skip to content</a>
 
 <header class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
