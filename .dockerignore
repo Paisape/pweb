@@ -18,3 +18,9 @@ implementation_plan.md
 walkthrough.md
 *.log
 *.py
+*.js
+!build.js
+!js/
+paisape-website/
+.tempmediaStorage/
+.user_uploaded/
