@@ -41,7 +41,7 @@
 </head>
 
 <body class="bg-white text-body antialiased">
-<div class="relative z-[100] w-full bg-gradient-to-r from-[#FF9933] via-white to-[#138808] px-4 py-2.5 text-center shadow-md">
+<div class="fixed top-0 left-0 z-[100] w-full bg-gradient-to-r from-[#FF9933] via-white to-[#138808] px-4 py-2.5 text-center shadow-md">
   <div class="flex items-center justify-center gap-4">
     <span class="text-2xl drop-shadow-sm">🇮🇳</span>
     <p class="font-display text-[15px] font-extrabold text-[#000080] tracking-widest uppercase drop-shadow-sm">Happy Independence Day</p>
@@ -53,7 +53,7 @@
 <div id="progress" class="fixed top-0 left-0 z-[60] h-[3px] w-full bg-brand transition-transform duration-150"></div>
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">Skip to content</a>
 
-<header class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+<header class="fixed top-[48px] inset-x-0 z-50 transition-all duration-500">
   <div class="mx-auto max-w-site px-5">
     <div id="navInner" class="mt-4 flex items-center justify-between rounded-2xl border border-transparent px-5 py-3 transition-all duration-500">
 
