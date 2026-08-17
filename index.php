@@ -256,42 +256,106 @@
 
     <div data-reveal="right" data-delay="240" class="relative">
       <div class="animate-float rounded-3xl border border-white bg-white/80 p-4 shadow-[0_30px_70px_-30px_rgba(22,35,59,.35)] backdrop-blur">
-        <div class="grid grid-cols-3 gap-3">
-          <div class="rounded-xl border border-slate-100 bg-white px-3.5 py-3">
-            <p class="text-[10px] font-medium uppercase tracking-wide text-body/70">Total Volume</p>
-            <p class="mt-1 font-display text-[15px] font-bold text-ink" data-count="571351" data-prefix="&#8377;" data-format="in">&#8377;0</p>
+        
+        <!-- Tabs Header -->
+        <div class="flex border-b border-slate-100 mb-4 pb-2 text-center">
+          <button id="tab-stats" class="flex-1 text-[11px] font-extrabold uppercase tracking-wider text-slate-400 pb-2 hover:text-ink transition duration-300 outline-none">Live Stats</button>
+          <button id="tab-sim" class="flex-1 text-[11px] font-extrabold uppercase tracking-wider text-brand border-b-2 border-brand pb-2 outline-none transition duration-300">Orchestrator Sim</button>
+        </div>
+
+        <!-- Panel 1: Live Stats -->
+        <div id="panel-stats" class="hidden space-y-3">
+          <div class="grid grid-cols-3 gap-3">
+            <div class="rounded-xl border border-slate-100 bg-white px-3.5 py-3">
+              <p class="text-[10px] font-medium uppercase tracking-wide text-body/70">Total Volume</p>
+              <p class="mt-1 font-display text-[15px] font-bold text-ink" data-count="571351" data-prefix="&#8377;" data-format="in">&#8377;0</p>
+            </div>
+            <div class="rounded-xl border border-slate-100 bg-white px-3.5 py-3">
+              <p class="text-[10px] font-medium uppercase tracking-wide text-body/70">Total Revenue</p>
+              <p class="mt-1 font-display text-[15px] font-bold text-ink" data-count="1461.49" data-prefix="&#8377;" data-dec="2">&#8377;0</p>
+            </div>
+            <div class="rounded-xl border border-slate-100 bg-white px-3.5 py-3">
+              <p class="text-[10px] font-medium uppercase tracking-wide text-body/70">Active Merchants</p>
+              <p class="mt-1 font-display text-[15px] font-bold text-ink" data-count="20">0</p>
+            </div>
           </div>
-          <div class="rounded-xl border border-slate-100 bg-white px-3.5 py-3">
-            <p class="text-[10px] font-medium uppercase tracking-wide text-body/70">Total Revenue</p>
-            <p class="mt-1 font-display text-[15px] font-bold text-ink" data-count="1461.49" data-prefix="&#8377;" data-dec="2">&#8377;0</p>
+
+          <div class="mt-3 grid grid-cols-2 gap-3">
+            <div class="donut flex items-center justify-center rounded-xl border border-slate-100 bg-white py-7">
+              <svg viewBox="0 0 100 100" class="h-28 w-28 -rotate-90" aria-hidden="true">
+                <circle cx="50" cy="50" r="35" fill="none" stroke="#EAF2F9" stroke-width="13"/>
+                <circle class="val" cx="50" cy="50" r="35" fill="none" stroke="#1F5FE0" stroke-width="13" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="flex flex-col justify-center gap-3.5 rounded-xl border border-slate-100 bg-white px-5 py-7">
+              <span class="bar h-2 w-[92%] rounded-full bg-[#1F5FE0]" style="transition-delay:.35s"></span>
+              <span class="bar h-2 w-[68%] rounded-full bg-brand/70" style="transition-delay:.5s"></span>
+              <span class="bar h-2 w-[80%] rounded-full bg-slate-200" style="transition-delay:.65s"></span>
+              <span class="bar h-2 w-[46%] rounded-full bg-slate-200" style="transition-delay:.8s"></span>
+            </div>
           </div>
-          <div class="rounded-xl border border-slate-100 bg-white px-3.5 py-3">
-            <p class="text-[10px] font-medium uppercase tracking-wide text-body/70">Active Merchants</p>
-            <p class="mt-1 font-display text-[15px] font-bold text-ink" data-count="20">0</p>
+
+          <div class="mt-3 flex items-center justify-between rounded-xl bg-mist px-4 py-2.5">
+            <span class="text-[11px] font-semibold text-ink">Routing decision</span>
+            <span class="flex items-center gap-1.5 text-[11px] font-semibold text-emerald-600">
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> PSP switched in 42&nbsp;ms
+            </span>
           </div>
         </div>
 
-        <div class="mt-3 grid grid-cols-2 gap-3">
-          <div class="donut flex items-center justify-center rounded-xl border border-slate-100 bg-white py-7">
-            <svg viewBox="0 0 100 100" class="h-28 w-28 -rotate-90" aria-hidden="true">
-              <circle cx="50" cy="50" r="35" fill="none" stroke="#EAF2F9" stroke-width="13"/>
-              <circle class="val" cx="50" cy="50" r="35" fill="none" stroke="#1F5FE0" stroke-width="13" stroke-linecap="round"/>
-            </svg>
+        <!-- Panel 2: Orchestrator Sim -->
+        <div id="panel-sim" class="space-y-4 min-h-[220px] flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <span class="text-[12px] font-bold text-ink font-display">Primary Gateway (HDFC)</span>
+            <label class="relative inline-flex items-center cursor-pointer select-none">
+              <input type="checkbox" id="gw-toggle" class="sr-only peer" checked>
+              <div class="w-9 h-5 bg-red-500 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-emerald-500"></div>
+              <span id="gw-status-text" class="ml-2 text-[10px] font-bold uppercase text-emerald-600">Online</span>
+            </label>
           </div>
-          <div class="flex flex-col justify-center gap-3.5 rounded-xl border border-slate-100 bg-white px-5 py-7">
-            <span class="bar h-2 w-[92%] rounded-full bg-[#1F5FE0]" style="transition-delay:.35s"></span>
-            <span class="bar h-2 w-[68%] rounded-full bg-brand/70" style="transition-delay:.5s"></span>
-            <span class="bar h-2 w-[80%] rounded-full bg-slate-200" style="transition-delay:.65s"></span>
-            <span class="bar h-2 w-[46%] rounded-full bg-slate-200" style="transition-delay:.8s"></span>
+          
+          <!-- Path Simulation Visuals -->
+          <div class="relative mt-6 flex items-center justify-between px-2">
+            <!-- User Node -->
+            <div class="flex flex-col items-center z-10">
+              <div class="h-10 w-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-ink font-bold text-[10px] shadow-sm">User</div>
+            </div>
+            
+            <!-- Connection Line 1 -->
+            <div class="flex-1 h-[3px] bg-slate-100 mx-1 relative overflow-hidden">
+              <div id="sim-line-1" class="absolute top-0 left-0 h-full w-0 bg-brand transition-all duration-[600ms] ease-out"></div>
+            </div>
+            
+            <!-- Orchestrator Switch Node -->
+            <div class="flex flex-col items-center z-10">
+              <div class="h-10 w-10 rounded-full bg-brandLt border border-brand/20 flex items-center justify-center text-brand font-bold text-[10px] relative shadow-sm">
+                Switch
+                <span id="sim-spinner" class="absolute -top-1 -right-1 h-3.5 w-3.5 rounded-full border-2 border-brand border-t-transparent animate-spin hidden"></span>
+              </div>
+            </div>
+            
+            <!-- Connection Line 2 -->
+            <div class="flex-1 h-[3px] bg-slate-100 mx-1 relative overflow-hidden">
+              <div id="sim-line-2" class="absolute top-0 left-0 h-full w-0 bg-emerald-500 transition-all duration-[600ms] ease-out"></div>
+            </div>
+            
+            <!-- Destination Node -->
+            <div class="flex flex-col items-center z-10 w-16">
+              <div id="sim-target" class="h-10 w-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-ink font-bold text-[9px] text-center leading-tight shadow-sm transition-all duration-300">HDFC</div>
+              <span id="sim-target-label" class="text-[8px] font-extrabold uppercase text-slate-400 mt-1.5 tracking-wider">Primary</span>
+            </div>
+          </div>
+
+          <div class="space-y-3 pt-2">
+            <div id="sim-message" class="rounded-xl bg-mist px-4 py-2.5 text-center min-h-[44px] flex items-center justify-center">
+              <p class="text-[11px] font-semibold text-ink2 leading-relaxed">Toggle Gateway status above, then click pay to test routing.</p>
+            </div>
+            <button id="sim-btn" class="w-full rounded-xl bg-brand py-3 text-xs font-bold text-white shadow-lg shadow-brand/20 hover:bg-brandDk active:scale-[0.98] transition">
+              Simulate UPI Payment (₹1,000)
+            </button>
           </div>
         </div>
 
-        <div class="mt-3 flex items-center justify-between rounded-xl bg-mist px-4 py-2.5">
-          <span class="text-[11px] font-semibold text-ink">Routing decision</span>
-          <span class="flex items-center gap-1.5 text-[11px] font-semibold text-emerald-600">
-            <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> PSP switched in 42&nbsp;ms
-          </span>
-        </div>
       </div>
     </div>
   </div>
@@ -365,7 +429,7 @@
 </section>
 
 <!-- ================= SOLUTIONS ================= -->
-<section id="solutions" class="bg-gradient-to-b from-white via-[#F5FAFE] to-white py-20 md:py-24">
+<section id="solutions" class="bg-gradient-to-b from-white via-[#F5FAFE] to-white pt-10 pb-16 md:pt-12 md:pb-20">
   <div class="mx-auto max-w-site px-5">
     <p data-reveal class="mb-3 text-center text-[11px] font-bold uppercase tracking-[0.24em] text-brand">
       <span class="mr-2 inline-block h-px w-6 align-middle bg-brand"></span>Our Solutions
@@ -444,7 +508,7 @@
 </section>
 
 <!-- ================= CHALLENGES ================= -->
-<section id="challenges" class="bg-white py-20 md:py-24">
+<section id="challenges" class="bg-white pt-10 pb-16 md:pt-12 md:pb-20">
   <div class="mx-auto max-w-site px-5">
     <h2 data-reveal class="mx-auto max-w-2xl text-center font-display text-[27px] font-extrabold leading-tight tracking-tight text-ink sm:text-[34px]">
       Payment Infrastructure Challenges<br class="hidden sm:block"> &amp; Our Solutions
@@ -492,6 +556,71 @@
             <h4 class="font-display text-[14.5px] font-bold text-ink">Smart Routing &amp; Real-Time Monitoring</h4>
             <p class="mt-2 text-[13px] leading-relaxed text-body">AI-driven routing, failover systems, and automated reconciliation improve efficiency and success rates.</p>
           </div>
+        </div>      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ROI CALCULATOR ================= -->
+<section id="roi-calculator" class="bg-slate-50 border-t border-slate-100 pt-12 pb-4">
+  <div class="mx-auto max-w-site px-5">
+    <p class="mb-3 text-center text-[11px] font-bold uppercase tracking-[0.24em] text-brand">
+      <span class="mr-2 inline-block h-px w-6 align-middle bg-brand"></span>Maximize Revenue
+    </p>
+    <h2 class="mx-auto max-w-3xl text-center font-display text-[27px] font-extrabold leading-tight tracking-tight text-ink sm:text-[34px]">
+      Calculate how much revenue you recover with Paisape
+    </h2>
+    <p class="mx-auto mt-4 max-w-xl text-center text-[14.5px] leading-relaxed text-body">
+      Enter your numbers below to see the commercial impact of intelligent payment switches and dynamic failover rules.
+    </p>
+
+    <div class="mt-14 max-w-4xl mx-auto bg-white rounded-3xl border border-slate-200/80 shadow-sm p-6 sm:p-10 grid gap-10 md:grid-cols-[1.1fr_.9fr]">
+      <!-- Left side: Sliders -->
+      <div class="space-y-8">
+        <!-- Volume Slider -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <label for="slider-volume" class="text-sm font-bold text-ink">Monthly Volume (INR)</label>
+            <span id="label-volume" class="text-sm font-extrabold text-brand bg-brand/5 border border-brand/10 rounded-lg px-2.5 py-1">₹5 Cr</span>
+          </div>
+          <input type="range" id="slider-volume" min="1" max="100" value="5" class="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-brand">
+          <div class="flex justify-between text-[10px] font-semibold text-slate-400">
+            <span>₹1 Cr</span>
+            <span>₹50 Cr</span>
+            <span>₹100 Cr</span>
+          </div>
+        </div>
+
+        <!-- Failure Rate Slider -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <label for="slider-failure" class="text-sm font-bold text-ink">Current Transaction Dropoff Rate</label>
+            <span id="label-failure" class="text-sm font-extrabold text-red-500 bg-red-50 border border-red-100 rounded-lg px-2.5 py-1">15%</span>
+          </div>
+          <input type="range" id="slider-failure" min="5" max="30" value="15" class="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-brand">
+          <div class="flex justify-between text-[10px] font-semibold text-slate-400">
+            <span>5% (Low)</span>
+            <span>18%</span>
+            <span>30% (High Failure)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side: Savings summary card -->
+      <div class="bg-gradient-to-b from-[#EAF4FD] to-white rounded-2xl border border-white p-6 flex flex-col justify-between shadow-sm">
+        <div class="space-y-4">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-body/70">Estimated Recovery Impact</h3>
+          <div>
+            <p class="text-[11px] font-semibold text-slate-500">Additional Successes (Annually)</p>
+            <p id="roi-additional-txs" class="text-2xl font-extrabold text-ink font-display mt-0.5">3.6 Lakhs+</p>
+          </div>
+          <div>
+            <p class="text-[11px] font-semibold text-slate-500">Estimated Annual Recovered Revenue</p>
+            <p id="roi-recovered-rev" class="text-3xl font-extrabold text-brand font-display mt-0.5">₹36 Lakhs</p>
+          </div>
+        </div>
+        <div class="mt-6 pt-5 border-t border-slate-200/50 flex items-center justify-between">
+          <span class="text-[10px] font-semibold text-slate-500 leading-tight">Based on average +6% optimization with smart failover routing rules.</span>
         </div>
       </div>
     </div>
@@ -499,7 +628,7 @@
 </section>
 
 <!-- ================= DEVELOPER EXPERIENCE ================= -->
-<section id="developers" class="border-y border-slate-100 bg-gradient-to-b from-[#F3F9FE] to-white py-20 md:py-24">
+<section id="developers" class="border-y border-slate-100 bg-gradient-to-b from-[#F3F9FE] to-white pt-8 pb-16 md:pb-20">
   <div class="mx-auto max-w-site px-5">
     <p data-reveal class="mb-3 text-center text-[11px] font-bold uppercase tracking-[0.24em] text-brand">&mdash; Developer Experience &mdash;</p>
     <h2 data-reveal data-delay="80" class="text-center font-display text-[27px] font-extrabold tracking-tight text-ink sm:text-[34px]">
@@ -530,16 +659,14 @@
       </div>
 
       <div data-reveal="right" id="terminal" class="overflow-hidden rounded-2xl bg-[#122234] shadow-[0_30px_70px_-25px_rgba(18,34,52,.6)]">
-        <div class="flex items-center justify-between bg-[#0D1B2A] px-4 py-3">
-          <div class="flex gap-1.5">
-            <span class="h-3 w-3 rounded-full bg-[#FF5F57]"></span>
-            <span class="h-3 w-3 rounded-full bg-[#FEBC2E]"></span>
-            <span class="h-3 w-3 rounded-full bg-[#28C840]"></span>
-          </div>
-          <span class="font-mono text-[11px] text-slate-400">paisape-cli &mdash; zsh</span>
-          <span class="rounded bg-brand/20 px-2 py-0.5 font-mono text-[10px] font-bold tracking-wider text-brand">SANDBOX</span>
+        <!-- Dev Tabs Header -->
+        <div class="flex bg-[#0D1B2A] border-b border-slate-800 px-4 pt-3 gap-2">
+          <button id="dev-tab-cli" class="text-[11px] font-extrabold uppercase tracking-wider text-brand border-b-2 border-brand pb-2 px-3 outline-none transition duration-300">CLI Tool</button>
+          <button id="dev-tab-sdk" class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 pb-2 px-3 hover:text-white transition duration-300 outline-none">SDK Integration</button>
         </div>
-        <div class="space-y-1.5 p-6 font-mono text-[12.5px] leading-relaxed">
+
+        <!-- CLI Panel -->
+        <div id="dev-panel-cli" class="space-y-1.5 p-6 font-mono text-[12.5px] leading-relaxed text-slate-300">
           <p class="term-line text-brand" data-t="0">$ <span class="font-bold">paisape sandbox init</span></p>
           <p class="term-line text-emerald-400" data-t="1">&#10003; Sandbox environment created</p>
           <p class="term-line text-emerald-400" data-t="2">&#10003; Test API keys generated</p>
@@ -550,6 +677,50 @@
           <p class="term-line text-emerald-400" data-t="7">&#10003; Flows migrated from staging</p>
           <p class="term-line text-emerald-400" data-t="8">&#10003; Live in 4.2s</p>
           <p class="term-line text-brand" data-t="9">$ <span class="inline-block h-3.5 w-2 translate-y-0.5 bg-brand animate-blink"></span></p>
+        </div>
+
+        <!-- SDK Panel -->
+        <div id="dev-panel-sdk" class="hidden p-6 font-mono text-[12px] leading-relaxed text-slate-300 bg-[#0F1D2B] min-h-[268px]">
+          <!-- Sub-tabs for Language -->
+          <div class="flex gap-2 border-b border-slate-800/80 pb-2 mb-4">
+            <button id="lang-tab-node" class="text-[10px] font-extrabold uppercase tracking-wide text-brand border border-brand/20 bg-brand/5 rounded px-2.5 py-1 transition duration-200 outline-none">Node.js</button>
+            <button id="lang-tab-py" class="text-[10px] font-extrabold uppercase tracking-wide text-slate-400 hover:text-white rounded px-2.5 py-1 transition duration-200 outline-none">Python</button>
+            <button id="lang-tab-curl" class="text-[10px] font-extrabold uppercase tracking-wide text-slate-400 hover:text-white rounded px-2.5 py-1 transition duration-200 outline-none">cURL</button>
+          </div>
+
+          <!-- Code Snippets -->
+          <div id="code-node" class="space-y-1 overflow-x-auto">
+            <p><span class="text-pink-400">const</span> Paisape = <span class="text-blue-300">require</span>(<span class="text-emerald-400">'@paisape/node'</span>);</p>
+            <p><span class="text-pink-400">const</span> client = <span class="text-pink-400">new</span> <span class="text-yellow-200">Paisape</span>(<span class="text-emerald-400">'api_key_prod_...'</span>);</p>
+            <p class="h-2"></p>
+            <p><span class="text-slate-400">// Initiate dynamic checkout routing</span></p>
+            <p><span class="text-pink-400">const</span> session = <span class="text-pink-400">await</span> client.<span class="text-cyan-300">sessions</span>.<span class="text-blue-300">create</span>({</p>
+            <p>&nbsp;&nbsp;amount: <span class="text-purple-300">100000</span>, <span class="text-slate-500">// ₹1,000</span></p>
+            <p>&nbsp;&nbsp;currency: <span class="text-emerald-400">'INR'</span>,</p>
+            <p>&nbsp;&nbsp;routing_rule: <span class="text-emerald-400">'high_success_rate'</span></p>
+            <p>});</p>
+          </div>
+
+          <div id="code-py" class="hidden space-y-1 overflow-x-auto">
+            <p><span class="text-pink-400">import</span> paisape</p>
+            <p class="h-2"></p>
+            <p><span class="text-pink-400">client</span> = paisape.<span class="text-yellow-200">Client</span>(api_key=<span class="text-emerald-400">"api_key_prod_..."</span>)</p>
+            <p class="h-2"></p>
+            <p><span class="text-slate-400"># Initiate dynamic checkout routing</span></p>
+            <p>session = client.sessions.create(</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;amount=<span class="text-purple-300">100000</span>, <span class="text-slate-500"># ₹1,000</span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;currency=<span class="text-emerald-400">"INR"</span>,</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;routing_rule=<span class="text-emerald-400">"high_success_rate"</span></p>
+            <p>)</p>
+          </div>
+
+          <div id="code-curl" class="hidden space-y-1 overflow-x-auto">
+            <p><span class="text-cyan-300">curl</span> -X POST https://api.paisape.in/v1/sessions \</p>
+            <p>&nbsp;&nbsp;-H <span class="text-emerald-400">"Authorization: Bearer api_key_prod_..."</span> \</p>
+            <p>&nbsp;&nbsp;-d amount=<span class="text-purple-300">100000</span> \</p>
+            <p>&nbsp;&nbsp;-d currency=INR \</p>
+            <p>&nbsp;&nbsp;-d routing_rule=high_success_rate</p>
+          </div>
         </div>
       </div>
     </div>
@@ -695,6 +866,83 @@
 
 </main>
 
+<!-- ================= LATEST BLOGS ================= -->
+<section id="latest-blogs" class="bg-white border-t border-slate-100 pt-12 pb-16">
+  <div class="mx-auto max-w-site px-5">
+    <div class="flex flex-col items-center justify-center text-center">
+      <p class="mb-3 text-center text-[11px] font-bold uppercase tracking-[0.24em] text-brand">
+        <span class="mr-2 inline-block h-px w-6 align-middle bg-brand"></span>Fintech Engineering Insights
+      </p>
+      <h2 class="font-display text-[27px] font-extrabold leading-tight tracking-tight text-ink sm:text-[34px] text-center">
+        Latest from Paisape Engineering
+      </h2>
+      <p class="mt-4 max-w-xl text-center text-[14.5px] leading-relaxed text-body">
+        Deep dives into high-throughput payment rails, API architectures, dynamic routing switches, and financial security compliance.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Neobanking Card -->
+      <article class="card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm">
+        <a href="/blog/neobanking-api-architecture" class="block overflow-hidden h-44 bg-slate-100">
+          <img src="/assets/blog/blog_neobanking.jpg" alt="Building the Future of Finance" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">engineering</span><span class="text-body/50">6 min read</span>
+          </div>
+          <a href="/blog/neobanking-api-architecture"><h3 class="mt-3 font-display text-[15px] font-bold leading-snug text-ink hover:text-brand">Building the Future of Finance: API-Driven Neobanking Architectures</h3></a>
+          <p class="mt-2 text-[12.5px] leading-relaxed text-body line-clamp-3">Explore how modern fintechs and enterprises launch prepaid cards, digital wallets, and virtual accounts using banking APIs.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[11px] text-body/70">17 Aug 2026</span>
+            <a href="/blog/neobanking-api-architecture" class="inline-flex items-center gap-1.5 text-[12px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Independence Day Card -->
+      <article class="card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm">
+        <a href="/blog/independence-day-2026" class="block overflow-hidden h-44 bg-slate-100">
+          <img src="/assets/blog/blog_independence_day.jpg" alt="Celebrating Financial Independence" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">engineering</span><span class="text-body/50">4 min read</span>
+          </div>
+          <a href="/blog/independence-day-2026"><h3 class="mt-3 font-display text-[15px] font-bold leading-snug text-ink hover:text-brand">Celebrating Financial Independence: India's Digital Payment Revolution</h3></a>
+          <p class="mt-2 text-[12.5px] leading-relaxed text-body line-clamp-3">Reflecting on India's incredible journey towards true financial independence through Digital Public Infrastructure.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[11px] text-body/70">15 Aug 2026</span>
+            <a href="/blog/independence-day-2026" class="inline-flex items-center gap-1.5 text-[12px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Soundbox Card -->
+      <article class="card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm">
+        <a href="/blog/soundbox-retail-revolution" class="block overflow-hidden h-44 bg-slate-100">
+          <img src="/assets/blog/blog_soundbox_retail.jpg" alt="The Rise of Soundbox Technology" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">engineering</span><span class="text-body/50">5 min read</span>
+          </div>
+          <a href="/blog/soundbox-retail-revolution"><h3 class="mt-3 font-display text-[15px] font-bold leading-snug text-ink hover:text-brand">The Rise of Soundbox Technology: Why Every Retailer Needs Audio Alerts</h3></a>
+          <p class="mt-2 text-[12.5px] leading-relaxed text-body line-clamp-3">Exploring the psychology and security benefits of audio confirmations in busy retail environments.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[11px] text-body/70">14 Aug 2026</span>
+            <a href="/blog/soundbox-retail-revolution" class="inline-flex items-center gap-1.5 text-[12px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+    <div class="mt-10 text-center">
+      <a href="/blog" class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-7 py-3 text-xs font-bold text-ink hover:border-brand hover:text-brand transition shadow-sm">View All Blog Articles</a>
+    </div>
+  </div>
+</section>
+
 <footer class="bg-night text-slate-300">
   <div class="mx-auto max-w-site px-5 py-16">
     <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-5">
@@ -764,6 +1012,263 @@
 </button>
 
 <script src="/js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Tab Switching Logic
+  const tabStats = document.getElementById('tab-stats');
+  const tabSim = document.getElementById('tab-sim');
+  const panelStats = document.getElementById('panel-stats');
+  const panelSim = document.getElementById('panel-sim');
+
+  if (tabStats && tabSim && panelStats && panelSim) {
+    tabStats.addEventListener('click', function () {
+      tabStats.className = 'flex-1 text-[11px] font-extrabold uppercase tracking-wider text-brand border-b-2 border-brand pb-2 outline-none transition duration-300';
+      tabSim.className = 'flex-1 text-[11px] font-extrabold uppercase tracking-wider text-slate-400 pb-2 hover:text-ink transition duration-300 outline-none';
+      panelStats.classList.remove('hidden');
+      panelSim.classList.add('hidden');
+    });
+
+    tabSim.addEventListener('click', function () {
+      tabSim.className = 'flex-1 text-[11px] font-extrabold uppercase tracking-wider text-brand border-b-2 border-brand pb-2 outline-none transition duration-300';
+      tabStats.className = 'flex-1 text-[11px] font-extrabold uppercase tracking-wider text-slate-400 pb-2 hover:text-ink transition duration-300 outline-none';
+      panelSim.classList.remove('hidden');
+      panelStats.classList.add('hidden');
+    });
+  }
+
+  // Simulation Logic
+  const gwToggle = document.getElementById('gw-toggle');
+  const gwStatusText = document.getElementById('gw-status-text');
+  const simTarget = document.getElementById('sim-target');
+  const simTargetLabel = document.getElementById('sim-target-label');
+  const simLine1 = document.getElementById('sim-line-1');
+  const simLine2 = document.getElementById('sim-line-2');
+  const simSpinner = document.getElementById('sim-spinner');
+  const simMessage = document.getElementById('sim-message');
+  const simBtn = document.getElementById('sim-btn');
+
+  let isRunning = false;
+
+  if (gwToggle && gwStatusText) {
+    gwToggle.addEventListener('change', function () {
+      if (gwToggle.checked) {
+        gwStatusText.textContent = 'Online';
+        gwStatusText.className = 'ml-2 text-[10px] font-bold uppercase text-emerald-600';
+      } else {
+        gwStatusText.textContent = 'Downtime';
+        gwStatusText.className = 'ml-2 text-[10px] font-bold uppercase text-red-500';
+      }
+      resetSimulationVisuals();
+    });
+  }
+
+  function resetSimulationVisuals() {
+    simLine1.style.width = '0%';
+    simLine2.style.width = '0%';
+    simLine2.className = 'absolute top-0 left-0 h-full w-0 bg-emerald-500 transition-all duration-[600ms] ease-out';
+    simSpinner.classList.add('hidden');
+    simTarget.textContent = 'HDFC';
+    simTarget.className = 'h-10 w-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-ink font-bold text-[9px] text-center leading-tight shadow-sm transition-all duration-300';
+    simTargetLabel.textContent = 'Primary';
+    simTargetLabel.className = 'text-[8px] font-extrabold uppercase text-slate-400 mt-1.5 tracking-wider';
+    simMessage.innerHTML = '<p class="text-[11px] font-semibold text-ink2 leading-relaxed">Toggle Gateway status above, then click pay to test routing.</p>';
+  }
+
+  if (simBtn) {
+    // Auto simulate offline on load, then toggle back online
+    setTimeout(function() {
+      if (gwToggle) {
+        gwToggle.checked = false;
+        gwToggle.dispatchEvent(new Event('change'));
+      }
+      setTimeout(function() {
+        simBtn.click();
+        // After animation completes (~5.5 seconds), toggle back to online
+        setTimeout(function() {
+          if (gwToggle && !isRunning) {
+            gwToggle.checked = true;
+            gwStatusText.textContent = 'Online';
+            gwStatusText.className = 'ml-2 text-[10px] font-bold uppercase text-emerald-600';
+            resetSimulationVisuals();
+          }
+        }, 5500);
+      }, 400);
+    }, 1200);
+
+    simBtn.addEventListener('click', function () {
+      if (isRunning) return;
+      isRunning = true;
+      simBtn.disabled = true;
+      simBtn.textContent = 'Processing...';
+      resetSimulationVisuals();
+
+      // Step 1: User initiating request
+      simMessage.innerHTML = '<p class="text-[11px] font-semibold text-brand animate-pulse leading-relaxed">Initiating payment request...</p>';
+      simLine1.style.width = '100%';
+
+      setTimeout(function () {
+        // Step 2: Hit switch, analyzing rules
+        simSpinner.classList.remove('hidden');
+        simMessage.innerHTML = '<p class="text-[11px] font-semibold text-brand leading-relaxed">Switch analyzing gateway health...</p>';
+
+        setTimeout(function () {
+          simSpinner.classList.add('hidden');
+
+          if (gwToggle.checked) {
+            // HDFC is Online
+            simMessage.innerHTML = '<p class="text-[11px] font-semibold text-brand leading-relaxed">HDFC (Primary) online. Routing payment...</p>';
+            simLine2.style.width = '100%';
+
+            setTimeout(function () {
+              simTarget.className = 'h-10 w-10 rounded-full bg-emerald-100 border-emerald-300 text-emerald-700 flex items-center justify-center font-bold text-[9px] text-center leading-tight shadow-sm transition-all duration-300';
+              simMessage.innerHTML = '<p class="text-[11px] font-semibold text-emerald-600 leading-relaxed">Success! Completed via HDFC (Primary) in 38ms.</p>';
+              finishSimulation();
+            }, 600);
+
+          } else {
+            // HDFC is Offline (Downtime)
+            simMessage.innerHTML = '<p class="text-[11px] font-semibold text-red-500 leading-relaxed">HDFC down (503 Error). Failover active...</p>';
+            simTarget.className = 'h-10 w-10 rounded-full bg-red-100 border-red-300 text-red-700 flex items-center justify-center font-bold text-[9px] text-center leading-tight shadow-sm transition-all duration-300';
+
+            setTimeout(function () {
+              simMessage.innerHTML = '<p class="text-[11px] font-semibold text-amber-500 leading-relaxed">Rerouting transaction to ICICI (Backup)...</p>';
+              
+              setTimeout(function () {
+                // Change UI to ICICI Node
+                simTarget.textContent = 'ICICI';
+                simTargetLabel.textContent = 'Backup';
+                simTargetLabel.className = 'text-[8px] font-extrabold uppercase text-amber-500 mt-1.5 tracking-wider';
+                simTarget.className = 'h-10 w-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-ink font-bold text-[9px] text-center leading-tight shadow-sm transition-all duration-300';
+                
+                // Animate to ICICI
+                simLine2.className = 'absolute top-0 left-0 h-full w-0 bg-amber-500 transition-all duration-[600ms] ease-out';
+                setTimeout(function () {
+                  simLine2.style.width = '100%';
+                  
+                  setTimeout(function () {
+                    simTarget.className = 'h-10 w-10 rounded-full bg-emerald-100 border-emerald-300 text-emerald-700 flex items-center justify-center font-bold text-[9px] text-center leading-tight shadow-sm transition-all duration-300';
+                    simMessage.innerHTML = '<p class="text-[11px] font-semibold text-emerald-600 leading-relaxed">Success! Auto-rerouted to ICICI in 94ms.</p>';
+                    finishSimulation();
+                  }, 600);
+                }, 100);
+
+              }, 800);
+            }, 800);
+          }
+        }, 1000);
+      }, 600);
+    });
+  }
+
+    function finishSimulation() {
+    isRunning = false;
+    simBtn.disabled = false;
+    simBtn.textContent = 'Simulate Again';
+  }
+
+  // ================= DEVELOPER PANEL TABS =================
+  const tabCli = document.getElementById('dev-tab-cli');
+  const tabSdk = document.getElementById('dev-tab-sdk');
+  const panelCli = document.getElementById('dev-panel-cli');
+  const panelSdk = document.getElementById('dev-panel-sdk');
+
+  if (tabCli && tabSdk && panelCli && panelSdk) {
+    tabCli.addEventListener('click', function () {
+      tabCli.className = 'text-[11px] font-extrabold uppercase tracking-wider text-brand border-b-2 border-brand pb-2 px-3 outline-none transition duration-300';
+      tabSdk.className = 'text-[11px] font-extrabold uppercase tracking-wider text-slate-400 pb-2 px-3 hover:text-white transition duration-300 outline-none';
+      panelCli.classList.remove('hidden');
+      panelSdk.classList.add('hidden');
+    });
+
+    tabSdk.addEventListener('click', function () {
+      tabSdk.className = 'text-[11px] font-extrabold uppercase tracking-wider text-brand border-b-2 border-brand pb-2 px-3 outline-none transition duration-300';
+      tabCli.className = 'text-[11px] font-extrabold uppercase tracking-wider text-slate-400 pb-2 px-3 hover:text-white transition duration-300 outline-none';
+      panelSdk.classList.remove('hidden');
+      panelCli.classList.add('hidden');
+    });
+  }
+
+  // SDK Language Sub-tabs
+  const langTabs = {
+    node: document.getElementById('lang-tab-node'),
+    py: document.getElementById('lang-tab-py'),
+    curl: document.getElementById('lang-tab-curl')
+  };
+
+  const codePanels = {
+    node: document.getElementById('code-node'),
+    py: document.getElementById('code-py'),
+    curl: document.getElementById('code-curl')
+  };
+
+  function switchLang(lang) {
+    Object.keys(langTabs).forEach(key => {
+      if (key === lang) {
+        langTabs[key].className = 'text-[10px] font-extrabold uppercase tracking-wide text-brand border border-brand/20 bg-brand/5 rounded px-2.5 py-1 transition duration-200 outline-none';
+        codePanels[key].classList.remove('hidden');
+      } else {
+        langTabs[key].className = 'text-[10px] font-extrabold uppercase tracking-wide text-slate-400 hover:text-white rounded px-2.5 py-1 transition duration-200 outline-none';
+        codePanels[key].classList.add('hidden');
+      }
+    });
+  }
+
+  if (langTabs.node && langTabs.py && langTabs.curl) {
+    langTabs.node.addEventListener('click', () => switchLang('node'));
+    langTabs.py.addEventListener('click', () => switchLang('py'));
+    langTabs.curl.addEventListener('click', () => switchLang('curl'));
+  }
+
+  // ================= ROI CALCULATOR LOGIC =================
+  const sliderVol = document.getElementById('slider-volume');
+  const sliderFail = document.getElementById('slider-failure');
+  const labelVol = document.getElementById('label-volume');
+  const labelFail = document.getElementById('label-failure');
+  const outTxs = document.getElementById('roi-additional-txs');
+  const outRev = document.getElementById('roi-recovered-rev');
+
+  function calculateROI() {
+    if (!sliderVol || !sliderFail) return;
+    const volCr = parseFloat(sliderVol.value);
+    const failRate = parseFloat(sliderFail.value) / 100;
+    
+    // Recovery rate (40% of dropoffs recovered)
+    const recoveryRate = 0.40;
+    
+    // Monthly Volume in Rs.
+    const monthlyVolRs = volCr * 10000000;
+    
+    // Annual Recovered Revenue
+    const annualRecoveredRs = monthlyVolRs * failRate * recoveryRate * 12;
+    
+    // Additional annual txs (assuming avg ticket size Rs. 1500)
+    const annualTxs = Math.round(annualRecoveredRs / 1500);
+
+    // Format labels
+    labelVol.textContent = '₹' + volCr + ' Cr';
+    labelFail.textContent = sliderFail.value + '%';
+
+    // Format outputs
+    if (annualRecoveredRs >= 10000000) {
+      outRev.textContent = '₹' + (annualRecoveredRs / 10000000).toFixed(2) + ' Cr';
+    } else {
+      outRev.textContent = '₹' + Math.round(annualRecoveredRs / 100000) + ' Lakhs';
+    }
+
+    if (annualTxs >= 100000) {
+      outTxs.textContent = (annualTxs / 100000).toFixed(1) + ' Lakhs+';
+    } else {
+      outTxs.textContent = annualTxs.toLocaleString('en-IN') + '+';
+    }
+  }
+
+  if (sliderVol && sliderFail) {
+    sliderVol.addEventListener('input', calculateROI);
+    sliderFail.addEventListener('input', calculateROI);
+    calculateROI();
+  }
+});
+</script>
 </body>
 </html>
 
