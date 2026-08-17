@@ -325,6 +325,25 @@
 
     <div id="grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
+      <!-- Neobanking API Architecture Post -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
+        <a href="/blog/neobanking-api-architecture" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_neobanking.jpg" alt="Building the Future of Finance" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">engineering</span><span class="text-body/50">6 min read</span>
+          </div>
+          <a href="/blog/neobanking-api-architecture"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Building the Future of Finance: API-Driven Neobanking Architectures</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">Explore how modern fintechs and enterprises launch prepaid cards, digital wallets, and virtual accounts using banking APIs.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">17 Aug 2026</span>
+            <a href="/blog/neobanking-api-architecture" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+
+
 <!-- Independence Day Post -->
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
         <a href="/blog/independence-day-2026" class="block overflow-hidden h-48 bg-slate-100">
