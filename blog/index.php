@@ -325,6 +325,115 @@
 
     <div id="grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
+      <!-- DPDPA Post: Building DPDPA-Compliant Consent Engines & 22-Language Notices -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
+        <a href="/blog/dpdpa-consent-architecture" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_dpdpa_consent.jpg" alt="Building DPDPA-Compliant Consent Engines & 22-Language Notices" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">compliance</span><span class="text-body/50">9 min read</span>
+          </div>
+          <a href="/blog/dpdpa-consent-architecture"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Building DPDPA-Compliant Consent Engines &amp; 22-Language Notices</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">A deep engineering guide to building DPDPA-compliant consent collection UI, Consent Vault databases, and multilingual notice systems.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">19 Aug 2026</span>
+            <a href="/blog/dpdpa-consent-architecture" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- DPDPA Post: Right to Erasure vs. 10-Year KYC Retention: Resolving the Fintech Conflict -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
+        <a href="/blog/dpdpa-erasure-vs-pmla" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_dpdpa_erasure.jpg" alt="Right to Erasure vs. 10-Year KYC Retention: Resolving the Fintech Conflict" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">compliance</span><span class="text-body/50">9 min read</span>
+          </div>
+          <a href="/blog/dpdpa-erasure-vs-pmla"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Right to Erasure vs. 10-Year KYC Retention: Resolving the Fintech Conflict</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">How DPDPA Section 8(7) resolves the conflict between a user's Right to Erasure and mandatory RBI/PMLA retention.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">19 Aug 2026</span>
+            <a href="/blog/dpdpa-erasure-vs-pmla" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- DPDPA Post: Securing Data Processors: DPA Requirements for Cloud, SMS & WhatsApp APIs -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
+        <a href="/blog/dpdpa-vendor-dpa-apis" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_dpdpa_vendor.jpg" alt="Securing Data Processors: DPA Requirements for Cloud, SMS & WhatsApp APIs" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">compliance</span><span class="text-body/50">8 min read</span>
+          </div>
+          <a href="/blog/dpdpa-vendor-dpa-apis"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Securing Data Processors: DPA Requirements for Cloud, SMS &amp; WhatsApp APIs</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">How to legally bind cloud hosts, SMS gateways, WhatsApp WABA providers, and bank switch APIs under DPDPA-compliant Data Processing Agreements.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">19 Aug 2026</span>
+            <a href="/blog/dpdpa-vendor-dpa-apis" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- DPDPA Post: Data Breach Management: How to Report Incidents to DPBI to Avoid Rs 200 Cr Fines -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
+        <a href="/blog/dpdpa-breach-response" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_dpdpa_breach.jpg" alt="Data Breach Management: How to Report Incidents to DPBI to Avoid Rs 200 Cr Fines" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">compliance</span><span class="text-body/50">10 min read</span>
+          </div>
+          <a href="/blog/dpdpa-breach-response"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Data Breach Management: How to Report Incidents to DPBI to Avoid Rs 200 Cr Fines</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">A step-by-step DPDPA incident response SOP for Indian fintechs to detect, assess, and report data breaches to the Data Protection Board within legal timeframes.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">19 Aug 2026</span>
+            <a href="/blog/dpdpa-breach-response" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- DPDPA Post: Privacy by Design in Payment Devices: Soundboxes, POS and Cellular Telemetry -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
+        <a href="/blog/dpdpa-hardware-privacy" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_dpdpa_hardware.jpg" alt="Privacy by Design in Payment Devices: Soundboxes, POS and Cellular Telemetry" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">compliance</span><span class="text-body/50">8 min read</span>
+          </div>
+          <a href="/blog/dpdpa-hardware-privacy"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Privacy by Design in Payment Devices: Soundboxes, POS and Cellular Telemetry</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">How DPDPA applies to payment hardware including audio soundboxes, POS terminals, and cellular telemetry with engineering guidelines for privacy-by-design.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">19 Aug 2026</span>
+            <a href="/blog/dpdpa-hardware-privacy" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- DPDPA Compliance Guide Post -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
+        <a href="/blog/dpdpa-guide" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_dpdpa.jpg" alt="The Complete DPDPA Guide" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">compliance</span><span class="text-body/50">8 min read</span>
+          </div>
+          <a href="/blog/dpdpa-guide"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">The Complete DPDPA Guide: Data Privacy for Indian Fintechs & Merchants</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">A deep dive into India's Digital Personal Data Protection Act (DPDPA), consent architectures, legal rights, statutory penalties, and compliance checklists.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">18 Aug 2026</span>
+            <a href="/blog/dpdpa-guide" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+
+
       <!-- Neobanking API Architecture Post -->
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
         <a href="/blog/neobanking-api-architecture" class="block overflow-hidden h-48 bg-slate-100">

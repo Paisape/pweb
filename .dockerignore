@@ -2,14 +2,14 @@
 .git/
 .gitignore
 
-# Admin and internal
+# Admin and internal tools
 admin/
 paisape-website/
-scratch/
 docker/
 .agents/
+scratch/
 
-# Artifacts & Scripts
+# Temp/build artifacts
 GEMINI.md
 README.md
 task.md
@@ -17,9 +17,10 @@ implementation_plan.md
 walkthrough.md
 *.log
 *.py
-*.js
-!build.js
-!js/
-paisape-website/
+
+# Leftover build scripts (never ship to server)
+build*.js
+
+# Uploaded media temp storage
 .tempmediaStorage/
 .user_uploaded/
