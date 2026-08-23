@@ -324,6 +324,15 @@
     </div>
 
     <div id="grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
+        <a href="/blog/aadhaar-ekyc-vs-ckyc-vcip" class="block overflow-hidden h-48 bg-slate-100"><img src="/assets/blog/blog_kyc_comparison.jpg" alt="Aadhaar eKYC vs CKYC vs V-CIP" class="h-full w-full object-cover transition duration-500 hover:scale-105" /></a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]"><span class="text-brand">compliance · kyc</span><span class="text-body/50">10 min read</span></div>
+          <a href="/blog/aadhaar-ekyc-vs-ckyc-vcip"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Aadhaar eKYC vs CKYC vs V-CIP: Which KYC Method Should Your Fintech Choose?</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">Engineering and compliance guide to India's three KYC methods with cost comparison, decision framework, and waterfall fallback architecture.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4"><span class="text-[12px] text-body/70">23 Aug 2026</span><a href="/blog/aadhaar-ekyc-vs-ckyc-vcip" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a></div>
+        </div>
+      </article>
 
       <!-- DPDPA Post: Building DPDPA-Compliant Consent Engines & 22-Language Notices -->
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
