@@ -41,6 +41,13 @@
       if(e.ctrlKey && e.keyCode == 85) { return false; }
     };
   </script>
+
+  <meta property="og:image" content="https://paisape.in/assets/paisape-og-banner.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:title" content="Audio Soundbox Solution — Paisape" />
+  <meta property="og:description" content="Instant payment confirmation audio alerts for merchants. Supports UPI, card and wallet payments." />
+  <meta property="og:type" content="website" />
 </head>
 
 <body class="bg-white text-body antialiased">

@@ -41,6 +41,13 @@
       if(e.ctrlKey && e.keyCode == 85) { return false; }
     };
   </script>
+
+  <meta property="og:image" content="https://paisape.in/assets/paisape-og-banner.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:title" content="Dynamic QR Code Solution — Paisape" />
+  <meta property="og:description" content="Generate dynamic UPI QR codes at scale. Enable merchant payment collection via scan-and-pay with instant settlement." />
+  <meta property="og:type" content="website" />
 </head>
 
 <body class="bg-white text-body antialiased">

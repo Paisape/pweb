@@ -11,7 +11,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="About Us — Enterprise Payment Infrastructure — Paisape" />
 <meta property="og:description" content="Discover how Paisape powers seamless digital payments for enterprises across India." />
-<meta property="og:image" content="https://paisape.in/assets/paisape-og-banner.png" />
+<meta property="og:image" content="https://paisape.in/assets/paisape-og-banner.jpg" />
 <meta property="og:url" content="https://paisape.in/about-us" />
 <meta name="twitter:card" content="summary_large_image" />
 

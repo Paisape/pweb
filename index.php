@@ -11,7 +11,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Paisape — Payment Orchestration Platform for India" />
 <meta property="og:description" content="A unified financial API layer for payments, payouts and reconciliation, with smart dynamic routing built in." />
-<meta property="og:image" content="https://paisape.in/assets/paisape-og-banner.png" />
+<meta property="og:image" content="https://paisape.in/assets/paisape-og-banner.jpg" />
 <meta property="og:url" content="https://paisape.in/" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />

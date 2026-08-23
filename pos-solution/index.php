@@ -41,6 +41,13 @@
       if(e.ctrlKey && e.keyCode == 85) { return false; }
     };
   </script>
+
+  <meta property="og:image" content="https://paisape.in/assets/paisape-og-banner.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:title" content="POS Solution — Paisape" />
+  <meta property="og:description" content="Deploy smart POS terminals with Paisape. Accept card, UPI and wallet payments with real-time settlement and analytics." />
+  <meta property="og:type" content="website" />
 </head>
 
 <body class="bg-white text-body antialiased">

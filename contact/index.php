@@ -46,6 +46,13 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
       if(e.ctrlKey && e.keyCode == 85) { return false; }
     };
   </script>
+
+  <meta property="og:image" content="https://paisape.in/assets/paisape-og-banner.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:title" content="Contact Paisape — Talk to Sales" />
+  <meta property="og:description" content="Get in touch with Paisape for payment infrastructure, issuing, acquiring, UPI, AEPS and merchant solutions." />
+  <meta property="og:type" content="website" />
 </head>
 
 <body class="bg-white text-body antialiased">
