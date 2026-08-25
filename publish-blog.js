@@ -71,11 +71,22 @@ ${blogUrl}
 
 // ── Buffer GraphQL post ────────────────────────────────────────────────────────
 async function postToBuffer(channelId, text, channelName) {
+  // Facebook requires metadata.facebook.type
+  const facebookMetadata = channelId === process.env.BUFFER_FACEBOOK_ID
+    ? ', metadata: { facebook: { type: post } }'
+    : '';
+
   const mutation = `
-    mutation CreatePost($input: CreatePostInput!) {
-      createPost(input: $input) {
+    mutation {
+      createPost(input: {
+        channelId: "${channelId}",
+        text: ${JSON.stringify(text)},
+        schedulingType: automatic,
+        mode: shareNow
+        ${facebookMetadata}
+      }) {
         ... on PostActionSuccess {
-          post { id dueAt status }
+          post { id status }
         }
         ... on MutationError {
           message
@@ -84,13 +95,7 @@ async function postToBuffer(channelId, text, channelName) {
     }
   `;
 
-  const variables = {
-    input: {
-      channelId,
-      text,
-      schedulingType: 'immediate'
-    }
-  };
+  const variables = {};
 
   const res = await fetch('https://api.buffer.com', {
     method: 'POST',
