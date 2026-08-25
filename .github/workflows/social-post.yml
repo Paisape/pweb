@@ -1,0 +1,131 @@
+name: Auto Social Post on Blog Publish
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'blog/*/index.php'   # Only triggers when a blog post is added/changed
+
+jobs:
+  social-post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2   # Need prev commit to detect new files
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Detect new blog posts and post to social media
+        env:
+          BUFFER_TOKEN: ${{ secrets.BUFFER_TOKEN }}
+          BUFFER_LINKEDIN_ID: ${{ secrets.BUFFER_LINKEDIN_ID }}
+          BUFFER_FACEBOOK_ID: ${{ secrets.BUFFER_FACEBOOK_ID }}
+          SITE_URL: https://paisape.in
+        run: |
+          node -e "
+          const { execSync } = require('child_process');
+          const fs = require('fs');
+          const path = require('path');
+
+          const TOKEN    = process.env.BUFFER_TOKEN;
+          const LINKEDIN = process.env.BUFFER_LINKEDIN_ID;
+          const FACEBOOK = process.env.BUFFER_FACEBOOK_ID;
+          const SITE_URL = process.env.SITE_URL || 'https://paisape.in';
+
+          if (!TOKEN) { console.log('No BUFFER_TOKEN set — skipping social post'); process.exit(0); }
+
+          // Find newly added blog/*/index.php files in this push
+          let changed = '';
+          try {
+            changed = execSync('git diff --name-only --diff-filter=A HEAD~1 HEAD').toString();
+          } catch(e) {
+            changed = execSync('git diff --name-only HEAD~1 HEAD').toString();
+          }
+
+          const newPosts = changed.split('\n')
+            .filter(f => f.match(/^blog\/.+\/index\.php$/))
+            .filter(f => !f.startsWith('blog/index.php'));
+
+          if (newPosts.length === 0) {
+            console.log('No new blog posts detected — skipping social post');
+            process.exit(0);
+          }
+
+          console.log('New blog posts detected:', newPosts);
+
+          // Parse blog metadata from the PHP file
+          function parseMeta(filePath) {
+            const content = fs.readFileSync(filePath, 'utf8');
+            const titleMatch   = content.match(/<title>([^<]+)<\/title>/);
+            const descMatch    = content.match(/<meta name=\"description\" content=\"([^\"]+)\"/);
+            const imageMatch   = content.match(/og:image.*?content=\"([^\"]+)\"/);
+            const title = titleMatch   ? titleMatch[1].replace(/ — Paisape.*$/, '').trim() : '';
+            const desc  = descMatch    ? descMatch[1].trim() : '';
+            const image = imageMatch   ? imageMatch[1].trim() : SITE_URL + '/assets/paisape-og-banner.jpg';
+            return { title, desc, image };
+          }
+
+          // Buffer rich post
+          async function postToBuffer(channelId, text, title, desc, blogUrl, imageUrl, isFacebook) {
+            const linkAttachment = JSON.stringify({ url: blogUrl, title, description: desc, thumbnail: { url: imageUrl } });
+            const laMutation = linkAttachment
+              .replace(/'/g, \"\\\\'\");
+
+            const metaField = isFacebook
+              ? \`, metadata: { facebook: { type: post, linkAttachment: { url: \${JSON.stringify(blogUrl)}, title: \${JSON.stringify(title)}, description: \${JSON.stringify(desc)}, thumbnail: { url: \${JSON.stringify(imageUrl)} } } } }\`
+              : \`, metadata: { linkedin: { linkAttachment: { url: \${JSON.stringify(blogUrl)}, title: \${JSON.stringify(title)}, description: \${JSON.stringify(desc)}, thumbnail: { url: \${JSON.stringify(imageUrl)} } } } }\`;
+
+            const mutation = \`mutation {
+              createPost(input: {
+                channelId: \\\"\${channelId}\\\",
+                text: \${JSON.stringify(text)},
+                schedulingType: automatic,
+                mode: shareNow
+                \${metaField}
+              }) {
+                ... on PostActionSuccess { post { id status } }
+                ... on MutationError { message }
+              }
+            }\`;
+
+            const res = await fetch('https://api.buffer.com', {
+              method: 'POST',
+              headers: { 'Authorization': 'Bearer ' + TOKEN, 'Content-Type': 'application/json' },
+              body: JSON.stringify({ query: mutation })
+            });
+            const data = await res.json();
+            if (data.errors) { console.error('Error:', data.errors[0].message); return; }
+            const result = data.data?.createPost;
+            if (result?.post) console.log('Posted! ID:', result.post.id, '| Status:', result.post.status);
+            else console.error('Failed:', result?.message);
+          }
+
+          // Process each new blog post
+          (async () => {
+            for (const filePath of newPosts) {
+              const slug    = filePath.split('/')[1];
+              const blogUrl = SITE_URL + '/blog/' + slug;
+              const { title, desc, image } = parseMeta(filePath);
+
+              console.log('\n--- Posting:', slug, '---');
+              console.log('Title:', title);
+              console.log('URL:', blogUrl);
+              console.log('Image:', image);
+
+              const liText = \`📰 New on Paisape Engineering Blog\n\n\${title}\n\n\${desc}\n\n👉 \${blogUrl}\n\n#Fintech #India #Payments #Engineering #Paisape\`;
+              const fbText = \`🆕 New Blog Post!\n\n\${title}\n\n\${desc}\n\n\${blogUrl}\n\n#Fintech #India #Payments\`;
+
+              console.log('\nPosting to LinkedIn...');
+              await postToBuffer(LINKEDIN, liText, title, desc, blogUrl, image, false);
+
+              console.log('Posting to Facebook...');
+              await postToBuffer(FACEBOOK, fbText, title, desc, blogUrl, image, true);
+            }
+            console.log('\n✅ Social posting complete!');
+          })();
+          "
