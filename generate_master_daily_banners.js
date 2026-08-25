@@ -9,11 +9,12 @@ if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
 }
 
+// 7 Service Banner Configurations (Clean Tags without Day Names)
 const bannersConfig = [
   {
     day: 'monday',
     dayName: 'Monday',
-    tag: 'MONDAY • WABA & MESSAGING SOLUTION',
+    tag: 'WABA & MESSAGING SOLUTION',
     headline: 'WhatsApp Business API & Messaging',
     subhead: 'Automated payment alerts, broadcast marketing & AI chatbots on WhatsApp.',
     features: ['Official WABA API', 'Payment Alerts', 'DLT SMS Gateway', 'AI Chatbots'],
@@ -25,7 +26,7 @@ const bannersConfig = [
   {
     day: 'tuesday',
     dayName: 'Tuesday',
-    tag: 'TUESDAY • PAYMENT GATEWAY & ACQUIRING',
+    tag: 'PAYMENT GATEWAY & ACQUIRING',
     headline: 'High-Speed Enterprise Payment Gateway',
     subhead: 'Accept Net Banking, Credit/Debit Cards, Wallets & UPI with 99.99% uptime.',
     features: ['Instant Settlements', 'PCI-DSS v4.0', 'Card Tokenization', '100+ Pay Modes'],
@@ -37,7 +38,7 @@ const bannersConfig = [
   {
     day: 'wednesday',
     dayName: 'Wednesday',
-    tag: 'WEDNESDAY • PAYMENT ORCHESTRATION',
+    tag: 'PAYMENT ORCHESTRATION',
     headline: 'Multi-PG Payment Orchestration Switch',
     subhead: 'Smart routing engine with instant failover, lower MDR & unified analytics.',
     features: ['Multi-PG Switch', 'Smart Failover', 'Lower MDR Costs', 'Unified Analytics'],
@@ -49,7 +50,7 @@ const bannersConfig = [
   {
     day: 'thursday',
     dayName: 'Thursday',
-    tag: 'THURSDAY • FINTECH SAAS MODULES',
+    tag: 'FINTECH SAAS MODULES',
     headline: 'Automated Multi-Sheet Reconciliation SaaS',
     subhead: 'Reconcile up to 4 spreadsheets with dynamic field mapping & zero formula errors.',
     features: ['4-Sheet Multi-Join', 'Dynamic Mapping', 'String Protection', 'Audit Reports'],
@@ -61,7 +62,7 @@ const bannersConfig = [
   {
     day: 'friday',
     dayName: 'Friday',
-    tag: 'FRIDAY • IN-STORE MERCHANT HARDWARE',
+    tag: 'IN-STORE HARDWARE & QR',
     headline: 'Dynamic QR Code & Audio Soundbox',
     subhead: 'Instant in-store voice alerts with loud dual-SIM Soundboxes and UPI QR standees.',
     features: ['Dynamic UPI QR', 'Voice Alerts', 'Dual-SIM Cellular', 'Zero MDR Acceptance'],
@@ -73,7 +74,7 @@ const bannersConfig = [
   {
     day: 'saturday',
     dayName: 'Saturday',
-    tag: 'SATURDAY • AEPS & BBPS BANKING',
+    tag: 'AEPS & BBPS BANKING',
     headline: 'AEPS Rural Banking & BBPS Bill Payments',
     subhead: 'Empower retail merchants with Aadhaar cash withdrawal, micro-ATM and BBPS payments.',
     features: ['Aadhaar eKYC', 'Cash Withdrawal', 'Micro-ATM', 'BBPS Utility Pay'],
@@ -85,7 +86,7 @@ const bannersConfig = [
   {
     day: 'sunday',
     dayName: 'Sunday',
-    tag: 'SUNDAY • DIGITAL PAYMENTS SUITE',
+    tag: 'DIGITAL PAYMENTS SUITE',
     headline: 'Building the Future of Digital Payments',
     subhead: 'End-to-end payment issuing, acquiring, orchestration, reconciliation & SaaS software.',
     features: ['Payment Gateway', 'Soundbox & POS', 'WABA & SMS', 'Multi-Sheet Recon'],
@@ -100,11 +101,8 @@ function drawCustomBackgroundGraphics(ctx, type, width, height, themeColor, acce
   ctx.save();
 
   if (type === 'waba') {
-    // Chat bubble vectors & WhatsApp messaging waves
     ctx.strokeStyle = 'rgba(16, 185, 129, 0.20)';
     ctx.fillStyle = 'rgba(16, 185, 129, 0.08)';
-
-    // Floating Chat Bubbles
     const bubbles = [
       { x: 680, y: 70, r: 45 },
       { x: 790, y: 130, r: 35 },
@@ -117,27 +115,20 @@ function drawCustomBackgroundGraphics(ctx, type, width, height, themeColor, acce
       ctx.fill();
       ctx.stroke();
     });
-
-    // Wave lines
     ctx.beginPath();
     ctx.moveTo(550, 300);
     ctx.quadraticCurveTo(700, 150, 900, 240);
     ctx.stroke();
   } 
   else if (type === 'gateway') {
-    // Credit card chip & digital security circuit lines
     ctx.strokeStyle = 'rgba(2, 132, 199, 0.20)';
     ctx.lineWidth = 1.5;
-
-    // Circuit grid
     for (let x = 550; x <= 900; x += 50) {
       ctx.beginPath();
       ctx.moveTo(x, 0);
       ctx.lineTo(x + 80, 300);
       ctx.stroke();
     }
-
-    // Shield card outline
     ctx.fillStyle = 'rgba(2, 132, 199, 0.08)';
     ctx.beginPath();
     ctx.roundRect(650, 70, 180, 110, 16);
@@ -145,16 +136,12 @@ function drawCustomBackgroundGraphics(ctx, type, width, height, themeColor, acce
     ctx.stroke();
   } 
   else if (type === 'orchestration') {
-    // Connected multi-PG routing network nodes
     ctx.strokeStyle = 'rgba(99, 102, 241, 0.25)';
     ctx.fillStyle = 'rgba(99, 102, 241, 0.12)';
-
     const nodes = [
       { x: 620, y: 80 }, { x: 740, y: 60 }, { x: 840, y: 120 },
       { x: 680, y: 160 }, { x: 780, y: 210 }, { x: 860, y: 240 }
     ];
-
-    // Connect nodes with routing paths
     ctx.lineWidth = 1.5;
     nodes.forEach((n1, i) => {
       nodes.forEach((n2, j) => {
@@ -166,8 +153,6 @@ function drawCustomBackgroundGraphics(ctx, type, width, height, themeColor, acce
         }
       });
     });
-
-    // Render Nodes
     nodes.forEach(n => {
       ctx.beginPath();
       ctx.arc(n.x, n.y, 10, 0, Math.PI * 2);
@@ -176,11 +161,8 @@ function drawCustomBackgroundGraphics(ctx, type, width, height, themeColor, acce
     });
   } 
   else if (type === 'reconciliation') {
-    // Ledger grid lines & data matching matrix
     ctx.strokeStyle = 'rgba(15, 118, 110, 0.18)';
     ctx.lineWidth = 1.2;
-
-    // Spreadsheet grid
     for (let x = 540; x <= 900; x += 40) {
       ctx.beginPath();
       ctx.moveTo(x, 0);
@@ -195,7 +177,6 @@ function drawCustomBackgroundGraphics(ctx, type, width, height, themeColor, acce
     }
   } 
   else if (type === 'soundbox') {
-    // Speaker audio soundwave equalizer bars & QR matrix grid
     ctx.fillStyle = 'rgba(217, 119, 6, 0.15)';
     const barHeights = [40, 70, 110, 140, 90, 130, 60, 100, 150, 80, 50];
     barHeights.forEach((h, i) => {
@@ -203,7 +184,6 @@ function drawCustomBackgroundGraphics(ctx, type, width, height, themeColor, acce
     });
   } 
   else if (type === 'aeps') {
-    // Biometric fingerprint circles & banking shield
     ctx.strokeStyle = 'rgba(37, 99, 235, 0.20)';
     ctx.lineWidth = 2;
     for (let r = 20; r <= 140; r += 20) {
@@ -226,10 +206,8 @@ async function generateAllBanners() {
     const ctx = canvas.getContext('2d');
 
     if (config.bgType === 'master') {
-      // Sunday uses master globe payments graphic
       ctx.drawImage(masterImg, 0, 0, masterImg.width, masterImg.height, 0, -45, width, 380);
     } else {
-      // Monday-Saturday use UNIQUE distinct product background gradients & graphics
       const bgGradient = ctx.createLinearGradient(0, 0, width, height);
       bgGradient.addColorStop(0, config.bgGrad[0]);
       bgGradient.addColorStop(0.5, config.bgGrad[1]);
@@ -237,17 +215,15 @@ async function generateAllBanners() {
       ctx.fillStyle = bgGradient;
       ctx.fillRect(0, 0, width, height);
 
-      // Draw day-specific background illustration graphics
       drawCustomBackgroundGraphics(ctx, config.bgType, width, height, config.themeColor, config.accentColor);
 
-      // Also render master globe graphic gracefully on right with transparency
       ctx.save();
       ctx.globalAlpha = 0.35;
       ctx.drawImage(masterImg, 450, 0, 450, 507, 450, -40, 450, 360);
       ctx.restore();
     }
 
-    // 2. Draw Translucent Content Panel (y >= 105) for text contrast
+    // 2. Content Backdrop Panel (y >= 105)
     const contentGrad = ctx.createLinearGradient(0, 105, 560, 300);
     contentGrad.addColorStop(0, 'rgba(255, 255, 255, 0.95)');
     contentGrad.addColorStop(0.8, 'rgba(255, 255, 255, 0.90)');
@@ -255,7 +231,7 @@ async function generateAllBanners() {
     ctx.fillStyle = contentGrad;
     ctx.fillRect(0, 105, 580, 150);
 
-    // 3. Category Day Badge Tag
+    // 3. Clean Service Tag (No Day Names)
     ctx.font = 'bold 10px sans-serif';
     const tagWidth = ctx.measureText(config.tag).width + 20;
     ctx.fillStyle = config.themeColor;
@@ -285,7 +261,6 @@ async function generateAllBanners() {
       const textWidth = ctx.measureText(feat).width;
       const pillWidth = textWidth + 26;
 
-      // Pill Background
       ctx.fillStyle = '#FFFFFF';
       ctx.shadowColor = 'rgba(15, 23, 42, 0.08)';
       ctx.shadowBlur = 4;
@@ -294,25 +269,21 @@ async function generateAllBanners() {
       ctx.fill();
       ctx.shadowColor = 'transparent';
 
-      // Pill Border
       ctx.strokeStyle = config.themeColor;
       ctx.lineWidth = 1;
       ctx.stroke();
 
-      // Bullet Dot
       ctx.fillStyle = config.themeColor;
       ctx.beginPath();
       ctx.arc(pillX + 11, pillY + 14, 3.5, 0, Math.PI * 2);
       ctx.fill();
 
-      // Text
       ctx.fillStyle = '#0F172A';
       ctx.fillText(feat, pillX + 20, pillY + 18);
 
       pillX += pillWidth + 8;
     });
 
-    // Save PNG File
     const buffer = canvas.toBuffer('image/png');
     const filePath = path.join(outputDir, `${config.day}.png`);
     fs.writeFileSync(filePath, buffer);
@@ -321,7 +292,7 @@ async function generateAllBanners() {
       fs.writeFileSync(path.join(outputDir, 'default.png'), buffer);
     }
 
-    console.log(`Generated ${config.day}.png with unique ${config.bgType} background - Size: ${Math.round(buffer.length / 1024)} KB (900x300px)`);
+    console.log(`Generated ${config.day}.png with clean tag "${config.tag}" - Size: ${Math.round(buffer.length / 1024)} KB (900x300px)`);
   }
 }
 
