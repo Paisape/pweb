@@ -3,22 +3,22 @@
  * publish-blog.js — Paisape Blog Publisher
  * ──────────────────────────────────────────
  * Usage:
- *   node publish-blog.js <slug> "<title>" "<description>"
+ *   node publish-blog.js <slug> "<title>" "<description>" "<image-filename>"
  *
  * Example:
- *   node publish-blog.js dpdpa-guide "DPDPA Guide for Fintechs" "Complete guide to India's data privacy law"
+ *   node publish-blog.js dpdpa-guide "DPDPA Guide for Fintechs" "Complete India data privacy guide" "blog_dpdpa.jpg"
  *
  * What it does:
  *   1. Git add + commit + push to GitHub
- *   2. Posts immediately to LinkedIn (paisapefin)
- *   3. Posts immediately to Facebook (Paisape)
+ *   2. Posts rich post (title + image + description + link) to LinkedIn
+ *   3. Posts rich post (title + image + description + link) to Facebook
  */
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-// ── Load .env ──────────────────────────────────────────────────────────────────
+// ── Load .env ─────────────────────────────────────────────────────────────────
 function loadEnv() {
   const envPath = path.join(__dirname, '.env');
   if (!fs.existsSync(envPath)) {
@@ -34,34 +34,40 @@ function loadEnv() {
 }
 loadEnv();
 
-const TOKEN      = process.env.BUFFER_TOKEN;
-const LINKEDIN   = process.env.BUFFER_LINKEDIN_ID;
-const FACEBOOK   = process.env.BUFFER_FACEBOOK_ID;
-const SITE_URL   = process.env.SITE_URL || 'https://paisape.in';
+const TOKEN    = process.env.BUFFER_TOKEN;
+const LINKEDIN = process.env.BUFFER_LINKEDIN_ID;
+const FACEBOOK = process.env.BUFFER_FACEBOOK_ID;
+const SITE_URL = process.env.SITE_URL || 'https://paisape.in';
 
-// ── Args ───────────────────────────────────────────────────────────────────────
-const [,, slug, title, description] = process.argv;
+// ── Args ──────────────────────────────────────────────────────────────────────
+const [,, slug, title, description, imageFile] = process.argv;
 if (!slug || !title) {
-  console.log('Usage: node publish-blog.js <slug> "<title>" "<description>"');
-  console.log('Example: node publish-blog.js dpdpa-guide "DPDPA Guide" "India data privacy law explained"');
+  console.log('Usage: node publish-blog.js <slug> "<title>" "<description>" "<image.jpg>"');
+  console.log('Example: node publish-blog.js dpdpa-guide "DPDPA Guide" "India privacy law for fintechs" "blog_dpdpa.jpg"');
   process.exit(1);
 }
 
 const blogUrl = `${SITE_URL}/blog/${slug}`;
+const imageUrl = imageFile
+  ? `${SITE_URL}/assets/blog/${imageFile}`
+  : `${SITE_URL}/assets/paisape-og-banner.jpg`;
 
-// ── Social post text ───────────────────────────────────────────────────────────
-const linkedinText = `📰 New on Paisape Engineering Blog
+// ── Post text ─────────────────────────────────────────────────────────────────
+const linkedinText =
+`📰 New on Paisape Engineering Blog
 
 ${title}
 
 ${description || ''}
 
-Read the full article 👇
-${blogUrl}
+👉 Read the full article: ${blogUrl}
 
 #Fintech #India #Payments #Engineering #Paisape`;
 
-const facebookText = `🆕 New Blog Post: ${title}
+const facebookText =
+`🆕 New Blog Post!
+
+${title}
 
 ${description || ''}
 
@@ -69,33 +75,31 @@ ${blogUrl}
 
 #Fintech #India #Payments`;
 
-// ── Buffer GraphQL post ────────────────────────────────────────────────────────
-async function postToBuffer(channelId, text, channelName) {
-  // Facebook requires metadata.facebook.type
-  const facebookMetadata = channelId === process.env.BUFFER_FACEBOOK_ID
-    ? ', metadata: { facebook: { type: post } }'
-    : '';
+// ── Buffer rich post ──────────────────────────────────────────────────────────
+async function postToBuffer(channelId, text, channelName, isFacebook) {
+  const linkAttachment = `{
+    url: "${blogUrl}",
+    title: ${JSON.stringify(title)},
+    description: ${JSON.stringify(description || '')},
+    thumbnail: { url: "${imageUrl}" }
+  }`;
 
-  const mutation = `
-    mutation {
-      createPost(input: {
-        channelId: "${channelId}",
-        text: ${JSON.stringify(text)},
-        schedulingType: automatic,
-        mode: shareNow
-        ${facebookMetadata}
-      }) {
-        ... on PostActionSuccess {
-          post { id status }
-        }
-        ... on MutationError {
-          message
-        }
-      }
+  const metaField = isFacebook
+    ? `, metadata: { facebook: { type: post, linkAttachment: ${linkAttachment} } }`
+    : `, metadata: { linkedin: { linkAttachment: ${linkAttachment} } }`;
+
+  const mutation = `mutation {
+    createPost(input: {
+      channelId: "${channelId}",
+      text: ${JSON.stringify(text)},
+      schedulingType: automatic,
+      mode: shareNow
+      ${metaField}
+    }) {
+      ... on PostActionSuccess { post { id status } }
+      ... on MutationError { message }
     }
-  `;
-
-  const variables = {};
+  }`;
 
   const res = await fetch('https://api.buffer.com', {
     method: 'POST',
@@ -103,7 +107,7 @@ async function postToBuffer(channelId, text, channelName) {
       'Authorization': `Bearer ${TOKEN}`,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ query: mutation, variables })
+    body: JSON.stringify({ query: mutation })
   });
 
   const data = await res.json();
@@ -115,7 +119,7 @@ async function postToBuffer(channelId, text, channelName) {
 
   const result = data.data?.createPost;
   if (result?.post) {
-    console.log(`✅ ${channelName} posted! Post ID: ${result.post.id}`);
+    console.log(`✅ ${channelName} posted! ID: ${result.post.id} | Status: ${result.post.status}`);
     return true;
   } else if (result?.message) {
     console.error(`❌ ${channelName} failed:`, result.message);
@@ -123,34 +127,37 @@ async function postToBuffer(channelId, text, channelName) {
   }
 }
 
-// ── Git push ───────────────────────────────────────────────────────────────────
+// ── Git push ──────────────────────────────────────────────────────────────────
 function gitPush() {
   try {
     console.log('📦 Pushing to GitHub...');
     execSync('git add .', { stdio: 'inherit' });
     execSync(`git commit -m "Publish blog: ${title}"`, { stdio: 'inherit' });
     execSync('git push origin main', { stdio: 'inherit' });
-    console.log('✅ Pushed to GitHub');
+    console.log('✅ Pushed to GitHub\n');
     return true;
   } catch (e) {
+    // If nothing to commit, still proceed to social posting
+    if (e.message.includes('nothing to commit')) {
+      console.log('ℹ️  Nothing new to commit — proceeding to social post\n');
+      return true;
+    }
     console.error('❌ Git push failed:', e.message);
     return false;
   }
 }
 
-// ── Main ───────────────────────────────────────────────────────────────────────
+// ── Main ──────────────────────────────────────────────────────────────────────
 (async () => {
   console.log(`\n🚀 Publishing: "${title}"`);
-  console.log(`   URL: ${blogUrl}\n`);
+  console.log(`   URL:   ${blogUrl}`);
+  console.log(`   Image: ${imageUrl}\n`);
 
-  // 1. Push to GitHub
   gitPush();
 
-  // 2. Post to social media
-  console.log('\n📣 Posting to social media...\n');
-  await postToBuffer(LINKEDIN, linkedinText, 'LinkedIn (paisapefin)');
-  await postToBuffer(FACEBOOK, facebookText, 'Facebook (Paisape)');
+  console.log('📣 Posting to social media...\n');
+  await postToBuffer(LINKEDIN, linkedinText, 'LinkedIn (paisapefin)', false);
+  await postToBuffer(FACEBOOK, facebookText, 'Facebook (Paisape)',    true);
 
-  console.log('\n✅ All done!');
-  console.log(`   Blog live at: ${blogUrl}`);
+  console.log(`\n✅ Done! Blog live at: ${blogUrl}`);
 })();
