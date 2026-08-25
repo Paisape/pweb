@@ -159,6 +159,28 @@ jobs:
               console.log(`   Image : ${image}`);
               console.log(`   URL   : ${blogUrl}`);
 
+              // Wait for Coolify deployment to finish (poll until HTTP 200 OK)
+              console.log(`\n⏳ Waiting for web server deployment of ${blogUrl} (HTTP 200 OK)...`);
+              let isLive = false;
+              for (let attempt = 1; attempt <= 24; attempt++) {
+                try {
+                  const res = await fetch(blogUrl, { method: 'HEAD' });
+                  if (res.status === 200) {
+                    console.log(`  ✅ Deployment Live! Server returned HTTP 200 OK (Attempt ${attempt})`);
+                    isLive = true;
+                    break;
+                  }
+                  console.log(`  [Attempt ${attempt}/24] Status: ${res.status}. Waiting 10s for Coolify deployment...`);
+                } catch(e) {
+                  console.log(`  [Attempt ${attempt}/24] Server deploying... (${e.message})`);
+                }
+                await new Promise(r => setTimeout(r, 10000));
+              }
+
+              if (!isLive) {
+                console.log('  ⚠️ Deployment check timed out — proceeding with posting.');
+              }
+
               const liText = `📰 New on Paisape Engineering Blog\n\n${title}\n\n${desc}\n\n👉 ${blogUrl}\n\n#Fintech #India #Payments #Engineering #Paisape`;
               const fbText = `🆕 New Blog Post!\n\n${title}\n\n${desc}\n\n${blogUrl}\n\n#Fintech #India #Payments`;
 
