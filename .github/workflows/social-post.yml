@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'blog/*/index.php'   # Only triggers when a blog post is added/changed
+      - 'blog/*/index.php'   # Only triggers when a new blog post is added
 
 jobs:
   social-post:
@@ -13,119 +13,160 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2   # Need prev commit to detect new files
+          fetch-depth: 2   # Need previous commit to detect what's new
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Detect new blog posts and post to social media
-        env:
-          BUFFER_TOKEN: ${{ secrets.BUFFER_TOKEN }}
-          BUFFER_LINKEDIN_ID: ${{ secrets.BUFFER_LINKEDIN_ID }}
-          BUFFER_FACEBOOK_ID: ${{ secrets.BUFFER_FACEBOOK_ID }}
-          SITE_URL: https://paisape.in
+      - name: Write social post script
         run: |
-          node -e "
+          cat << 'SCRIPT' > /tmp/social_post.js
           const { execSync } = require('child_process');
           const fs = require('fs');
-          const path = require('path');
 
           const TOKEN    = process.env.BUFFER_TOKEN;
           const LINKEDIN = process.env.BUFFER_LINKEDIN_ID;
           const FACEBOOK = process.env.BUFFER_FACEBOOK_ID;
-          const SITE_URL = process.env.SITE_URL || 'https://paisape.in';
+          const SITE_URL = 'https://paisape.in';
+          // GitHub raw CDN — image available IMMEDIATELY on push, no deployment wait
+          const GITHUB_RAW = 'https://raw.githubusercontent.com/Paisape/pweb/main';
 
-          if (!TOKEN) { console.log('No BUFFER_TOKEN set — skipping social post'); process.exit(0); }
-
-          // Find newly added blog/*/index.php files in this push
-          let changed = '';
-          try {
-            changed = execSync('git diff --name-only --diff-filter=A HEAD~1 HEAD').toString();
-          } catch(e) {
-            changed = execSync('git diff --name-only HEAD~1 HEAD').toString();
-          }
-
-          const newPosts = changed.split('\n')
-            .filter(f => f.match(/^blog\/.+\/index\.php$/))
-            .filter(f => !f.startsWith('blog/index.php'));
-
-          if (newPosts.length === 0) {
-            console.log('No new blog posts detected — skipping social post');
+          if (!TOKEN) {
+            console.log('No BUFFER_TOKEN — add it in GitHub Secrets. Skipping.');
             process.exit(0);
           }
 
-          console.log('New blog posts detected:', newPosts);
+          // Detect newly added blog/*/index.php files in this push
+          let diff = '';
+          try {
+            diff = execSync('git diff --name-only --diff-filter=A HEAD~1 HEAD').toString();
+          } catch(e) {
+            diff = execSync('git diff --name-only HEAD~1 HEAD').toString();
+          }
 
-          // Parse blog metadata from the PHP file
+          const newPosts = diff.split('\n')
+            .map(f => f.trim())
+            .filter(f => /^blog\/.+\/index\.php$/.test(f))
+            .filter(f => f !== 'blog/index.php');
+
+          if (newPosts.length === 0) {
+            console.log('No new blog posts in this push — skipping social post.');
+            process.exit(0);
+          }
+
+          console.log('New posts detected:', newPosts);
+
+          // Parse metadata directly from the PHP file
           function parseMeta(filePath) {
-            const content = fs.readFileSync(filePath, 'utf8');
-            const titleMatch   = content.match(/<title>([^<]+)<\/title>/);
-            const descMatch    = content.match(/<meta name=\"description\" content=\"([^\"]+)\"/);
-            const imageMatch   = content.match(/og:image.*?content=\"([^\"]+)\"/);
-            const title = titleMatch   ? titleMatch[1].replace(/ — Paisape.*$/, '').trim() : '';
-            const desc  = descMatch    ? descMatch[1].trim() : '';
-            const image = imageMatch   ? imageMatch[1].trim() : SITE_URL + '/assets/paisape-og-banner.jpg';
+            const c = fs.readFileSync(filePath, 'utf8');
+
+            const titleM = c.match(/<title>([^<]+)<\/title>/);
+            const descM  = c.match(/<meta name="description" content="([^"]+)"/);
+            const imgM   = c.match(/og:image[^>]+content="([^"]+)"/);
+
+            const title = titleM ? titleM[1].replace(/ [—\-] Paisape.*$/i, '').trim() : '';
+            const desc  = descM  ? descM[1].trim() : '';
+
+            // Convert production image URL → GitHub raw CDN URL (available immediately on push)
+            let image = GITHUB_RAW + '/assets/paisape-og-banner.jpg';
+            if (imgM) {
+              const imgUrl = imgM[1].trim();
+              // e.g. https://paisape.in/assets/blog/blog_waba_api.jpg
+              //   →  https://raw.githubusercontent.com/Paisape/pweb/main/assets/blog/blog_waba_api.jpg
+              image = imgUrl.replace(SITE_URL, GITHUB_RAW);
+            }
+
             return { title, desc, image };
           }
 
-          // Buffer rich post
+          // Post to Buffer with rich link attachment
           async function postToBuffer(channelId, text, title, desc, blogUrl, imageUrl, isFacebook) {
-            const linkAttachment = JSON.stringify({ url: blogUrl, title, description: desc, thumbnail: { url: imageUrl } });
-            const laMutation = linkAttachment
-              .replace(/'/g, \"\\\\'\");
+            const la = {
+              url: blogUrl,
+              title: title,
+              description: desc,
+              thumbnail: { url: imageUrl }
+            };
+
+            const laStr = `{
+              url: ${JSON.stringify(la.url)},
+              title: ${JSON.stringify(la.title)},
+              description: ${JSON.stringify(la.description)},
+              thumbnail: { url: ${JSON.stringify(la.thumbnail.url)} }
+            }`;
 
             const metaField = isFacebook
-              ? \`, metadata: { facebook: { type: post, linkAttachment: { url: \${JSON.stringify(blogUrl)}, title: \${JSON.stringify(title)}, description: \${JSON.stringify(desc)}, thumbnail: { url: \${JSON.stringify(imageUrl)} } } } }\`
-              : \`, metadata: { linkedin: { linkAttachment: { url: \${JSON.stringify(blogUrl)}, title: \${JSON.stringify(title)}, description: \${JSON.stringify(desc)}, thumbnail: { url: \${JSON.stringify(imageUrl)} } } } }\`;
+              ? `metadata: { facebook: { type: post, linkAttachment: ${laStr} } }`
+              : `metadata: { linkedin: { linkAttachment: ${laStr} } }`;
 
-            const mutation = \`mutation {
-              createPost(input: {
-                channelId: \\\"\${channelId}\\\",
-                text: \${JSON.stringify(text)},
-                schedulingType: automatic,
-                mode: shareNow
-                \${metaField}
-              }) {
-                ... on PostActionSuccess { post { id status } }
-                ... on MutationError { message }
+            const mutation = `
+              mutation {
+                createPost(input: {
+                  channelId: ${JSON.stringify(channelId)},
+                  text: ${JSON.stringify(text)},
+                  schedulingType: automatic,
+                  mode: shareNow,
+                  ${metaField}
+                }) {
+                  ... on PostActionSuccess { post { id status } }
+                  ... on MutationError { message }
+                }
               }
-            }\`;
+            `;
 
             const res = await fetch('https://api.buffer.com', {
               method: 'POST',
-              headers: { 'Authorization': 'Bearer ' + TOKEN, 'Content-Type': 'application/json' },
+              headers: {
+                'Authorization': 'Bearer ' + TOKEN,
+                'Content-Type': 'application/json'
+              },
               body: JSON.stringify({ query: mutation })
             });
+
             const data = await res.json();
-            if (data.errors) { console.error('Error:', data.errors[0].message); return; }
+            if (data.errors) {
+              console.error('  ❌ Error:', data.errors[0].message);
+              return;
+            }
             const result = data.data?.createPost;
-            if (result?.post) console.log('Posted! ID:', result.post.id, '| Status:', result.post.status);
-            else console.error('Failed:', result?.message);
+            if (result?.post) {
+              console.log(`  ✅ Posted! ID: ${result.post.id} | Status: ${result.post.status}`);
+            } else if (result?.message) {
+              console.error('  ❌ Failed:', result.message);
+            }
           }
 
-          // Process each new blog post
+          // Main
           (async () => {
             for (const filePath of newPosts) {
               const slug    = filePath.split('/')[1];
-              const blogUrl = SITE_URL + '/blog/' + slug;
+              const blogUrl = `${SITE_URL}/blog/${slug}`;
               const { title, desc, image } = parseMeta(filePath);
 
-              console.log('\n--- Posting:', slug, '---');
-              console.log('Title:', title);
-              console.log('URL:', blogUrl);
-              console.log('Image:', image);
+              console.log(`\n📝 Blog: ${slug}`);
+              console.log(`   Title : ${title}`);
+              console.log(`   Desc  : ${desc.substring(0, 80)}...`);
+              console.log(`   Image : ${image}`);
+              console.log(`   URL   : ${blogUrl}`);
 
-              const liText = \`📰 New on Paisape Engineering Blog\n\n\${title}\n\n\${desc}\n\n👉 \${blogUrl}\n\n#Fintech #India #Payments #Engineering #Paisape\`;
-              const fbText = \`🆕 New Blog Post!\n\n\${title}\n\n\${desc}\n\n\${blogUrl}\n\n#Fintech #India #Payments\`;
+              const liText = `📰 New on Paisape Engineering Blog\n\n${title}\n\n${desc}\n\n👉 ${blogUrl}\n\n#Fintech #India #Payments #Engineering #Paisape`;
+              const fbText = `🆕 New Blog Post!\n\n${title}\n\n${desc}\n\n${blogUrl}\n\n#Fintech #India #Payments`;
 
-              console.log('\nPosting to LinkedIn...');
+              console.log('\n  → LinkedIn...');
               await postToBuffer(LINKEDIN, liText, title, desc, blogUrl, image, false);
 
-              console.log('Posting to Facebook...');
+              console.log('  → Facebook...');
               await postToBuffer(FACEBOOK, fbText, title, desc, blogUrl, image, true);
             }
             console.log('\n✅ Social posting complete!');
           })();
-          "
+          SCRIPT
+
+      - name: Post to LinkedIn and Facebook
+        env:
+          BUFFER_TOKEN: ${{ secrets.BUFFER_TOKEN }}
+          BUFFER_LINKEDIN_ID: ${{ secrets.BUFFER_LINKEDIN_ID }}
+          BUFFER_FACEBOOK_ID: ${{ secrets.BUFFER_FACEBOOK_ID }}
+        run: node /tmp/social_post.js
