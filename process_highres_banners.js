@@ -11,12 +11,10 @@ if (!fs.existsSync(outputDir)) {
 }
 
 function findFile(pattern) {
-  // Search brainDir
   if (fs.existsSync(brainDir)) {
     const files = fs.readdirSync(brainDir).filter(f => f.includes(pattern));
     if (files.length > 0) return path.join(brainDir, files[0]);
   }
-  // Search userUploadedDir
   if (fs.existsSync(userUploadedDir)) {
     const files = fs.readdirSync(userUploadedDir).filter(f => f.includes(pattern));
     if (files.length > 0) return path.join(userUploadedDir, files[0]);
@@ -28,7 +26,7 @@ const map = [
   { day: 'monday', pattern: 'waba_email_banner' },
   { day: 'tuesday', pattern: 'pg_email_banner' },
   { day: 'wednesday', pattern: 'orchestration_email_banner' },
-  { day: 'thursday', pattern: 'recon_email_banner' },
+  { day: 'thursday', pattern: 'thursday_freetools_banner' },
   { day: 'friday', pattern: 'soundbox_email_banner' },
   { day: 'saturday', pattern: 'aeps_email_banner' },
   { day: 'sunday', pattern: 'media_1787657500383' }
