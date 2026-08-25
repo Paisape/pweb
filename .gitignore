@@ -2,3 +2,6 @@ config.php
 admin/
 .agents/
 GEMINI.md
+.env
+.env.*
+node_modules/
