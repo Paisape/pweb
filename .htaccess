@@ -9,6 +9,10 @@ Redirect 301 /index.html /
 # Enable rewrite engine
 RewriteEngine On
 
+# Route Microsoft 365 Exchange Daily Banner Requests
+RewriteRule ^email-banner\.png$ api/daily-banner.php [L,QSA]
+RewriteRule ^assets/email-banner\.png$ api/daily-banner.php [L,QSA]
+
 # Allow actual files and directories through unchanged
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
