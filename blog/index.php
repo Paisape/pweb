@@ -303,6 +303,15 @@
     </div>
 
     <div id="grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="upi" data-reveal data-delay="0">
+        <a href="/blog/credit-line-on-upi" class="block overflow-hidden h-48 bg-slate-100"><img src="/assets/blog/blog_credit_line_upi.jpg" alt="Credit Line on UPI API Architecture" class="h-full w-full object-cover transition duration-500 hover:scale-105" /></a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]"><span class="text-brand">upi · credit</span><span class="text-body/50">9 min read</span></div>
+          <a href="/blog/credit-line-on-upi"><h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Credit Line on UPI: API Architecture &amp; Integration Guide for Indian Fintechs</h3></a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">Technical and compliance guide to NPCI Credit Line on UPI — pre-approved credit linking, LAA systems, real-time transaction authorization, and MDR rules.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4"><span class="text-[12px] text-body/70">25 Aug 2026</span><a href="/blog/credit-line-on-upi" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a></div>
+        </div>
+      </article>
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
         <a href="/blog/waba-business-api" class="block overflow-hidden h-48 bg-slate-100"><img src="/assets/blog/blog_waba_api.jpg" alt="WhatsApp Business API WABA Engineering Guide" class="h-full w-full object-cover transition duration-500 hover:scale-105" /></a>
         <div class="flex flex-1 flex-col p-6">
