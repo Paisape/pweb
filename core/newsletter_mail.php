@@ -31,6 +31,9 @@ function get_newsletter_template($title, $subtitle, $content, $cta_text = 'Read 
             <div class="header">
                 <img src="https://paisape.in/assets/logo-white.svg" alt="Paisape">
             </div>
+            <div class="banner" style="width: 100%; overflow: hidden;">
+                <img src="https://paisape.in/assets/paisape-email-banner.png" alt="Paisape - Digital Payments" style="width: 100%; height: auto; display: block; border-bottom: 1px solid #e2e8f0;">
+            </div>
             <div class="content">
                 <span class="tag">Paisape Insider Note</span>
                 <h1 class="title">' . htmlspecialchars($title) . '</h1>
