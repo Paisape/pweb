@@ -163,6 +163,10 @@
                 <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                 Merchant Category (MCC) Finder
               </a>
+              <a href="/excel-reconciliation-tool" class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-bold text-brand hover:bg-mist transition">
+                <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                Multi-Sheet Excel Reconciliation Tool
+              </a>
             </div>
           </div>
         </div>
@@ -982,6 +986,7 @@
           <li><a href="/hsn-sac-finder" class="transition hover:text-brand">HSN &amp; SAC GST Rate Finder</a></li>
           <li><a href="/gst-invoice-generator" class="transition hover:text-brand">Free GST Invoice Generator</a></li>
           <li><a href="/mcc-finder" class="transition hover:text-brand">Merchant Category (MCC) Finder</a></li>
+          <li><a href="/excel-reconciliation-tool" class="transition hover:text-brand font-semibold text-mint">Free Excel Reconciliation Tool</a></li>
         </ul>
       </div>
 
