@@ -77,53 +77,40 @@ async function generateAllBanners() {
     const canvas = createCanvas(width, height);
     const ctx = canvas.getContext('2d');
 
-    // 1. Draw Master Template Backdrop (scaled to 900x300)
+    // 1. Draw Master Template Background (preserves exact globe graphic & wave graphic)
     ctx.drawImage(masterImg, 0, 0, masterImg.width, masterImg.height, 0, -45, width, 380);
 
-    // 2. Draw Soft Translucent Panel on Left to guarantee crisp text readability
-    const panelGrad = ctx.createLinearGradient(0, 0, 580, 0);
-    panelGrad.addColorStop(0, 'rgba(255, 255, 255, 0.96)');
-    panelGrad.addColorStop(0.75, 'rgba(255, 255, 255, 0.90)');
-    panelGrad.addColorStop(1, 'rgba(255, 255, 255, 0.0)');
-    ctx.fillStyle = panelGrad;
-    ctx.fillRect(0, 0, 600, height);
+    // 2. Draw Translucent Content Backdrop ONLY in content region below the logo (y >= 110)
+    const contentGrad = ctx.createLinearGradient(0, 110, 560, 300);
+    contentGrad.addColorStop(0, 'rgba(255, 255, 255, 0.94)');
+    contentGrad.addColorStop(0.8, 'rgba(255, 255, 255, 0.88)');
+    contentGrad.addColorStop(1, 'rgba(255, 255, 255, 0.0)');
+    ctx.fillStyle = contentGrad;
+    ctx.fillRect(0, 105, 580, 150);
 
-    // 3. Top Accent Line
-    ctx.fillStyle = '#06B6D4';
-    ctx.fillRect(40, 0, 140, 4);
-
-    // 4. PAISAPE Logo text / branding
-    ctx.fillStyle = '#0891B2';
-    ctx.font = 'bold 28px sans-serif';
-    ctx.fillText('PAISAPe', 40, 44);
-
-    ctx.fillStyle = '#0891B2';
-    ctx.font = 'bold 10.5px sans-serif';
-    ctx.fillText('Payments. Everytime. Everywhere.', 40, 62);
-
-    // 5. Category Day Badge Tag
+    // 3. Category Day Badge Tag
     ctx.font = 'bold 10px sans-serif';
     const tagWidth = ctx.measureText(config.tag).width + 20;
     ctx.fillStyle = '#06B6D4';
     ctx.beginPath();
-    ctx.roundRect(40, 75, tagWidth, 22, 11);
+    ctx.roundRect(40, 114, tagWidth, 22, 11);
     ctx.fill();
 
     ctx.fillStyle = '#FFFFFF';
-    ctx.fillText(config.tag, 50, 90);
+    ctx.fillText(config.tag, 50, 129);
 
-    // 6. Main Headline (Dark Slate #0F172A)
+    // 4. Main Headline (Dark Slate #0F172A)
     ctx.fillStyle = '#0F172A';
     ctx.font = 'bold 21px sans-serif';
-    ctx.fillText(config.headline, 40, 132);
+    ctx.fillText(config.headline, 40, 164);
 
-    // 7. Subtitle / Description (#334155)
+    // 5. Subtitle / Description (#334155)
     ctx.fillStyle = '#334155';
     ctx.font = '13px sans-serif';
-    ctx.fillText(config.subhead, 40, 156);
+    ctx.fillText(config.subhead, 40, 188);
 
-    // 8. 4 Feature Pills Row
-    const pillY = 184;
+    // 6. 4 Feature Pills Row
+    const pillY = 212;
     let pillX = 40;
 
     config.features.forEach((feat) => {
@@ -158,15 +145,6 @@ async function generateAllBanners() {
       pillX += pillWidth + 8;
     });
 
-    // 9. Footer Website Link & Slogan
-    ctx.fillStyle = '#0891B2';
-    ctx.font = 'bold 11.5px sans-serif';
-    ctx.fillText('www.paisape.in', 40, 275);
-
-    ctx.fillStyle = '#475569';
-    ctx.font = '11px sans-serif';
-    ctx.fillText('|   Powering Businesses. Connecting Lives.', 140, 275);
-
     // Save PNG File
     const buffer = canvas.toBuffer('image/png');
     const filePath = path.join(outputDir, `${config.day}.png`);
@@ -176,7 +154,7 @@ async function generateAllBanners() {
       fs.writeFileSync(path.join(outputDir, 'default.png'), buffer);
     }
 
-    console.log(`Generated ${config.day}.png - Size: ${Math.round(buffer.length / 1024)} KB (900x300px)`);
+    console.log(`Generated ${config.day}.png with original logo - Size: ${Math.round(buffer.length / 1024)} KB (900x300px)`);
   }
 }
 
