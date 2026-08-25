@@ -62,19 +62,27 @@ jobs:
           function parseMeta(filePath) {
             const c = fs.readFileSync(filePath, 'utf8');
 
-            const titleM = c.match(/<title>([^<]+)<\/title>/);
-            const descM  = c.match(/<meta name="description" content="([^"]+)"/);
-            const imgM   = c.match(/og:image[^>]+content="([^"]+)"/);
+            const ogTitleM = c.match(/meta property="og:title" content="([^"]+)"/i);
+            const titleM   = c.match(/<title>([^<]+)<\/title>/i);
+            const descM    = c.match(/meta name="description" content="([^"]+)"/i);
+            const imgM     = c.match(/og:image[^>]+content="([^"]+)"/i);
 
-            const title = titleM ? titleM[1].replace(/ [—\-] Paisape.*$/i, '').trim() : '';
-            const desc  = descM  ? descM[1].trim() : '';
+            let rawTitle = '';
+            if (ogTitleM && ogTitleM[1]) {
+              rawTitle = ogTitleM[1].trim();
+            } else if (titleM && titleM[1]) {
+              rawTitle = titleM[1].replace(/\s+[—\-]\s+Paisape.*$/i, '').trim();
+            }
+
+            // Unescape common HTML entities
+            const title = rawTitle.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'");
+            const rawDesc = descM ? descM[1].trim() : '';
+            const desc  = rawDesc.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'");
 
             // Convert production image URL → GitHub raw CDN URL (available immediately on push)
             let image = GITHUB_RAW + '/assets/paisape-og-banner.jpg';
             if (imgM) {
               const imgUrl = imgM[1].trim();
-              // e.g. https://paisape.in/assets/blog/blog_waba_api.jpg
-              //   →  https://raw.githubusercontent.com/Paisape/pweb/main/assets/blog/blog_waba_api.jpg
               image = imgUrl.replace(SITE_URL, GITHUB_RAW);
             }
 

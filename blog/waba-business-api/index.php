@@ -6,7 +6,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The Complete DPDPA Guide for Indian Fintechs & Merchants — Paisape Blog</title>
+<title>WhatsApp Business API (WABA): Complete Engineering Guide for Indian Fintechs — Paisape Blog</title>
 <meta name="description" content="A complete engineering guide to WhatsApp Business API (WABA) — architecture, message templates, interactive messages, webhooks, TRAI compliance, conversation billing, and real fintech use cases." />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="WhatsApp Business API (WABA): Complete Engineering Guide for Indian Fintechs" />
