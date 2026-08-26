@@ -43,25 +43,7 @@
   </script>
 </head>
 <body class="bg-white text-body antialiased">
-<div id="progress" class="fixed top-0 left-0 z-[60] h-[3px] w-full bg-brand transition-transform duration-150"></div>
-<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">Skip to content</a>
-
-<header class="fixed top-0 inset-x-0 z-50 transition-all duration-500 bg-white/90 backdrop-blur-md border-b border-slate-100">
-  <div class="mx-auto max-w-site px-5">
-    <div id="navInner" class="flex items-center justify-between px-2 py-3 transition-all duration-500">
-      <!-- LOGO -->
-      <a href="/" class="flex items-center" aria-label="Paisape home">
-        <img src="/assets/logo.svg" alt="Paisape" class="h-9 w-auto" width="200" height="52">
-      </a>
-      <nav class="hidden md:flex items-center gap-8 text-[15px] font-medium text-ink2" aria-label="Main">
-        <a href="/" class="nav-link hover:text-brand transition-colors">Home</a>
-        <a href="/blog" class="nav-link text-brand font-semibold">Blog</a>
-        <a href="/excel-reconciliation-tool" class="nav-link hover:text-brand transition-colors">Free Tools</a>
-        <a href="/contact" class="nav-link hover:text-brand transition-colors">Contact Us</a>
-      </nav>
-    </div>
-  </div>
-</header>
+<?php include_once __DIR__ . '/../../includes/header.php'; ?>
 
 <main id="main" class="pt-28 pb-20">
   <article class="mx-auto max-w-4xl px-5">
@@ -350,46 +332,6 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 </script>
 
-<!-- Standard Paisape Site Footer -->
-<footer class="bg-night text-slate-300 mt-20">
-  <div class="mx-auto max-w-site px-5 py-16">
-    <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-5">
-      <div class="sm:col-span-2 md:col-span-1">
-        <img src="/assets/logo-white.svg" alt="Paisape" class="h-9 w-auto" width="200" height="52">
-        <p class="mt-5 max-w-xs text-[13px] leading-relaxed text-slate-400">
-          Payments. Everytime. Everywhere. Paisape provides comprehensive payment solutions including issuing, acquiring, transaction banking, and payment orchestration.
-        </p>
-      </div>
-
-      <div>
-        <h2 class="font-display text-[13.5px] font-bold text-white">Company</h2>
-        <ul class="mt-5 space-y-3 text-[13px]">
-          <li><a href="/about-us" class="transition hover:text-brand">About Us</a></li>
-          <li><a href="/blog" class="transition hover:text-brand">Blog</a></li>
-          <li><a href="/contact" class="transition hover:text-brand">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h2 class="font-display text-[13.5px] font-bold text-white">Legal</h2>
-        <ul class="mt-5 space-y-3 text-[13px]">
-          <li><a href="/privacy" class="transition hover:text-brand">Privacy Policy</a></li>
-          <li><a href="/refund-policy" class="transition hover:text-brand">Refund Policy</a></li>
-          <li><a href="/terms-and-conditions" class="transition hover:text-brand">Terms &amp; Conditions</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h2 class="font-display text-[13.5px] font-bold text-white">Free Tools</h2>
-        <ul class="mt-5 space-y-3 text-[13px]">
-          <li><a href="/excel-reconciliation-tool" class="transition hover:text-brand font-semibold text-mint">Free Excel Reconciliation Tool</a></li>
-          <li><a href="/upi-qr-generator" class="transition hover:text-brand">UPI QR Code Generator</a></li>
-          <li><a href="/card-bin-lookup" class="transition hover:text-brand">Card BIN Lookup Tool</a></li>
-          <li><a href="/ifsc-finder" class="transition hover:text-brand">IFSC Code &amp; Branch Finder</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
+<?php include_once __DIR__ . '/../../includes/footer.php'; ?>
 </body>
 </html>
