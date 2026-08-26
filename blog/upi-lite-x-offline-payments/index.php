@@ -44,63 +44,7 @@
 </head>
 
 <body class="bg-white text-body antialiased">
-<div class="fixed top-0 left-0 z-[100] w-full px-4 py-2.5 text-center shadow-md border-b border-black/10" style="background-image: url('/assets/hand_painted_tricolor.jpg'); background-size: cover; background-position: center;">
-  <div class="flex items-center justify-center gap-4">
-    <div class="animate-[bounce_2s_infinite]">
-      <svg class="h-6 w-9 rounded-sm shadow-sm drop-shadow-md" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-        <rect width="900" height="200" fill="#FF9933"/>
-        <rect y="200" width="900" height="200" fill="#FFFFFF"/>
-        <rect y="400" width="900" height="200" fill="#138808"/>
-        <circle cx="450" cy="300" r="80" fill="none" stroke="#000080" stroke-width="15"/>
-        <circle cx="450" cy="300" r="16" fill="#000080"/>
-        <path d="M450 220 L450 380 M370 300 L530 300 M393 243 L507 357 M393 357 L507 243" stroke="#000080" stroke-width="10"/>
-      </svg>
-    </div>
-    <p class="font-display text-[15px] font-extrabold text-[#000080] tracking-widest uppercase drop-shadow-sm">Happy Independence Day</p>
-    <svg class="h-7 w-7 text-[#000080] animate-[spin_15s_linear_infinite]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93M7.76 3.05l8.48 17.9M3.05 7.76l17.9 8.48M3.05 16.24l17.9-8.48M7.76 20.95l8.48-17.9"/></svg>
-    <p class="font-display text-[15px] font-extrabold text-[#000080] tracking-widest uppercase drop-shadow-sm">Jai Hind!</p>
-    <div class="animate-[bounce_2s_infinite]">
-      <svg class="h-6 w-9 rounded-sm shadow-sm drop-shadow-md" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-        <rect width="900" height="200" fill="#FF9933"/>
-        <rect y="200" width="900" height="200" fill="#FFFFFF"/>
-        <rect y="400" width="900" height="200" fill="#138808"/>
-        <circle cx="450" cy="300" r="80" fill="none" stroke="#000080" stroke-width="15"/>
-        <circle cx="450" cy="300" r="16" fill="#000080"/>
-        <path d="M450 220 L450 380 M370 300 L530 300 M393 243 L507 357 M393 357 L507 243" stroke="#000080" stroke-width="10"/>
-      </svg>
-    </div>
-  </div>
-</div>
-<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">Skip to content</a>
-
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>
-
-<main id="main" class="pt-36 pb-24">
-  <article class="mx-auto max-w-4xl px-5">
-    <!-- Header -->
-    <header class="space-y-6">
-      <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider text-brand">
-        <a href="/blog" class="hover:underline">Engineering Blog</a>
-        <span>&bull;</span>
-        <span>UPI & Mobile</span>
-        <span>&bull;</span>
-        <span class="text-slate-400">8 min read</span>
-      </div>
-
-      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-ink">
-        UPI Lite X & Offline Payments: Technical Mechanics, On-Device Wallets & NFC Infrastructure
-      </h1>
-
-      <p class="text-lg text-slate-600 leading-relaxed font-medium">
-        A complete engineering guide to NPCI UPI Lite X — offline wallet architecture, Secure Element (SE) storage, NFC peer-to-peer data exchange, and batch sync settlement.
-      </p>
-
-      <div class="flex items-center gap-4 border-y border-slate-100 py-4 text-xs font-semibold text-slate-500">
-        <div>Published: <span class="text-ink">25 August 2026</span></div>
-        <div>&bull;</div>
-        <div>Target Audience: <span class="text-ink">Mobile Engineers, Payment Switch Architects & Security Engineers</span></div>
-      </div>
-    </header>
 
     <!-- Whiteboard Diagram Image -->
     <div class="my-10 overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
