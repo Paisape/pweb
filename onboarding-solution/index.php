@@ -43,7 +43,7 @@
   </script>
 </head>
 
-<body class="bg-white text-body antialiased">
+<body class="bg-[#F8FCFF] text-body antialiased">
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>
 
 <main id="main">

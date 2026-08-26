@@ -41,7 +41,7 @@
     };
   </script>
 </head>
-<body class="bg-white text-body antialiased">
+<body class="bg-[#F8FCFF] text-body antialiased">
 <div class="fixed top-0 left-0 z-[100] w-full px-4 py-2.5 text-center shadow-md border-b border-black/10" style="background-image: url('/assets/hand_painted_tricolor.jpg'); background-size: cover; background-position: center;">
   <div class="flex items-center justify-center gap-4">
     <div class="animate-[bounce_2s_infinite]">
@@ -71,7 +71,9 @@
 </div>
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>
 
-<main id="main">
+<main id="main" class="relative overflow-hidden bg-gradient-to-b from-[#EAF4FD] via-[#F4FAFE] to-white pt-28 pb-20">
+  <div class="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-brand/10 blur-3xl"></div>
+  <div class="pointer-events-none absolute -left-32 top-40 h-[380px] w-[380px] rounded-full bg-brand/[0.07] blur-3xl"></div>
   <article class="pt-36 pb-20">
     <div class="mx-auto max-w-4xl px-5">
       <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.16em] mb-4">

@@ -43,10 +43,12 @@
   </script>
 </head>
 
-<body class="bg-white text-body antialiased">
+<body class="bg-[#F8FCFF] text-body antialiased">
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>
 
-<main id="main" class="pt-28 pb-20">
+<main id="main" class="relative overflow-hidden bg-gradient-to-b from-[#EAF4FD] via-[#F4FAFE] to-white pt-28 pb-20">
+  <div class="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-brand/10 blur-3xl"></div>
+  <div class="pointer-events-none absolute -left-32 top-40 h-[380px] w-[380px] rounded-full bg-brand/[0.07] blur-3xl"></div>
   <article class="mx-auto max-w-4xl px-5">
     
     <!-- Article Header -->
