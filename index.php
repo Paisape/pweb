@@ -719,56 +719,56 @@
     </div>
 
     <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Neobanking Card -->
+      <!-- MID & TID Card -->
       <article class="card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm">
-        <a href="/blog/neobanking-api-architecture" class="block overflow-hidden h-44 bg-slate-100">
-          <img src="/assets/blog/blog_neobanking.jpg" alt="Building the Future of Finance" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        <a href="/blog/what-is-mid-and-tid" class="block overflow-hidden h-44 bg-slate-100">
+          <img src="/assets/blog/blog_mid_tid.jpg" alt="What is MID and TID in Digital Payments?" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
         </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
-            <span class="text-brand">engineering</span><span class="text-body/50">6 min read</span>
+            <span class="text-brand">engineering</span><span class="text-body/50">8 min read</span>
           </div>
-          <a href="/blog/neobanking-api-architecture"><h3 class="mt-3 font-display text-[15px] font-bold leading-snug text-ink hover:text-brand">Building the Future of Finance: API-Driven Neobanking Architectures</h3></a>
-          <p class="mt-2 text-[12.5px] leading-relaxed text-body line-clamp-3">Explore how modern fintechs and enterprises launch prepaid cards, digital wallets, and virtual accounts using banking APIs.</p>
+          <a href="/blog/what-is-mid-and-tid"><h3 class="mt-3 font-display text-[15px] font-bold leading-snug text-ink hover:text-brand">What is MID and TID in Digital Payments? Merchant ID &amp; Terminal ID Explained</h3></a>
+          <p class="mt-2 text-[12.5px] leading-relaxed text-body line-clamp-3">Complete guide to MID (15-digit Merchant ID) and TID (8-digit Terminal ID), acquiring bank routing, and settlement reconciliation.</p>
           <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="text-[11px] text-body/70">17 Aug 2026</span>
-            <a href="/blog/neobanking-api-architecture" class="inline-flex items-center gap-1.5 text-[12px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+            <span class="text-[11px] text-body/70">26 Aug 2026</span>
+            <a href="/blog/what-is-mid-and-tid" class="inline-flex items-center gap-1.5 text-[12px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
           </div>
         </div>
       </article>
 
-      <!-- Independence Day Card -->
+      <!-- UPI Lite X Card -->
       <article class="card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm">
-        <a href="/blog/independence-day-2026" class="block overflow-hidden h-44 bg-slate-100">
-          <img src="/assets/blog/blog_independence_day.jpg" alt="Celebrating Financial Independence" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        <a href="/blog/upi-lite-x-offline-payments" class="block overflow-hidden h-44 bg-slate-100">
+          <img src="/assets/blog/blog_upi_lite_x.jpg" alt="UPI Lite X Offline Payments" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
         </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
-            <span class="text-brand">engineering</span><span class="text-body/50">4 min read</span>
+            <span class="text-brand">upi &bull; offline</span><span class="text-body/50">8 min read</span>
           </div>
-          <a href="/blog/independence-day-2026"><h3 class="mt-3 font-display text-[15px] font-bold leading-snug text-ink hover:text-brand">Celebrating Financial Independence: India's Digital Payment Revolution</h3></a>
-          <p class="mt-2 text-[12.5px] leading-relaxed text-body line-clamp-3">Reflecting on India's incredible journey towards true financial independence through Digital Public Infrastructure.</p>
+          <a href="/blog/upi-lite-x-offline-payments"><h3 class="mt-3 font-display text-[15px] font-bold leading-snug text-ink hover:text-brand">UPI Lite X &amp; Offline Payments: Mechanics &amp; NFC Infrastructure</h3></a>
+          <p class="mt-2 text-[12.5px] leading-relaxed text-body line-clamp-3">Engineering guide to NPCI UPI Lite X — offline wallet architecture, Secure Element storage, NFC data exchange, and batch sync settlement.</p>
           <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="text-[11px] text-body/70">15 Aug 2026</span>
-            <a href="/blog/independence-day-2026" class="inline-flex items-center gap-1.5 text-[12px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+            <span class="text-[11px] text-body/70">25 Aug 2026</span>
+            <a href="/blog/upi-lite-x-offline-payments" class="inline-flex items-center gap-1.5 text-[12px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
           </div>
         </div>
       </article>
 
-      <!-- Soundbox Card -->
+      <!-- Credit Line on UPI Card -->
       <article class="card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm">
-        <a href="/blog/soundbox-retail-revolution" class="block overflow-hidden h-44 bg-slate-100">
-          <img src="/assets/blog/blog_soundbox_retail.jpg" alt="The Rise of Soundbox Technology" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        <a href="/blog/credit-line-on-upi" class="block overflow-hidden h-44 bg-slate-100">
+          <img src="/assets/blog/blog_credit_line_upi.jpg" alt="Credit Line on UPI Architecture" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
         </a>
         <div class="flex flex-1 flex-col p-6">
           <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
-            <span class="text-brand">engineering</span><span class="text-body/50">5 min read</span>
+            <span class="text-brand">upi &bull; credit</span><span class="text-body/50">9 min read</span>
           </div>
-          <a href="/blog/soundbox-retail-revolution"><h3 class="mt-3 font-display text-[15px] font-bold leading-snug text-ink hover:text-brand">The Rise of Soundbox Technology: Why Every Retailer Needs Audio Alerts</h3></a>
-          <p class="mt-2 text-[12.5px] leading-relaxed text-body line-clamp-3">Exploring the psychology and security benefits of audio confirmations in busy retail environments.</p>
+          <a href="/blog/credit-line-on-upi"><h3 class="mt-3 font-display text-[15px] font-bold leading-snug text-ink hover:text-brand">Credit Line on UPI: API Architecture &amp; Integration Guide</h3></a>
+          <p class="mt-2 text-[12.5px] leading-relaxed text-body line-clamp-3">Technical guide to NPCI Credit Line on UPI — pre-approved credit linking, LAA systems, real-time authorization, and MDR rules.</p>
           <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="text-[11px] text-body/70">14 Aug 2026</span>
-            <a href="/blog/soundbox-retail-revolution" class="inline-flex items-center gap-1.5 text-[12px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
+            <span class="text-[11px] text-body/70">25 Aug 2026</span>
+            <a href="/blog/credit-line-on-upi" class="inline-flex items-center gap-1.5 text-[12px] font-semibold text-brand">Read <span class="arrow">&rarr;</span></a>
           </div>
         </div>
       </article>
