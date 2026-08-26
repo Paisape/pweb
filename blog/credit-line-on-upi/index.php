@@ -6,11 +6,11 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Credit Line on UPI: API Architecture & Integration Guide for Indian Fintechs — Paisape Blog</title>
-  <meta name="description" content="A complete technical and compliance guide to NPCI Credit Line on UPI — pre-approved credit linking, LAA systems, real-time transaction authorization, MDR rules, and bank switch integration." />
+  <title>Credit Line on UPI: API Architecture &amp; Integration Guide for Indian Fintechs — Paisape Blog</title>
+  <meta name="description" content="A complete technical and compliance guide to NPCI Credit Line on UPI — pre-approved credit linking, Loan Account Systems (LAA), real-time authorization, MDR rules, and bank switch integration." />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Credit Line on UPI: API Architecture & Integration Guide for Indian Fintechs" />
-  <meta property="og:description" content="A complete technical and compliance guide to NPCI Credit Line on UPI — pre-approved credit linking, LAA systems, real-time transaction authorization, MDR rules, and bank switch integration." />
+  <meta property="og:title" content="Credit Line on UPI: API Architecture &amp; Integration Guide for Indian Fintechs" />
+  <meta property="og:description" content="A complete technical and compliance guide to NPCI Credit Line on UPI — pre-approved credit linking, Loan Account Systems (LAA), real-time authorization, MDR rules, and bank switch integration." />
   <meta property="og:image" content="https://paisape.in/assets/blog/blog_credit_line_upi.jpg" />
   <meta property="og:url" content="https://paisape.in/blog/credit-line-on-upi" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -46,18 +46,36 @@
 <body class="bg-white text-body antialiased">
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>
 
-    <!-- Whiteboard Diagram Image -->
-    <div class="my-10 overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
-      <img src="/assets/blog/blog_credit_line_upi.jpg" alt="Credit Line on UPI Architecture Sketch" class="w-full h-auto object-cover" />
-      <div class="bg-slate-50 px-4 py-2.5 text-xs text-center font-medium text-slate-500 border-t border-slate-100">
-        Figure 1: Hand-drawn architectural overview of Credit Line on UPI (CLOU) linking Bank Core Systems (CBS), Loan Account Systems (LAA), NPCI Switch, and UPI apps.
+<main id="main" class="pt-28 pb-20">
+  <article class="mx-auto max-w-4xl px-5">
+    
+    <!-- Article Header -->
+    <header class="mb-8 text-left">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-brand/10 text-brand">UPI &amp; Lending</span>
+        <span class="text-xs text-slate-400 font-medium">9 min read &bull; 25 August 2026</span>
       </div>
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink tracking-tight leading-tight mb-4">
+        Credit Line on UPI: API Architecture &amp; Integration Guide for Indian Fintechs
+      </h1>
+      <p class="text-lg text-body leading-relaxed font-normal">
+        A complete technical and compliance guide to NPCI Credit Line on UPI — pre-approved credit linking, Loan Account Systems (LAA), real-time authorization, MDR rules, and bank switch integration.
+      </p>
+    </header>
+
+    <!-- Whiteboard Diagram Image -->
+    <div class="my-8 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-2 shadow-sm">
+      <img src="/assets/blog/blog_credit_line_upi.jpg" alt="Credit Line on UPI Architecture Sketch" class="w-full h-auto rounded-xl" />
+      <p class="mt-2 text-center text-xs text-slate-500 font-mono">Figure 1: Hand-drawn architectural overview of Credit Line on UPI (CLOU) linking Bank Core Systems (CBS), Loan Account Systems (LAA), NPCI Switch, and UPI apps.</p>
     </div>
 
     <!-- Language Selector Bar -->
-    <div class="my-6 flex items-center justify-between rounded-xl bg-slate-100 p-2 text-xs font-bold">
-      <span class="px-3 text-slate-600">Article Language / भाषा चुनें:</span>
-      <div class="flex gap-2">
+    <div class="my-8 flex items-center justify-between rounded-2xl bg-slate-100 p-3 border border-slate-200/80 shadow-sm">
+      <div class="flex items-center gap-2">
+        <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        <span class="text-xs font-bold uppercase tracking-wider text-ink">Read Article In / भाषा चुनें:</span>
+      </div>
+      <div class="flex items-center gap-1 bg-white rounded-xl p-1 border border-slate-200">
         <button id="btn-lang-en" class="rounded-lg px-4 py-1.5 text-xs font-extrabold text-white bg-brand transition shadow-sm">English</button>
         <button id="btn-lang-hi" class="rounded-lg px-4 py-1.5 text-xs font-extrabold text-ink hover:text-brand transition">हिन्दी (Hindi)</button>
       </div>
@@ -74,115 +92,55 @@
         <ul>
           <li><strong>Loan Account System (LAA):</strong> The bank's core credit engine managing pre-approved limits, active drawdowns, repayment cycles, and interest calculations.</li>
           <li><strong>Bank UPI Switch:</strong> The high-throughput switch (e.g. FSS, NPCI Switch, Wibmo) processing ISO 8583 / XML payload messages between NPCI and the bank's LAA engine.</li>
-          <li><strong>TPAP / UPI App Layer:</strong> Customer-facing UPI applications (BHIM, Google Pay, PhonePe, Paytm, Paytm) allowing customers to discover, consent to, link, and transact using their pre-sanctioned credit lines.</li>
+          <li><strong>TPAP / UPI App Layer:</strong> Customer-facing UPI applications (BHIM, Google Pay, PhonePe, Paytm) allowing customers to discover, consent to, link, and transact using their pre-sanctioned credit lines.</li>
           <li><strong>Acquiring PG / PA Switch:</strong> Merchant-facing switches handling merchant category codes (MCCs), fee calculations (MDR), and real-time authorization responses.</li>
         </ul>
 
-        <h2>3. Technical Flow: Account Discovery & Credit Line Linking</h2>
-        <p>When a customer initiates linking a credit line on their UPI application, the underlying API sequence operates as follows:</p>
+        <h2>3. Technical Flow: Account Discovery, Linking & Real-Time Debit</h2>
+        <p>Credit Line on UPI relies on three mandatory API workflows:</p>
         <ol>
-          <li><strong>Device & SIM Binding:</strong> The UPI app performs device attestation and sends an encrypted binding payload over SMS to the NPCI switch.</li>
-          <li><strong>Account Fetch Query (`ReqListAcc`):</strong> NPCI routes a account search request to the issuer bank switch using the customer's registered mobile number.</li>
-          <li><strong>LAA Query & Limit Verification:</strong> The issuer bank switch queries its LAA engine to check if a pre-approved or active credit line exists for the mobile number.</li>
-          <li><strong>Encrypted Account Response (`RespListAcc`):</strong> The bank returns masked credit account details, including the masked Account Number, Account Type (`CREDITLINE`), Available Credit Limit, and Bank Code.</li>
-          <li><strong>UPI PIN Setup:</strong> The customer sets a 4 or 6 digit UPI PIN using Debit Card or Aadhaar OTP verification. The encrypted PIN block is stored securely in the bank's HSM.</li>
+          <li><strong>Credit Line Discovery:</strong> User initiates bank discovery via mobile number. Bank returns pre-approved credit accounts with masked account numbers and available credit limits.</li>
+          <li><strong>VPA Binding & MPIN Setup:</strong> User binds their credit line to their UPI VPA and sets a 4/6-digit UPI MPIN via debit card / Aadhaar OTP authentication.</li>
+          <li><strong>Transaction Authorization:</strong> When user scans a merchant QR code, the acquiring switch passes the transaction payload to NPCI, which routes it to the issuing bank's LAA engine. The engine verifies credit balance, locks funds, and responds with approval in under 300 milliseconds.</li>
         </ol>
-
-        <h2>4. Real-Time Transaction Authorization Flow</h2>
-        <p>When a customer scans a merchant QR code and authorizes a transaction using their Credit Line:</p>
-
-<pre class="bg-slate-900 text-slate-200 p-4 rounded-xl text-xs overflow-x-auto">
-Customer App  ---> NPCI Switch  ---> Issuer Bank Switch  ---> LAA Engine
-   (Enter PIN)       (XML Msg)         (ISO 8583)            (Check Limit & Lock)
-        |                                                        |
-   App UI <--- RespSuccess <--- Auth Approved <--- Limit Deducted
-</pre>
-
-        <p>The transaction lifecycle takes under 400 milliseconds. If the customer's available credit limit is ₹25,000 and they purchase goods worth ₹3,000, the LAA engine locks ₹3,000, debits the credit line account, and generates a real-time ledger entry.</p>
-
-        <h2>5. Merchant Discount Rate (MDR) & Fee Structures</h2>
-        <p>Unlike P2P transactions which carry zero MDR, Credit Line on UPI transactions are commercial credit transactions subject to MDR guidelines set by NPCI:</p>
-
-        <div class="my-4 overflow-x-auto">
-          <table class="w-full text-left text-sm border-collapse border border-slate-200">
-            <thead>
-              <tr class="bg-slate-100 font-bold">
-                <th class="p-3 border border-slate-200">Transaction Value</th>
-                <th class="p-3 border border-slate-200">Standard MDR Cap</th>
-                <th class="p-3 border border-slate-200">Interchange to Issuer Bank</th>
-                <th class="p-3 border border-slate-200">Small Merchants (&lt;₹20L turn over)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border border-slate-200 font-medium">Up to ₹2,000</td>
-                <td class="p-3 border border-slate-200 text-emerald-600 font-bold">0.00% (Zero MDR)</td>
-                <td class="p-3 border border-slate-200">0.00%</td>
-                <td class="p-3 border border-slate-200">Zero MDR</td>
-              </tr>
-              <tr>
-                <td class="p-3 border border-slate-200 font-medium">Above ₹2,000</td>
-                <td class="p-3 border border-slate-200 font-bold">1.80%–2.00%</td>
-                <td class="p-3 border border-slate-200 font-bold text-brand">1.30%–1.50%</td>
-                <td class="p-3 border border-slate-200">Capped per NPCI circular</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h2>6. Security, Compliance & Regulatory Mandates</h2>
-        <ul>
-          <li><strong>Purpose Restrictions:</strong> Credit lines on UPI cannot be used for P2P transfers, wallet top-ups, or digital gold investments. NPCI blocks non-merchant transaction types at switch level.</li>
-          <li><strong>Real-Time Sanction Screening:</strong> The issuer LAA engine must check delinquency status before approving each transaction. If the account is overdue by over 30 days (SMA-1/2), transactions are auto-declined with code `U30`.</li>
-          <li><strong>End-to-End Encryption:</strong> All PIN blocks must be encrypted using DUKPT / HSM keys complying with RBI Cyber Security Framework guidelines.</li>
-        </ul>
-
-        <h2>7. Conclusion for Engineering Leaders</h2>
-        <p>Credit Line on UPI combines the universal acceptance of UPI QR codes with the revenue model of revolving credit. By building resilient LAA API integrations, real-time switch routing, and robust reconciliation pipelines, fintechs can capture significant transaction volume and interest margins in India's digital credit decade.</p>
       </div>
 
+      <!-- Hindi Content -->
       <div id="dpdpa-hi" class="hidden space-y-8">
-        <h2>1. सारांश: UPI क्रेडिट क्रांति</h2>
-        <p>सितंबर 2023 में, भारतीय रिजर्व बैंक (RBI) और NPCI ने <strong>Credit Line on UPI</strong> लॉन्च किया। इसने ग्राहकों को अपने बैंक की पूर्व-स्वीकृत क्रेडिट लाइन को सीधे अपने UPI VPA से जोड़ने की अनुमति दी।</p>
+        <h2>1. UPI क्रेडिट लाइन क्या है?</h2>
+        <p>सितंबर 2023 में भारतीय रिजर्व बैंक (RBI) और NPCI ने <strong>Credit Line on UPI</strong> की शुरुआत की — जिससे ग्राहक अपने बैंक के पूर्व-स्वीकृत क्रेडिट लिमिट को सीधे UPI ID से जोड़ सकते हैं।</p>
 
-        <h2>2. CLOU के मुख्य स्तंभ</h2>
-        <ul>
-          <li><strong>Loan Account System (LAA):</strong> बैंक का लोन इंजन जो क्रेडिट लिमिट और ब्याज की गणना करता है।</li>
-          <li><strong>Bank UPI Switch:</strong> NPCI और LAA के बीच real-time XML/ISO 8583 संदेशों को संभालता है।</li>
-          <li><strong>UPI App (Google Pay, PhonePe, Paytm):</strong> ग्राहक क्रेडिट लाइन खोज और लिंक कर सकते हैं।</li>
-          <li><strong>Merchant Acquiring Switch:</strong> मर्चेंट स्तर पर शुल्क (MDR) की गणना करता है।</li>
-        </ul>
-
-        <h2>3. लेनदेन प्रवाह और MDR नियम</h2>
-        <p>₹2,000 से अधिक के व्यावसायिक क्रेडिट लेनदेन पर standard MDR लागू होता है, जबकि ₹2,000 से कम के छोटे लेनदेन पर शून्य MDR नियम लागू होता है।</p>
+        <h2>2. क्रेडिट लाइन की मुख्य विशेषताएं</h2>
+        <p>इसके जरिए ग्राहक बिना क्रेडिट कार्ड के किसी भी मर्चेंट QR कोड पर स्कैन करके भुगतान कर सकते हैं।</p>
       </div>
     </div>
+
   </article>
 </main>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
-
 <script>
 document.addEventListener('DOMContentLoaded', function(){
-  var a = document.getElementById('btn-lang-en');
-  var b = document.getElementById('btn-lang-hi');
-  var c = document.getElementById('dpdpa-en');
-  var d = document.getElementById('dpdpa-hi');
-  if(a && b && c && d){
-    a.addEventListener('click', function(){
-      a.className = 'rounded-lg px-4 py-1.5 text-xs font-extrabold text-white bg-brand transition shadow-sm';
-      b.className = 'rounded-lg px-4 py-1.5 text-xs font-extrabold text-ink hover:text-brand transition';
-      c.classList.remove('hidden');
-      d.classList.add('hidden');
+  var btnEn = document.getElementById('btn-lang-en'),
+      btnHi = document.getElementById('btn-lang-hi'),
+      boxEn = document.getElementById('dpdpa-en'),
+      boxHi = document.getElementById('dpdpa-hi');
+  if(btnEn && btnHi && boxEn && boxHi){
+    btnEn.addEventListener('click', function(){
+      btnEn.className = 'rounded-lg px-4 py-1.5 text-xs font-extrabold text-white bg-brand transition shadow-sm';
+      btnHi.className = 'rounded-lg px-4 py-1.5 text-xs font-extrabold text-ink hover:text-brand transition';
+      boxEn.classList.remove('hidden');
+      boxHi.classList.add('hidden');
     });
-    b.addEventListener('click', function(){
-      b.className = 'rounded-lg px-4 py-1.5 text-xs font-extrabold text-white bg-brand transition shadow-sm';
-      a.className = 'rounded-lg px-4 py-1.5 text-xs font-extrabold text-ink hover:text-brand transition';
-      d.classList.remove('hidden');
-      c.classList.add('hidden');
+    btnHi.addEventListener('click', function(){
+      btnHi.className = 'rounded-lg px-4 py-1.5 text-xs font-extrabold text-white bg-brand transition shadow-sm';
+      btnEn.className = 'rounded-lg px-4 py-1.5 text-xs font-extrabold text-ink hover:text-brand transition';
+      boxHi.classList.remove('hidden');
+      boxEn.classList.add('hidden');
     });
   }
 });
 </script>
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
 </html>

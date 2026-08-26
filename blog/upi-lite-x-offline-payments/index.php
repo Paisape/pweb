@@ -46,18 +46,36 @@
 <body class="bg-white text-body antialiased">
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>
 
-    <!-- Whiteboard Diagram Image -->
-    <div class="my-10 overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
-      <img src="/assets/blog/blog_upi_lite_x.jpg" alt="UPI Lite X Offline Payment Architecture Sketch" class="w-full h-auto object-cover" />
-      <div class="bg-slate-50 px-4 py-2.5 text-xs text-center font-medium text-slate-500 border-t border-slate-100">
-        Figure 1: Technical hand-drawn whiteboard architecture showing UPI Lite X offline payment exchange over NFC between Sender, Receiver, and asynchronous batch settlement.
+<main id="main" class="pt-28 pb-20">
+  <article class="mx-auto max-w-4xl px-5">
+    
+    <!-- Article Header -->
+    <header class="mb-8 text-left">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-brand/10 text-brand">UPI &amp; Offline</span>
+        <span class="text-xs text-slate-400 font-medium">8 min read &bull; 25 August 2026</span>
       </div>
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink tracking-tight leading-tight mb-4">
+        UPI Lite X &amp; Offline Payments: Technical Mechanics, On-Device Wallets &amp; NFC Infrastructure
+      </h1>
+      <p class="text-lg text-body leading-relaxed font-normal">
+        A complete engineering guide to NPCI UPI Lite X — offline wallet architecture, Secure Element (SE) storage, NFC peer-to-peer data exchange, and batch sync settlement.
+      </p>
+    </header>
+
+    <!-- Whiteboard Diagram Image -->
+    <div class="my-8 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-2 shadow-sm">
+      <img src="/assets/blog/blog_upi_lite_x.jpg" alt="UPI Lite X Offline Payment Architecture Sketch" class="w-full h-auto rounded-xl" />
+      <p class="mt-2 text-center text-xs text-slate-500 font-mono">Figure 1: Technical hand-drawn whiteboard architecture showing UPI Lite X offline payment exchange over NFC between Sender, Receiver, and asynchronous batch settlement.</p>
     </div>
 
     <!-- Language Selector Bar -->
-    <div class="my-6 flex items-center justify-between rounded-xl bg-slate-100 p-2 text-xs font-bold">
-      <span class="px-3 text-slate-600">Article Language / भाषा चुनें:</span>
-      <div class="flex gap-2">
+    <div class="my-8 flex items-center justify-between rounded-2xl bg-slate-100 p-3 border border-slate-200/80 shadow-sm">
+      <div class="flex items-center gap-2">
+        <svg class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        <span class="text-xs font-bold uppercase tracking-wider text-ink">Read Article In / भाषा चुनें:</span>
+      </div>
+      <div class="flex items-center gap-1 bg-white rounded-xl p-1 border border-slate-200">
         <button id="btn-lang-en" class="rounded-lg px-4 py-1.5 text-xs font-extrabold text-white bg-brand transition shadow-sm">English</button>
         <button id="btn-lang-hi" class="rounded-lg px-4 py-1.5 text-xs font-extrabold text-ink hover:text-brand transition">हिन्दी (Hindi)</button>
       </div>
@@ -77,7 +95,7 @@
           <li><strong>P2P NFC Proximity Protocol:</strong> Payments occur by tapping two phones together or tapping a merchant's offline Soundbox/POS terminal.</li>
         </ul>
 
-        <h2>3. Cryptographic Token Generation & Peer-to-Peer Exchange</h2>
+        <h2>3. Cryptographic Token Generation &amp; Peer-to-Peer Exchange</h2>
         <p>The offline transaction sequence operates in three distinct phases:</p>
 
 <pre class="bg-slate-900 text-slate-200 p-4 rounded-xl text-xs overflow-x-auto">
@@ -94,12 +112,12 @@ Sender Device (Offline)              Receiver Device (Offline)              NPCI
 
         <ol>
           <li><strong>Pre-Funding:</strong> When online, the user loads up to ₹2,000 into their UPI Lite X wallet from their bank account. The bank locks this amount in a dedicated escrow account.</li>
-          <li><strong>Offline Tap:</strong> Sender taps receiver's phone via NFC. Sender's app generates a cryptographically signed payload containing `WalletID`, `TransactionSeq`, `Amount`, `Timestamp`, and an HMAC payload signed by the hardware key.</li>
+          <li><strong>Offline Tap:</strong> Sender taps receiver's phone via NFC. Sender's app generates a cryptographically signed payload containing <code>WalletID</code>, <code>TransactionSeq</code>, <code>Amount</code>, <code>Timestamp</code>, and an HMAC payload signed by the hardware key.</li>
           <li><strong>Local Validation:</strong> Receiver's Secure Element verifies the signature and sequence counter. Sender's local wallet balance is debited immediately on-device.</li>
           <li><strong>Asynchronous Batch Sync:</strong> When either phone reconnects to cellular/Wi-Fi networks, the queued signed tokens are uploaded to NPCI for batch clearing and final bank account settlement.</li>
         </ol>
 
-        <h2>4. Fraud Prevention & Security Safeguards</h2>
+        <h2>4. Fraud Prevention &amp; Security Safeguards</h2>
         <ul>
           <li><strong>Double-Spend Prevention:</strong> Strict monotonically increasing sequence counters backed by hardware keys prevent token reuse or replay attacks.</li>
           <li><strong>Balance Caps:</strong> Wallet balance is strictly capped at ₹2,000 to limit risk exposure in case of physical device theft.</li>
@@ -110,44 +128,45 @@ Sender Device (Offline)              Receiver Device (Offline)              NPCI
         <p>UPI Lite X bridges the last mile of Indian digital payments. By implementing NFC wallet APIs, offline queue managers, and robust asynchronous batch clearing pipelines, payment apps ensure zero transaction drop-offs regardless of network connectivity.</p>
       </div>
 
+      <!-- Hindi Content -->
       <div id="dpdpa-hi" class="hidden space-y-8">
-        <h2>1. भारत में ऑफलाइन UPI क्यों आवश्यक है?</h2>
-        <p>जब मोबाइल नेटवर्क या इंटरनेट नहीं होता, तब भी <strong>UPI Lite X</strong> के जरिए फोन को आपस में टैप (NFC) करके बिना किसी पिन या सर्वर के तुरंत भुगतान किया जा सकता है।</p>
+        <h2>1. भारत में ऑफलाइन UPI क्यों महत्वपूर्ण है?</h2>
+        <p>ऑनलाइन UPI प्रति माह 14 अरब से अधिक लेनदेन संसाधित करता है, लेकिन अंडरग्राउंड मेट्रो, स्टेडियमों और ग्रामीण इलाकों में नेटवर्क कनेक्टिविटी न होना एक चुनौती थी। NPCI ने <strong>UPI Lite X</strong> लॉन्च किया — जिससे बिना इंटरनेट के दो फोन आपस में पेमेंट ट्रांसफर कर सकते हैं।</p>
 
-        <h2>2. तकनीकी प्रक्रिया: ऑन-डिवाइस वॉलेट और NFC</h2>
-        <ul>
-          <li><strong>Secure Element (SE):</strong> वॉलेट बैलेंस आपके फोन की हार्डवेयर सुरक्षा चिप में सुरक्षित रहता है।</li>
-          <li><strong>बिना UPI PIN के भुगतान:</strong> ₹500 तक का भुगतान बिना PIN के तुरंत हो जाता है।</li>
-          <li><strong>बैच सिंक:</strong> फोन ऑनलाइन आने पर लेनदेन रिकॉर्ड स्वचालित रूप से बैंक सर्वर से सिंक हो जाता है।</li>
-        </ul>
+        <h2>2. UPI Lite X तकनीक कैसे काम करती है?</h2>
+        <p>UPI Lite X इंटरनेट के बिना कार्य करने के लिए **Near Field Communication (NFC)** तकनीक का उपयोग करता है।</p>
+
+        <h2>3. सुरक्षा और फ्रॉड रोकथाम</h2>
+        <p>हार्डवेयर एनक्लेव और Secure Element (SE) में सुरक्षित स्टोरेज से धोखाधड़ी पूरी तरह से रुकी रहती है। ऑनलाइन आने पर बैच सिंक के जरिए बैंक खातों का सेटलमेंट पूरा होता है।</p>
       </div>
     </div>
+
   </article>
 </main>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
-
 <script>
 document.addEventListener('DOMContentLoaded', function(){
-  var a = document.getElementById('btn-lang-en');
-  var b = document.getElementById('btn-lang-hi');
-  var c = document.getElementById('dpdpa-en');
-  var d = document.getElementById('dpdpa-hi');
-  if(a && b && c && d){
-    a.addEventListener('click', function(){
-      a.className = 'rounded-lg px-4 py-1.5 text-xs font-extrabold text-white bg-brand transition shadow-sm';
-      b.className = 'rounded-lg px-4 py-1.5 text-xs font-extrabold text-ink hover:text-brand transition';
-      c.classList.remove('hidden');
-      d.classList.add('hidden');
+  var btnEn = document.getElementById('btn-lang-en'),
+      btnHi = document.getElementById('btn-lang-hi'),
+      boxEn = document.getElementById('dpdpa-en'),
+      boxHi = document.getElementById('dpdpa-hi');
+  if(btnEn && btnHi && boxEn && boxHi){
+    btnEn.addEventListener('click', function(){
+      btnEn.className = 'rounded-lg px-4 py-1.5 text-xs font-extrabold text-white bg-brand transition shadow-sm';
+      btnHi.className = 'rounded-lg px-4 py-1.5 text-xs font-extrabold text-ink hover:text-brand transition';
+      boxEn.classList.remove('hidden');
+      boxHi.classList.add('hidden');
     });
-    b.addEventListener('click', function(){
-      b.className = 'rounded-lg px-4 py-1.5 text-xs font-extrabold text-white bg-brand transition shadow-sm';
-      a.className = 'rounded-lg px-4 py-1.5 text-xs font-extrabold text-ink hover:text-brand transition';
-      d.classList.remove('hidden');
-      c.classList.add('hidden');
+    btnHi.addEventListener('click', function(){
+      btnHi.className = 'rounded-lg px-4 py-1.5 text-xs font-extrabold text-white bg-brand transition shadow-sm';
+      btnEn.className = 'rounded-lg px-4 py-1.5 text-xs font-extrabold text-ink hover:text-brand transition';
+      boxHi.classList.remove('hidden');
+      boxEn.classList.add('hidden');
     });
   }
 });
 </script>
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
 </html>
