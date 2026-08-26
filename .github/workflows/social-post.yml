@@ -4,7 +4,13 @@ on:
   push:
     branches: [main]
     paths:
-      - 'blog/*/index.php'   # Only triggers when a new blog post is added
+      - 'blog/*/index.php'   # Only triggers when a blog post is added/updated
+  workflow_dispatch:        # Allows manual trigger from GitHub UI
+    inputs:
+      blog_slug:
+        description: 'Blog slug to post manually (e.g. what-is-mid-and-tid)'
+        required: false
+        default: ''
 
 jobs:
   social-post:
@@ -13,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2   # Need previous commit to detect what's new
+          fetch-depth: 0   # Full history to accurately detect push diffs
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -29,34 +35,57 @@ jobs:
           const TOKEN    = process.env.BUFFER_TOKEN;
           const LINKEDIN = process.env.BUFFER_LINKEDIN_ID;
           const FACEBOOK = process.env.BUFFER_FACEBOOK_ID;
+          const MANUAL_SLUG = process.env.MANUAL_SLUG;
           const SITE_URL = 'https://paisape.in';
-          // GitHub raw CDN — image available IMMEDIATELY on push, no deployment wait
           const GITHUB_RAW = 'https://raw.githubusercontent.com/Paisape/pweb/main';
 
           if (!TOKEN) {
-            console.log('No BUFFER_TOKEN — add it in GitHub Secrets. Skipping.');
+            console.log('⚠️ No BUFFER_TOKEN found in GitHub Secrets. Skipping social post.');
             process.exit(0);
           }
 
-          // Detect newly added blog/*/index.php files in this push
-          let diff = '';
-          try {
-            diff = execSync('git diff --name-only --diff-filter=A HEAD~1 HEAD').toString();
-          } catch(e) {
-            diff = execSync('git diff --name-only HEAD~1 HEAD').toString();
-          }
+          let newPosts = [];
 
-          const newPosts = diff.split('\n')
-            .map(f => f.trim())
-            .filter(f => /^blog\/.+\/index\.php$/.test(f))
-            .filter(f => f !== 'blog/index.php');
+          if (MANUAL_SLUG && MANUAL_SLUG.trim() !== '') {
+            const manualPath = `blog/${MANUAL_SLUG.trim()}/index.php`;
+            if (fs.existsSync(manualPath)) {
+              newPosts = [manualPath];
+              console.log(`📌 Manual trigger for blog: ${manualPath}`);
+            } else {
+              console.error(`❌ Manual blog path not found: ${manualPath}`);
+              process.exit(1);
+            }
+          } else {
+            // Detect newly added or updated blog/*/index.php files in this push
+            let diff = '';
+            try {
+              const beforeSha = process.env.BEFORE_SHA;
+              const currentSha = process.env.CURRENT_SHA;
+              if (beforeSha && currentSha && beforeSha !== '0000000000000000000000000000000000000000') {
+                diff = execSync(`git diff --name-only ${beforeSha} ${currentSha}`).toString();
+              } else {
+                diff = execSync('git diff --name-only HEAD~1 HEAD').toString();
+              }
+            } catch(e) {
+              try {
+                diff = execSync('git diff --name-only HEAD~1 HEAD').toString();
+              } catch(err) {
+                console.log('Could not get git diff:', err.message);
+              }
+            }
+
+            newPosts = diff.split('\n')
+              .map(f => f.trim())
+              .filter(f => /^blog\/.+\/index\.php$/.test(f))
+              .filter(f => f !== 'blog/index.php');
+          }
 
           if (newPosts.length === 0) {
-            console.log('No new blog posts in this push — skipping social post.');
+            console.log('ℹ️ No new or modified blog posts in this push — skipping social post.');
             process.exit(0);
           }
 
-          console.log('New posts detected:', newPosts);
+          console.log('📌 Blog posts to publish:', newPosts);
 
           // Parse metadata directly from the PHP file
           function parseMeta(filePath) {
@@ -74,12 +103,10 @@ jobs:
               rawTitle = titleM[1].replace(/\s+[—\-]\s+Paisape.*$/i, '').trim();
             }
 
-            // Unescape common HTML entities
             const title = rawTitle.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'");
             const rawDesc = descM ? descM[1].trim() : '';
             const desc  = rawDesc.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'");
 
-            // Convert production image URL → GitHub raw CDN URL (available immediately on push)
             let image = GITHUB_RAW + '/assets/paisape-og-banner.jpg';
             if (imgM) {
               const imgUrl = imgM[1].trim();
@@ -89,7 +116,7 @@ jobs:
             return { title, desc, image };
           }
 
-          // Post to Buffer with rich link attachment
+          // Post to Buffer API
           async function postToBuffer(channelId, text, title, desc, blogUrl, imageUrl, isFacebook) {
             const la = {
               url: blogUrl,
@@ -135,62 +162,81 @@ jobs:
 
             const data = await res.json();
             if (data.errors) {
-              console.error('  ❌ Error:', data.errors[0].message);
+              console.error('  ❌ Buffer API Error:', data.errors[0].message);
               return;
             }
             const result = data.data?.createPost;
             if (result?.post) {
-              console.log(`  ✅ Posted! ID: ${result.post.id} | Status: ${result.post.status}`);
+              console.log(`  ✅ Posted to Buffer! ID: ${result.post.id} | Status: ${result.post.status}`);
             } else if (result?.message) {
-              console.error('  ❌ Failed:', result.message);
+              console.error('  ❌ Buffer API Failed:', result.message);
             }
           }
 
-          // Main
+          // Main Workflow Execution
           (async () => {
             for (const filePath of newPosts) {
               const slug    = filePath.split('/')[1];
               const blogUrl = `${SITE_URL}/blog/${slug}`;
               const { title, desc, image } = parseMeta(filePath);
 
-              console.log(`\n📝 Blog: ${slug}`);
+              console.log(`\n==================================================`);
+              console.log(`📝 Processing Blog Post: ${slug}`);
               console.log(`   Title : ${title}`);
-              console.log(`   Desc  : ${desc.substring(0, 80)}...`);
+              console.log(`   Desc  : ${desc.substring(0, 90)}...`);
               console.log(`   Image : ${image}`);
               console.log(`   URL   : ${blogUrl}`);
+              console.log(`==================================================\n`);
 
-              // Wait for Coolify deployment to finish (poll until HTTP 200 OK)
-              console.log(`\n⏳ Waiting for web server deployment of ${blogUrl} (HTTP 200 OK)...`);
+              // Poll web server until HTTP 200 OK and non-404 body content is confirmed
+              console.log(`⏳ Verifying web server deployment of ${blogUrl}...`);
               let isLive = false;
-              for (let attempt = 1; attempt <= 24; attempt++) {
+              const maxAttempts = 30; // 30 attempts * 10s = 5 minutes max
+
+              for (let attempt = 1; attempt <= maxAttempts; attempt++) {
                 try {
-                  const res = await fetch(blogUrl, { method: 'HEAD' });
+                  const res = await fetch(blogUrl, {
+                    method: 'GET',
+                    headers: {
+                      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 PaisapeDeployBot/1.0'
+                    }
+                  });
+
                   if (res.status === 200) {
-                    console.log(`  ✅ Deployment Live! Server returned HTTP 200 OK (Attempt ${attempt})`);
-                    isLive = true;
-                    break;
+                    const htmlText = await res.text();
+                    if (!htmlText.includes('404 Not Found') && !htmlText.includes('404 Page Not Found')) {
+                      console.log(`  ✅ DEPLOYMENT VERIFIED LIVE! Server returned HTTP 200 OK with valid page content (Attempt ${attempt}/${maxAttempts})`);
+                      isLive = true;
+                      break;
+                    } else {
+                      console.log(`  [Attempt ${attempt}/${maxAttempts}] HTTP 200 returned but body contains 404 message. Waiting 10s...`);
+                    }
+                  } else {
+                    console.log(`  [Attempt ${attempt}/${maxAttempts}] Status: ${res.status}. Web server deploying... Waiting 10s...`);
                   }
-                  console.log(`  [Attempt ${attempt}/24] Status: ${res.status}. Waiting 10s for Coolify deployment...`);
                 } catch(e) {
-                  console.log(`  [Attempt ${attempt}/24] Server deploying... (${e.message})`);
+                  console.log(`  [Attempt ${attempt}/${maxAttempts}] Web server not responding yet... (${e.message}). Waiting 10s...`);
                 }
                 await new Promise(r => setTimeout(r, 10000));
               }
 
+              // STRICT SAFETY GUARD: Do NOT publish to social media if URL is 404 / not live!
               if (!isLive) {
-                console.log('  ⚠️ Deployment check timed out — proceeding with posting.');
+                console.error(`\n❌ DEPLOYMENT TIMED OUT: ${blogUrl} is NOT live (returned 404 or non-200 status).`);
+                console.error(`🛑 ABORTING SOCIAL POSTING TO PREVENT PUBLISHING 404 LINKS ON FACEBOOK & LINKEDIN.`);
+                process.exit(1);
               }
 
               const liText = `📰 New on Paisape Engineering Blog\n\n${title}\n\n${desc}\n\n👉 ${blogUrl}\n\n#Fintech #India #Payments #Engineering #Paisape`;
               const fbText = `🆕 New Blog Post!\n\n${title}\n\n${desc}\n\n${blogUrl}\n\n#Fintech #India #Payments`;
 
-              console.log('\n  → LinkedIn...');
+              console.log('\n🚀 Dispatching to LinkedIn via Buffer...');
               await postToBuffer(LINKEDIN, liText, title, desc, blogUrl, image, false);
 
-              console.log('  → Facebook...');
+              console.log('\n🚀 Dispatching to Facebook via Buffer...');
               await postToBuffer(FACEBOOK, fbText, title, desc, blogUrl, image, true);
             }
-            console.log('\n✅ Social posting complete!');
+            console.log('\n🎉 Social posting workflow executed successfully!');
           })();
           SCRIPT
 
@@ -199,4 +245,7 @@ jobs:
           BUFFER_TOKEN: ${{ secrets.BUFFER_TOKEN }}
           BUFFER_LINKEDIN_ID: ${{ secrets.BUFFER_LINKEDIN_ID }}
           BUFFER_FACEBOOK_ID: ${{ secrets.BUFFER_FACEBOOK_ID }}
+          BEFORE_SHA: ${{ github.event.before }}
+          CURRENT_SHA: ${{ github.sha }}
+          MANUAL_SLUG: ${{ github.event.inputs.blog_slug }}
         run: node /tmp/social_post.js
