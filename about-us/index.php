@@ -46,10 +46,13 @@
       <div class="mx-auto max-w-3xl text-center">
         <span class="inline-block px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-brandLt text-brand mb-4">About Paisape Techfin</span>
         <h1 class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-tight leading-tight">
-          Powering India’s Next Generation Payment Infrastructure
+          Comprehensive Payment &amp; Fintech Solutions for Indian SMEs
         </h1>
         <p class="mt-5 text-body text-base sm:text-lg leading-relaxed">
-          Paisape Techfin Private Limited is an enterprise payments technology company. We build high-throughput payment switches, issuing solutions, merchant acquiring stacks, and transaction banking rails for businesses across India.
+          Paisape is a fintech company founded by a team of industry experts, with significant experience across payment gateways, banking, and financial technology. Our primary objective is to provide comprehensive payment and fintech solutions under one roof for Indian SMEs.
+        </p>
+        <p class="mt-4 text-body text-base sm:text-lg leading-relaxed">
+          Our focus is not to create solutions that are already widely available in the market, but rather to make existing and essential financial technology solutions more accessible, affordable, and easier to integrate for SMEs. We aim to help businesses access multiple services through a single platform while minimizing additional technology and operational costs.
         </p>
       </div>
     </div>

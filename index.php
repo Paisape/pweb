@@ -573,13 +573,13 @@
       <div data-reveal="left">
         <span class="inline-block px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-brandLt text-brand mb-4">About Paisape</span>
         <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ink tracking-tight leading-tight">
-          Empowering Indian Businesses with Next-Gen Payment Infrastructure
+          Empowering Indian SMEs with Comprehensive Payment &amp; Fintech Solutions
         </h2>
         <p class="mt-5 text-body text-base leading-relaxed">
-          Paisape is India's premier enterprise payment orchestration and financial technology platform. Founded with a vision to simplify complex transaction flows, Paisape empowers merchants, D2C brands, fintechs, and enterprises to process, route, and reconcile payments seamlessly across multi-bank gateways.
+          Paisape is a fintech company founded by a team of industry experts, with significant experience across payment gateways, banking, and financial technology. Our primary objective is to provide comprehensive payment and fintech solutions under one roof for Indian SMEs.
         </p>
         <p class="mt-4 text-body text-base leading-relaxed">
-          Our unified API infrastructure eliminates single-point-of-failure risks, lowers payment drop-offs, and optimizes authorization rates across UPI, Credit/Debit Cards, Net Banking, AePS, BBPS, and Micro-ATMs.
+          Our focus is not to create solutions that are already widely available in the market, but rather to make existing and essential financial technology solutions more accessible, affordable, and easier to integrate for SMEs. We aim to help businesses access multiple services through a single platform while minimizing additional technology and operational costs.
         </p>
 
         <!-- Feature List Grid -->
