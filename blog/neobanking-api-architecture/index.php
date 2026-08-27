@@ -129,7 +129,7 @@
 <p>Finally, settlement occurs asynchronously at the end of the day, where the partner bank clears the funds and updates the master physical ledger to match the neobank's virtual database records.</p>
 
 <h2>Compliance, Security, and Fraud Management</h2>
-<p>Building a neobank isn't just about writing neat code; it is deeply about managing risk and maintaining security. Because neobanks process sensitive transaction data, they must adhere to strict security standards like PCI-DSS (Payment Card Industry Data Security Standard) to ensure cardholder data is always encrypted in transit and at rest.</p>
+<p>Building a neobank isn't just about writing neat code; it is deeply about managing risk and maintaining security. Because neobanks process sensitive transaction data, they must adhere to strict security standards like Bank-Grade Security (Payment Card Industry Data Security Standard) to ensure cardholder data is always encrypted in transit and at rest.</p>
 <p>Additionally, modern banking APIs employ robust security mechanisms like OAuth 2.0 with Mutual TLS (mTLS) to secure machine-to-machine communication between the neobank middleware and partner bank switches. This prevents unauthorized third parties from spoofing banking requests.</p>
 <p>On the compliance side, neobanks use automated KYC/AML (Know Your Customer / Anti-Money Laundering) pipelines during user signups. Verification APIs connect to government registries (like PAN card databases) and run automated facial matching algorithms to verify identity in seconds, minimizing onboarding drop-offs while preventing identity theft.</p>
 

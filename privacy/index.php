@@ -70,7 +70,7 @@
       <p>To provide you with secure payment services, we collect the following types of information:</p>
       <ul class="list-disc pl-5 space-y-2">
         <li><strong>Identity & KYC Data:</strong> Name, address, PAN, Aadhaar, business registration details, and director information required for regulatory compliance.</li>
-        <li><strong>Financial Information:</strong> Bank account details, transaction history, and payment instrument details (stored securely and encrypted as per PCI-DSS guidelines).</li>
+        <li><strong>Financial Information:</strong> Bank account details, transaction history, and payment instrument details (stored securely and encrypted as per Bank-Grade Security guidelines).</li>
         <li><strong>Technical Data:</strong> IP address, device ID, browser type, and operating system used to detect and prevent fraud.</li>
       </ul>
 
@@ -92,7 +92,7 @@
       </ul>
 
       <h2 class="text-xl font-bold text-ink">4. Data Security</h2>
-      <p>Paisape employs bank-grade security measures. We are PCI-DSS compliant and utilize industry-standard encryption (AES-256 and TLS 1.2+) to safeguard your data in transit and at rest.</p>
+      <p>Paisape employs bank-grade security measures. We are Bank-Grade Security compliant and utilize industry-standard encryption (AES-256 and TLS 1.2+) to safeguard your data in transit and at rest.</p>
 
       <h2 class="text-xl font-bold text-ink">5. Your Rights</h2>
       <p>Subject to applicable Indian laws and RBI data retention mandates, you have the right to access, correct, or request the deletion of your personal data. Please note that financial transaction records must be retained for a minimum of 10 years as per AML laws.</p>

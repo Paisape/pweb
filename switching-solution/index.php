@@ -130,7 +130,7 @@
           <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 6.5V12c0 5 3.4 8.2 8 9.5 4.6-1.3 8-4.5 8-9.5V6.5z"/></svg>
         </div>
         <h3 class="font-display text-[15px] font-bold text-ink">Bank-Grade Security</h3>
-        <p class="mt-2 text-[13px] leading-relaxed text-body">Secure architecture with end-to-end encryption, fully compliant with PCI-DSS and RBI data localization norms.</p>
+        <p class="mt-2 text-[13px] leading-relaxed text-body">Secure architecture with end-to-end encryption, fully compliant with Bank-Grade Security and RBI data localization norms.</p>
       </article>
     </div>
   </div>

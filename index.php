@@ -66,7 +66,7 @@
           <span class="absolute inline-flex h-full w-full rounded-full bg-brand animate-ring"></span>
           <span class="relative inline-flex h-2 w-2 rounded-full bg-brand"></span>
         </span>
-        Live across 8+ gateways
+        Integrated with 8+ Gateways
       </p>
 
       <h1 class="font-display text-[38px] font-extrabold leading-[1.12] tracking-tight text-ink sm:text-[46px] lg:text-[52px]">
@@ -143,7 +143,7 @@
         <!-- Panel 2: Orchestrator Sim -->
         <div id="panel-sim" class="space-y-4 min-h-[220px] flex flex-col justify-between">
           <div class="flex items-center justify-between">
-            <span class="text-[12px] font-bold text-ink font-display">Primary Gateway (HDFC)</span>
+            <span class="text-[12px] font-bold text-ink font-display">Primary Gateway</span>
             <label class="relative inline-flex items-center cursor-pointer select-none">
               <input type="checkbox" id="gw-toggle" class="sr-only peer" checked>
               <div class="w-9 h-5 bg-red-500 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-emerald-500"></div>
@@ -178,7 +178,7 @@
             
             <!-- Destination Node -->
             <div class="flex flex-col items-center z-10 w-16">
-              <div id="sim-target" class="h-10 w-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-ink font-bold text-[9px] text-center leading-tight shadow-sm transition-all duration-300">HDFC</div>
+              <div id="sim-target" class="h-10 w-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-ink font-bold text-[9px] text-center leading-tight shadow-sm transition-all duration-300">Gateway A</div>
               <span id="sim-target-label" class="text-[8px] font-extrabold uppercase text-slate-400 mt-1.5 tracking-wider">Primary</span>
             </div>
           </div>
@@ -218,8 +218,8 @@
       <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80">P95 API Latency</p>
     </div>
     <div data-reveal data-delay="320" class="col-span-2 px-4 py-8 text-center sm:col-span-3 lg:col-span-1">
-      <p class="font-display text-[28px] font-extrabold text-ink">SAQ-A</p>
-      <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80">PCI DSS Certified</p>
+      <p class="font-display text-[28px] font-extrabold text-ink">256-bit</p>
+      <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80">Bank-Grade Security</p>
     </div>
   </div>
 </section>
@@ -599,7 +599,7 @@
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
             </div>
             <div>
-              <h3 class="text-sm font-bold text-ink">PCI-DSS Level 1</h3>
+              <h3 class="text-sm font-bold text-ink">Enterprise Security</h3>
               <p class="text-xs text-slate-500 mt-0.5">Hardware tokenization &amp; RBI compliance</p>
             </div>
           </div>
@@ -656,14 +656,14 @@
             <div>
               <p class="text-xs font-semibold text-slate-400">Average Uptime</p>
               <p class="text-3xl font-extrabold text-mint mt-1 font-mono">99.99%</p>
-              <p class="text-[11px] text-slate-400 mt-0.5">Across 8+ Acquirers</p>
+              <p class="text-[11px] text-slate-400 mt-0.5">Supported across 8+ Gateways</p>
             </div>
           </div>
 
           <div class="pt-6 space-y-3 text-xs text-slate-300">
             <div class="flex justify-between items-center bg-white/5 p-3 rounded-xl border border-white/10">
-              <span class="font-medium">Direct Bank Connections</span>
-              <span class="font-bold text-white">ICICI, Axis, HDFC, SBI, YES Bank</span>
+              <span class="font-medium">Multi-Gateway Integration</span>
+              <span class="font-bold text-white">Enterprise API Switch &amp; Orchestration</span>
             </div>
             <div class="flex justify-between items-center bg-white/5 p-3 rounded-xl border border-white/10">
               <span class="font-medium">Supported Payment Modes</span>
@@ -892,26 +892,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
           if (gwToggle.checked) {
             // HDFC is Online
-            simMessage.innerHTML = '<p class="text-[11px] font-semibold text-brand leading-relaxed">HDFC (Primary) online. Routing payment...</p>';
+            simMessage.innerHTML = '<p class="text-[11px] font-semibold text-brand leading-relaxed">Primary Gateway online. Routing payment...</p>';
             simLine2.style.width = '100%';
 
             setTimeout(function () {
               simTarget.className = 'h-10 w-10 rounded-full bg-emerald-100 border-emerald-300 text-emerald-700 flex items-center justify-center font-bold text-[9px] text-center leading-tight shadow-sm transition-all duration-300';
-              simMessage.innerHTML = '<p class="text-[11px] font-semibold text-emerald-600 leading-relaxed">Success! Completed via HDFC (Primary) in 38ms.</p>';
+              simMessage.innerHTML = '<p class="text-[11px] font-semibold text-emerald-600 leading-relaxed">Success! Completed via Primary Gateway in 38ms.</p>';
               finishSimulation();
             }, 600);
 
           } else {
             // HDFC is Offline (Downtime)
-            simMessage.innerHTML = '<p class="text-[11px] font-semibold text-red-500 leading-relaxed">HDFC down (503 Error). Failover active...</p>';
+            simMessage.innerHTML = '<p class="text-[11px] font-semibold text-red-500 leading-relaxed">Primary Gateway offline (503 Error). Failover active...</p>';
             simTarget.className = 'h-10 w-10 rounded-full bg-red-100 border-red-300 text-red-700 flex items-center justify-center font-bold text-[9px] text-center leading-tight shadow-sm transition-all duration-300';
 
             setTimeout(function () {
-              simMessage.innerHTML = '<p class="text-[11px] font-semibold text-amber-500 leading-relaxed">Rerouting transaction to ICICI (Backup)...</p>';
+              simMessage.innerHTML = '<p class="text-[11px] font-semibold text-amber-500 leading-relaxed">Rerouting transaction to Backup Gateway...</p>';
               
               setTimeout(function () {
                 // Change UI to ICICI Node
-                simTarget.textContent = 'ICICI';
+                simTarget.textContent = 'Gateway B';
                 simTargetLabel.textContent = 'Backup';
                 simTargetLabel.className = 'text-[8px] font-extrabold uppercase text-amber-500 mt-1.5 tracking-wider';
                 simTarget.className = 'h-10 w-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-ink font-bold text-[9px] text-center leading-tight shadow-sm transition-all duration-300';
@@ -923,7 +923,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   
                   setTimeout(function () {
                     simTarget.className = 'h-10 w-10 rounded-full bg-emerald-100 border-emerald-300 text-emerald-700 flex items-center justify-center font-bold text-[9px] text-center leading-tight shadow-sm transition-all duration-300';
-                    simMessage.innerHTML = '<p class="text-[11px] font-semibold text-emerald-600 leading-relaxed">Success! Auto-rerouted to ICICI in 94ms.</p>';
+                    simMessage.innerHTML = '<p class="text-[11px] font-semibold text-emerald-600 leading-relaxed">Success! Auto-rerouted to Backup Gateway in 94ms.</p>';
                     finishSimulation();
                   }, 600);
                 }, 100);

@@ -72,7 +72,7 @@
           <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-2">Monthly Transactions</p>
         </div>
         <div class="p-4">
-          <p class="text-3xl sm:text-4xl font-extrabold text-brand font-mono">PCI-DSS</p>
+          <p class="text-3xl sm:text-4xl font-extrabold text-brand font-mono">Bank-Grade Security</p>
           <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-2">Level 1 Compliant</p>
         </div>
       </div>

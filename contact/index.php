@@ -422,7 +422,7 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
           <span class="font-display text-[14.5px] font-bold text-ink">What compliance standards do you hold?</span>
           <svg class="faq-icon h-4 w-4 shrink-0 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M12 5v14M5 12h14"/></svg>
         </button>
-        <div class="faq-body"><p class="px-6 pb-5 text-[13.5px] leading-relaxed text-body">PCI DSS SAQ-A, full audit trails on every transaction, and KYC workflows built to RBI expectations. Documentation goes out with the first solutions call.</p></div>
+        <div class="faq-body"><p class="px-6 pb-5 text-[13.5px] leading-relaxed text-body">Bank-Grade Security 256-bit, full audit trails on every transaction, and KYC workflows built to RBI expectations. Documentation goes out with the first solutions call.</p></div>
       </div>
     </div>
   </div>

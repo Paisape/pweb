@@ -108,7 +108,7 @@
           <div>
             <label for="upiId" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">UPI ID (VPA) <span class="text-rose-500">*</span></label>
             <input type="text" id="upiId" value="merchant@paisape" placeholder="e.g. 9529160004@ybl" oninput="updateQR()" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-sm font-medium focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition">
-            <p class="mt-1 text-[11.5px] text-slate-400">Accepts any VPA from Kotak, Paytm, PhonePe, ICICI, HDFC, SBI, Google Pay.</p>
+            <p class="mt-1 text-[11.5px] text-slate-400">Accepts payments from all major UPI applications and banking apps.</p>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">

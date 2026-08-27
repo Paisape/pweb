@@ -194,7 +194,7 @@
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-xs font-bold text-slate-700 mb-1">UPI VPA Handle</label>
-            <input type="text" id="mUpiVpaInput" value="paisape@icici" oninput="updateInvoice()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-ink focus:border-brand focus:outline-none">
+            <input type="text" id="mUpiVpaInput" value="paisape@upi" oninput="updateInvoice()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-ink focus:border-brand focus:outline-none">
           </div>
           <div>
             <label class="block text-xs font-bold text-slate-700 mb-1">Payee Name</label>
@@ -205,7 +205,7 @@
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-xs font-bold text-slate-700 mb-1">Bank Name</label>
-            <input type="text" id="mBankNameInput" value="ICICI Bank Ltd" oninput="updateInvoice()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-ink focus:border-brand focus:outline-none">
+            <input type="text" id="mBankNameInput" value="Primary Business Bank" oninput="updateInvoice()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-ink focus:border-brand focus:outline-none">
           </div>
           <div>
             <label class="block text-xs font-bold text-slate-700 mb-1">IFSC Code</label>
@@ -547,7 +547,7 @@ function updateInvoice() {
   const mBank = document.getElementById('mBankNameInput').value || '-';
   const mIfsc = document.getElementById('mIfscInput').value || '-';
   const mAccNo = document.getElementById('mAccNoInput').value || '-';
-  const mUpiVpa = document.getElementById('mUpiVpaInput').value || 'paisape@icici';
+  const mUpiVpa = document.getElementById('mUpiVpaInput').value || 'paisape@upi';
   const mPayeeName = document.getElementById('mPayeeNameInput').value || mName;
 
   const cName = document.getElementById('cNameInput').value || 'Client Name';
