@@ -167,6 +167,29 @@
     </div>
 
     <div id="grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Payment Gateway Switch Failover Architecture -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
+        <a href="/blog/payment-gateway-failover-architecture" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_failover_architecture.jpg" alt="Payment Gateway Switch Failover System Whiteboard Architecture Diagram" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">Engineering &bull; Routing</span>
+            <span class="text-body/50">9 min read</span>
+          </div>
+          <a href="/blog/payment-gateway-failover-architecture">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Payment Gateway Switch Failover Architecture: How Intelligent Routing Achieves 99.99% Uptime</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            A complete technical guide to payment gateway failover architecture — sub-second health checks, automated switch rerouting, latency budgets, and 99.99% uptime strategy for Indian fintechs.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">28 Aug 2026</span>
+            <a href="/blog/payment-gateway-failover-architecture" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
       <!-- MID & TID Post -->
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
         <a href="/blog/what-is-mid-and-tid" class="block overflow-hidden h-48 bg-slate-100">
