@@ -189,9 +189,9 @@ jobs:
               console.log(`==================================================\n`);
 
               // Poll web server until HTTP 200 OK and non-404 body content is confirmed
-              console.log(`⏳ Verifying web server deployment of ${blogUrl}...`);
+              console.log(`⏳ Verifying Coolify web server deployment of ${blogUrl}...`);
               let isLive = false;
-              const maxAttempts = 30; // 30 attempts * 10s = 5 minutes max
+              const maxAttempts = 45; // 45 attempts * 10s = 7.5 minutes max polling window
 
               for (let attempt = 1; attempt <= maxAttempts; attempt++) {
                 try {
@@ -205,14 +205,14 @@ jobs:
                   if (res.status === 200) {
                     const htmlText = await res.text();
                     if (!htmlText.includes('404 Not Found') && !htmlText.includes('404 Page Not Found')) {
-                      console.log(`  ✅ DEPLOYMENT VERIFIED LIVE! Server returned HTTP 200 OK with valid page content (Attempt ${attempt}/${maxAttempts})`);
+                      console.log(`  ✅ COOLIFY DEPLOYMENT VERIFIED LIVE! Server returned HTTP 200 OK with valid page content (Attempt ${attempt}/${maxAttempts})`);
                       isLive = true;
                       break;
                     } else {
-                      console.log(`  [Attempt ${attempt}/${maxAttempts}] HTTP 200 returned but body contains 404 message. Waiting 10s...`);
+                      console.log(`  [Attempt ${attempt}/${maxAttempts}] HTTP 200 returned but body contains 404 message. Waiting 10s for Coolify...`);
                     }
                   } else {
-                    console.log(`  [Attempt ${attempt}/${maxAttempts}] Status: ${res.status}. Web server deploying... Waiting 10s...`);
+                    console.log(`  [Attempt ${attempt}/${maxAttempts}] Status: ${res.status}. Coolify deploying... Waiting 10s...`);
                   }
                 } catch(e) {
                   console.log(`  [Attempt ${attempt}/${maxAttempts}] Web server not responding yet... (${e.message}). Waiting 10s...`);
@@ -226,6 +226,10 @@ jobs:
                 console.error(`🛑 ABORTING SOCIAL POSTING TO PREVENT PUBLISHING 404 LINKS ON FACEBOOK & LINKEDIN.`);
                 process.exit(1);
               }
+
+              // Warmup pause (15 seconds) so Coolify web server cache is completely warmed up for social crawlers
+              console.log('☕ Warmup pause (15s) for social crawler cache...');
+              await new Promise(r => setTimeout(r, 15000));
 
               const liText = `📰 New on Paisape Engineering Blog\n\n${title}\n\n${desc}\n\n👉 ${blogUrl}\n\n#Fintech #India #Payments #Engineering #Paisape`;
               const fbText = `🆕 New Blog Post!\n\n${title}\n\n${desc}\n\n${blogUrl}\n\n#Fintech #India #Payments`;
