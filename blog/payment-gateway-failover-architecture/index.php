@@ -69,7 +69,7 @@
     <!-- Handwritten Blueprint Diagram Card -->
     <div class="my-8 overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-md">
       <img src="/assets/blog/blog_failover_architecture.jpg" alt="Payment Gateway Switch Failover System Whiteboard Architecture Diagram" class="w-full h-auto rounded-xl" />
-      <p class="mt-2 text-center text-xs text-slate-500 font-mono">Figure 1: Hand-drawn technical whiteboard blueprint illustrating real-time health check monitoring, primary gateway 503 error detection, and automatic 94ms failover rerouting to secondary acquirer ledger.</p>
+      
     </div>
 
     <!-- Language Selector Bar -->

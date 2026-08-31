@@ -67,7 +67,7 @@
     <!-- Technical Hand-Drawn Architecture Diagram -->
     <div class="my-8 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-2 shadow-sm">
       <img src="/assets/blog/blog_mid_tid.jpg" alt="Technical Diagram: MID and TID in Digital Payment Processing" class="w-full h-auto rounded-xl">
-      <p class="mt-2 text-center text-xs text-slate-500 font-mono">Figure 1: Architectural diagram showing how a single Merchant Business Entity (MID) maps to multiple POS, Soundbox, Web, and QR Terminals (TIDs).</p>
+      
     </div>
 
     <!-- Dual Language Toggle Bar -->

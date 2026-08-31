@@ -68,7 +68,7 @@
     <!-- Whiteboard Diagram Image -->
     <div class="my-8 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-2 shadow-sm">
       <img src="/assets/blog/blog_credit_line_upi.jpg" alt="Credit Line on UPI Architecture Sketch" class="w-full h-auto rounded-xl" />
-      <p class="mt-2 text-center text-xs text-slate-500 font-mono">Figure 1: Hand-drawn architectural overview of Credit Line on UPI (CLOU) linking Bank Core Systems (CBS), Loan Account Systems (LAA), NPCI Switch, and UPI apps.</p>
+      
     </div>
 
     <!-- Language Selector Bar -->

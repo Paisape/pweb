@@ -68,7 +68,7 @@
     <!-- Whiteboard Diagram Image -->
     <div class="my-8 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-2 shadow-sm">
       <img src="/assets/blog/blog_upi_lite_x.jpg" alt="UPI Lite X Offline Payment Architecture Sketch" class="w-full h-auto rounded-xl" />
-      <p class="mt-2 text-center text-xs text-slate-500 font-mono">Figure 1: Technical hand-drawn whiteboard architecture showing UPI Lite X offline payment exchange over NFC between Sender, Receiver, and asynchronous batch settlement.</p>
+      
     </div>
 
     <!-- Language Selector Bar -->

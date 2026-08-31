@@ -69,7 +69,7 @@
     <!-- Handwritten Blueprint Diagram Card -->
     <div class="my-8 overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-md">
       <img src="/assets/blog/blog_upi_autopay_handwritten.jpg" alt="NPCI UPI AutoPay Mandate Lifecycle & Recurring Debits Technical Whiteboard Diagram" class="w-full h-auto rounded-xl" />
-      <p class="mt-2 text-center text-xs text-slate-500 font-mono">Figure 1: Hand-drawn technical whiteboard blueprint illustrating user mandate creation (up to ₹15,000 limit), NPCI mapper tokenization, secure Mandate Vault registration, auto-debit scheduler, and sub-second T+0 recurring debit execution.</p>
+      
     </div>
 
     <!-- Language Selector Bar -->
