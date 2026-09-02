@@ -1,36 +1,8 @@
-<!-- Universal Top Announcement Banner (Independence Day) -->
-<div class="fixed top-0 left-0 z-[100] w-full px-4 py-2.5 text-center shadow-md border-b border-black/10" style="background-image: url('/assets/hand_painted_tricolor.jpg'); background-size: cover; background-position: center;">
-  <div class="flex items-center justify-center gap-4">
-    <div class="animate-[bounce_2s_infinite]">
-      <svg class="h-6 w-9 rounded-sm shadow-sm drop-shadow-md" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-        <rect width="900" height="200" fill="#FF9933"/>
-        <rect y="200" width="900" height="200" fill="#FFFFFF"/>
-        <rect y="400" width="900" height="200" fill="#138808"/>
-        <circle cx="450" cy="300" r="80" fill="none" stroke="#000080" stroke-width="15"/>
-        <circle cx="450" cy="300" r="16" fill="#000080"/>
-        <path d="M450 220 L450 380 M370 300 L530 300 M393 243 L507 357 M393 357 L507 243" stroke="#000080" stroke-width="10"/>
-      </svg>
-    </div>
-    <p class="font-display text-[15px] font-extrabold text-[#000080] tracking-widest uppercase drop-shadow-sm">Happy Independence Day</p>
-    <svg class="h-7 w-7 text-[#000080] animate-[spin_15s_linear_infinite]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93M7.76 3.05l8.48 17.9M3.05 7.76l17.9 8.48M3.05 16.24l17.9-8.48M7.76 20.95l8.48-17.9"/></svg>
-    <p class="font-display text-[15px] font-extrabold text-[#000080] tracking-widest uppercase drop-shadow-sm">Jai Hind!</p>
-    <div class="animate-[bounce_2s_infinite]">
-      <svg class="h-6 w-9 rounded-sm shadow-sm drop-shadow-md" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-        <rect width="900" height="200" fill="#FF9933"/>
-        <rect y="200" width="900" height="200" fill="#FFFFFF"/>
-        <rect y="400" width="900" height="200" fill="#138808"/>
-        <circle cx="450" cy="300" r="80" fill="none" stroke="#000080" stroke-width="15"/>
-        <circle cx="450" cy="300" r="16" fill="#000080"/>
-        <path d="M450 220 L450 380 M370 300 L530 300 M393 243 L507 357 M393 357 L507 243" stroke="#000080" stroke-width="10"/>
-      </svg>
-    </div>
-  </div>
-</div>
 <div id="progress" class="fixed top-0 left-0 z-[60] h-[3px] w-full bg-brand transition-transform duration-150"></div>
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">Skip to content</a>
 
 <!-- Universal Fixed Navigation Header (Image 3 Official Style) -->
-<header class="fixed top-[48px] inset-x-0 z-50 transition-all duration-500">
+<header class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
   <div class="mx-auto max-w-site px-5">
     <div id="navInner" class="mt-4 flex items-center justify-between rounded-2xl border border-transparent px-5 py-3 transition-all duration-500">
       <!-- LOGO -->
