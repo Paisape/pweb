@@ -168,6 +168,52 @@
 
     <div id="grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
+      <!-- Merchant Acquiring & Dynamic QR Code Engine -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="acquiring" data-reveal data-delay="0">
+        <a href="/blog/merchant-acquiring-dynamic-qr-engine" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_dynamic_qr_engine_handwritten.jpg" alt="Dynamic UPI QR Code Generation &amp; Merchant Acquiring Engine Technical Whiteboard Diagram" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">Acquiring &bull; UPI QR</span>
+            <span class="text-body/50">10 min read</span>
+          </div>
+          <a href="/blog/merchant-acquiring-dynamic-qr-engine">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Merchant Acquiring &amp; Dynamic QR Code Engine: High-Throughput NPCI Payload Generation</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            An engineering guide to dynamic UPI QR code generation — EMVCo specification, Base64 payload encoding, transaction reference binding, instant webhook callback hooks, and acquirer switch integration.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">08 Sep 2026</span>
+            <a href="/blog/merchant-acquiring-dynamic-qr-engine" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Soundbox Audio Notification Rails -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="hardware" data-reveal data-delay="0">
+        <a href="/blog/soundbox-audio-notification-rails" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_soundbox_rails_handwritten.jpg" alt="Retail Soundbox Audio Notification Rails Technical Whiteboard Diagram" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">Hardware &bull; Cellular IoT</span>
+            <span class="text-body/50">10 min read</span>
+          </div>
+          <a href="/blog/soundbox-audio-notification-rails">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Soundbox Audio Notification Rails: Cellular SIM Telemetry &amp; Real-Time Broadcast Architecture</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            A complete technical engineering guide to Soundbox audio terminals — MQTT telemetry pipelines, LTE-M/NB-IoT SIM data exchange, speaker-only hardware security, and sub-300ms audio alerts.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">06 Sep 2026</span>
+            <a href="/blog/soundbox-audio-notification-rails" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
       <!-- Multi-Bank Reconciliation Engine -->
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
         <a href="/blog/multi-bank-reconciliation-engine" class="block overflow-hidden h-48 bg-slate-100">
