@@ -118,6 +118,21 @@
         </div>
 
       </div>
+
+      <!-- Certified Partnerships Bar -->
+      <div class="mt-12 rounded-3xl bg-gradient-to-r from-brand/10 via-brandLt to-white p-8 border border-brand/20 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-5">
+          <a href="https://pmny.in/er1smJcqj6z5" target="_blank" rel="noopener" class="shrink-0 transition hover:scale-105" aria-label="PayU Certified Partner Verification">
+            <img width="100" height="100" src="https://partner.payu.in/packs/media/icons/certified-partner-9aa55562.png" alt="PayU Certified Partner" class="h-24 w-auto drop-shadow-md rounded-xl" />
+          </a>
+          <div>
+            <span class="text-[11px] font-extrabold uppercase tracking-wider text-brand">Certified Acquirer Partner</span>
+            <h4 class="text-lg font-extrabold text-ink flex items-center gap-2">PayU Certified Partner <span class="text-[10px] font-extrabold uppercase text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Verified &rarr;</span></h4>
+            <p class="text-xs text-body mt-1 max-w-lg">Paisape is an official PayU Certified Partner, delivering high-throughput acquirer switch integration, sub-second transaction processing, and optimized authorization routing for Indian merchants.</p>
+          </div>
+        </div>
+        <a href="https://pmny.in/er1smJcqj6z5" target="_blank" rel="noopener" class="shrink-0 rounded-full bg-brand px-6 py-3 text-xs font-bold text-white hover:bg-brandDk transition shadow-md flex items-center gap-1.5">Verify PayU Partner Status &rarr;</a>
+      </div>
     </div>
   </section>
 

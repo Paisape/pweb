@@ -5,9 +5,14 @@
       <!-- Column 1: Logo & Brand -->
       <div class="sm:col-span-2 md:col-span-1">
         <img src="/assets/logo-white.svg" alt="Paisape" class="h-9 w-auto" width="200" height="52">
-        <p class="mt-5 max-w-xs text-[13px] leading-relaxed text-slate-400">
+        <p class="mt-4 max-w-xs text-[13px] leading-relaxed text-slate-400">
           Payments. Everytime. Everywhere. Paisape provides comprehensive payment solutions including issuing, acquiring, transaction banking, and payment orchestration.
         </p>
+        <div class="mt-4">
+          <a href="https://pmny.in/er1smJcqj6z5" target="_blank" rel="noopener" class="inline-block transition hover:opacity-90" aria-label="PayU Certified Partner">
+            <img width="90" height="90" src="https://partner.payu.in/packs/media/icons/certified-partner-9aa55562.png" alt="PayU Certified Partner" class="h-20 w-auto rounded-lg" />
+          </a>
+        </div>
       </div>
 
       <!-- Column 2: Company -->
@@ -17,7 +22,7 @@
           <li><a href="/about-us" class="transition hover:text-brand">About Us</a></li>
           <li><a href="/blog" class="transition hover:text-brand">Blog</a></li>
           <li><a href="/contact" class="transition hover:text-brand">Contact Us</a></li>
-          <li><a href="/contact" class="transition hover:text-brand">Partnership</a></li>
+          <li><a href="/contact" class="inline-flex items-center gap-1 text-emerald-400 font-semibold hover:text-white transition"><svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>PayU Partner</a></li>
         </ul>
       </div>
 
