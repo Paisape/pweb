@@ -1,15 +1,15 @@
 <!-- Universal Website Footer -->
 <footer class="bg-night text-slate-300 mt-20">
   <div class="mx-auto max-w-site px-5 py-16">
-    <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-5">
+    <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-6">
       <!-- Column 1: Logo & Brand -->
-      <div class="sm:col-span-2 md:col-span-1">
+      <div class="sm:col-span-2 md:col-span-2 lg:col-span-2">
         <img src="/assets/logo-white.svg" alt="Paisape" class="h-9 w-auto" width="200" height="52">
         <p class="mt-4 max-w-xs text-[13px] leading-relaxed text-slate-400">
           Payments. Everytime. Everywhere. Paisape provides comprehensive payment solutions including issuing, acquiring, transaction banking, and payment orchestration.
         </p>
-        <!-- Verified Trust & Compliance Badges (Side-by-Side Horizontal Row) -->
-        <div class="mt-5 flex flex-wrap items-center gap-3">
+        <!-- Verified Trust & Compliance Badges (Directly Side-by-Side on Single Line) -->
+        <div class="mt-5 flex items-center gap-3">
           <a href="https://pmny.in/er1smJcqj6z5" target="_blank" rel="noopener" class="transition hover:scale-105 shrink-0" aria-label="PayU Certified Partner Verification">
             <img width="80" height="80" src="https://partner.payu.in/packs/media/icons/certified-partner-9aa55562.png" alt="PayU Certified Partner" class="h-16 w-auto rounded-lg drop-shadow" />
           </a>
