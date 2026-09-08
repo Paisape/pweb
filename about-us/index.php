@@ -74,10 +74,10 @@
           <p class="text-3xl sm:text-4xl font-extrabold text-brand font-mono">100M+</p>
           <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-2">Monthly Transactions</p>
         </div>
-        <div class="p-4">
-          <p class="text-3xl sm:text-4xl font-extrabold text-brand font-mono">Bank-Grade Security</p>
-          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-2">Level 1 Compliant</p>
-        </div>
+        <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" class="p-4 group block hover:bg-slate-50 rounded-2xl transition">
+          <p class="text-2xl sm:text-3xl font-extrabold text-brand font-mono group-hover:underline">ISO 9001:2015</p>
+          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-2 group-hover:text-brand transition">QMS Certified (IAF Validated &rarr;)</p>
+        </a>
       </div>
     </div>
   </section>

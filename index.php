@@ -217,10 +217,10 @@
       <p class="font-display text-[28px] font-extrabold text-ink">&lt;<span data-count="200">0</span><span class="text-brand">ms</span></p>
       <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80">P95 API Latency</p>
     </div>
-    <div data-reveal data-delay="320" class="col-span-2 px-4 py-8 text-center sm:col-span-3 lg:col-span-1">
-      <p class="font-display text-[28px] font-extrabold text-ink">256-bit</p>
-      <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80">Bank-Grade Security</p>
-    </div>
+    <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" data-reveal data-delay="320" class="group col-span-2 px-4 py-8 text-center sm:col-span-3 lg:col-span-1 rounded-2xl hover:bg-brand/5 border border-transparent hover:border-brand/20 transition">
+      <p class="font-display text-[26px] sm:text-[28px] font-extrabold text-ink group-hover:text-brand transition flex items-center justify-center gap-1">ISO 9001:2015</p>
+      <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80 group-hover:text-brand transition">IAF Certified QMS &bull; Verify &rarr;</p>
+    </a>
   </div>
 </section>
 
@@ -594,15 +594,15 @@
             </div>
           </div>
 
-          <div class="flex items-start gap-3 p-3.5 bg-white rounded-2xl border border-slate-200/80 shadow-sm">
-            <div class="p-2 bg-blue-100 text-blue-700 rounded-xl shrink-0 mt-0.5">
+          <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" class="flex items-start gap-3 p-3.5 bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:border-brand/40 hover:shadow-md transition group">
+            <div class="p-2 bg-blue-100 text-blue-700 rounded-xl shrink-0 mt-0.5 group-hover:bg-brand group-hover:text-white transition">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
             </div>
             <div>
-              <h3 class="text-sm font-bold text-ink">Enterprise Security</h3>
-              <p class="text-xs text-slate-500 mt-0.5">Hardware tokenization &amp; RBI compliance</p>
+              <h3 class="text-sm font-bold text-ink group-hover:text-brand transition flex items-center gap-1">ISO 9001:2015 Certified <span class="text-[10px] font-extrabold uppercase text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">Verify &rarr;</span></h3>
+              <p class="text-xs text-slate-500 mt-0.5">Quality Management System &amp; RBI compliance</p>
             </div>
-          </div>
+          </a>
 
           <div class="flex items-start gap-3 p-3.5 bg-white rounded-2xl border border-slate-200/80 shadow-sm">
             <div class="p-2 bg-purple-100 text-purple-700 rounded-xl shrink-0 mt-0.5">

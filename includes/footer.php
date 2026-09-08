@@ -28,6 +28,7 @@
           <li><a href="/privacy" class="transition hover:text-brand">Privacy Policy</a></li>
           <li><a href="/refund-policy" class="transition hover:text-brand">Refund Policy</a></li>
           <li><a href="/terms-and-conditions" class="transition hover:text-brand">Terms &amp; Conditions</a></li>
+          <li><a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-emerald-400 font-semibold hover:text-white transition">ISO 9001:2015 Certified <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></li>
         </ul>
       </div>
 
