@@ -8,13 +8,13 @@
         <p class="mt-4 max-w-xs text-[13px] leading-relaxed text-slate-400">
           Payments. Everytime. Everywhere. Paisape provides comprehensive payment solutions including issuing, acquiring, transaction banking, and payment orchestration.
         </p>
-        <!-- Verified Trust & Compliance Badges -->
-        <div class="mt-5 flex flex-wrap items-center gap-3">
+        <!-- Verified Trust & Compliance Badges (Vertical Stack) -->
+        <div class="mt-5 flex flex-col items-start gap-3">
           <a href="https://pmny.in/er1smJcqj6z5" target="_blank" rel="noopener" class="transition hover:scale-105" aria-label="PayU Certified Partner Verification">
-            <img width="80" height="80" src="https://partner.payu.in/packs/media/icons/certified-partner-9aa55562.png" alt="PayU Certified Partner" class="h-16 w-auto rounded-lg drop-shadow" />
+            <img width="90" height="90" src="https://partner.payu.in/packs/media/icons/certified-partner-9aa55562.png" alt="PayU Certified Partner" class="h-20 w-auto rounded-lg drop-shadow" />
           </a>
           <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" class="transition hover:scale-105" aria-label="ISO 9001:2015 IAF Verification">
-            <img width="140" height="42" src="/assets/iso-9001-logo.svg" alt="ISO 9001:2015 Certified" class="h-11 w-auto rounded-lg bg-white/90 p-1 shadow-sm" />
+            <img width="160" height="50" src="/assets/iso-9001-logo.svg" alt="ISO 9001:2015 Certified" class="h-12 w-auto rounded-xl shadow-sm" />
           </a>
         </div>
       </div>
