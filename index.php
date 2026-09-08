@@ -217,9 +217,8 @@
       <p class="font-display text-[28px] font-extrabold text-ink">&lt;<span data-count="200">0</span><span class="text-brand">ms</span></p>
       <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80">P95 API Latency</p>
     </div>
-    <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" data-reveal data-delay="320" class="group col-span-2 px-4 py-8 text-center sm:col-span-3 lg:col-span-1 rounded-2xl hover:bg-brand/5 border border-transparent hover:border-brand/20 transition">
-      <p class="font-display text-[26px] sm:text-[28px] font-extrabold text-ink group-hover:text-brand transition flex items-center justify-center gap-1">ISO 9001:2015</p>
-      <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80 group-hover:text-brand transition">IAF Certified QMS &bull; Verify &rarr;</p>
+    <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" data-reveal data-delay="320" class="group col-span-2 px-4 py-6 text-center sm:col-span-3 lg:col-span-1 flex flex-col items-center justify-center transition hover:opacity-90">
+      <img src="/assets/iso-9001-logo.svg" alt="ISO 9001:2015 Quality Certified" class="h-10 w-auto transition duration-300 group-hover:scale-105" width="160" height="48" />
     </a>
   </div>
 </section>
