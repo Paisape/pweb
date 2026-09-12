@@ -198,47 +198,95 @@
   </div>
 </section>
 
-<!-- ================= CERTIFICATIONS & TRUST ================= -->
-<section class="border-y border-slate-100 bg-white py-6">
-  <div class="mx-auto max-w-site px-5">
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 items-center justify-center">
-      
-      <!-- PayU Certified Partner -->
-      <a href="https://pmny.in/er1smJcqj6z5" target="_blank" rel="noopener" class="group flex items-center justify-center rounded-2xl border border-slate-100 bg-slate-50/50 p-4 transition duration-300 hover:border-brand/30 hover:bg-white hover:shadow-md" aria-label="PayU Certified Partner">
-        <img src="https://partner.payu.in/packs/media/icons/certified-partner-9aa55562.png" alt="PayU Certified Partner" class="h-11 w-auto drop-shadow-sm transition group-hover:scale-105" width="80" height="80" />
+<!-- ================= STATS & CERTIFICATIONS ================= -->
+<section class="border-y border-slate-100 bg-white">
+  <div class="mx-auto grid max-w-site grid-cols-2 divide-slate-100 px-5 sm:grid-cols-3 lg:grid-cols-5 lg:divide-x">
+    <div data-reveal class="px-4 py-8 text-center">
+      <p class="font-display text-[28px] font-extrabold text-ink"><span data-count="2400" data-prefix="&#8377;">&#8377;0</span><span class="text-brand">Cr+</span></p>
+      <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80">Processed / Month</p>
+    </div>
+    <div data-reveal data-delay="80" class="px-4 py-8 text-center">
+      <p class="font-display text-[28px] font-extrabold text-ink"><span data-count="99.99" data-dec="2">0</span><span class="text-brand">%</span></p>
+      <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80">Platform Uptime</p>
+    </div>
+    <div data-reveal data-delay="160" class="px-4 py-8 text-center">
+      <p class="font-display text-[28px] font-extrabold text-ink"><span data-count="8">0</span><span class="text-brand">+</span></p>
+      <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80">Payment Gateways</p>
+    </div>
+    <div data-reveal data-delay="240" class="px-4 py-8 text-center">
+      <p class="font-display text-[28px] font-extrabold text-ink">&lt;<span data-count="200">0</span><span class="text-brand">ms</span></p>
+      <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80">P95 API Latency</p>
+    </div>
+    <div data-reveal data-delay="320" class="col-span-2 px-4 py-6 text-center sm:col-span-3 lg:col-span-1 flex flex-col items-center justify-center gap-2">
+      <div class="flex items-center justify-center gap-2">
+        <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" aria-label="ISO 9001:2015 Certification" class="transition hover:scale-105">
+          <img src="/assets/iso-9001-logo.svg" alt="ISO 9001:2015 QMS Certified" class="h-9 w-auto shadow-sm rounded-lg" width="130" height="40" />
+        </a>
+        <a href="https://www.iafcertsearch.org/certification/EMahmahDvCLJcoeJoGLB1BaY" target="_blank" rel="noopener" aria-label="ISO 27001:2022 Certification" class="transition hover:scale-105">
+          <img src="/assets/iso-27001-logo.svg" alt="ISO 27001:2022 ISMS Certified" class="h-9 w-auto shadow-sm rounded-lg" width="130" height="40" />
+        </a>
+      </div>
+      <a href="/assets/startup-india-certificate.pdf" target="_blank" rel="noopener" class="transition hover:scale-105" aria-label="DPIIT Recognized Startup Certification DIPP282292">
+        <img src="/assets/startup-india-logo.svg" alt="DPIIT Recognized Startup DIPP282292" class="h-8 w-auto shadow-sm rounded-lg" width="160" height="40" />
       </a>
-
-      <!-- ISO 9001:2015 QMS -->
-      <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" class="group flex items-center justify-center rounded-2xl border border-slate-100 bg-slate-50/50 p-4 transition duration-300 hover:border-brand/30 hover:bg-white hover:shadow-md" aria-label="ISO 9001:2015 QMS Certified">
-        <img src="/assets/iso-9001-logo.svg" alt="ISO 9001:2015 QMS Certified" class="h-11 w-auto shadow-sm rounded-xl transition group-hover:scale-105" width="160" height="50" />
-      </a>
-
-      <!-- ISO 27001:2022 ISMS -->
-      <a href="https://www.iafcertsearch.org/certification/EMahmahDvCLJcoeJoGLB1BaY" target="_blank" rel="noopener" class="group flex items-center justify-center rounded-2xl border border-slate-100 bg-slate-50/50 p-4 transition duration-300 hover:border-brand/30 hover:bg-white hover:shadow-md" aria-label="ISO 27001:2022 ISMS Certified">
-        <img src="/assets/iso-27001-logo.svg" alt="ISO 27001:2022 ISMS Certified" class="h-11 w-auto shadow-sm rounded-xl transition group-hover:scale-105" width="170" height="50" />
-      </a>
-
-      <!-- DPIIT Recognized Startup -->
-      <a href="/assets/startup-india-certificate.pdf" target="_blank" rel="noopener" class="group flex items-center justify-center rounded-2xl border border-slate-100 bg-slate-50/50 p-4 transition duration-300 hover:border-brand/30 hover:bg-white hover:shadow-md" aria-label="DPIIT Recognized Startup DIPP282292">
-        <img src="/assets/startup-india-logo.svg" alt="DPIIT Recognized Startup DIPP282292" class="h-11 w-auto shadow-sm rounded-xl transition group-hover:scale-105" width="195" height="50" />
-      </a>
-
     </div>
   </div>
 </section>
 
 <!-- ================= DUAL MARQUEE ================= -->
 <section class="space-y-3 bg-white py-6" aria-label="Supported payment methods and industries">
-  <!-- row 1: right to left -->
-  <div class="marquee">
+  <!-- row 1: payment method pills -->
+  <div class="marquee overflow-hidden py-1">
     <div class="track animate-marquee-l gap-3 pr-3">
-        <span class="flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-brand/15 bg-brandLt/60 px-3.5 py-1.5 text-[12px] font-semibold text-ink2"><svg class="h-3 w-3 text-brand" viewBox="0 0 24 24" fill="currentColor"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>Card EMI</span>
-        <span class="flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-brand/15 bg-brandLt/60 px-3.5 py-1.5 text-[12px] font-semibold text-ink2"><svg class="h-3 w-3 text-brand" viewBox="0 0 24 24" fill="currentColor"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>Paytm</span>
-        <span class="flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-brand/15 bg-brandLt/60 px-3.5 py-1.5 text-[12px] font-semibold text-ink2"><svg class="h-3 w-3 text-brand" viewBox="0 0 24 24" fill="currentColor"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>UPI Intent</span>
-        <span class="flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-brand/15 bg-brandLt/60 px-3.5 py-1.5 text-[12px] font-semibold text-ink2"><svg class="h-3 w-3 text-brand" viewBox="0 0 24 24" fill="currentColor"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>IMPS</span>
+      <div class="flex shrink-0 items-center gap-3 pr-3" data-mq-group>
+        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
+          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          Razorpay
+        </span>
+        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
+          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          Cashfree
+        </span>
+        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
+          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          PayU
+        </span>
+        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
+          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          Scan &amp; Pay
+        </span>
+        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
+          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          NACH Mandates
+        </span>
+        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
+          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          Pay Later
+        </span>
+        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
+          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          PhonePe
+        </span>
+        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
+          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          Card EMI
+        </span>
+        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
+          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          Paytm
+        </span>
+        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
+          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          UPI Intent
+        </span>
+        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
+          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          IMPS
+        </span>
       </div>
-      <div class="flex shrink-0 gap-3 pr-3" data-mq-clone aria-hidden="true"></div>
+      <div class="flex shrink-0 items-center gap-3 pr-3" data-mq-clone aria-hidden="true"></div>
     </div>
+  </div>
   </div>
   <!-- row 2: left to right -->
   <div class="marquee">
