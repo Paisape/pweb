@@ -61,22 +61,30 @@
   <!-- Metrics Grid -->
   <section class="py-12 bg-white border-y border-slate-100">
     <div class="mx-auto max-w-site px-5">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div class="p-4">
-          <p class="text-3xl sm:text-4xl font-extrabold text-brand font-mono">99.99%</p>
-          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-2">Switch Uptime</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+        <div class="p-3">
+          <p class="text-2xl sm:text-3xl font-extrabold text-brand font-mono">99.99%</p>
+          <p class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mt-1.5">Switch Uptime</p>
         </div>
-        <div class="p-4">
-          <p class="text-3xl sm:text-4xl font-extrabold text-brand font-mono">8+ Banks</p>
-          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-2">Direct PSP Integrations</p>
+        <div class="p-3">
+          <p class="text-2xl sm:text-3xl font-extrabold text-brand font-mono">8+ Banks</p>
+          <p class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mt-1.5">Direct PSP Integrations</p>
         </div>
-        <div class="p-4">
-          <p class="text-3xl sm:text-4xl font-extrabold text-brand font-mono">100M+</p>
-          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-2">Monthly Transactions</p>
+        <div class="p-3">
+          <p class="text-2xl sm:text-3xl font-extrabold text-brand font-mono">100M+</p>
+          <p class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mt-1.5">Monthly Transactions</p>
         </div>
-        <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" class="p-4 group block hover:bg-slate-50 rounded-2xl transition">
-          <p class="text-2xl sm:text-3xl font-extrabold text-brand font-mono group-hover:underline">ISO 9001:2015</p>
-          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-2 group-hover:text-brand transition">QMS Certified (IAF Validated &rarr;)</p>
+        <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" class="p-3 group block hover:bg-slate-50 rounded-2xl transition">
+          <p class="text-xl sm:text-2xl font-extrabold text-sky-600 font-mono group-hover:underline">ISO 9001:2015</p>
+          <p class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mt-1.5 group-hover:text-brand transition">QMS Certified &rarr;</p>
+        </a>
+        <a href="https://www.iafcertsearch.org/certification/EMahmahDvCLJcoeJoGLB1BaY" target="_blank" rel="noopener" class="p-3 group block hover:bg-slate-50 rounded-2xl transition">
+          <p class="text-xl sm:text-2xl font-extrabold text-teal-600 font-mono group-hover:underline">ISO 27001:2022</p>
+          <p class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mt-1.5 group-hover:text-brand transition">ISMS Certified &rarr;</p>
+        </a>
+        <a href="/assets/startup-india-certificate.pdf" target="_blank" rel="noopener" class="p-3 group block hover:bg-slate-50 rounded-2xl transition">
+          <p class="text-xl sm:text-2xl font-extrabold text-amber-600 font-mono group-hover:underline">#startupindia</p>
+          <p class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mt-1.5 group-hover:text-brand transition">DPIIT DIPP282292 &rarr;</p>
         </a>
       </div>
     </div>
@@ -103,13 +111,13 @@
           </div>
           <h3 class="text-xl font-extrabold text-ink mb-3">Enterprise Security</h3>
           <p class="text-sm text-body leading-relaxed">
-            Built with hardware-level encryption, AES-256 tokenization, and strict RBI &amp; NPCI security standards for complete data privacy.
+            Built with hardware-level encryption, AES-256 tokenization, ISO 27001:2022 ISMS standards, and strict RBI &amp; NPCI security standards for complete data privacy.
           </p>
         </div>
 
         <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
           <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-800 flex items-center justify-center font-bold mb-6">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m3 0h1M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m3 0h1M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
           </div>
           <h3 class="text-xl font-extrabold text-ink mb-3">Complete Stack</h3>
           <p class="text-sm text-body leading-relaxed">
@@ -119,20 +127,31 @@
 
       </div>
 
-      <!-- Certified Partnerships Bar -->
-      <div class="mt-12 rounded-3xl bg-gradient-to-r from-brand/10 via-brandLt to-white p-8 border border-brand/20 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
-        <div class="flex items-center gap-5">
-          <a href="https://pmny.in/er1smJcqj6z5" target="_blank" rel="noopener" class="shrink-0 transition hover:scale-105" aria-label="PayU Certified Partner Verification">
-            <img width="100" height="100" src="https://partner.payu.in/packs/media/icons/certified-partner-9aa55562.png" alt="PayU Certified Partner" class="h-24 w-auto drop-shadow-md rounded-xl" />
-          </a>
+      <!-- Certified Partnerships & Compliance Bar -->
+      <div class="mt-12 rounded-3xl bg-gradient-to-r from-brand/10 via-brandLt to-white p-8 border border-brand/20 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-6">
+        <div class="flex flex-col sm:flex-row items-center gap-6">
+          <div class="flex flex-wrap items-center gap-3 shrink-0 justify-center">
+            <a href="https://pmny.in/er1smJcqj6z5" target="_blank" rel="noopener" class="transition hover:scale-105 shrink-0" aria-label="PayU Certified Partner Verification">
+              <img width="80" height="80" src="https://partner.payu.in/packs/media/icons/certified-partner-9aa55562.png" alt="PayU Certified Partner" class="h-14 w-auto drop-shadow-md rounded-xl" />
+            </a>
+            <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" class="transition hover:scale-105 shrink-0" aria-label="ISO 9001:2015 IAF Verification">
+              <img width="160" height="50" src="/assets/iso-9001-logo.svg" alt="ISO 9001:2015 Certified" class="h-12 w-auto rounded-xl shadow-sm" />
+            </a>
+            <a href="https://www.iafcertsearch.org/certification/EMahmahDvCLJcoeJoGLB1BaY" target="_blank" rel="noopener" class="transition hover:scale-105 shrink-0" aria-label="ISO 27001:2022 IAF Verification">
+              <img width="160" height="50" src="/assets/iso-27001-logo.svg" alt="ISO 27001:2022 ISMS Certified" class="h-12 w-auto rounded-xl shadow-sm" />
+            </a>
+            <a href="/assets/startup-india-certificate.pdf" target="_blank" rel="noopener" class="transition hover:scale-105 shrink-0" aria-label="DPIIT Startup India Recognition Certificate DIPP282292">
+              <img width="190" height="50" src="/assets/startup-india-logo.svg" alt="DPIIT Recognized Startup DIPP282292" class="h-12 w-auto rounded-xl shadow-sm" />
+            </a>
+          </div>
           <div>
-            <span class="text-[11px] font-extrabold uppercase tracking-wider text-brand">Certified Acquirer Partner</span>
-            <h4 class="text-lg font-extrabold text-ink flex items-center gap-2">PayU Certified Partner <span class="text-[10px] font-extrabold uppercase text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Verified &rarr;</span></h4>
-            <p class="text-xs text-body mt-1 max-w-lg">Paisape is an official PayU Certified Partner, delivering high-throughput acquirer switch integration, sub-second transaction processing, and optimized authorization routing for Indian merchants.</p>
+            <span class="text-[11px] font-extrabold uppercase tracking-wider text-brand">Certified Partnerships &amp; Enterprise Compliance</span>
+            <h4 class="text-lg font-extrabold text-ink flex items-center gap-2">PayU Certified Partner &amp; IAF ISO Certified <span class="text-[10px] font-extrabold uppercase text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Verified &rarr;</span></h4>
+            <p class="text-xs text-body mt-1 max-w-lg">Paisape is an official PayU Certified Partner, ISO 9001:2015 QMS &amp; ISO 27001:2022 ISMS IAF-validated entity, and DPIIT Recognized Startup (DIPP282292), delivering bank-grade payment orchestration across India.</p>
           </div>
         </div>
-        <a href="https://pmny.in/er1smJcqj6z5" target="_blank" rel="noopener" class="shrink-0 rounded-full bg-brand px-6 py-3 text-xs font-bold text-white hover:bg-brandDk transition shadow-md flex items-center gap-1.5">Verify PayU Partner Status &rarr;</a>
-      </div>
+        <a href="https://pmny.in/er1smJcqj6z5" target="_blank" rel="noopener" class="shrink-0 rounded-full bg-brand px-6 py-3 text-xs font-bold text-white hover:bg-brandDk transition shadow-md flex items-center gap-1.5">Verify Partner Status &rarr;</a>
+      </div>  </div>
     </div>
   </section>
 

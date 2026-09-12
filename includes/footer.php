@@ -8,13 +8,19 @@
         <p class="mt-4 max-w-xs text-[13px] leading-relaxed text-slate-400">
           Payments. Everytime. Everywhere. Paisape provides comprehensive payment solutions including issuing, acquiring, transaction banking, and payment orchestration.
         </p>
-        <!-- Verified Trust & Compliance Badges (Directly Side-by-Side on Single Line) -->
-        <div class="mt-5 flex items-center gap-3">
+        <!-- Verified Trust & Compliance Badges Grid -->
+        <div class="mt-5 flex flex-wrap items-center gap-2.5">
           <a href="https://pmny.in/er1smJcqj6z5" target="_blank" rel="noopener" class="transition hover:scale-105 shrink-0" aria-label="PayU Certified Partner Verification">
-            <img width="80" height="80" src="https://partner.payu.in/packs/media/icons/certified-partner-9aa55562.png" alt="PayU Certified Partner" class="h-16 w-auto rounded-lg drop-shadow" />
+            <img width="80" height="80" src="https://partner.payu.in/packs/media/icons/certified-partner-9aa55562.png" alt="PayU Certified Partner" class="h-11 w-auto rounded-lg drop-shadow" />
           </a>
           <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" class="transition hover:scale-105 shrink-0" aria-label="ISO 9001:2015 IAF Verification">
-            <img width="160" height="50" src="/assets/iso-9001-logo.svg" alt="ISO 9001:2015 Certified" class="h-12 w-auto rounded-xl shadow-sm" />
+            <img width="160" height="50" src="/assets/iso-9001-logo.svg" alt="ISO 9001:2015 Certified" class="h-11 w-auto rounded-xl shadow-sm" />
+          </a>
+          <a href="https://www.iafcertsearch.org/certification/EMahmahDvCLJcoeJoGLB1BaY" target="_blank" rel="noopener" class="transition hover:scale-105 shrink-0" aria-label="ISO 27001:2022 IAF Verification">
+            <img width="160" height="50" src="/assets/iso-27001-logo.svg" alt="ISO 27001:2022 ISMS Certified" class="h-11 w-auto rounded-xl shadow-sm" />
+          </a>
+          <a href="/assets/startup-india-certificate.pdf" target="_blank" rel="noopener" class="transition hover:scale-105 shrink-0" aria-label="DPIIT Startup India Recognition Certificate DIPP282292">
+            <img width="190" height="50" src="/assets/startup-india-logo.svg" alt="DPIIT Recognized Startup DIPP282292" class="h-11 w-auto rounded-xl shadow-sm" />
           </a>
         </div>
       </div>
@@ -32,12 +38,14 @@
 
       <!-- Column 3: Legal -->
       <div>
-        <h2 class="font-display text-[13.5px] font-bold text-white">Legal</h2>
+        <h2 class="font-display text-[13.5px] font-bold text-white">Legal &amp; Certs</h2>
         <ul class="mt-5 space-y-3 text-[13px]">
           <li><a href="/privacy" class="transition hover:text-brand">Privacy Policy</a></li>
           <li><a href="/refund-policy" class="transition hover:text-brand">Refund Policy</a></li>
           <li><a href="/terms-and-conditions" class="transition hover:text-brand">Terms &amp; Conditions</a></li>
-          <li><a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-emerald-400 font-semibold hover:text-white transition">ISO 9001:2015 Certified <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></li>
+          <li><a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-sky-400 font-semibold hover:text-white transition">ISO 9001:2015 QMS <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></li>
+          <li><a href="https://www.iafcertsearch.org/certification/EMahmahDvCLJcoeJoGLB1BaY" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-teal-400 font-semibold hover:text-white transition">ISO 27001:2022 ISMS <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></li>
+          <li><a href="/assets/startup-india-certificate.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-amber-400 font-semibold hover:text-white transition">DPIIT Startup India <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></li>
         </ul>
       </div>
 
