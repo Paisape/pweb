@@ -9,18 +9,18 @@
           Payments. Everytime. Everywhere. Paisape provides comprehensive payment solutions including issuing, acquiring, transaction banking, and payment orchestration.
         </p>
         <!-- Verified Trust & Compliance Badges Grid -->
-        <div class="mt-5 flex flex-wrap items-center gap-2.5">
+        <div class="mt-5 flex flex-wrap items-center gap-2">
           <a href="https://pmny.in/er1smJcqj6z5" target="_blank" rel="noopener" class="transition hover:scale-105 shrink-0" aria-label="PayU Certified Partner Verification">
-            <img width="80" height="80" src="https://partner.payu.in/packs/media/icons/certified-partner-9aa55562.png" alt="PayU Certified Partner" class="h-11 w-auto rounded-lg drop-shadow" />
+            <img width="80" height="80" src="https://partner.payu.in/packs/media/icons/certified-partner-9aa55562.png" alt="PayU Certified Partner" class="h-10 w-auto rounded-lg drop-shadow" />
           </a>
           <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" class="transition hover:scale-105 shrink-0" aria-label="ISO 9001:2015 IAF Verification">
-            <img width="160" height="50" src="/assets/iso-9001-logo.svg" alt="ISO 9001:2015 Certified" class="h-11 w-auto rounded-xl shadow-sm" />
+            <img width="160" height="50" src="/assets/iso-9001-logo.svg" alt="ISO 9001:2015 Certified" class="h-10 w-auto rounded-xl shadow-sm" />
           </a>
           <a href="https://www.iafcertsearch.org/certification/EMahmahDvCLJcoeJoGLB1BaY" target="_blank" rel="noopener" class="transition hover:scale-105 shrink-0" aria-label="ISO 27001:2022 IAF Verification">
-            <img width="160" height="50" src="/assets/iso-27001-logo.svg" alt="ISO 27001:2022 ISMS Certified" class="h-11 w-auto rounded-xl shadow-sm" />
+            <img width="160" height="50" src="/assets/iso-27001-logo.svg" alt="ISO 27001:2022 ISMS Certified" class="h-10 w-auto rounded-xl shadow-sm" />
           </a>
           <a href="/assets/startup-india-certificate.pdf" target="_blank" rel="noopener" class="transition hover:scale-105 shrink-0" aria-label="DPIIT Startup India Recognition Certificate DIPP282292">
-            <img width="190" height="50" src="/assets/startup-india-logo.svg" alt="DPIIT Recognized Startup DIPP282292" class="h-11 w-auto rounded-xl shadow-sm" />
+            <img width="190" height="50" src="/assets/startup-india-logo.svg" alt="DPIIT Recognized Startup DIPP282292" class="h-10 w-auto rounded-xl shadow-sm" />
           </a>
         </div>
       </div>
