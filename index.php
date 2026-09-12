@@ -199,41 +199,28 @@
 </section>
 
 <!-- ================= CERTIFICATIONS & TRUST ================= -->
-<section class="border-y border-slate-100 bg-white py-10">
+<section class="border-y border-slate-100 bg-white py-6">
   <div class="mx-auto max-w-site px-5">
-    <div class="text-center mb-6">
-      <span class="inline-block px-3.5 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-brandLt text-brand border border-brand/10">Enterprise Compliance &amp; Certifications</span>
-      <h2 class="mt-2 font-display text-xl sm:text-2xl font-extrabold text-ink tracking-tight">Bank-Grade Security &amp; Recognized Infrastructure</h2>
-    </div>
-    
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 items-center justify-center">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 items-center justify-center">
       
       <!-- PayU Certified Partner -->
-      <a href="https://pmny.in/er1smJcqj6z5" target="_blank" rel="noopener" class="group flex flex-col items-center justify-center rounded-2xl border border-slate-100 bg-slate-50/60 p-4 transition duration-300 hover:border-brand/30 hover:bg-white hover:shadow-md text-center">
-        <img src="https://partner.payu.in/packs/media/icons/certified-partner-9aa55562.png" alt="PayU Certified Partner" class="h-12 w-auto drop-shadow-sm transition group-hover:scale-105" width="80" height="80" />
-        <p class="mt-3 font-display text-xs font-bold text-ink group-hover:text-brand transition">PayU Certified Partner</p>
-        <span class="mt-0.5 text-[10.5px] font-semibold text-emerald-600">Verified Acquirer Status &rarr;</span>
+      <a href="https://pmny.in/er1smJcqj6z5" target="_blank" rel="noopener" class="group flex items-center justify-center rounded-2xl border border-slate-100 bg-slate-50/50 p-4 transition duration-300 hover:border-brand/30 hover:bg-white hover:shadow-md" aria-label="PayU Certified Partner">
+        <img src="https://partner.payu.in/packs/media/icons/certified-partner-9aa55562.png" alt="PayU Certified Partner" class="h-11 w-auto drop-shadow-sm transition group-hover:scale-105" width="80" height="80" />
       </a>
 
       <!-- ISO 9001:2015 QMS -->
-      <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" class="group flex flex-col items-center justify-center rounded-2xl border border-slate-100 bg-slate-50/60 p-4 transition duration-300 hover:border-brand/30 hover:bg-white hover:shadow-md text-center">
-        <img src="/assets/iso-9001-logo.svg" alt="ISO 9001:2015 QMS Certified" class="h-12 w-auto shadow-sm rounded-xl transition group-hover:scale-105" width="160" height="50" />
-        <p class="mt-3 font-display text-xs font-bold text-ink group-hover:text-brand transition">ISO 9001:2015 QMS</p>
-        <span class="mt-0.5 text-[10.5px] font-semibold text-sky-600">IAF Search Validated &rarr;</span>
+      <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" class="group flex items-center justify-center rounded-2xl border border-slate-100 bg-slate-50/50 p-4 transition duration-300 hover:border-brand/30 hover:bg-white hover:shadow-md" aria-label="ISO 9001:2015 QMS Certified">
+        <img src="/assets/iso-9001-logo.svg" alt="ISO 9001:2015 QMS Certified" class="h-11 w-auto shadow-sm rounded-xl transition group-hover:scale-105" width="160" height="50" />
       </a>
 
       <!-- ISO 27001:2022 ISMS -->
-      <a href="https://www.iafcertsearch.org/certification/EMahmahDvCLJcoeJoGLB1BaY" target="_blank" rel="noopener" class="group flex flex-col items-center justify-center rounded-2xl border border-slate-100 bg-slate-50/60 p-4 transition duration-300 hover:border-brand/30 hover:bg-white hover:shadow-md text-center">
-        <img src="/assets/iso-27001-logo.svg" alt="ISO 27001:2022 ISMS Certified" class="h-12 w-auto shadow-sm rounded-xl transition group-hover:scale-105" width="170" height="50" />
-        <p class="mt-3 font-display text-xs font-bold text-ink group-hover:text-brand transition">ISO 27001:2022 ISMS</p>
-        <span class="mt-0.5 text-[10.5px] font-semibold text-teal-600">IAF Search Validated &rarr;</span>
+      <a href="https://www.iafcertsearch.org/certification/EMahmahDvCLJcoeJoGLB1BaY" target="_blank" rel="noopener" class="group flex items-center justify-center rounded-2xl border border-slate-100 bg-slate-50/50 p-4 transition duration-300 hover:border-brand/30 hover:bg-white hover:shadow-md" aria-label="ISO 27001:2022 ISMS Certified">
+        <img src="/assets/iso-27001-logo.svg" alt="ISO 27001:2022 ISMS Certified" class="h-11 w-auto shadow-sm rounded-xl transition group-hover:scale-105" width="170" height="50" />
       </a>
 
       <!-- DPIIT Recognized Startup -->
-      <a href="/assets/startup-india-certificate.pdf" target="_blank" rel="noopener" class="group flex flex-col items-center justify-center rounded-2xl border border-slate-100 bg-slate-50/60 p-4 transition duration-300 hover:border-brand/30 hover:bg-white hover:shadow-md text-center">
-        <img src="/assets/startup-india-logo.svg" alt="DPIIT Recognized Startup DIPP282292" class="h-12 w-auto shadow-sm rounded-xl transition group-hover:scale-105" width="195" height="50" />
-        <p class="mt-3 font-display text-xs font-bold text-ink group-hover:text-brand transition">#startupindia</p>
-        <span class="mt-0.5 text-[10.5px] font-semibold text-amber-600">DPIIT DIPP282292 &rarr;</span>
+      <a href="/assets/startup-india-certificate.pdf" target="_blank" rel="noopener" class="group flex items-center justify-center rounded-2xl border border-slate-100 bg-slate-50/50 p-4 transition duration-300 hover:border-brand/30 hover:bg-white hover:shadow-md" aria-label="DPIIT Recognized Startup DIPP282292">
+        <img src="/assets/startup-india-logo.svg" alt="DPIIT Recognized Startup DIPP282292" class="h-11 w-auto shadow-sm rounded-xl transition group-hover:scale-105" width="195" height="50" />
       </a>
 
     </div>
