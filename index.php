@@ -198,38 +198,38 @@
   </div>
 </section>
 
-<!-- ================= STATS & CERTIFICATIONS ================= -->
+<!-- ================= CERTIFICATIONS & TRUST BADGES BAR ================= -->
 <section class="border-y border-slate-100 bg-white">
-  <div class="mx-auto grid max-w-site grid-cols-2 divide-slate-100 px-5 sm:grid-cols-3 lg:grid-cols-5 lg:divide-x">
-    <div data-reveal class="px-4 py-8 text-center">
-      <p class="font-display text-[28px] font-extrabold text-ink"><span data-count="2400" data-prefix="&#8377;">&#8377;0</span><span class="text-brand">Cr+</span></p>
-      <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80">Processed / Month</p>
-    </div>
-    <div data-reveal data-delay="80" class="px-4 py-8 text-center">
-      <p class="font-display text-[28px] font-extrabold text-ink"><span data-count="99.99" data-dec="2">0</span><span class="text-brand">%</span></p>
-      <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80">Platform Uptime</p>
-    </div>
-    <div data-reveal data-delay="160" class="px-4 py-8 text-center">
-      <p class="font-display text-[28px] font-extrabold text-ink"><span data-count="8">0</span><span class="text-brand">+</span></p>
-      <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80">Payment Gateways</p>
-    </div>
-    <div data-reveal data-delay="240" class="px-4 py-8 text-center">
-      <p class="font-display text-[28px] font-extrabold text-ink">&lt;<span data-count="200">0</span><span class="text-brand">ms</span></p>
-      <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80">P95 API Latency</p>
-    </div>
-    <div data-reveal data-delay="320" class="col-span-2 px-4 py-6 text-center sm:col-span-3 lg:col-span-1 flex flex-col items-center justify-center gap-2">
-      <div class="flex items-center justify-center gap-2">
-        <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" aria-label="ISO 9001:2015 Certification" class="transition hover:scale-105">
-          <img src="/assets/iso-9001-logo.svg" alt="ISO 9001:2015 QMS Certified" class="h-9 w-auto shadow-sm rounded-lg" width="130" height="40" />
-        </a>
-        <a href="https://www.iafcertsearch.org/certification/EMahmahDvCLJcoeJoGLB1BaY" target="_blank" rel="noopener" aria-label="ISO 27001:2022 Certification" class="transition hover:scale-105">
-          <img src="/assets/iso-27001-logo.svg" alt="ISO 27001:2022 ISMS Certified" class="h-9 w-auto shadow-sm rounded-lg" width="130" height="40" />
-        </a>
-      </div>
-      <a href="/assets/startup-india-certificate.pdf" target="_blank" rel="noopener" class="transition hover:scale-105" aria-label="DPIIT Recognized Startup Certification DIPP282292">
-        <img src="/assets/startup-india-logo.svg" alt="DPIIT Recognized Startup DIPP282292" class="h-8 w-auto shadow-sm rounded-lg" width="160" height="40" />
+  <div class="mx-auto grid max-w-site grid-cols-2 divide-y divide-slate-100 sm:grid-cols-4 sm:divide-y-0 sm:divide-x">
+    
+    <!-- Column 1: PayU Certified Partner -->
+    <div data-reveal class="p-6 flex items-center justify-center">
+      <a href="https://pmny.in/er1smJcqj6z5" target="_blank" rel="noopener" aria-label="PayU Certified Partner Verification" class="transition hover:scale-105">
+        <img src="https://partner.payu.in/packs/media/icons/certified-partner-9aa55562.png" alt="PayU Certified Partner" class="h-11 w-auto drop-shadow-sm" width="80" height="80" />
       </a>
     </div>
+
+    <!-- Column 2: ISO 9001:2015 QMS -->
+    <div data-reveal data-delay="80" class="p-6 flex items-center justify-center">
+      <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" aria-label="ISO 9001:2015 Certification" class="transition hover:scale-105">
+        <img src="/assets/iso-9001-logo.svg" alt="ISO 9001:2015 QMS Certified" class="h-11 w-auto shadow-sm rounded-xl" width="160" height="50" />
+      </a>
+    </div>
+
+    <!-- Column 3: ISO 27001:2022 ISMS -->
+    <div data-reveal data-delay="160" class="p-6 flex items-center justify-center">
+      <a href="https://www.iafcertsearch.org/certification/EMahmahDvCLJcoeJoGLB1BaY" target="_blank" rel="noopener" aria-label="ISO 27001:2022 Certification" class="transition hover:scale-105">
+        <img src="/assets/iso-27001-logo.svg" alt="ISO 27001:2022 ISMS Certified" class="h-11 w-auto shadow-sm rounded-xl" width="170" height="50" />
+      </a>
+    </div>
+
+    <!-- Column 4: DPIIT Recognized Startup -->
+    <div data-reveal data-delay="240" class="p-6 flex items-center justify-center">
+      <a href="/assets/startup-india-certificate.pdf" target="_blank" rel="noopener" aria-label="DPIIT Recognized Startup Certification DIPP282292" class="transition hover:scale-105">
+        <img src="/assets/startup-india-logo.svg" alt="DPIIT Recognized Startup DIPP282292" class="h-11 w-auto shadow-sm rounded-xl" width="195" height="50" />
+      </a>
+    </div>
+
   </div>
 </section>
 
