@@ -55,7 +55,7 @@
 
 <main id="main">
 
-<section class="relative overflow-hidden bg-gradient-to-b from-[#EAF4FD] via-[#F4FAFE] to-white pt-36 pb-14 md:pt-44 md:pb-20">
+<section class="relative overflow-hidden bg-gradient-to-b from-[#EAF4FD] via-[#F4FAFE] to-white pt-28 pb-8 md:pt-32 md:pb-10">
   <div class="pointer-events-none absolute right-0 top-24 hidden h-[300px] w-[46%] rounded-3xl bg-gradient-to-br from-brand/15 via-brand/5 to-transparent blur-2xl lg:block"></div>
   <div class="pointer-events-none absolute -left-32 top-40 h-[380px] w-[380px] rounded-full bg-brand/[0.06] blur-3xl"></div>
 
@@ -85,7 +85,7 @@
   </div>
 </section>
 
-<section id="features" class="bg-white py-20 md:py-24">
+<section id="features" class="bg-white py-12 md:py-16">
   <div class="mx-auto max-w-site px-5">
     <p data-reveal class="mb-3 text-center text-[11px] font-bold uppercase tracking-[0.24em] text-brand">
       <span class="mr-2 inline-block h-px w-6 align-middle bg-brand"></span>Why Paisape
@@ -120,7 +120,7 @@
   </div>
 </section>
 
-<section class="bg-gradient-to-b from-[#F5FAFE] to-white py-20 md:py-24">
+<section class="bg-gradient-to-b from-[#F5FAFE] to-white py-12 md:py-16">
   <div class="mx-auto max-w-site px-5">
     <p data-reveal class="mb-3 text-center text-[11px] font-bold uppercase tracking-[0.24em] text-brand">
       <span class="mr-2 inline-block h-px w-6 align-middle bg-brand"></span>Specifications
@@ -159,7 +159,7 @@
   </div>
 </section>
 
-<section class="relative overflow-hidden bg-deep py-20 md:py-24">
+<section class="relative overflow-hidden bg-deep py-12 md:py-16">
   <div class="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-brand/20 blur-3xl"></div>
   <div class="pointer-events-none absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-mint/10 blur-3xl"></div>
 

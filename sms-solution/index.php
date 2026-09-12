@@ -54,7 +54,7 @@
 
 <main id="main">
 
-<section class="relative overflow-hidden bg-gradient-to-b from-[#EAF4FD] via-[#F4FAFE] to-white pt-36 pb-14 md:pt-44 md:pb-20">
+<section class="relative overflow-hidden bg-gradient-to-b from-[#EAF4FD] via-[#F4FAFE] to-white pt-28 pb-8 md:pt-32 md:pb-10">
   <div class="pointer-events-none absolute right-0 top-24 hidden h-[300px] w-[46%] rounded-3xl bg-gradient-to-br from-brand/15 via-brand/5 to-transparent blur-2xl lg:block"></div>
   <div class="pointer-events-none absolute -left-32 top-40 h-[380px] w-[380px] rounded-full bg-brand/[0.06] blur-3xl"></div>
 

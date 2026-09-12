@@ -60,7 +60,7 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
 
 <main id="main">
 
-<section class="relative overflow-hidden bg-gradient-to-b from-[#EAF4FD] via-[#F4FAFE] to-white pt-36 pb-14 md:pt-44 md:pb-20">
+<section class="relative overflow-hidden bg-gradient-to-b from-[#EAF4FD] via-[#F4FAFE] to-white pt-28 pb-8 md:pt-32 md:pb-10">
   <div class="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-brand/10 blur-3xl"></div>
   <div class="pointer-events-none absolute -left-32 top-40 h-[380px] w-[380px] rounded-full bg-brand/[0.07] blur-3xl"></div>
 
@@ -112,7 +112,7 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
   </div>
 </section>
 
-<section id="form" class="bg-gradient-to-b from-white via-[#F5FAFE] to-white py-20 md:py-24">
+<section id="form" class="bg-gradient-to-b from-white via-[#F5FAFE] to-white py-12 md:py-16">
   <div class="mx-auto grid max-w-site gap-10 px-5 lg:grid-cols-[1.25fr_.75fr]">
 
     <div class="rounded-3xl border border-slate-100 bg-white p-7 shadow-[0_30px_70px_-40px_rgba(22,35,59,.35)] sm:p-9">
@@ -387,7 +387,7 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
   </div>
 </section>
 
-<section class="bg-white py-20 md:py-24">
+<section class="bg-white py-12 md:py-16">
   <div class="mx-auto max-w-3xl px-5">
     <p data-reveal class="mb-3 text-center text-[11px] font-bold uppercase tracking-[0.24em] text-brand">
       <span class="mr-2 inline-block h-px w-6 align-middle bg-brand"></span>Before you write in
