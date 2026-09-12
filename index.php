@@ -198,38 +198,44 @@
   </div>
 </section>
 
-<!-- ================= STATS ================= -->
-<section class="border-y border-slate-100 bg-white">
-  <div class="mx-auto grid max-w-site grid-cols-2 divide-slate-100 px-5 sm:grid-cols-3 lg:grid-cols-5 lg:divide-x">
-    <div data-reveal class="px-4 py-8 text-center">
-      <p class="font-display text-[28px] font-extrabold text-ink"><span data-count="2400" data-prefix="&#8377;">&#8377;0</span><span class="text-brand">Cr+</span></p>
-      <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80">Processed / Month</p>
+<!-- ================= CERTIFICATIONS & TRUST ================= -->
+<section class="border-y border-slate-100 bg-white py-10">
+  <div class="mx-auto max-w-site px-5">
+    <div class="text-center mb-6">
+      <span class="inline-block px-3.5 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-brandLt text-brand border border-brand/10">Enterprise Compliance &amp; Certifications</span>
+      <h2 class="mt-2 font-display text-xl sm:text-2xl font-extrabold text-ink tracking-tight">Bank-Grade Security &amp; Recognized Infrastructure</h2>
     </div>
-    <div data-reveal data-delay="80" class="px-4 py-8 text-center">
-      <p class="font-display text-[28px] font-extrabold text-ink"><span data-count="99.99" data-dec="2">0</span><span class="text-brand">%</span></p>
-      <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80">Platform Uptime</p>
-    </div>
-    <div data-reveal data-delay="160" class="px-4 py-8 text-center">
-      <p class="font-display text-[28px] font-extrabold text-ink"><span data-count="8">0</span><span class="text-brand">+</span></p>
-      <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80">Payment Gateways</p>
-    </div>
-    <div data-reveal data-delay="240" class="px-4 py-8 text-center">
-      <p class="font-display text-[28px] font-extrabold text-ink">&lt;<span data-count="200">0</span><span class="text-brand">ms</span></p>
-      <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-body/80">P95 API Latency</p>
-    </div>
-    <div data-reveal data-delay="320" class="col-span-2 px-4 py-6 text-center sm:col-span-3 lg:col-span-1 flex flex-col items-center justify-center gap-2">
-      <div class="flex items-center justify-center gap-2">
-        <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" aria-label="ISO 9001:2015 Certification" class="transition hover:scale-105">
-          <img src="/assets/iso-9001-logo.svg" alt="ISO 9001:2015 QMS Certified" class="h-9 w-auto shadow-sm rounded-lg" width="130" height="40" />
-        </a>
-        <a href="https://www.iafcertsearch.org/certification/EMahmahDvCLJcoeJoGLB1BaY" target="_blank" rel="noopener" aria-label="ISO 27001:2022 Certification" class="transition hover:scale-105">
-          <img src="/assets/iso-27001-logo.svg" alt="ISO 27001:2022 ISMS Certified" class="h-9 w-auto shadow-sm rounded-lg" width="130" height="40" />
-        </a>
-      </div>
-      <a href="/assets/startup-india-certificate.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-3 py-1 text-[11px] font-extrabold text-amber-800 border border-amber-200/80 hover:bg-amber-100 transition shadow-sm">
-        <span class="h-2 w-2 rounded-full bg-amber-500 animate-pulse"></span>
-        DPIIT Recognized Startup &bull; DIPP282292 &rarr;
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 items-center justify-center">
+      
+      <!-- PayU Certified Partner -->
+      <a href="https://pmny.in/er1smJcqj6z5" target="_blank" rel="noopener" class="group flex flex-col items-center justify-center rounded-2xl border border-slate-100 bg-slate-50/60 p-4 transition duration-300 hover:border-brand/30 hover:bg-white hover:shadow-md text-center">
+        <img src="https://partner.payu.in/packs/media/icons/certified-partner-9aa55562.png" alt="PayU Certified Partner" class="h-12 w-auto drop-shadow-sm transition group-hover:scale-105" width="80" height="80" />
+        <p class="mt-3 font-display text-xs font-bold text-ink group-hover:text-brand transition">PayU Certified Partner</p>
+        <span class="mt-0.5 text-[10.5px] font-semibold text-emerald-600">Verified Acquirer Status &rarr;</span>
       </a>
+
+      <!-- ISO 9001:2015 QMS -->
+      <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" class="group flex flex-col items-center justify-center rounded-2xl border border-slate-100 bg-slate-50/60 p-4 transition duration-300 hover:border-brand/30 hover:bg-white hover:shadow-md text-center">
+        <img src="/assets/iso-9001-logo.svg" alt="ISO 9001:2015 QMS Certified" class="h-12 w-auto shadow-sm rounded-xl transition group-hover:scale-105" width="160" height="50" />
+        <p class="mt-3 font-display text-xs font-bold text-ink group-hover:text-brand transition">ISO 9001:2015 QMS</p>
+        <span class="mt-0.5 text-[10.5px] font-semibold text-sky-600">IAF Search Validated &rarr;</span>
+      </a>
+
+      <!-- ISO 27001:2022 ISMS -->
+      <a href="https://www.iafcertsearch.org/certification/EMahmahDvCLJcoeJoGLB1BaY" target="_blank" rel="noopener" class="group flex flex-col items-center justify-center rounded-2xl border border-slate-100 bg-slate-50/60 p-4 transition duration-300 hover:border-brand/30 hover:bg-white hover:shadow-md text-center">
+        <img src="/assets/iso-27001-logo.svg" alt="ISO 27001:2022 ISMS Certified" class="h-12 w-auto shadow-sm rounded-xl transition group-hover:scale-105" width="170" height="50" />
+        <p class="mt-3 font-display text-xs font-bold text-ink group-hover:text-brand transition">ISO 27001:2022 ISMS</p>
+        <span class="mt-0.5 text-[10.5px] font-semibold text-teal-600">IAF Search Validated &rarr;</span>
+      </a>
+
+      <!-- DPIIT Recognized Startup -->
+      <a href="/assets/startup-india-certificate.pdf" target="_blank" rel="noopener" class="group flex flex-col items-center justify-center rounded-2xl border border-slate-100 bg-slate-50/60 p-4 transition duration-300 hover:border-brand/30 hover:bg-white hover:shadow-md text-center">
+        <img src="/assets/startup-india-logo.svg" alt="DPIIT Recognized Startup DIPP282292" class="h-12 w-auto shadow-sm rounded-xl transition group-hover:scale-105" width="195" height="50" />
+        <p class="mt-3 font-display text-xs font-bold text-ink group-hover:text-brand transition">#startupindia</p>
+        <span class="mt-0.5 text-[10.5px] font-semibold text-amber-600">DPIIT DIPP282292 &rarr;</span>
+      </a>
+
     </div>
   </div>
 </section>
