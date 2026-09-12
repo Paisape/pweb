@@ -38,7 +38,7 @@
 <body class="bg-slate-50 text-body antialiased">
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>
 
-<main id="main" class="pt-32 pb-20">
+<main id="main" class="pt-24 pb-10">
   <div class="mx-auto max-w-site px-5">
     
     <!-- Page Header -->

@@ -86,7 +86,7 @@
 </section>
 
 <!-- Features Grid -->
-<section id="features" class="bg-white py-16 md:py-24">
+<section id="features" class="bg-white py-16 md:py-14">
   <div class="mx-auto max-w-site px-5">
     <div class="mx-auto max-w-2xl text-center">
       <p data-reveal class="text-[11px] font-bold uppercase tracking-[0.2em] text-brand">Core Capabilities</p>
@@ -147,7 +147,7 @@
 </section>
 
 <!-- Call to Action Banner -->
-<section class="bg-white pb-20 md:pb-24">
+<section class="bg-white pb-20 md:pb-10">
   <div class="mx-auto max-w-site px-5">
     <div data-reveal="zoom" class="relative overflow-hidden rounded-3xl bg-night px-8 py-14 text-center sm:px-14">
       <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand/20 blur-3xl"></div>

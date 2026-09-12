@@ -153,7 +153,7 @@
   </div>
 </section>
 
-<section id="articles" class="bg-gradient-to-b from-white via-[#F5FAFE] to-white py-16 md:py-20">
+<section id="articles" class="bg-gradient-to-b from-white via-[#F5FAFE] to-white py-10 md:py-14">
   <div class="mx-auto max-w-site px-5">
     <div class="flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-center">
       <h2 data-reveal="left" class="font-display text-[22px] font-extrabold tracking-tight text-ink sm:text-[26px]">All articles</h2>
@@ -743,7 +743,7 @@
   </div>
 </section>
 
-<section class="bg-white pb-20 md:pb-24">
+<section class="bg-white pb-20 md:pb-10">
   <div class="mx-auto max-w-site px-5">
     <div data-reveal="zoom" class="relative overflow-hidden rounded-3xl bg-night px-8 py-14 text-center sm:px-14">
       <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand/20 blur-3xl"></div>

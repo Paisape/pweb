@@ -74,7 +74,7 @@
 <main id="main" class="relative overflow-hidden bg-gradient-to-b from-[#EAF4FD] via-[#F4FAFE] to-white pt-28 pb-20">
   <div class="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-brand/10 blur-3xl"></div>
   <div class="pointer-events-none absolute -left-32 top-40 h-[380px] w-[380px] rounded-full bg-brand/[0.07] blur-3xl"></div>
-  <article class="pt-36 pb-20">
+  <article class="pt-28 pb-10">
     <div class="mx-auto max-w-4xl px-5">
       <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.16em] mb-4">
         <span class="rounded-full bg-brand px-3 py-1 text-white">Engineering</span>

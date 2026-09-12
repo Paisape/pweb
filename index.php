@@ -55,7 +55,7 @@
 <main id="main">
 
 <!-- ================= HERO ================= -->
-<section class="relative overflow-hidden bg-gradient-to-b from-[#EAF4FD] via-[#F4FAFE] to-white pt-36 pb-16 md:pt-44 md:pb-24">
+<section class="relative overflow-hidden bg-gradient-to-b from-[#EAF4FD] via-[#F4FAFE] to-white pt-36 pb-16 md:pt-44 md:pb-10">
   <div class="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-brand/10 blur-3xl"></div>
   <div class="pointer-events-none absolute -left-32 top-40 h-[380px] w-[380px] rounded-full bg-brand/[0.07] blur-3xl"></div>
 
@@ -608,7 +608,7 @@
 </section>
 
 <!-- ================= ABOUT PAISAPE SECTION ================= -->
-<section id="about-paisape" class="py-20 bg-slate-50 border-t border-slate-100 relative overflow-hidden">
+<section id="about-paisape" class="py-12 bg-slate-50 border-t border-slate-100 relative overflow-hidden">
   <div class="mx-auto max-w-site px-5">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       

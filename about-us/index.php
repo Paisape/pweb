@@ -38,7 +38,7 @@
 <body class="bg-slate-50 text-body antialiased">
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>
 
-<main id="main" class="pt-32 pb-20">
+<main id="main" class="pt-24 pb-10">
 
   <!-- Hero Section -->
   <section class="relative overflow-hidden pt-6 pb-16">
@@ -91,7 +91,7 @@
   </section>
 
   <!-- Mission & Vision Cards -->
-  <section class="py-20">
+  <section class="py-12">
     <div class="mx-auto max-w-site px-5">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         

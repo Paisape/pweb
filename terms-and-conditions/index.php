@@ -54,7 +54,7 @@
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>
 
 <main id="main">
-  <section class="relative overflow-hidden bg-gradient-to-b from-[#EAF4FD] via-[#F4FAFE] to-white pt-36 pb-14 md:pt-44 md:pb-20">
+  <section class="relative overflow-hidden bg-gradient-to-b from-[#EAF4FD] via-[#F4FAFE] to-white pt-28 pb-8 md:pt-32 md:pb-10">
     <div class="relative mx-auto max-w-3xl px-5 text-center">
       <h1 class="font-display text-[36px] font-extrabold leading-[1.12] tracking-tight text-ink sm:text-[46px]">
         Terms &amp; Conditions

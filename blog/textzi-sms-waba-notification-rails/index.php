@@ -86,7 +86,7 @@
   <div class="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-brand/10 blur-3xl"></div>
   <div class="pointer-events-none absolute -left-32 top-40 h-[380px] w-[380px] rounded-full bg-brand/[0.07] blur-3xl"></div>
 
-<article class="pt-36 pb-20">
+<article class="pt-28 pb-10">
   <div class="mx-auto max-w-4xl px-5">
     
     <!-- Meta Breadcrumb -->
