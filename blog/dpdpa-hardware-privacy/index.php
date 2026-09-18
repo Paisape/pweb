@@ -14,6 +14,9 @@
 <meta property="og:image" content="https://paisape.in/assets/blog/blog_dpdpa_hardware.jpg" />
 <meta property="og:url" content="https://paisape.in/blog/dpdpa-hardware-privacy" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Privacy by Design in Payment Devices: Soundboxes, POS and Cellular Telemetry" />
+<meta name="twitter:description" content="How DPDPA applies to payment hardware including audio soundboxes, POS terminals, and cellular telemetry with engineering guidelines for privacy-by-design." />
+<meta name="twitter:image" content="https://paisape.in/assets/blog/blog_dpdpa_hardware.jpg" />
 
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +44,34 @@
       if(e.ctrlKey && e.keyCode == 85) { return false; }
     };
   </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Privacy by Design in Payment Devices: Soundboxes, POS and Cellular Telemetry",
+  "description": "How DPDPA applies to payment hardware including audio soundboxes, POS terminals, and cellular telemetry with engineering guidelines for privacy-by-design.",
+  "image": ["https://paisape.in/assets/blog/blog_dpdpa_hardware.jpg"],
+  "datePublished": "19 August 2026",
+  "author": {
+    "@type": "Organization",
+    "name": "Paisape Engineering",
+    "url": "https://paisape.in"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Paisape Techfin Private Limited",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://paisape.in/assets/paisape-logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://paisape.in/blog/dpdpa-hardware-privacy"
+  }
+}
+</script>
 </head>
 <body class="bg-[#F8FCFF] text-body antialiased">
 <div class="fixed top-0 left-0 z-[100] w-full px-4 py-2.5 text-center shadow-md border-b border-black/10" style="background-image: url('/assets/hand_painted_tricolor.jpg'); background-size: cover; background-position: center;">

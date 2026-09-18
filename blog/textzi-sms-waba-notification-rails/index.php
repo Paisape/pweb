@@ -14,6 +14,9 @@
 <meta property="og:image" content="https://paisape.in/assets/blog/blog_textzi_waba.jpg" />
 <meta property="og:url" content="https://paisape.in/blog/textzi-sms-waba-notification-rails" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="SMS vs WhatsApp Business API: High-Throughput Payment &amp; OTP Rails" />
+<meta name="twitter:description" content="Comparing TRAI DLT-compliant SMS routing against Meta WhatsApp Cloud API webhooks for sub-2 second OTP delivery, transaction alerts, and interactive paymen..." />
+<meta name="twitter:image" content="https://paisape.in/assets/blog/blog_textzi_waba.jpg" />
 
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
 
@@ -48,6 +51,34 @@
       if(e.ctrlKey && e.keyCode == 85) { return false; }
     };
   </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "SMS vs WhatsApp Business API: High-Throughput Payment &amp; OTP Rails",
+  "description": "Comparing TRAI DLT-compliant SMS routing against Meta WhatsApp Cloud API webhooks for sub-2 second OTP delivery, transaction alerts, and interactive paymen...",
+  "image": ["https://paisape.in/assets/blog/blog_textzi_waba.jpg"],
+  "datePublished": "11 August 2026",
+  "author": {
+    "@type": "Organization",
+    "name": "Paisape Engineering",
+    "url": "https://paisape.in"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Paisape Techfin Private Limited",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://paisape.in/assets/paisape-logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://paisape.in/blog/textzi-sms-waba-notification-rails"
+  }
+}
+</script>
 </head>
 
 <body class="bg-[#F8FCFF] text-body antialiased">

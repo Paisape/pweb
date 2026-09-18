@@ -14,6 +14,9 @@
   <meta property="og:image" content="https://paisape.in/assets/blog/blog_recon_engine_handwritten.jpg" />
   <meta property="og:url" content="https://paisape.in/blog/multi-bank-reconciliation-engine" />
   <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Automated Multi-Bank Reconciliation Engine: T+0 Batch Settlement &amp; Discrepancy Resolution" />
+<meta name="twitter:description" content="An engineering guide to multi-bank automated reconciliation architecture — 3-way matching algorithms, PG MIS parsing, T+0 ledger updates, and automated exception bucket workflows." />
+<meta name="twitter:image" content="https://paisape.in/assets/blog/blog_recon_engine_handwritten.jpg" />
 
   <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +44,34 @@
       if(e.ctrlKey && e.keyCode == 85) { return false; }
     };
   </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Automated Multi-Bank Reconciliation Engine: T+0 Batch Settlement &amp; Discrepancy Resolution",
+  "description": "An engineering guide to multi-bank automated reconciliation architecture — 3-way matching algorithms, PG MIS parsing, T+0 ledger updates, and automated exception bucket workflows.",
+  "image": ["https://paisape.in/assets/blog/blog_recon_engine_handwritten.jpg"],
+  "datePublished": "02 September 2026",
+  "author": {
+    "@type": "Organization",
+    "name": "Paisape Engineering",
+    "url": "https://paisape.in"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Paisape Techfin Private Limited",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://paisape.in/assets/paisape-logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://paisape.in/blog/multi-bank-reconciliation-engine"
+  }
+}
+</script>
 </head>
 
 <body class="bg-[#F8FCFF] text-body antialiased">

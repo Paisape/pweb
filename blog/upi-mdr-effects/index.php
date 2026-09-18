@@ -14,6 +14,9 @@
 <meta property="og:image" content="https://paisape.in/assets/blog_upi_mdr.jpg" />
 <meta property="og:url" content="https://paisape.in/blog/upi-mdr-effects" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="NPCI's Revised UPI MDR Framework (Oct 2026): Technical & Business Impact" />
+<meta name="twitter:description" content="A deep dive into NPCI's revised Merchant Discount Rate (MDR) rules for UPI transactions above Rs 2,000, 0.4% tier caps, essential service rates, 18% GST Input Tax Credit, and engineering adjustments for payment switches." />
+<meta name="twitter:image" content="https://paisape.in/assets/blog_upi_mdr.jpg" />
 
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +44,34 @@
       if(e.ctrlKey && e.keyCode == 85) { return false; }
     };
   </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "NPCI's Revised UPI MDR Framework (Oct 2026): Technical & Business Impact",
+  "description": "A deep dive into NPCI's revised Merchant Discount Rate (MDR) rules for UPI transactions above Rs 2,000, 0.4% tier caps, essential service rates, 18% GST Input Tax Credit, and engineering adjustments for payment switches.",
+  "image": ["https://paisape.in/assets/blog_upi_mdr.jpg"],
+  "datePublished": "15 October 2026",
+  "author": {
+    "@type": "Organization",
+    "name": "Paisape Engineering",
+    "url": "https://paisape.in"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Paisape Techfin Private Limited",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://paisape.in/assets/paisape-logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://paisape.in/blog/upi-mdr-effects"
+  }
+}
+</script>
 </head>
 <body class="bg-[#F8FCFF] text-body antialiased">
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>

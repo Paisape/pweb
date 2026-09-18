@@ -14,6 +14,9 @@
   <meta property="og:image" content="https://paisape.in/assets/blog/blog_upi_lite_x.jpg" />
   <meta property="og:url" content="https://paisape.in/blog/upi-lite-x-offline-payments" />
   <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="UPI Lite X & Offline Payments: Technical Mechanics, On-Device Wallets & NFC Infrastructure" />
+<meta name="twitter:description" content="A complete engineering guide to NPCI UPI Lite X — offline wallet architecture, Secure Element storage, NFC peer-to-peer data exchange, and batch sync settlement." />
+<meta name="twitter:image" content="https://paisape.in/assets/blog/blog_upi_lite_x.jpg" />
 
   <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +44,34 @@
       if(e.ctrlKey && e.keyCode == 85) { return false; }
     };
   </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "UPI Lite X & Offline Payments: Technical Mechanics, On-Device Wallets & NFC Infrastructure",
+  "description": "A complete engineering guide to NPCI UPI Lite X — offline wallet architecture, Secure Element storage, NFC peer-to-peer data exchange, and batch sync settlement.",
+  "image": ["https://paisape.in/assets/blog/blog_upi_lite_x.jpg"],
+  "datePublished": "25 August 2026",
+  "author": {
+    "@type": "Organization",
+    "name": "Paisape Engineering",
+    "url": "https://paisape.in"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Paisape Techfin Private Limited",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://paisape.in/assets/paisape-logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://paisape.in/blog/upi-lite-x-offline-payments"
+  }
+}
+</script>
 </head>
 
 <body class="bg-[#F8FCFF] text-body antialiased">

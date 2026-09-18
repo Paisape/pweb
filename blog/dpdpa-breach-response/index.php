@@ -14,6 +14,9 @@
 <meta property="og:image" content="https://paisape.in/assets/blog/blog_dpdpa_breach.jpg" />
 <meta property="og:url" content="https://paisape.in/blog/dpdpa-breach-response" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Data Breach Management: How to Report Incidents to DPBI to Avoid Rs 200 Cr Fines" />
+<meta name="twitter:description" content="A step-by-step DPDPA incident response SOP for Indian fintechs to detect, assess, and report data breaches to the Data Protection Board within legal timeframes." />
+<meta name="twitter:image" content="https://paisape.in/assets/blog/blog_dpdpa_breach.jpg" />
 
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +44,34 @@
       if(e.ctrlKey && e.keyCode == 85) { return false; }
     };
   </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Data Breach Management: How to Report Incidents to DPBI to Avoid Rs 200 Cr Fines",
+  "description": "A step-by-step DPDPA incident response SOP for Indian fintechs to detect, assess, and report data breaches to the Data Protection Board within legal timeframes.",
+  "image": ["https://paisape.in/assets/blog/blog_dpdpa_breach.jpg"],
+  "datePublished": "19 August 2026",
+  "author": {
+    "@type": "Organization",
+    "name": "Paisape Engineering",
+    "url": "https://paisape.in"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Paisape Techfin Private Limited",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://paisape.in/assets/paisape-logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://paisape.in/blog/dpdpa-breach-response"
+  }
+}
+</script>
 </head>
 <body class="bg-[#F8FCFF] text-body antialiased">
 <div class="fixed top-0 left-0 z-[100] w-full px-4 py-2.5 text-center shadow-md border-b border-black/10" style="background-image: url('/assets/hand_painted_tricolor.jpg'); background-size: cover; background-position: center;">

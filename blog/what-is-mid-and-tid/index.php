@@ -14,6 +14,9 @@
   <meta property="og:image" content="https://paisape.in/assets/blog/blog_mid_tid.jpg" />
   <meta property="og:url" content="https://paisape.in/blog/what-is-mid-and-tid" />
   <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="What is MID and TID in Digital Payments? Merchant ID &amp; Terminal ID Explained" />
+<meta name="twitter:description" content="Learn what MID (Merchant Identification Number) and TID (Terminal Identification Number) mean in payment processing, how acquiring banks route transactions, and why managing them matters for fintechs &amp; merchants." />
+<meta name="twitter:image" content="https://paisape.in/assets/blog/blog_mid_tid.jpg" />
 
   <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +44,34 @@
       if(e.ctrlKey && e.keyCode == 85) { return false; }
     };
   </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "What is MID and TID in Digital Payments? Merchant ID &amp; Terminal ID Explained",
+  "description": "Learn what MID (Merchant Identification Number) and TID (Terminal Identification Number) mean in payment processing, how acquiring banks route transactions, and why managing them matters for fintechs &amp; merchants.",
+  "image": ["https://paisape.in/assets/blog/blog_mid_tid.jpg"],
+  "datePublished": "26 August 2026",
+  "author": {
+    "@type": "Organization",
+    "name": "Paisape Engineering",
+    "url": "https://paisape.in"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Paisape Techfin Private Limited",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://paisape.in/assets/paisape-logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://paisape.in/blog/what-is-mid-and-tid"
+  }
+}
+</script>
 </head>
 <body class="bg-[#F8FCFF] text-body antialiased">
 <?php include_once __DIR__ . '/../../includes/header.php'; ?>

@@ -14,6 +14,9 @@
 <meta property="og:image" content="https://paisape.in/assets/blog/blog_independence_day.jpg" />
 <meta property="og:url" content="https://paisape.in/blog/independence-day-2026" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Celebrating Financial Independence: India's Digital Payment Revolution" />
+<meta name="twitter:description" content="Reflecting on India's incredible journey towards true financial independence through Digital Public Infrastructure." />
+<meta name="twitter:image" content="https://paisape.in/assets/blog/blog_independence_day.jpg" />
 
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +44,34 @@
       if(e.ctrlKey && e.keyCode == 85) { return false; }
     };
   </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Celebrating Financial Independence: India's Digital Payment Revolution",
+  "description": "Reflecting on India's incredible journey towards true financial independence through Digital Public Infrastructure.",
+  "image": ["https://paisape.in/assets/blog/blog_independence_day.jpg"],
+  "datePublished": "15 August 2026",
+  "author": {
+    "@type": "Organization",
+    "name": "Paisape Engineering",
+    "url": "https://paisape.in"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Paisape Techfin Private Limited",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://paisape.in/assets/paisape-logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://paisape.in/blog/independence-day-2026"
+  }
+}
+</script>
 </head>
 <body class="bg-[#F8FCFF] text-body antialiased">
 <div class="fixed top-0 left-0 z-[100] w-full px-4 py-2.5 text-center shadow-md border-b border-black/10" style="background-image: url('/assets/hand_painted_tricolor.jpg'); background-size: cover; background-position: center;">

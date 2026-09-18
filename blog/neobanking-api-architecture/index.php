@@ -14,6 +14,9 @@
 <meta property="og:image" content="https://paisape.in/assets/blog/blog_neobanking.jpg" />
 <meta property="og:url" content="https://paisape.in/blog/neobanking-api-architecture" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Building the Future of Finance: API-Driven Neobanking Architectures" />
+<meta name="twitter:description" content="Explore how modern fintechs and enterprises launch prepaid cards, digital wallets, and virtual accounts using banking APIs." />
+<meta name="twitter:image" content="https://paisape.in/assets/blog/blog_neobanking.jpg" />
 
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +44,34 @@
       if(e.ctrlKey && e.keyCode == 85) { return false; }
     };
   </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Building the Future of Finance: API-Driven Neobanking Architectures",
+  "description": "Explore how modern fintechs and enterprises launch prepaid cards, digital wallets, and virtual accounts using banking APIs.",
+  "image": ["https://paisape.in/assets/blog/blog_neobanking.jpg"],
+  "datePublished": "17 August 2026",
+  "author": {
+    "@type": "Organization",
+    "name": "Paisape Engineering",
+    "url": "https://paisape.in"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Paisape Techfin Private Limited",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://paisape.in/assets/paisape-logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://paisape.in/blog/neobanking-api-architecture"
+  }
+}
+</script>
 </head>
 <body class="bg-[#F8FCFF] text-body antialiased">
 <div class="fixed top-0 left-0 z-[100] w-full px-4 py-2.5 text-center shadow-md border-b border-black/10" style="background-image: url('/assets/hand_painted_tricolor.jpg'); background-size: cover; background-position: center;">

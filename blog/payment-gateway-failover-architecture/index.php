@@ -14,6 +14,9 @@
   <meta property="og:image" content="https://paisape.in/assets/blog/blog_failover_architecture.jpg" />
   <meta property="og:url" content="https://paisape.in/blog/payment-gateway-failover-architecture" />
   <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Payment Gateway Switch Failover Architecture: How Intelligent Routing Achieves 99.99% Uptime" />
+<meta name="twitter:description" content="A complete technical guide to payment gateway failover architecture — sub-second health checks, automated switch rerouting, latency budgets, and 99.99% uptime strategy for Indian fintechs." />
+<meta name="twitter:image" content="https://paisape.in/assets/blog/blog_failover_architecture.jpg" />
 
   <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +44,34 @@
       if(e.ctrlKey && e.keyCode == 85) { return false; }
     };
   </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Payment Gateway Switch Failover Architecture: How Intelligent Routing Achieves 99.99% Uptime",
+  "description": "A complete technical guide to payment gateway failover architecture — sub-second health checks, automated switch rerouting, latency budgets, and 99.99% uptime strategy for Indian fintechs.",
+  "image": ["https://paisape.in/assets/blog/blog_failover_architecture.jpg"],
+  "datePublished": "28 August 2026",
+  "author": {
+    "@type": "Organization",
+    "name": "Paisape Engineering",
+    "url": "https://paisape.in"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Paisape Techfin Private Limited",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://paisape.in/assets/paisape-logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://paisape.in/blog/payment-gateway-failover-architecture"
+  }
+}
+</script>
 </head>
 
 <body class="bg-[#F8FCFF] text-body antialiased">

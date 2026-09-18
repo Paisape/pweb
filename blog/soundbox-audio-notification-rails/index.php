@@ -14,6 +14,9 @@
   <meta property="og:image" content="https://paisape.in/assets/blog/blog_soundbox_rails_handwritten.jpg" />
   <meta property="og:url" content="https://paisape.in/blog/soundbox-audio-notification-rails" />
   <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Soundbox Audio Notification Rails: Cellular SIM Telemetry &amp; Real-Time Broadcast Architecture" />
+<meta name="twitter:description" content="A complete technical engineering guide to Soundbox audio terminals — MQTT telemetry pipelines, LTE-M/NB-IoT SIM data exchange, speaker-only hardware security, and sub-300ms audio alerts." />
+<meta name="twitter:image" content="https://paisape.in/assets/blog/blog_soundbox_rails_handwritten.jpg" />
 
   <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +44,34 @@
       if(e.ctrlKey && e.keyCode == 85) { return false; }
     };
   </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Soundbox Audio Notification Rails: Cellular SIM Telemetry &amp; Real-Time Broadcast Architecture",
+  "description": "A complete technical engineering guide to Soundbox audio terminals — MQTT telemetry pipelines, LTE-M/NB-IoT SIM data exchange, speaker-only hardware security, and sub-300ms audio alerts.",
+  "image": ["https://paisape.in/assets/blog/blog_soundbox_rails_handwritten.jpg"],
+  "datePublished": "06 September 2026",
+  "author": {
+    "@type": "Organization",
+    "name": "Paisape Engineering",
+    "url": "https://paisape.in"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Paisape Techfin Private Limited",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://paisape.in/assets/paisape-logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://paisape.in/blog/soundbox-audio-notification-rails"
+  }
+}
+</script>
 </head>
 
 <body class="bg-[#F8FCFF] text-body antialiased">

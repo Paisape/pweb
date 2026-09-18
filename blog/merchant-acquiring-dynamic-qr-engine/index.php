@@ -14,6 +14,9 @@
   <meta property="og:image" content="https://paisape.in/assets/blog/blog_dynamic_qr_engine_handwritten.jpg" />
   <meta property="og:url" content="https://paisape.in/blog/merchant-acquiring-dynamic-qr-engine" />
   <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Merchant Acquiring &amp; Dynamic QR Code Engine: High-Throughput NPCI Payload Generation" />
+<meta name="twitter:description" content="An engineering guide to dynamic UPI QR code generation — EMVCo specification, Base64 payload encoding, transaction reference binding, instant webhook callback hooks, and acquirer switch integration." />
+<meta name="twitter:image" content="https://paisape.in/assets/blog/blog_dynamic_qr_engine_handwritten.jpg" />
 
   <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +44,34 @@
       if(e.ctrlKey && e.keyCode == 85) { return false; }
     };
   </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Merchant Acquiring &amp; Dynamic QR Code Engine: High-Throughput NPCI Payload Generation",
+  "description": "An engineering guide to dynamic UPI QR code generation — EMVCo specification, Base64 payload encoding, transaction reference binding, instant webhook callback hooks, and acquirer switch integration.",
+  "image": ["https://paisape.in/assets/blog/blog_dynamic_qr_engine_handwritten.jpg"],
+  "datePublished": "08 September 2026",
+  "author": {
+    "@type": "Organization",
+    "name": "Paisape Engineering",
+    "url": "https://paisape.in"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Paisape Techfin Private Limited",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://paisape.in/assets/paisape-logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://paisape.in/blog/merchant-acquiring-dynamic-qr-engine"
+  }
+}
+</script>
 </head>
 
 <body class="bg-[#F8FCFF] text-body antialiased">

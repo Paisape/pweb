@@ -14,6 +14,9 @@
   <meta property="og:image" content="https://paisape.in/assets/blog/blog_credit_line_upi.jpg" />
   <meta property="og:url" content="https://paisape.in/blog/credit-line-on-upi" />
   <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Credit Line on UPI: API Architecture &amp; Integration Guide for Indian Fintechs" />
+<meta name="twitter:description" content="A complete technical and compliance guide to NPCI Credit Line on UPI — pre-approved credit linking, Loan Account Systems (LAA), real-time authorization, MDR rules, and bank switch integration." />
+<meta name="twitter:image" content="https://paisape.in/assets/blog/blog_credit_line_upi.jpg" />
 
   <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +44,34 @@
       if(e.ctrlKey && e.keyCode == 85) { return false; }
     };
   </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Credit Line on UPI: API Architecture &amp; Integration Guide for Indian Fintechs",
+  "description": "A complete technical and compliance guide to NPCI Credit Line on UPI — pre-approved credit linking, Loan Account Systems (LAA), real-time authorization, MDR rules, and bank switch integration.",
+  "image": ["https://paisape.in/assets/blog/blog_credit_line_upi.jpg"],
+  "datePublished": "25 August 2026",
+  "author": {
+    "@type": "Organization",
+    "name": "Paisape Engineering",
+    "url": "https://paisape.in"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Paisape Techfin Private Limited",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://paisape.in/assets/paisape-logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://paisape.in/blog/credit-line-on-upi"
+  }
+}
+</script>
 </head>
 
 <body class="bg-[#F8FCFF] text-body antialiased">

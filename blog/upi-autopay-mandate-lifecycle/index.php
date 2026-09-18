@@ -14,6 +14,9 @@
   <meta property="og:image" content="https://paisape.in/assets/blog/blog_upi_autopay_handwritten.jpg" />
   <meta property="og:url" content="https://paisape.in/blog/upi-autopay-mandate-lifecycle" />
   <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="NPCI UPI AutoPay &amp; Recurring Mandates: VPA Binding, Token Lifecycle &amp; Sub-Second Execution" />
+<meta name="twitter:description" content="A complete technical engineering guide to NPCI UPI AutoPay — mandate creation APIs, VPA tokenization, pre-debit notification rules, recurring scheduler execution, and webhook reconciliation." />
+<meta name="twitter:image" content="https://paisape.in/assets/blog/blog_upi_autopay_handwritten.jpg" />
 
   <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +44,34 @@
       if(e.ctrlKey && e.keyCode == 85) { return false; }
     };
   </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "NPCI UPI AutoPay &amp; Recurring Mandates: VPA Binding, Token Lifecycle &amp; Sub-Second Execution",
+  "description": "A complete technical engineering guide to NPCI UPI AutoPay — mandate creation APIs, VPA tokenization, pre-debit notification rules, recurring scheduler execution, and webhook reconciliation.",
+  "image": ["https://paisape.in/assets/blog/blog_upi_autopay_handwritten.jpg"],
+  "datePublished": "31 August 2026",
+  "author": {
+    "@type": "Organization",
+    "name": "Paisape Engineering",
+    "url": "https://paisape.in"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Paisape Techfin Private Limited",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://paisape.in/assets/paisape-logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://paisape.in/blog/upi-autopay-mandate-lifecycle"
+  }
+}
+</script>
 </head>
 
 <body class="bg-[#F8FCFF] text-body antialiased">
