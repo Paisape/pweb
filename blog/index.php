@@ -168,6 +168,29 @@
 
     <div id="grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
+      <!-- NPCI's Revised UPI MDR Framework (Oct 2026) -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
+        <a href="/blog/upi-mdr-effects" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog_upi_mdr.jpg" alt="UPI Merchant Discount Rate (MDR) Pricing Engine Flow" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">Policy &amp; Architecture</span>
+            <span class="text-body/50">8 min read</span>
+          </div>
+          <a href="/blog/upi-mdr-effects">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">NPCI's Revised UPI MDR Framework (Oct 2026): Technical &amp; Business Impact</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            An engineering and financial breakdown of NPCI's new Merchant Discount Rate (MDR) rules effective 15 October 2026, 0.4% transaction fee tiers, ₹300 caps, 18% GST Input Tax Credit, and payment switch adaptations.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">18 Sep 2026</span>
+            <a href="/blog/upi-mdr-effects" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
       <!-- Merchant Acquiring & Dynamic QR Code Engine -->
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="acquiring" data-reveal data-delay="0">
         <a href="/blog/merchant-acquiring-dynamic-qr-engine" class="block overflow-hidden h-48 bg-slate-100">
