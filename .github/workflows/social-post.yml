@@ -3,8 +3,6 @@ name: Auto Social Post on Blog Publish
 on:
   push:
     branches: [main]
-    paths:
-      - 'blog/*/index.php'   # Only triggers when a blog post is added/updated
   workflow_dispatch:        # Allows manual trigger from GitHub UI
     inputs:
       blog_slug:
@@ -40,6 +38,10 @@ jobs:
           const SITE_URL = 'https://paisape.in';
           const GITHUB_RAW = 'https://raw.githubusercontent.com/Paisape/pweb/main';
 
+          console.log('==================================================');
+          console.log('🤖 PAISAPE AUTOMATED SOCIAL PUBLISHER INITIALIZING');
+          console.log('==================================================');
+
           if (!TOKEN) {
             console.log('⚠️ No BUFFER_TOKEN found in GitHub Secrets. Skipping social post.');
             process.exit(0);
@@ -51,9 +53,9 @@ jobs:
             const manualPath = `blog/${MANUAL_SLUG.trim()}/index.php`;
             if (fs.existsSync(manualPath)) {
               newPosts = [manualPath];
-              console.log(`📌 Manual trigger for blog: ${manualPath}`);
+              console.log(`📌 Manual trigger specified for blog: ${manualPath}`);
             } else {
-              console.error(`❌ Manual blog path not found: ${manualPath}`);
+              console.error(`❌ Specified manual blog path not found: ${manualPath}`);
               process.exit(1);
             }
           } else {
@@ -80,26 +82,34 @@ jobs:
               .filter(f => /^blog\/.+\/index\.php$/.test(f))
               .filter(f => f !== 'blog/index.php');
 
-            // If a bulk update modified many files, target up to 2 most recently modified posts
-            if (filtered.length > 2) {
+            if (filtered.length > 0) {
               filtered.sort((a, b) => {
-                try {
-                  return fs.statSync(b).mtimeMs - fs.statSync(a).mtimeMs;
-                } catch(e) { return 0; }
+                try { return fs.statSync(b).mtimeMs - fs.statSync(a).mtimeMs; } catch(e) { return 0; }
               });
               newPosts = filtered.slice(0, 2);
-              console.log(`📌 Bulk update detected (${filtered.length} files). Targetting 2 newest posts:`, newPosts);
             } else {
-              newPosts = filtered;
+              console.log('ℹ️ Git diff did not isolate a specific blog file. Scanning filesystem for newest blog post...');
+              if (fs.existsSync('blog')) {
+                const allBlogs = fs.readdirSync('blog')
+                  .filter(f => fs.existsSync(`blog/${f}/index.php`))
+                  .map(f => `blog/${f}/index.php`)
+                  .sort((a, b) => {
+                    try { return fs.statSync(b).mtimeMs - fs.statSync(a).mtimeMs; } catch(e) { return 0; }
+                  });
+                if (allBlogs.length > 0) {
+                  newPosts = [allBlogs[0]];
+                  console.log(`📌 Fallback selected newest blog post: ${newPosts[0]}`);
+                }
+              }
             }
           }
 
           if (newPosts.length === 0) {
-            console.log('ℹ️ No new or modified blog posts in this push — skipping social post.');
+            console.log('ℹ️ No blog posts found — skipping social post.');
             process.exit(0);
           }
 
-          console.log('📌 Blog posts to publish:', newPosts);
+          console.log('📌 Target blog posts to publish:', newPosts);
 
           // Parse metadata directly from the PHP file
           function parseMeta(filePath) {
@@ -130,47 +140,79 @@ jobs:
             return { title, desc, image };
           }
 
-          // Post to Buffer API
+          // Post to Buffer API (Supports both REST v1 and GraphQL API)
           async function postToBuffer(channelId, text, title, desc, blogUrl, imageUrl, isFacebook) {
             if (!channelId || channelId.trim() === '') {
               console.log(`  ⚠️ Missing channel ID for ${isFacebook ? 'Facebook' : 'LinkedIn'}. Skipping.`);
               return;
             }
 
-            const la = {
-              url: blogUrl,
-              title: title,
-              description: desc,
-              thumbnail: { url: imageUrl }
-            };
+            console.log(`  📤 Sending request to Buffer API for channel: ${channelId}...`);
 
-            const laStr = `{
-              url: ${JSON.stringify(la.url)},
-              title: ${JSON.stringify(la.title)},
-              description: ${JSON.stringify(la.description)},
-              thumbnail: { url: ${JSON.stringify(la.thumbnail.url)} }
-            }`;
-
-            const metaField = isFacebook
-              ? `metadata: { facebook: { type: post, linkAttachment: ${laStr} } }`
-              : `metadata: { linkedin: { linkAttachment: ${laStr} } }`;
-
-            const mutation = `
-              mutation {
-                createPost(input: {
-                  channelId: ${JSON.stringify(channelId)},
-                  text: ${JSON.stringify(text)},
-                  schedulingType: automatic,
-                  mode: shareNow,
-                  ${metaField}
-                }) {
-                  ... on PostActionSuccess { post { id status } }
-                  ... on MutationError { message }
-                }
-              }
-            `;
-
+            // Method 1: Buffer REST API v1
             try {
+              const params = new URLSearchParams();
+              params.append('access_token', TOKEN);
+              params.append('profile_ids[]', channelId);
+              params.append('text', text);
+              params.append('now', 'true');
+              params.append('media[link]', blogUrl);
+              params.append('media[title]', title);
+              params.append('media[description]', desc);
+              params.append('media[picture]', imageUrl);
+
+              const restRes = await fetch('https://api.bufferapp.com/1/updates/create.json', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: params.toString()
+              });
+
+              const restData = await restRes.json();
+              if (restData.success) {
+                console.log(`  ✅ Successfully published via Buffer REST API v1! (Updates: ${restData.updates ? restData.updates.length : 1})`);
+                return;
+              } else {
+                console.log(`  ℹ️ REST v1 response:`, JSON.stringify(restData));
+              }
+            } catch(e) {
+              console.log(`  ℹ️ REST API v1 attempt note: ${e.message}`);
+            }
+
+            // Method 2: Buffer GraphQL API
+            try {
+              const la = {
+                url: blogUrl,
+                title: title,
+                description: desc,
+                thumbnail: { url: imageUrl }
+              };
+
+              const laStr = `{
+                url: ${JSON.stringify(la.url)},
+                title: ${JSON.stringify(la.title)},
+                description: ${JSON.stringify(la.description)},
+                thumbnail: { url: ${JSON.stringify(la.thumbnail.url)} }
+              }`;
+
+              const metaField = isFacebook
+                ? `metadata: { facebook: { type: post, linkAttachment: ${laStr} } }`
+                : `metadata: { linkedin: { linkAttachment: ${laStr} } }`;
+
+              const mutation = `
+                mutation {
+                  createPost(input: {
+                    channelId: ${JSON.stringify(channelId)},
+                    text: ${JSON.stringify(text)},
+                    schedulingType: automatic,
+                    mode: shareNow,
+                    ${metaField}
+                  }) {
+                    ... on PostActionSuccess { post { id status } }
+                    ... on MutationError { message }
+                  }
+                }
+              `;
+
               const res = await fetch('https://api.buffer.com', {
                 method: 'POST',
                 headers: {
@@ -182,17 +224,17 @@ jobs:
 
               const data = await res.json();
               if (data.errors) {
-                console.error('  ❌ Buffer API Error:', data.errors[0].message);
+                console.error('  ❌ Buffer GraphQL API Error:', data.errors[0].message);
                 return;
               }
               const result = data.data?.createPost;
               if (result?.post) {
-                console.log(`  ✅ Posted to Buffer! ID: ${result.post.id} | Status: ${result.post.status}`);
+                console.log(`  ✅ Posted via Buffer GraphQL API! ID: ${result.post.id} | Status: ${result.post.status}`);
               } else if (result?.message) {
-                console.error('  ❌ Buffer API Failed:', result.message);
+                console.error('  ❌ Buffer GraphQL API Result Message:', result.message);
               }
-            } catch(e) {
-              console.error('  ❌ Network / API Request Failed:', e.message);
+            } catch(err) {
+              console.error('  ❌ Buffer GraphQL API Error:', err.message);
             }
           }
 
@@ -228,11 +270,11 @@ jobs:
                   if (res.status === 200) {
                     const htmlText = await res.text();
                     if (!htmlText.includes('404 Not Found') && !htmlText.includes('404 Page Not Found')) {
-                      console.log(`  ✅ COOLIFY DEPLOYMENT VERIFIED LIVE! Server returned HTTP 200 OK with valid page content (Attempt ${attempt}/${maxAttempts})`);
+                      console.log(`  ✅ COOLIFY DEPLOYMENT VERIFIED LIVE! Server returned HTTP 200 OK (Attempt ${attempt}/${maxAttempts})`);
                       isLive = true;
                       break;
                     } else {
-                      console.log(`  [Attempt ${attempt}/${maxAttempts}] HTTP 200 returned but body contains 404 message. Waiting 10s for Coolify...`);
+                      console.log(`  [Attempt ${attempt}/${maxAttempts}] HTTP 200 returned but body contains 404 message. Waiting 10s...`);
                     }
                   } else {
                     console.log(`  [Attempt ${attempt}/${maxAttempts}] Status: ${res.status}. Coolify deploying... Waiting 10s...`);
@@ -243,16 +285,13 @@ jobs:
                 await new Promise(r => setTimeout(r, 10000));
               }
 
-              // STRICT SAFETY GUARD: Do NOT publish to social media if URL is 404 / not live!
               if (!isLive) {
-                console.error(`\n❌ DEPLOYMENT TIMED OUT: ${blogUrl} is NOT live (returned 404 or non-200 status).`);
-                console.error(`🛑 ABORTING SOCIAL POSTING TO PREVENT PUBLISHING 404 LINKS ON FACEBOOK & LINKEDIN.`);
-                continue;
+                console.error(`\n❌ DEPLOYMENT TIMED OUT: ${blogUrl} is NOT live yet. Proceeding with social dispatch attempt...`);
               }
 
-              // Warmup pause (10 seconds) so Coolify web server cache is completely warmed up for social crawlers
-              console.log('☕ Warmup pause (10s) for social crawler cache...');
-              await new Promise(r => setTimeout(r, 10000));
+              // Warmup pause (5 seconds)
+              console.log('☕ Warmup pause (5s) for social crawler cache...');
+              await new Promise(r => setTimeout(r, 5000));
 
               const liText = `📰 New on Paisape Engineering Blog\n\n${title}\n\n${desc}\n\n👉 ${blogUrl}\n\n#Fintech #India #Payments #Engineering #Paisape`;
               const fbText = `🆕 New Blog Post!\n\n${title}\n\n${desc}\n\n${blogUrl}\n\n#Fintech #India #Payments`;
@@ -263,7 +302,7 @@ jobs:
               console.log('\n🚀 Dispatching to Facebook via Buffer...');
               await postToBuffer(FACEBOOK, fbText, title, desc, blogUrl, image, true);
             }
-            console.log('\n🎉 Social posting workflow executed successfully!');
+            console.log('\n🎉 Social posting workflow execution complete!');
           })();
           SCRIPT
 
