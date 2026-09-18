@@ -6,7 +6,8 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>NPCI's Revised UPI MDR Framework (Oct 2026): Technical & Business Impact — Paisape Blog</title>
+<title>NPCI's Revised UPI MDR Framework (Oct 2026): Technical &amp; Business Impact — Paisape Blog</title>
+<!-- Last Updated: 18 September 2026 12:54 PM IST -->
 <meta name="description" content="A deep dive into NPCI's revised Merchant Discount Rate (MDR) rules for UPI transactions above Rs 2,000, 0.4% tier caps, essential service rates, 18% GST Input Tax Credit, and engineering adjustments for payment switches." />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="NPCI's Revised UPI MDR Framework (Oct 2026): Technical & Business Impact" />

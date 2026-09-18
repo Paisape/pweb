@@ -8,9 +8,9 @@ on:
   workflow_dispatch:        # Allows manual trigger from GitHub UI
     inputs:
       blog_slug:
-        description: 'Blog slug to post manually (e.g. what-is-mid-and-tid)'
+        description: 'Blog slug to post manually (e.g. upi-mdr-effects)'
         required: false
-        default: ''
+        default: 'upi-mdr-effects'
 
 jobs:
   social-post:
@@ -31,6 +31,7 @@ jobs:
           cat << 'SCRIPT' > /tmp/social_post.js
           const { execSync } = require('child_process');
           const fs = require('fs');
+          const path = require('path');
 
           const TOKEN    = process.env.BUFFER_TOKEN;
           const LINKEDIN = process.env.BUFFER_LINKEDIN_ID;
@@ -74,10 +75,23 @@ jobs:
               }
             }
 
-            newPosts = diff.split('\n')
+            let filtered = diff.split('\n')
               .map(f => f.trim())
               .filter(f => /^blog\/.+\/index\.php$/.test(f))
               .filter(f => f !== 'blog/index.php');
+
+            // If a bulk update modified many files, target up to 2 most recently modified posts
+            if (filtered.length > 2) {
+              filtered.sort((a, b) => {
+                try {
+                  return fs.statSync(b).mtimeMs - fs.statSync(a).mtimeMs;
+                } catch(e) { return 0; }
+              });
+              newPosts = filtered.slice(0, 2);
+              console.log(`📌 Bulk update detected (${filtered.length} files). Targetting 2 newest posts:`, newPosts);
+            } else {
+              newPosts = filtered;
+            }
           }
 
           if (newPosts.length === 0) {
@@ -118,6 +132,11 @@ jobs:
 
           // Post to Buffer API
           async function postToBuffer(channelId, text, title, desc, blogUrl, imageUrl, isFacebook) {
+            if (!channelId || channelId.trim() === '') {
+              console.log(`  ⚠️ Missing channel ID for ${isFacebook ? 'Facebook' : 'LinkedIn'}. Skipping.`);
+              return;
+            }
+
             const la = {
               url: blogUrl,
               title: title,
@@ -151,25 +170,29 @@ jobs:
               }
             `;
 
-            const res = await fetch('https://api.buffer.com', {
-              method: 'POST',
-              headers: {
-                'Authorization': 'Bearer ' + TOKEN,
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({ query: mutation })
-            });
+            try {
+              const res = await fetch('https://api.buffer.com', {
+                method: 'POST',
+                headers: {
+                  'Authorization': 'Bearer ' + TOKEN,
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ query: mutation })
+              });
 
-            const data = await res.json();
-            if (data.errors) {
-              console.error('  ❌ Buffer API Error:', data.errors[0].message);
-              return;
-            }
-            const result = data.data?.createPost;
-            if (result?.post) {
-              console.log(`  ✅ Posted to Buffer! ID: ${result.post.id} | Status: ${result.post.status}`);
-            } else if (result?.message) {
-              console.error('  ❌ Buffer API Failed:', result.message);
+              const data = await res.json();
+              if (data.errors) {
+                console.error('  ❌ Buffer API Error:', data.errors[0].message);
+                return;
+              }
+              const result = data.data?.createPost;
+              if (result?.post) {
+                console.log(`  ✅ Posted to Buffer! ID: ${result.post.id} | Status: ${result.post.status}`);
+              } else if (result?.message) {
+                console.error('  ❌ Buffer API Failed:', result.message);
+              }
+            } catch(e) {
+              console.error('  ❌ Network / API Request Failed:', e.message);
             }
           }
 
@@ -191,7 +214,7 @@ jobs:
               // Poll web server until HTTP 200 OK and non-404 body content is confirmed
               console.log(`⏳ Verifying Coolify web server deployment of ${blogUrl}...`);
               let isLive = false;
-              const maxAttempts = 45; // 45 attempts * 10s = 7.5 minutes max polling window
+              const maxAttempts = 30; // 30 attempts * 10s = 5 minutes max polling window
 
               for (let attempt = 1; attempt <= maxAttempts; attempt++) {
                 try {
@@ -224,12 +247,12 @@ jobs:
               if (!isLive) {
                 console.error(`\n❌ DEPLOYMENT TIMED OUT: ${blogUrl} is NOT live (returned 404 or non-200 status).`);
                 console.error(`🛑 ABORTING SOCIAL POSTING TO PREVENT PUBLISHING 404 LINKS ON FACEBOOK & LINKEDIN.`);
-                process.exit(1);
+                continue;
               }
 
-              // Warmup pause (15 seconds) so Coolify web server cache is completely warmed up for social crawlers
-              console.log('☕ Warmup pause (15s) for social crawler cache...');
-              await new Promise(r => setTimeout(r, 15000));
+              // Warmup pause (10 seconds) so Coolify web server cache is completely warmed up for social crawlers
+              console.log('☕ Warmup pause (10s) for social crawler cache...');
+              await new Promise(r => setTimeout(r, 10000));
 
               const liText = `📰 New on Paisape Engineering Blog\n\n${title}\n\n${desc}\n\n👉 ${blogUrl}\n\n#Fintech #India #Payments #Engineering #Paisape`;
               const fbText = `🆕 New Blog Post!\n\n${title}\n\n${desc}\n\n${blogUrl}\n\n#Fintech #India #Payments`;
