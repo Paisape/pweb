@@ -188,6 +188,26 @@ async function postToBuffer(channelId, text, title, desc, blogUrl, imageUrl, isF
   }
 }
 
+// Coolify Deployment Wait Helper
+async function waitForDeployment(url, maxAttempts = 18, delayMs = 10000) {
+  console.log(`⏳ Waiting for Coolify deployment to complete live at: ${url}...`);
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      const response = await fetch(url, { method: 'GET', headers: { 'User-Agent': 'Paisape-Deploy-Checker/1.0' } });
+      if (response.status === 200) {
+        console.log(`✅ Live site verified! ${url} returned 200 OK (Attempt ${attempt}/${maxAttempts}).`);
+        return true;
+      }
+      console.log(`  ⏳ Attempt ${attempt}/${maxAttempts}: Status ${response.status}. Waiting ${delayMs / 1000}s for Coolify build...`);
+    } catch (err) {
+      console.log(`  ⏳ Attempt ${attempt}/${maxAttempts}: Connection pending (${err.message}). Waiting ${delayMs / 1000}s...`);
+    }
+    await new Promise(res => setTimeout(res, delayMs));
+  }
+  console.warn(`⚠️ Warning: Live URL ${url} did not return 200 OK after ${maxAttempts * (delayMs / 1000)}s. Proceeding with dispatch.`);
+  return false;
+}
+
 // Main Execution
 (async () => {
   const blogUrl = `${SITE_URL}/blog/${targetSlug}`;
@@ -200,6 +220,9 @@ async function postToBuffer(channelId, text, title, desc, blogUrl, imageUrl, isF
   console.log(`   Image : ${image}`);
   console.log(`   URL   : ${blogUrl}`);
   console.log(`==================================================\n`);
+
+  // Wait for Coolify deployment to finish live before sending to Buffer
+  await waitForDeployment(blogUrl);
 
   const liText = `📰 New on Paisape Engineering Blog\n\n${title}\n\n${desc}\n\n👉 ${blogUrl}\n\n#Fintech #India #Payments #Engineering #Paisape`;
   const fbText = `🆕 New Blog Post!\n\n${title}\n\n${desc}\n\n${blogUrl}\n\n#Fintech #India #Payments`;
