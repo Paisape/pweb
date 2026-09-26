@@ -38,18 +38,54 @@ if (targetSlug && targetSlug.trim() !== '') {
 
 if (!targetFilePath) {
   console.log('ℹ️ Searching repository for the newest blog post...');
-  const blogDir = path.join(rootDir, 'blog');
-  if (fs.existsSync(blogDir)) {
-    const allBlogs = fs.readdirSync(blogDir)
-      .filter(f => fs.existsSync(path.join(blogDir, f, 'index.php')))
-      .map(f => path.join(blogDir, f, 'index.php'))
-      .sort((a, b) => {
-        try { return fs.statSync(b).mtimeMs - fs.statSync(a).mtimeMs; } catch(e) { return 0; }
-      });
+  
+  // 1. Check master registry in includes/blogs_data.php
+  const blogsDataPath = path.join(rootDir, 'includes', 'blogs_data.php');
+  if (fs.existsSync(blogsDataPath)) {
+    const content = fs.readFileSync(blogsDataPath, 'utf8');
+    const match = content.match(/'slug'\s*=>\s*'([^']+)'/);
+    if (match && match[1]) {
+      const candidate = path.join(rootDir, 'blog', match[1], 'index.php');
+      if (fs.existsSync(candidate)) {
+        targetSlug = match[1];
+        targetFilePath = candidate;
+        console.log(`📌 Found newest blog from includes/blogs_data.php: ${targetSlug}`);
+      }
+    }
+  }
 
-    if (allBlogs.length > 0) {
-      targetFilePath = allBlogs[0];
-      targetSlug = path.basename(path.dirname(targetFilePath));
+  // 2. Check top featured card in blog/index.php
+  if (!targetFilePath) {
+    const blogIndexPath = path.join(rootDir, 'blog', 'index.php');
+    if (fs.existsSync(blogIndexPath)) {
+      const content = fs.readFileSync(blogIndexPath, 'utf8');
+      const match = content.match(/href="\/blog\/([a-z0-9\-]+)"/i);
+      if (match && match[1]) {
+        const candidate = path.join(rootDir, 'blog', match[1], 'index.php');
+        if (fs.existsSync(candidate)) {
+          targetSlug = match[1];
+          targetFilePath = candidate;
+          console.log(`📌 Found newest blog from blog/index.php: ${targetSlug}`);
+        }
+      }
+    }
+  }
+
+  // 3. Fallback: Directory search
+  if (!targetFilePath) {
+    const blogDir = path.join(rootDir, 'blog');
+    if (fs.existsSync(blogDir)) {
+      const allBlogs = fs.readdirSync(blogDir)
+        .filter(f => fs.existsSync(path.join(blogDir, f, 'index.php')))
+        .map(f => path.join(blogDir, f, 'index.php'))
+        .sort((a, b) => {
+          try { return fs.statSync(b).mtimeMs - fs.statSync(a).mtimeMs; } catch(e) { return 0; }
+        });
+
+      if (allBlogs.length > 0) {
+        targetFilePath = allBlogs[0];
+        targetSlug = path.basename(path.dirname(targetFilePath));
+      }
     }
   }
 }

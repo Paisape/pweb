@@ -8,9 +8,9 @@ on:
   workflow_dispatch:       # Allows manual trigger from GitHub UI
     inputs:
       blog_slug:
-        description: 'Blog slug to post manually (e.g. upi-mdr-effects)'
+        description: 'Blog slug to post manually (leave empty for auto-detect newest)'
         required: false
-        default: 'upi-mdr-effects'
+        default: ''
 
 jobs:
   social-post:
