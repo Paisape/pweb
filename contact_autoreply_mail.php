@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $auto_reply_message = '
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +30,7 @@ $auto_reply_message = '
                 </div>
                 
                 <p style="color: #4a5568; line-height: 1.8; font-size: 16px; margin-bottom: 30px;">
-                    If you have any urgent queries in the meantime, feel free to reply directly to this email or reach out to our support team at <a href="mailto:support@paisape.in" style="color: #3b82f6; text-decoration: none;">support@paisape.in</a>.
+                    If you have any urgent queries in the meantime, feel free to reply directly to this email or reach out to our support team at <a href="mailto:info@paisape.in" style="color: #3b82f6; text-decoration: none;">info@paisape.in</a>.
                 </p>
                 
                 <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 30px 0;">

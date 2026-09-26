@@ -83,7 +83,7 @@
       <p>If a customer files a chargeback with their issuing bank claiming fraud or non-delivery of goods, the refund is subject to the chargeback resolution process as per Visa/Mastercard/NPCI guidelines. The merchant must provide valid proof of delivery to contest the chargeback.</p>
 
       <h2 class="text-xl font-bold text-ink">5. Support</h2>
-      <p>Customers facing delays in refunds for failed transactions should first contact the respective merchant. If the merchant confirms the refund was processed by Paisape, customers can reach out to our support team with the Transaction ID at <a href="mailto:support@paisape.in" class="text-brand hover:underline">support@paisape.in</a>.</p>
+      <p>Customers facing delays in refunds for failed transactions should first contact the respective merchant. If the merchant confirms the refund was processed by Paisape, customers can reach out to our support team with the Transaction ID at <a href="mailto:info@paisape.in" class="text-brand hover:underline">info@paisape.in</a>.</p>
     </div>
   </section>
 </main>

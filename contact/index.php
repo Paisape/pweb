@@ -91,7 +91,7 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
       </div>
       <h2 class="font-display text-[15px] font-bold text-ink">Talk to Sales</h2>
       <p class="mt-2 text-[13px] leading-relaxed text-body">Pricing, routing design and go-live plans for new volume.</p>
-      <span class="mt-5 inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">sales@paisape.in <span class="arrow">&rarr;</span></span>
+      <span class="mt-5 inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">rs@paisape.in <span class="arrow">&rarr;</span></span>
     </a>
     <a href="#form" data-reveal data-delay="80" class="card-lift rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
       <div class="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brandLt text-brand">
@@ -99,7 +99,7 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
       </div>
       <h2 class="font-display text-[15px] font-bold text-ink">Merchant Support</h2>
       <p class="mt-2 text-[13px] leading-relaxed text-body">Live transactions, settlements and reconciliation queries.</p>
-      <span class="mt-5 inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">support@paisape.in <span class="arrow">&rarr;</span></span>
+      <span class="mt-5 inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">info@paisape.in <span class="arrow">&rarr;</span></span>
     </a>
     <a href="#form" data-reveal data-delay="160" class="card-lift rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
       <div class="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brandLt text-brand">
@@ -107,7 +107,7 @@ $msgID = isset($_GET['msg']) ? $_GET['msg'] : '';
       </div>
       <h2 class="font-display text-[15px] font-bold text-ink">Partnerships</h2>
       <p class="mt-2 text-[13px] leading-relaxed text-body">Banks, NBFCs, aggregators and platform integrations.</p>
-      <span class="mt-5 inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">partners@paisape.in <span class="arrow">&rarr;</span></span>
+      <span class="mt-5 inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">rs@paisape.in <span class="arrow">&rarr;</span></span>
     </a>
   </div>
 </section>

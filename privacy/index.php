@@ -98,7 +98,7 @@
       <p>Subject to applicable Indian laws and RBI data retention mandates, you have the right to access, correct, or request the deletion of your personal data. Please note that financial transaction records must be retained for a minimum of 10 years as per AML laws.</p>
 
       <h2 class="text-xl font-bold text-ink">6. Contact Us</h2>
-      <p>For any privacy-related concerns or to contact our Grievance Officer, please email us at <a href="mailto:support@paisape.in" class="text-brand hover:underline">support@paisape.in</a>.</p>
+      <p>For any privacy-related concerns or to contact our Grievance Officer, please email us at <a href="mailto:info@paisape.in" class="text-brand hover:underline">info@paisape.in</a>.</p>
     </div>
   </section>
 </main>
