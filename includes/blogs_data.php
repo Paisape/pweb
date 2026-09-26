@@ -6,6 +6,50 @@
 function get_all_blogs() {
     $static_blogs = [
         [
+            'slug' => 'real-time-payment-fraud-prevention-engine',
+            'url' => '/blog/real-time-payment-fraud-prevention-engine',
+            'title' => 'Real-Time Payment Fraud Prevention: Velocity Rules, Mule Account Detection & Sub-50ms Risk Engines',
+            'image' => '/assets/blog/blog_fraud_prevention_handwritten.jpg',
+            'category' => 'Engineering • Security & Risk',
+            'read_time' => '12 min read',
+            'date' => '26 Sep 2026',
+            'timestamp' => strtotime('2026-09-26 15:56:00'),
+            'description' => 'A technical architecture guide to building sub-50ms payment fraud prevention systems — Kafka event streams, Redis velocity evaluation, XGBoost ML risk models, and automated mule account freeze hooks.'
+        ],
+        [
+            'slug' => 'uidai-face-auth-facerd-liveness',
+            'url' => '/blog/uidai-face-auth-facerd-liveness',
+            'title' => 'UIDAI Face Authentication (FaceRD) & Passive 3D AI Liveness Detection in Digital Onboarding',
+            'image' => '/assets/blog/blog_facerd_liveness_handwritten.jpg',
+            'category' => 'Compliance • Identity & KYC',
+            'read_time' => '10 min read',
+            'date' => '26 Sep 2026',
+            'timestamp' => strtotime('2026-09-26 15:54:00'),
+            'description' => "An engineering guide to UIDAI's FaceRD biometric SDK — incorporating passive 3D liveness detection AI, preventing presentation attacks, signed auth token verification, and Aadhaar Act compliance."
+        ],
+        [
+            'slug' => 'rupay-credit-card-on-upi',
+            'url' => '/blog/rupay-credit-card-on-upi',
+            'title' => 'RuPay Credit Card on UPI: Issuer Switch Rails, Interchange Fee Mechanics & ISO 8583 Authorization',
+            'image' => '/assets/blog/blog_rupay_cc_upi_handwritten.jpg',
+            'category' => 'UPI • Credit Cards',
+            'read_time' => '11 min read',
+            'date' => '26 Sep 2026',
+            'timestamp' => strtotime('2026-09-26 15:52:00'),
+            'description' => 'A deep technical breakdown of RuPay Credit Cards linked to UPI — translating XML/JSON payment payloads into ISO 8583 credit issuer switch messages, interchange revenue distribution, and merchant MDR rules.'
+        ],
+        [
+            'slug' => 'upi-circle-delegated-payments',
+            'url' => '/blog/upi-circle-delegated-payments',
+            'title' => 'NPCI UPI Circle: Delegated Payments API Architecture, Permission Mechanics & Spent Limit Enforcement',
+            'image' => '/assets/blog/blog_upi_circle_handwritten.jpg',
+            'category' => 'UPI • Delegated Payments',
+            'read_time' => '10 min read',
+            'date' => '26 Sep 2026',
+            'timestamp' => strtotime('2026-09-26 15:50:00'),
+            'description' => "An engineering guide to NPCI's UPI Circle framework — linking primary VPAs with secondary delegates, managing full vs. partial delegation modes, enforcing real-time velocity limits, and handling instant revocation hooks."
+        ],
+        [
             'slug' => 'upi-mdr-effects',
             'url' => '/blog/upi-mdr-effects',
             'title' => "NPCI's Revised UPI MDR Framework (Oct 2026): Technical & Business Impact",

@@ -361,8 +361,26 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paisape.in/blog/zero-downtime-payment-switch</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://paisape.in/blog/upi-circle-delegated-payments</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paisape.in/blog/rupay-credit-card-on-upi</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paisape.in/blog/uidai-face-auth-facerd-liveness</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paisape.in/blog/real-time-payment-fraud-prevention-engine</loc>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

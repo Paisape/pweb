@@ -168,6 +168,98 @@
 
     <div id="grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
+      <!-- Real-Time Payment Fraud Prevention Engine -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
+        <a href="/blog/real-time-payment-fraud-prevention-engine" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_fraud_prevention_handwritten.jpg" alt="Real-Time Payment Fraud Prevention Engine Sub-50ms" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">Engineering &bull; Risk</span>
+            <span class="text-body/50">12 min read</span>
+          </div>
+          <a href="/blog/real-time-payment-fraud-prevention-engine">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Real-Time Payment Fraud Prevention: Velocity Rules, Mule Account Detection &amp; Sub-50ms Risk Engines</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            A technical architecture guide to building sub-50ms payment fraud prevention systems — Kafka event streams, Redis velocity evaluation, XGBoost ML risk models, and automated mule account freeze hooks.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">26 Sep 2026</span>
+            <a href="/blog/real-time-payment-fraud-prevention-engine" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- UIDAI Face Authentication (FaceRD) -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
+        <a href="/blog/uidai-face-auth-facerd-liveness" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_facerd_liveness_handwritten.jpg" alt="UIDAI Face Auth (FaceRD) & Passive 3D AI Liveness Detection" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">Compliance &bull; Identity</span>
+            <span class="text-body/50">10 min read</span>
+          </div>
+          <a href="/blog/uidai-face-auth-facerd-liveness">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">UIDAI Face Authentication (FaceRD) &amp; Passive 3D AI Liveness Detection in Digital Onboarding</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            An engineering guide to UIDAI's FaceRD biometric SDK — incorporating passive 3D liveness detection AI, preventing presentation attacks, signed auth token verification, and Aadhaar Act compliance.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">26 Sep 2026</span>
+            <a href="/blog/uidai-face-auth-facerd-liveness" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- RuPay Credit Card on UPI -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="upi" data-reveal data-delay="0">
+        <a href="/blog/rupay-credit-card-on-upi" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_rupay_cc_upi_handwritten.jpg" alt="RuPay Credit Card on UPI Issuer Switch Rails" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">UPI &bull; Credit Cards</span>
+            <span class="text-body/50">11 min read</span>
+          </div>
+          <a href="/blog/rupay-credit-card-on-upi">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">RuPay Credit Card on UPI: Issuer Switch Rails, Interchange Fee Mechanics &amp; ISO 8583 Authorization</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            A deep technical breakdown of RuPay Credit Cards linked to UPI — translating XML/JSON payment payloads into ISO 8583 credit issuer switch messages, interchange revenue distribution, and merchant MDR rules.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">26 Sep 2026</span>
+            <a href="/blog/rupay-credit-card-on-upi" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- NPCI UPI Circle Delegated Payments -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="upi" data-reveal data-delay="0">
+        <a href="/blog/upi-circle-delegated-payments" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_upi_circle_handwritten.jpg" alt="NPCI UPI Circle Delegated Payment Architecture" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">UPI &bull; Delegated</span>
+            <span class="text-body/50">10 min read</span>
+          </div>
+          <a href="/blog/upi-circle-delegated-payments">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">NPCI UPI Circle: Delegated Payments API Architecture, Permission Mechanics &amp; Spent Limit Enforcement</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            An engineering guide to NPCI's UPI Circle framework — linking primary VPAs with secondary delegates, managing full vs. partial delegation modes, enforcing real-time velocity limits, and handling instant revocation hooks.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">26 Sep 2026</span>
+            <a href="/blog/upi-circle-delegated-payments" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
       <!-- NPCI's Revised UPI MDR Framework (Oct 2026) -->
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
         <a href="/blog/upi-mdr-effects" class="block overflow-hidden h-48 bg-slate-100">
