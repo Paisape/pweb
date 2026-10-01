@@ -168,6 +168,75 @@
 
     <div id="grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
+      <!-- Programmable e-RUPI Vouchers & Digital Rupee (CBDC) -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
+        <a href="/blog/programmable-erupi-cbdc-interoperability" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_erupi_cbdc_interop_handwritten.jpg" alt="Programmable e-RUPI Vouchers & Digital Rupee (CBDC) Switch Architecture" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">CBDC &bull; Programmable</span>
+            <span class="text-body/50">12 min read</span>
+          </div>
+          <a href="/blog/programmable-erupi-cbdc-interoperability">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Programmable e-RUPI Vouchers &amp; Digital Rupee (CBDC) Interoperability</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            A complete technical engineering guide to programmable e-RUPI digital vouchers and RBI's Retail CBDC (Digital Rupee) — offline QR tokenization, merchant redemption switches, and core banking ledger reconciliation.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">01 Oct 2026</span>
+            <a href="/blog/programmable-erupi-cbdc-interoperability" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PA-CB (Payment Aggregator Cross-Border) -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
+        <a href="/blog/pa-cb-cross-border-payment-aggregator" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_pacb_cross_border_handwritten.jpg" alt="PA-CB Cross-Border Payment Aggregator API Switch Architecture" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">Cross-Border &bull; Forex</span>
+            <span class="text-body/50">10 min read</span>
+          </div>
+          <a href="/blog/pa-cb-cross-border-payment-aggregator">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">PA-CB (Payment Aggregator Cross-Border): Inward &amp; Outward API Switch Architecture</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            An engineering deep-dive into RBI's PA-CB regulatory framework — managing Authorised Dealer Category-1 bank escrow accounts, LRS reporting, real-time FX rate locks, and domestic merchant settlement.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">30 Sep 2026</span>
+            <a href="/blog/pa-cb-cross-border-payment-aggregator" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- RBI Unified Lending Interface (ULI) -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
+        <a href="/blog/rbi-uli-credit-origination-architecture" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_rbi_uli_handwritten.jpg" alt="RBI Unified Lending Interface (ULI) API Switch Architecture" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">Lending &bull; API Switch</span>
+            <span class="text-body/50">11 min read</span>
+          </div>
+          <a href="/blog/rbi-uli-credit-origination-architecture">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">RBI Unified Lending Interface (ULI): API Mechanics &amp; Instant Credit Origination</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            An engineering guide to RBI's Unified Lending Interface (ULI) switch — consent artefact validation, multi-FIP data orchestration (GSTN, land records, credit bureaus), and sub-5 minute loan disbursal switches.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">28 Sep 2026</span>
+            <a href="/blog/rbi-uli-credit-origination-architecture" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
       <!-- Real-Time Payment Fraud Prevention Engine -->
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
         <a href="/blog/real-time-payment-fraud-prevention-engine" class="block overflow-hidden h-48 bg-slate-100">

@@ -379,8 +379,20 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paisape.in/blog/real-time-payment-fraud-prevention-engine</loc>
-    <lastmod>2026-09-26</lastmod>
+    <loc>https://paisape.in/blog/rbi-uli-credit-origination-architecture</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paisape.in/blog/pa-cb-cross-border-payment-aggregator</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paisape.in/blog/programmable-erupi-cbdc-interoperability</loc>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

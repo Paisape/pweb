@@ -6,6 +6,39 @@
 function get_all_blogs() {
     $static_blogs = [
         [
+            'slug' => 'programmable-erupi-cbdc-interoperability',
+            'url' => '/blog/programmable-erupi-cbdc-interoperability',
+            'title' => 'Programmable e-RUPI Vouchers & Digital Rupee (CBDC) Interoperability: Switch Architecture & Merchant POS Integration',
+            'image' => '/assets/blog/blog_erupi_cbdc_interop_handwritten.jpg',
+            'category' => 'CBDC • Programmable Money',
+            'read_time' => '12 min read',
+            'date' => '01 Oct 2026',
+            'timestamp' => strtotime('2026-10-01 11:30:00'),
+            'description' => "A complete technical engineering guide to programmable e-RUPI digital vouchers and RBI's Retail CBDC (Digital Rupee) — offline QR tokenization, merchant redemption switches, corporate welfare disbursals, and core banking ledger reconciliation."
+        ],
+        [
+            'slug' => 'pa-cb-cross-border-payment-aggregator',
+            'url' => '/blog/pa-cb-cross-border-payment-aggregator',
+            'title' => 'PA-CB (Payment Aggregator Cross-Border): Inward & Outward API Switch Architecture',
+            'image' => '/assets/blog/blog_pacb_cross_border_handwritten.jpg',
+            'category' => 'Cross-Border • Forex',
+            'read_time' => '10 min read',
+            'date' => '30 Sep 2026',
+            'timestamp' => strtotime('2026-09-30 11:30:00'),
+            'description' => "An engineering deep-dive into RBI's PA-CB regulatory framework — managing Authorised Dealer Category-1 bank escrow accounts, Liberalised Remittance Scheme (LRS) reporting, real-time FX rate locks, and domestic merchant settlement."
+        ],
+        [
+            'slug' => 'rbi-uli-credit-origination-architecture',
+            'url' => '/blog/rbi-uli-credit-origination-architecture',
+            'title' => 'RBI Unified Lending Interface (ULI): API Mechanics, Consent Architecture & Instant Credit Origination',
+            'image' => '/assets/blog/blog_rbi_uli_handwritten.jpg',
+            'category' => 'Lending • API Switch',
+            'read_time' => '11 min read',
+            'date' => '28 Sep 2026',
+            'timestamp' => strtotime('2026-09-28 11:30:00'),
+            'description' => "An engineering guide to RBI's Unified Lending Interface (ULI) switch — consent artefact validation, multi-FIP data orchestration (GSTN, land records, credit bureaus), and sub-5 minute loan disbursal switches."
+        ],
+        [
             'slug' => 'real-time-payment-fraud-prevention-engine',
             'url' => '/blog/real-time-payment-fraud-prevention-engine',
             'title' => 'Real-Time Payment Fraud Prevention: Velocity Rules, Mule Account Detection & Sub-50ms Risk Engines',
