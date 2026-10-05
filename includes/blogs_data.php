@@ -6,6 +6,28 @@
 function get_all_blogs() {
     $static_blogs = [
         [
+            'slug' => 'pci-dss-v4-vault-tokenization-architecture',
+            'url' => '/blog/pci-dss-v4-vault-tokenization-architecture',
+            'title' => 'PCI-DSS v4.0.1 Compliance & Vault Tokenization Architecture for Indian Payment Switches',
+            'image' => '/assets/blog/blog_pci_dss_v4_tokenization_handwritten.jpg',
+            'category' => 'Engineering • Security',
+            'read_time' => '12 min read',
+            'date' => '05 Oct 2026',
+            'timestamp' => strtotime('2026-10-05 11:30:00'),
+            'description' => "A complete technical guide to PCI-DSS v4.0.1 compliance in Indian payment switches — secure card vault tokenization, HSM key management, network micro-segmentation, and zero-trust payload encryption."
+        ],
+        [
+            'slug' => 'rbi-digital-payment-security-controls-2026',
+            'url' => '/blog/rbi-digital-payment-security-controls-2026',
+            'title' => 'RBI Digital Payment Security Controls (DPSC 2026): Switch Security, API Authentication & Audit Controls',
+            'image' => '/assets/blog/blog_rbi_dpsc_2026_handwritten.jpg',
+            'category' => 'Security • RBI Compliance',
+            'read_time' => '11 min read',
+            'date' => '03 Oct 2026',
+            'timestamp' => strtotime('2026-10-03 11:30:00'),
+            'description' => "An engineering breakdown of RBI's updated Digital Payment Security Controls framework — multi-factor authentication (MFA) standards, HSM key rotation, continuous API vulnerability scanning, and real-time fraud monitoring compliance."
+        ],
+        [
             'slug' => 'programmable-erupi-cbdc-interoperability',
             'url' => '/blog/programmable-erupi-cbdc-interoperability',
             'title' => 'Programmable e-RUPI Vouchers & Digital Rupee (CBDC) Interoperability: Switch Architecture & Merchant POS Integration',
