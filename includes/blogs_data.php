@@ -6,6 +6,17 @@
 function get_all_blogs() {
     $static_blogs = [
         [
+            'slug' => 'happy-navratri-2026',
+            'url' => '/blog/happy-navratri-2026',
+            'title' => 'Happy Navratri 2026: May Maa Shailputri Bless You With Strength, Health & Prosperity',
+            'image' => '/assets/blog/blog_happy_navratri_2026.jpg',
+            'category' => 'Celebration • Festive Greetings',
+            'read_time' => '4 min read',
+            'date' => '11 Oct 2026',
+            'timestamp' => strtotime('2026-10-11 11:00:00'),
+            'description' => "Warm Navratri greetings from Paisape. Celebrating auspicious beginnings, resilience, and prosperity for merchants, partners, and businesses across India."
+        ],
+        [
             'slug' => 'pci-dss-v4-vault-tokenization-architecture',
             'url' => '/blog/pci-dss-v4-vault-tokenization-architecture',
             'title' => 'PCI-DSS v4.0.1 Compliance & Vault Tokenization Architecture for Indian Payment Switches',
