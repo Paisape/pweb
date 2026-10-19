@@ -6,6 +6,50 @@
 function get_all_blogs() {
     $static_blogs = [
         [
+            'slug' => 'conversational-payments-hello-upi-voice-switch',
+            'url' => '/blog/conversational-payments-hello-upi-voice-switch',
+            'title' => 'Conversational Payments & Hello! UPI: Voice-to-Payment AI Architecture & Bhashini ASR',
+            'image' => '/assets/blog/blog_conversational_upi_voice_handwritten.jpg',
+            'category' => 'UPI • AI Voice Rails',
+            'read_time' => '12 min read',
+            'date' => '19 Oct 2026',
+            'timestamp' => strtotime('2026-10-19 11:30:00'),
+            'description' => "An engineering breakdown of NPCI's 'Hello! UPI' conversational payment switch — edge voice pre-processing, Bhashini multilingual speech recognition, intent parsing, and real-time audio soundbox confirmation."
+        ],
+        [
+            'slug' => 'softpos-tap-to-phone-architecture',
+            'url' => '/blog/softpos-tap-to-phone-architecture',
+            'title' => 'SoftPOS & NFC Tap-to-Phone: Host Card Emulation (HCE) & EMV MPoC Compliance',
+            'image' => '/assets/blog/blog_softpos_tap_to_phone_handwritten.jpg',
+            'category' => 'Merchant Acquiring • POS Engineering',
+            'read_time' => '12 min read',
+            'date' => '17 Oct 2026',
+            'timestamp' => strtotime('2026-10-17 11:30:00'),
+            'description' => "A comprehensive technical guide to transforming off-the-shelf Android smartphones into certified payment terminals — PCI MPoC security compliance, Host Card Emulation (HCE), RuPay/Visa L2 contactless kernels, and TEE attestation."
+        ],
+        [
+            'slug' => 'bharat-connect-b2b-invoice-settlement',
+            'url' => '/blog/bharat-connect-b2b-invoice-settlement',
+            'title' => 'Bharat Connect (BBPS B2B) Invoicing Rails: ERP Switch Integration & Supply Chain Escrow',
+            'image' => '/assets/blog/blog_bharat_connect_b2b_handwritten.jpg',
+            'category' => 'Enterprise • B2B Settlement',
+            'read_time' => '10 min read',
+            'date' => '15 Oct 2026',
+            'timestamp' => strtotime('2026-10-15 11:30:00'),
+            'description' => "An engineering breakdown of NPCI Bharat Connect's B2B electronic invoice presentment and payment (EIPP) rails — integrating SAP/Oracle ERPs, automated GSTN cross-checks, dynamic early-payment discounts, and nodal escrow settlement switches."
+        ],
+        [
+            'slug' => 'account-aggregator-fiu-architecture',
+            'url' => '/blog/account-aggregator-fiu-architecture',
+            'title' => 'Account Aggregator (AA 2.0) & FIU Architecture: End-to-End Encryption, Consent Artefacts & Real-Time Underwriting',
+            'image' => '/assets/blog/blog_account_aggregator_aa2_handwritten.jpg',
+            'category' => 'Banking • Data & Underwriting',
+            'read_time' => '11 min read',
+            'date' => '13 Oct 2026',
+            'timestamp' => strtotime('2026-10-13 11:30:00'),
+            'description' => "A deep architectural breakdown of India's Account Aggregator (AA 2.0) rails — handling digitally signed consent handles, Elliptic Curve Diffie-Hellman (ECDH) payload encryption, asynchronous financial data pipelines, and sub-15 second credit scoring switches."
+        ],
+        [
             'slug' => 'happy-navratri-2026',
             'url' => '/blog/happy-navratri-2026',
             'title' => 'Happy Navratri 2026: May Maa Shailputri Bless You With Strength, Health & Prosperity',

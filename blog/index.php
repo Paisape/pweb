@@ -177,6 +177,98 @@
 
     <div id="grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
+      <!-- Conversational Payments & Hello! UPI -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="upi" data-reveal data-delay="0">
+        <a href="/blog/conversational-payments-hello-upi-voice-switch" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_conversational_upi_voice_handwritten.jpg" alt="Conversational Payments Hello! UPI Voice AI Architecture" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">UPI &bull; AI Voice Rails</span>
+            <span class="text-body/50">12 min read</span>
+          </div>
+          <a href="/blog/conversational-payments-hello-upi-voice-switch">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Conversational Payments &amp; Hello! UPI: Voice-to-Payment AI Architecture &amp; Bhashini ASR</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            An engineering breakdown of NPCI's 'Hello! UPI' conversational payment switch — edge voice pre-processing, Bhashini multilingual speech recognition, intent parsing, and real-time audio soundbox confirmation.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">19 Oct 2026</span>
+            <a href="/blog/conversational-payments-hello-upi-voice-switch" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- SoftPOS & NFC Tap-to-Phone -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
+        <a href="/blog/softpos-tap-to-phone-architecture" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_softpos_tap_to_phone_handwritten.jpg" alt="SoftPOS Tap to Phone NFC Architecture" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">Acquiring &bull; POS Engineering</span>
+            <span class="text-body/50">12 min read</span>
+          </div>
+          <a href="/blog/softpos-tap-to-phone-architecture">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">SoftPOS &amp; NFC Tap-to-Phone: Host Card Emulation (HCE) &amp; EMV MPoC Compliance</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            A comprehensive technical guide to transforming off-the-shelf Android smartphones into certified payment terminals — PCI MPoC security compliance, Host Card Emulation (HCE), RuPay/Visa L2 contactless kernels, and TEE attestation.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">17 Oct 2026</span>
+            <a href="/blog/softpos-tap-to-phone-architecture" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bharat Connect B2B Invoicing -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
+        <a href="/blog/bharat-connect-b2b-invoice-settlement" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_bharat_connect_b2b_handwritten.jpg" alt="Bharat Connect BBPS B2B Invoicing and Escrow" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">Enterprise &bull; B2B Settlement</span>
+            <span class="text-body/50">10 min read</span>
+          </div>
+          <a href="/blog/bharat-connect-b2b-invoice-settlement">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Bharat Connect (BBPS B2B) Invoicing Rails: ERP Switch Integration &amp; Supply Chain Escrow</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            An engineering breakdown of NPCI Bharat Connect's B2B electronic invoice presentment and payment (EIPP) rails — integrating SAP/Oracle ERPs, automated GSTN cross-checks, dynamic early-payment discounts, and nodal escrow settlement switches.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">15 Oct 2026</span>
+            <a href="/blog/bharat-connect-b2b-invoice-settlement" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Account Aggregator AA 2.0 -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
+        <a href="/blog/account-aggregator-fiu-architecture" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_account_aggregator_aa2_handwritten.jpg" alt="Account Aggregator AA 2.0 and FIU Architecture" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">Banking &bull; Data &amp; Underwriting</span>
+            <span class="text-body/50">11 min read</span>
+          </div>
+          <a href="/blog/account-aggregator-fiu-architecture">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Account Aggregator (AA 2.0) &amp; FIU Architecture: End-to-End Encryption &amp; Real-Time Underwriting</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            A deep architectural breakdown of India's Account Aggregator (AA 2.0) rails — handling digitally signed consent handles, Elliptic Curve Diffie-Hellman (ECDH) payload encryption, asynchronous financial data pipelines, and sub-15 second credit scoring switches.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">13 Oct 2026</span>
+            <a href="/blog/account-aggregator-fiu-architecture" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
       <!-- Happy Navratri 2026 -->
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="all" data-reveal data-delay="0">
         <a href="/blog/happy-navratri-2026" class="block overflow-hidden h-48 bg-slate-100">
