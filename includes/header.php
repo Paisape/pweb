@@ -76,7 +76,7 @@
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="https://portal.paisape.in/login" class="hidden md:inline-flex text-[14.5px] font-semibold text-ink2 hover:text-brand transition-colors">Login</a>
+        <a href="https://portal.paisape.in/login" class="hidden md:inline-flex rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brandDk hover:-translate-y-0.5">Login</a>
         <a href="https://portal.paisape.in/signup" class="hidden md:inline-flex rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-ink shadow-sm transition hover:border-brand hover:text-brand hover:-translate-y-0.5">Sign Up</a>
         <a href="/contact" class="hidden md:inline-flex rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand/30 transition hover:-translate-y-0.5 hover:bg-brandDk">Talk to Sales</a>
         <button id="burger" aria-label="Open menu" aria-expanded="false" class="md:hidden rounded-xl border border-slate-200 bg-white p-2.5 text-ink">
@@ -117,8 +117,8 @@
       <a href="/contact" class="block rounded-xl px-4 py-3 font-medium text-ink hover:bg-mist">Contact Us</a>
       <div class="mt-3 pt-3 border-t border-slate-100 flex flex-col gap-2">
         <div class="grid grid-cols-2 gap-2">
-          <a href="https://portal.paisape.in/login" class="text-center rounded-xl border border-slate-200 bg-white py-2.5 text-sm font-semibold text-ink hover:text-brand hover:border-brand transition">Login</a>
-          <a href="https://portal.paisape.in/signup" class="text-center rounded-xl border border-brand/30 bg-brand/5 py-2.5 text-sm font-semibold text-brand hover:bg-brand hover:text-white transition">Sign Up</a>
+          <a href="https://portal.paisape.in/login" class="text-center rounded-xl bg-brand text-white py-2.5 text-sm font-semibold hover:bg-brandDk transition shadow-sm">Login</a>
+          <a href="https://portal.paisape.in/signup" class="text-center rounded-xl border border-slate-200 bg-white py-2.5 text-sm font-semibold text-ink hover:text-brand hover:border-brand transition">Sign Up</a>
         </div>
         <a href="/contact" class="text-center rounded-xl bg-brand py-2.5 text-sm font-semibold text-white shadow-md shadow-brand/20">Talk to Sales</a>
       </div>
