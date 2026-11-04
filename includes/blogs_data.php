@@ -6,6 +6,94 @@
 function get_all_blogs() {
     $static_blogs = [
         [
+            'slug' => 'aadhaar-facerd-passive-liveness-ekyc',
+            'url' => '/blog/aadhaar-facerd-passive-liveness-ekyc',
+            'title' => 'Aadhaar FaceRD 2.0 & Passive 3D AI Liveness: Zero-Sensor Spoof Prevention in Digital Onboarding',
+            'image' => '/assets/blog/blog_facerd_passive_liveness_handwritten.jpg',
+            'category' => 'Identity • AI Liveness',
+            'read_time' => '10 min read',
+            'date' => '04 Nov 2026',
+            'timestamp' => strtotime('2026-11-04 11:30:00'),
+            'description' => "Technical guide to UIDAI Aadhaar FaceRD 2.0 integration — single-frame passive 3D AI liveness detection, presentation attack detection (PAD), PID block encryption, and zero-sensor hardware onboarding."
+        ],
+        [
+            'slug' => 'smart-dynamic-routing-multi-acquirer-gateways',
+            'url' => '/blog/smart-dynamic-routing-multi-acquirer-gateways',
+            'title' => 'Smart Dynamic Routing in Multi-Acquirer Payment Gateways: Thompson Sampling & Automated Health Pings',
+            'image' => '/assets/blog/blog_smart_routing_thompson_handwritten.jpg',
+            'category' => 'Payment Gateway • Routing Engine',
+            'read_time' => '9 min read',
+            'date' => '02 Nov 2026',
+            'timestamp' => strtotime('2026-11-02 11:30:00'),
+            'description' => "Engineering high-availability multi-acquirer payment gateways — implementing Bayesian Thompson Sampling algorithms, active synthetic health probes, and sub-second circuit breaking for maximum SR."
+        ],
+        [
+            'slug' => 'cross-border-fast-payments-upi-paynow-aani',
+            'url' => '/blog/cross-border-fast-payments-upi-paynow-aani',
+            'title' => 'Cross-Border Real-Time Fast Payment Linkages: UPI-PayNow & UPI-Aani Rails with ISO 20022',
+            'image' => '/assets/blog/blog_cross_border_upi_paynow_handwritten.jpg',
+            'category' => 'Cross-Border • ISO 20022',
+            'read_time' => '10 min read',
+            'date' => '31 Oct 2026',
+            'timestamp' => strtotime('2026-10-31 11:30:00'),
+            'description' => "Technical analysis of cross-border real-time payment linkages connecting India's UPI with Singapore's PayNow and UAE's Aani — ISO 20022 message transformation, FX liquidity switches, and sub-30s settlements."
+        ],
+        [
+            'slug' => 'npci-autopay-recurring-mandate-switch',
+            'url' => '/blog/npci-autopay-recurring-mandate-switch',
+            'title' => 'NPCI AutoPay 2.0 & Recurring Mandate Switches: Automated Retry Queues & Presentation Windows',
+            'image' => '/assets/blog/blog_autopay_mandate_switch_handwritten.jpg',
+            'category' => 'AutoPay • Mandate Engine',
+            'read_time' => '9 min read',
+            'date' => '29 Oct 2026',
+            'timestamp' => strtotime('2026-10-29 11:30:00'),
+            'description' => "Technical guide to engineering high-volume recurring subscription billing switches on NPCI AutoPay 2.0 — mandate lifecycle management, pre-debit notification webhooks, and intelligent retry queues."
+        ],
+        [
+            'slug' => 'credit-lines-on-upi-shadow-ledgers',
+            'url' => '/blog/credit-lines-on-upi-shadow-ledgers',
+            'title' => 'Pre-Sanctioned Credit Lines on UPI: Core Banking Shadow Ledgers & Instant Reversal Switches',
+            'image' => '/assets/blog/blog_credit_line_upi_shadow_handwritten.jpg',
+            'category' => 'UPI • Credit Architecture',
+            'read_time' => '9 min read',
+            'date' => '27 Oct 2026',
+            'timestamp' => strtotime('2026-10-27 11:30:00'),
+            'description' => "An in-depth engineering blueprint of RBI & NPCI pre-sanctioned credit lines on UPI — in-memory shadow ledgers, atomic hold reservations, dynamic interest accrual engines, and sub-10ms reversal rails."
+        ],
+        [
+            'slug' => 'ocen-4-embedded-msme-lending-apis',
+            'url' => '/blog/ocen-4-embedded-msme-lending-apis',
+            'title' => 'OCEN 4.0 (Open Credit Enablement Network): Embedded MSME Lending APIs & Sub-3-Minute Disbursal Rails',
+            'image' => '/assets/blog/blog_ocen4_lending_handwritten.jpg',
+            'category' => 'Lending • Embedded Finance',
+            'read_time' => '10 min read',
+            'date' => '25 Oct 2026',
+            'timestamp' => strtotime('2026-10-25 11:30:00'),
+            'description' => "A comprehensive engineering guide to iSPIRT's OCEN 4.0 specification — connecting Loan Service Providers (LSPs), Derived Credential verifiers, cash-flow underwriting switches, and sub-3-minute MSME loan disbursals."
+        ],
+        [
+            'slug' => 'upi-switch-active-active-multi-region-architecture',
+            'url' => '/blog/upi-switch-active-active-multi-region-architecture',
+            'title' => 'UPI Switch Active-Active Multi-Region Architecture: Achieving 100,000 TPS & Sub-20ms P99 Latency',
+            'image' => '/assets/blog/blog_upi_active_active_handwritten.jpg',
+            'category' => 'UPI • High-Scale Switch',
+            'read_time' => '11 min read',
+            'date' => '23 Oct 2026',
+            'timestamp' => strtotime('2026-10-23 11:30:00'),
+            'description' => "How to architect an enterprise-grade Active-Active multi-datacenter UPI Switch capable of handling 100,000+ peak Transactions Per Second (TPS) with cross-region Raft state machines and sub-20ms P99 latency."
+        ],
+        [
+            'slug' => 'rbi-mulehunter-ai-fraud-quarantine',
+            'url' => '/blog/rbi-mulehunter-ai-fraud-quarantine',
+            'title' => 'RBI MuleHunter AI & Digital Intelligence Unit: Real-Time Mule Account Freezing & CFCFRMS 1930 Integration',
+            'image' => '/assets/blog/blog_rbi_mulehunter_handwritten.jpg',
+            'category' => 'Compliance • Fraud AI',
+            'read_time' => '10 min read',
+            'date' => '21 Oct 2026',
+            'timestamp' => strtotime('2026-10-21 11:30:00'),
+            'description' => "A deep technical blueprint of RBI and DIU MuleHunter AI frameworks — graph neural network mule detection, real-time lien imposition, and sub-second automated freeze webhooks with Citizen Financial Cyber Fraud Reporting System (CFCFRMS / 1930)."
+        ],
+        [
             'slug' => 'conversational-payments-hello-upi-voice-switch',
             'url' => '/blog/conversational-payments-hello-upi-voice-switch',
             'title' => 'Conversational Payments & Hello! UPI: Voice-to-Payment AI Architecture & Bhashini ASR',

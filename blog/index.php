@@ -177,6 +177,190 @@
 
     <div id="grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
+      <!-- Aadhaar FaceRD 2.0 & Passive 3D AI Liveness -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
+        <a href="/blog/aadhaar-facerd-passive-liveness-ekyc" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_facerd_passive_liveness_handwritten.jpg" alt="Aadhaar FaceRD 2.0 Passive 3D AI Liveness Architecture" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">Identity &bull; AI Liveness</span>
+            <span class="text-body/50">10 min read</span>
+          </div>
+          <a href="/blog/aadhaar-facerd-passive-liveness-ekyc">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Aadhaar FaceRD 2.0 &amp; Passive 3D AI Liveness: Zero-Sensor Spoof Prevention in Digital Onboarding</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            Technical guide to UIDAI Aadhaar FaceRD 2.0 integration — single-frame passive 3D AI liveness detection, presentation attack detection (PAD), PID block encryption, and zero-sensor hardware onboarding.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">04 Nov 2026</span>
+            <a href="/blog/aadhaar-facerd-passive-liveness-ekyc" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Smart Dynamic Routing in Multi-Acquirer Payment Gateways -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="orchestration" data-reveal data-delay="0">
+        <a href="/blog/smart-dynamic-routing-multi-acquirer-gateways" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_smart_routing_thompson_handwritten.jpg" alt="Smart Dynamic Routing in Multi-Acquirer Payment Gateways" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">Payment Gateway &bull; Routing</span>
+            <span class="text-body/50">9 min read</span>
+          </div>
+          <a href="/blog/smart-dynamic-routing-multi-acquirer-gateways">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Smart Dynamic Routing in Multi-Acquirer Payment Gateways: Thompson Sampling &amp; Automated Health Pings</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            Engineering high-availability multi-acquirer payment gateways — implementing Bayesian Thompson Sampling algorithms, active synthetic health probes, and sub-second circuit breaking for maximum SR.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">02 Nov 2026</span>
+            <a href="/blog/smart-dynamic-routing-multi-acquirer-gateways" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Cross-Border Real-Time Fast Payment Linkages -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="upi" data-reveal data-delay="0">
+        <a href="/blog/cross-border-fast-payments-upi-paynow-aani" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_cross_border_upi_paynow_handwritten.jpg" alt="Cross-Border Fast Payment Linkages UPI PayNow Aani" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">Cross-Border &bull; ISO 20022</span>
+            <span class="text-body/50">10 min read</span>
+          </div>
+          <a href="/blog/cross-border-fast-payments-upi-paynow-aani">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Cross-Border Real-Time Fast Payment Linkages: UPI-PayNow &amp; UPI-Aani Rails with ISO 20022</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            Technical analysis of cross-border real-time payment linkages connecting India's UPI with Singapore's PayNow and UAE's Aani — ISO 20022 message transformation, FX liquidity switches, and sub-30s settlements.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">31 Oct 2026</span>
+            <a href="/blog/cross-border-fast-payments-upi-paynow-aani" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- NPCI AutoPay 2.0 & Recurring Mandate Switches -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="upi" data-reveal data-delay="0">
+        <a href="/blog/npci-autopay-recurring-mandate-switch" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_autopay_mandate_switch_handwritten.jpg" alt="NPCI AutoPay 2.0 Recurring Mandate Switch Architecture" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">AutoPay &bull; Mandate Engine</span>
+            <span class="text-body/50">9 min read</span>
+          </div>
+          <a href="/blog/npci-autopay-recurring-mandate-switch">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">NPCI AutoPay 2.0 &amp; Recurring Mandate Switches: Automated Retry Queues &amp; Presentation Windows</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            Technical guide to engineering high-volume recurring subscription billing switches on NPCI AutoPay 2.0 — mandate lifecycle management, pre-debit notification webhooks, and intelligent retry queues.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">29 Oct 2026</span>
+            <a href="/blog/npci-autopay-recurring-mandate-switch" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Pre-Sanctioned Credit Lines on UPI -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="upi" data-reveal data-delay="0">
+        <a href="/blog/credit-lines-on-upi-shadow-ledgers" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_credit_line_upi_shadow_handwritten.jpg" alt="Pre-Sanctioned Credit Lines on UPI Shadow Ledgers" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">UPI &bull; Credit Architecture</span>
+            <span class="text-body/50">9 min read</span>
+          </div>
+          <a href="/blog/credit-lines-on-upi-shadow-ledgers">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Pre-Sanctioned Credit Lines on UPI: Core Banking Shadow Ledgers &amp; Instant Reversal Switches</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            An in-depth engineering blueprint of RBI &amp; NPCI pre-sanctioned credit lines on UPI — in-memory shadow ledgers, atomic hold reservations, dynamic interest accrual engines, and sub-10ms reversal rails.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">27 Oct 2026</span>
+            <a href="/blog/credit-lines-on-upi-shadow-ledgers" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- OCEN 4.0 Embedded MSME Lending APIs -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
+        <a href="/blog/ocen-4-embedded-msme-lending-apis" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_ocen4_lending_handwritten.jpg" alt="OCEN 4.0 Embedded MSME Lending Architecture" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">Lending &bull; Embedded Finance</span>
+            <span class="text-body/50">10 min read</span>
+          </div>
+          <a href="/blog/ocen-4-embedded-msme-lending-apis">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">OCEN 4.0 (Open Credit Enablement Network): Embedded MSME Lending APIs &amp; Sub-3-Minute Disbursal Rails</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            A comprehensive engineering guide to iSPIRT's OCEN 4.0 specification — connecting Loan Service Providers (LSPs), Derived Credential verifiers, cash-flow underwriting switches, and sub-3-minute MSME loan disbursals.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">25 Oct 2026</span>
+            <a href="/blog/ocen-4-embedded-msme-lending-apis" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- UPI Switch Active-Active Multi-Region Architecture -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="upi" data-reveal data-delay="0">
+        <a href="/blog/upi-switch-active-active-multi-region-architecture" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_upi_active_active_handwritten.jpg" alt="UPI Switch Active-Active Multi-Region Architecture" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">UPI &bull; High-Scale Switch</span>
+            <span class="text-body/50">11 min read</span>
+          </div>
+          <a href="/blog/upi-switch-active-active-multi-region-architecture">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">UPI Switch Active-Active Multi-Region Architecture: Achieving 100,000 TPS &amp; Sub-20ms P99 Latency</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            How to architect an enterprise-grade Active-Active multi-datacenter UPI Switch capable of handling 100,000+ peak Transactions Per Second (TPS) with cross-region Raft state machines and sub-20ms P99 latency.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">23 Oct 2026</span>
+            <a href="/blog/upi-switch-active-active-multi-region-architecture" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- RBI MuleHunter AI & Digital Intelligence Unit -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
+        <a href="/blog/rbi-mulehunter-ai-fraud-quarantine" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_rbi_mulehunter_handwritten.jpg" alt="RBI MuleHunter AI Fraud Quarantine Architecture" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">Compliance &bull; Fraud AI</span>
+            <span class="text-body/50">10 min read</span>
+          </div>
+          <a href="/blog/rbi-mulehunter-ai-fraud-quarantine">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">RBI MuleHunter AI &amp; Digital Intelligence Unit: Real-Time Mule Account Freezing &amp; CFCFRMS 1930 Integration</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            A deep technical blueprint of RBI and DIU MuleHunter AI frameworks — graph neural network mule detection, real-time lien imposition, and sub-second automated freeze webhooks with Citizen Financial Cyber Fraud Reporting System (CFCFRMS / 1930).
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">21 Oct 2026</span>
+            <a href="/blog/rbi-mulehunter-ai-fraud-quarantine" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
       <!-- Conversational Payments & Hello! UPI -->
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="upi" data-reveal data-delay="0">
         <a href="/blog/conversational-payments-hello-upi-voice-switch" class="block overflow-hidden h-48 bg-slate-100">
