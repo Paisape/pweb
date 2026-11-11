@@ -63,15 +63,17 @@
         </ul>
       </div>
 
-      <!-- Column 5: Products -->
+      <!-- Column 5: Enterprise Solutions -->
       <div>
-        <h2 class="font-display text-[13.5px] font-bold text-white">Products</h2>
+        <h2 class="font-display text-[13.5px] font-bold text-white">Solutions</h2>
         <ul class="mt-5 space-y-3 text-[13px]">
+          <li><a href="/payment-orchestrator" class="transition hover:text-brand text-white font-medium">Payment Orchestrator</a></li>
+          <li><a href="/payout" class="transition hover:text-brand text-white font-medium">Instant Payouts</a></li>
+          <li><a href="/connected-banking" class="transition hover:text-brand text-white font-medium">Connected Banking</a></li>
+          <li><a href="/payment-gateway" class="transition hover:text-brand text-white font-medium">Payment Gateway</a></li>
+          <li><a href="/upi-switch" class="transition hover:text-brand text-white font-medium">Enterprise UPI Switch</a></li>
           <li><a href="/neobanking" class="transition hover:text-brand">Issuing Solution</a></li>
           <li><a href="/qr-code-solution" class="transition hover:text-brand">Merchant Acquiring</a></li>
-          <li><a href="/upi" class="transition hover:text-brand">Transaction Banking</a></li>
-          <li><a href="/sms-solution" class="transition hover:text-brand">SMS Solution</a></li>
-          <li><a href="/waba-solution" class="transition hover:text-brand">WABA Solution</a></li>
         </ul>
       </div>
     </div>

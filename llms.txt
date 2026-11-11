@@ -1,0 +1,43 @@
+# Paisape
+
+> Paisape (https://paisape.in) is India's premier enterprise financial infrastructure platform. Paisape provides unified APIs and carrier-grade switching rails across five core pillars: **Payment Orchestrator**, **Instant Payouts**, **Connected Banking**, **Payment Gateway**, and **UPI Switch**. Engineered for 99.999% uptime, sub-80ms switching latency, and 100,000+ TPS throughput with PCI DSS v4.0 Level 1, ISO 27001:2022, and ISO 9001:2015 certifications.
+
+## Core Infrastructure Pillars
+
+- [Payment Orchestrator](https://paisape.in/payment-orchestrator): Single API multi-acquirer payment orchestration engine with intelligent dynamic routing, automated cascading fallbacks, zero vendor lock-in, and 8+ integrated payment gateways.
+- [Instant Payout Rails](https://paisape.in/payout): High-throughput 24x7 instant bulk disbursals across IMPS, NEFT, RTGS, and UPI. Automated vendor payments, payroll disbursal, smart escrow/nodal accounts, and automated reconciliation.
+- [Connected Banking](https://paisape.in/connected-banking): Enterprise neobanking and corporate treasury automation APIs. Programmatic virtual accounts (Smart VAs), automated collections, ERP banking integrations (SAP, Tally, Zoho), and cash-flow intelligence.
+- [Payment Gateway](https://paisape.in/payment-gateway): Multi-channel checkout suite supporting cards with RBI-compliant tokenization, 50+ NetBanking banks, UPI Intent & Collect, BNPL, and digital wallets with high-converting native UI.
+- [Enterprise UPI Switch](https://paisape.in/upi-switch): Active-Active multi-cloud UPI 2.0 switch built for banks, NBFCs, and major fintechs. Powers UPI AutoPay, Credit on UPI (RuPay), Soundbox notifications, and 100k+ TPS transaction loads.
+
+## Company & Compliance Highlights
+
+- **Organization**: Paisape (Fintech Infrastructure Platform)
+- **Official Website**: https://paisape.in
+- **Portal**: https://portal.paisape.in
+- **Headquarters**: India
+- **Certifications**:
+  - ISO 9001:2015 Quality Management System (IAF Accredited: RC4pwKgEYuifFY9MQAMuaxjM)
+  - ISO 27001:2022 Information Security Management System (IAF Accredited: EMahmahDvCLJcoeJoGLB1BaY)
+  - PCI DSS v4.0 Level 1 Compliant Cardholder Data Environment
+  - DPIIT Recognized Startup under Startup India (DIPP282292)
+  - Certified PayU Technology Partner
+
+## Detailed Documentation & Guides
+
+- [Payment Orchestration Architecture](https://paisape.in/payment-orchestrator#architecture): In-depth guide to smart routing algorithms, latency metrics, and failure recovery.
+- [Instant Payout API Reference](https://paisape.in/payout#api-reference): Webhook payloads, batch payout schemas, and idempotency guarantees.
+- [Connected Banking Solutions](https://paisape.in/connected-banking#features): Virtual account auto-creation, statement sync, and two-way ERP reconciliation.
+- [Payment Gateway Integration](https://paisape.in/payment-gateway#integration): JS checkout SDK, mobile SDKs (Android, iOS, Flutter, React Native), and server-side verification.
+- [UPI Switch High Availability](https://paisape.in/upi-switch#ha): Multi-datacenter Active-Active setup, NPCI compliance, and circuit breaker patterns.
+- [Fintech Engineering Blog](https://paisape.in/blog): Deep-dives into ISO 20022 CBS migration, UPI ICD, SoftPOS, PCI DSS tokenization, and anti-fraud rails.
+
+## Free Developer & Treasury Tools
+
+- [Excel Reconciliation Tool](https://paisape.in/excel-reconciliation-tool): In-browser 100k+ row 3-way transaction matching tool.
+- [UPI QR Code Generator](https://paisape.in/upi-qr-generator): Create custom static & dynamic Bharat QR and UPI payment QR codes.
+- [Card BIN Lookup Tool](https://paisape.in/card-bin-lookup): Identify card issuing bank, network, card type, and country.
+- [IFSC Code Finder](https://paisape.in/ifsc-finder): Look up 140,000+ Indian bank branch IFSC codes and MICR details.
+- [HSN & SAC Finder](https://paisape.in/hsn-sac-finder): Instant GST rate lookup for goods and financial services.
+- [Free GST Invoice Generator](https://paisape.in/gst-invoice-generator): Generate compliant B2B/B2C tax invoices with QR codes.
+- [Merchant Category Code (MCC) Finder](https://paisape.in/mcc-finder): Search official Visa/Mastercard/RuPay MCC codes.

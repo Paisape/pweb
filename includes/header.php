@@ -28,19 +28,24 @@
               </div>
               <div class="p-5">
                 <div class="mega-panel grid-cols-1 gap-3 sm:grid-cols-2" data-panel="issuing">
+                  <a class="mega-link" href="/connected-banking"><span class="font-semibold text-brand">Connected Banking</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                   <a class="mega-link" href="/neobanking"><span>Neobanking solution</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                 </div>
                 <div class="mega-panel grid-cols-1 gap-3 sm:grid-cols-2" data-panel="acquiring">
+                  <a class="mega-link" href="/payment-gateway"><span class="font-semibold text-brand">Payment Gateway</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                   <a class="mega-link" href="/qr-code-solution"><span>Dynamic QR Code solution</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                   <a class="mega-link" href="/soundbox"><span>Instant Audio Soundbox</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                   <a class="mega-link" href="/pos-solution"><span>POS Solution</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                 </div>
                 <div class="mega-panel grid-cols-1 gap-3 sm:grid-cols-2" data-panel="banking">
+                  <a class="mega-link" href="/payout"><span class="font-semibold text-brand">Instant Payout Rails</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                  <a class="mega-link" href="/upi-switch"><span class="font-semibold text-brand">Enterprise UPI Switch</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                   <a class="mega-link" href="/bbps"><span>Bharat Bill Payment System (BBPS)</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                   <a class="mega-link" href="/upi"><span>Enterprise UPI Stack</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                   <a class="mega-link" href="/aeps"><span>Aadhaar Enabled Payment System</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                 </div>
                 <div class="mega-panel show grid-cols-1 gap-3 sm:grid-cols-2" data-panel="value">
+                  <a class="mega-link" href="/payment-orchestrator"><span class="font-semibold text-brand">Payment Orchestrator</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                   <a class="mega-link" href="/onboarding-solution"><span>Digital Merchant Onboarding</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                   <a class="mega-link" href="/reconciliation-solution"><span>Automated Reconciliation</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                   <a class="mega-link" href="/switching-solution"><span>Intelligent Payment Switch</span><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -89,7 +94,13 @@
     <div id="mobileMenu" class="md:hidden mt-2 hidden max-h-[75vh] overflow-y-auto rounded-2xl border border-slate-100 bg-white p-3 shadow-xl">
       <a href="/" class="block rounded-xl px-4 py-3 font-medium text-ink hover:bg-mist">Home</a>
       <div class="rounded-xl bg-brand/5 p-2 my-1 space-y-1">
-        <p class="px-3 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-brand">Products</p>
+        <p class="px-3 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-brand">Core Infrastructure</p>
+        <a href="/payment-orchestrator" class="block rounded-lg px-3 py-2 text-[13.5px] font-semibold text-brand hover:bg-white transition">Payment Orchestrator</a>
+        <a href="/payout" class="block rounded-lg px-3 py-2 text-[13.5px] font-semibold text-brand hover:bg-white transition">Instant Payouts</a>
+        <a href="/connected-banking" class="block rounded-lg px-3 py-2 text-[13.5px] font-semibold text-brand hover:bg-white transition">Connected Banking</a>
+        <a href="/payment-gateway" class="block rounded-lg px-3 py-2 text-[13.5px] font-semibold text-brand hover:bg-white transition">Payment Gateway</a>
+        <a href="/upi-switch" class="block rounded-lg px-3 py-2 text-[13.5px] font-semibold text-brand hover:bg-white transition">Enterprise UPI Switch</a>
+        <p class="px-3 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-400 mt-2">More Solutions</p>
         <a href="/neobanking" class="block rounded-lg px-3 py-2 text-[13.5px] font-medium text-ink hover:bg-white transition">Neobanking</a>
         <a href="/qr-code-solution" class="block rounded-lg px-3 py-2 text-[13.5px] font-medium text-ink hover:bg-white transition">Dynamic QR Code</a>
         <a href="/soundbox" class="block rounded-lg px-3 py-2 text-[13.5px] font-medium text-ink hover:bg-white transition">Audio Soundbox</a>

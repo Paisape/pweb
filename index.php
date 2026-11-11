@@ -15,15 +15,146 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Paisape — Payment Orchestration Platform for India</title>
-<meta name="description" content="A unified financial API layer for payments, payouts and reconciliation, with smart dynamic routing built in." />
+<title>Paisape — Payment Orchestrator, Instant Payouts, Connected Banking, Payment Gateway & UPI Switch</title>
+<meta name="description" content="Paisape is India's leading financial infrastructure platform offering enterprise Payment Orchestration, Instant 24x7 Payouts, Connected Banking APIs, Payment Gateway, and Active-Active UPI Switch." />
+<meta name="keywords" content="Payment Orchestrator, Payout, Connected Banking, Payment Gateway, UPI Switch, Payment Orchestration India, Instant Payout Rails, Neobanking APIs, Paisape" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Paisape — Payment Orchestration Platform for India" />
-<meta property="og:description" content="A unified financial API layer for payments, payouts and reconciliation, with smart dynamic routing built in." />
+<meta property="og:title" content="Paisape — Payment Orchestrator, Instant Payouts, Connected Banking, Payment Gateway & UPI Switch" />
+<meta property="og:description" content="India's leading financial infrastructure platform offering enterprise Payment Orchestrator, 24x7 Instant Payouts, Connected Banking APIs, Payment Gateway, and Active-Active UPI Switch." />
 <meta property="og:image" content="https://paisape.in/assets/paisape-og-banner.jpg" />
 <meta property="og:url" content="https://paisape.in/" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
+
+<!-- Structured Data: JSON-LD for AI Search & Generative Engine Optimization (GEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FinancialService",
+      "@id": "https://paisape.in/#organization",
+      "name": "Paisape",
+      "alternateName": "Paisape Financial Infrastructure",
+      "url": "https://paisape.in",
+      "logo": "https://paisape.in/assets/logo.svg",
+      "description": "Enterprise financial infrastructure platform in India providing Payment Orchestration, 24x7 Instant Payouts, Connected Banking APIs, Payment Gateway, and Enterprise UPI Switch.",
+      "sameAs": [
+        "https://portal.paisape.in"
+      ],
+      "knowsAbout": [
+        "Payment Orchestrator",
+        "Payment Orchestration",
+        "Instant Payout Rails",
+        "Bulk Disbursals",
+        "Connected Banking",
+        "Neobanking APIs",
+        "Payment Gateway",
+        "UPI Switch",
+        "PCI DSS v4.0 Tokenization",
+        "ISO 27001 Certified Security"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Core Financial Infrastructure Pillars",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Payment Orchestrator",
+              "url": "https://paisape.in/payment-orchestrator",
+              "description": "Multi-gateway payment orchestration with dynamic smart routing, cascading fallbacks, and single reconciliation."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Instant Payout Rails",
+              "url": "https://paisape.in/payout",
+              "description": "High-throughput 24x7 bulk disbursals across IMPS, UPI, NEFT, and RTGS with automated beneficiary validation."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Connected Banking",
+              "url": "https://paisape.in/connected-banking",
+              "description": "Neobanking APIs, smart virtual accounts (Smart VAs), automated collections, and ERP banking integration."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Payment Gateway",
+              "url": "https://paisape.in/payment-gateway",
+              "description": "High-converting checkout suite supporting cards with RBI tokenization, UPI Intent, 50+ NetBanking banks, and BNPL."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Enterprise UPI Switch",
+              "url": "https://paisape.in/upi-switch",
+              "description": "Carrier-grade Active-Active UPI 2.0 switch engineered for 100,000+ TPS and sub-80ms turnaround."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://paisape.in/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Paisape?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Paisape is India's leading enterprise financial infrastructure platform offering five core solutions: Payment Orchestrator, Instant Payout Rails, Connected Banking, Payment Gateway, and Active-Active UPI Switch. It delivers 99.999% uptime, sub-80ms latency, and 100k+ TPS throughput with PCI DSS v4.0 Level 1 and ISO 27001:2022 certifications."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Paisape Payment Orchestrator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Paisape Payment Orchestrator is a single-API layer connecting multiple payment aggregators (PayU, Razorpay, Cashfree, BillDesk, Paytm, etc.) with real-time dynamic routing and cascading fallbacks, eliminating vendor lock-in and boosting checkout success rates by 7% to 14%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do Paisape Instant Payout Rails work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Paisape Instant Payout Rails provide high-frequency 24x7x365 disbursals via IMPS, UPI, NEFT, and RTGS to any bank account or VPA in India with sub-2 second settlement, real-time penny drop validation, and 50,000 requests/min concurrency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Connected Banking in Paisape?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Paisape Connected Banking bridges enterprise ERP systems (SAP, Oracle, Tally, Zoho) directly to partner scheduled commercial banks for programmatic virtual account creation, real-time collections, and 100% automated bank reconciliation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Paisape Enterprise UPI Switch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Paisape Enterprise UPI Switch is an Active-Active multi-cloud switching engine built for banks and major fintechs. It supports 100,000+ TPS, UPI AutoPay, Credit on UPI (RuPay), and sub-80ms internal latency."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -313,6 +444,147 @@
         <span class="whitespace-nowrap text-[12.5px] font-bold text-brand">+ Food Delivery</span>
       </div>
       <div class="flex shrink-0 gap-8 pr-8" data-mq-clone aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= 5 CORE ENTERPRISE INFRASTRUCTURE PILLARS ================= -->
+<section id="core-pillars" class="relative overflow-hidden bg-white py-16 md:py-24 border-b border-slate-100">
+  <div class="mx-auto max-w-site px-5">
+    <div class="text-center max-w-3xl mx-auto">
+      <p data-reveal class="mb-3 text-[11px] font-bold uppercase tracking-[0.24em] text-brand">
+        <span class="mr-2 inline-block h-px w-6 align-middle bg-brand"></span>Mission-Critical Rails
+      </p>
+      <h2 data-reveal data-delay="80" class="font-display text-[30px] font-extrabold leading-tight tracking-tight text-ink sm:text-[40px]">
+        Enterprise Financial Infrastructure for India
+      </h2>
+      <p data-reveal data-delay="160" class="mt-4 text-[15.5px] leading-relaxed text-body">
+        Paisape delivers five carrier-grade infrastructure pillars engineered for 99.999% uptime, sub-80ms switching latency, and complete regulatory compliance.
+      </p>
+    </div>
+
+    <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Pillar 1: Payment Orchestrator -->
+      <a href="/payment-orchestrator" data-reveal data-delay="0" class="group card-lift relative flex flex-col justify-between rounded-3xl border border-slate-200/80 bg-gradient-to-b from-white to-[#F8FCFF] p-7 shadow-sm transition hover:border-brand/40 hover:shadow-xl">
+        <div>
+          <div class="flex items-center justify-between">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10 text-brand">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+            </div>
+            <span class="rounded-full bg-brand/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brand">Pillar 01</span>
+          </div>
+          <h3 class="mt-6 font-display text-[20px] font-extrabold text-ink group-hover:text-brand transition">Payment Orchestrator</h3>
+          <p class="mt-2.5 text-[14px] leading-relaxed text-body">
+            Multi-acquirer smart dynamic routing, automated cascading fallbacks, and unified PCI DSS v4.0 token vault. Boost checkout success rates by up to 14%.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-2 text-[11.5px] font-medium text-slate-600">
+            <span class="rounded-md bg-slate-100 px-2 py-0.5">8+ Gateways</span>
+            <span class="rounded-md bg-slate-100 px-2 py-0.5">&lt; 80ms Routing</span>
+            <span class="rounded-md bg-slate-100 px-2 py-0.5">Zero Lock-in</span>
+          </div>
+        </div>
+        <div class="mt-6 flex items-center gap-1.5 text-[13.5px] font-semibold text-brand">
+          Explore Payment Orchestration <span class="arrow transition-transform group-hover:translate-x-1">&rarr;</span>
+        </div>
+      </a>
+
+      <!-- Pillar 2: Instant Payouts -->
+      <a href="/payout" data-reveal data-delay="80" class="group card-lift relative flex flex-col justify-between rounded-3xl border border-slate-200/80 bg-gradient-to-b from-white to-[#F8FCFF] p-7 shadow-sm transition hover:border-brand/40 hover:shadow-xl">
+        <div>
+          <div class="flex items-center justify-between">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10 text-brand">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <span class="rounded-full bg-brand/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brand">Pillar 02</span>
+          </div>
+          <h3 class="mt-6 font-display text-[20px] font-extrabold text-ink group-hover:text-brand transition">Instant Payout Rails</h3>
+          <p class="mt-2.5 text-[14px] leading-relaxed text-body">
+            High-throughput 24x7 instant bulk disbursals across IMPS, UPI, NEFT, and RTGS. Built-in penny drop account verification and nodal/escrow automation.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-2 text-[11.5px] font-medium text-slate-600">
+            <span class="rounded-md bg-slate-100 px-2 py-0.5">Sub-2s Turnaround</span>
+            <span class="rounded-md bg-slate-100 px-2 py-0.5">50k req/min</span>
+            <span class="rounded-md bg-slate-100 px-2 py-0.5">Penny Drop</span>
+          </div>
+        </div>
+        <div class="mt-6 flex items-center gap-1.5 text-[13.5px] font-semibold text-brand">
+          Explore Payout Rails <span class="arrow transition-transform group-hover:translate-x-1">&rarr;</span>
+        </div>
+      </a>
+
+      <!-- Pillar 3: Connected Banking -->
+      <a href="/connected-banking" data-reveal data-delay="160" class="group card-lift relative flex flex-col justify-between rounded-3xl border border-slate-200/80 bg-gradient-to-b from-white to-[#F8FCFF] p-7 shadow-sm transition hover:border-brand/40 hover:shadow-xl">
+        <div>
+          <div class="flex items-center justify-between">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10 text-brand">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M4 10h16M5 10V21M19 10V21M9 10V21M15 10V21M12 3l9 5H3z"/></svg>
+            </div>
+            <span class="rounded-full bg-brand/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brand">Pillar 03</span>
+          </div>
+          <h3 class="mt-6 font-display text-[20px] font-extrabold text-ink group-hover:text-brand transition">Connected Banking</h3>
+          <p class="mt-2.5 text-[14px] leading-relaxed text-body">
+            Bridge enterprise ERPs (SAP, Tally, Zoho) directly to bank rails. Programmatic Smart Virtual Accounts for 100% automated collection reconciliation.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-2 text-[11.5px] font-medium text-slate-600">
+            <span class="rounded-md bg-slate-100 px-2 py-0.5">Smart VAs</span>
+            <span class="rounded-md bg-slate-100 px-2 py-0.5">Auto-Recon</span>
+            <span class="rounded-md bg-slate-100 px-2 py-0.5">ERP Connectors</span>
+          </div>
+        </div>
+        <div class="mt-6 flex items-center gap-1.5 text-[13.5px] font-semibold text-brand">
+          Explore Connected Banking <span class="arrow transition-transform group-hover:translate-x-1">&rarr;</span>
+        </div>
+      </a>
+
+      <!-- Pillar 4: Payment Gateway -->
+      <a href="/payment-gateway" data-reveal data-delay="200" class="group card-lift relative flex flex-col justify-between rounded-3xl border border-slate-200/80 bg-gradient-to-b from-white to-[#F8FCFF] p-7 shadow-sm transition hover:border-brand/40 hover:shadow-xl">
+        <div>
+          <div class="flex items-center justify-between">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10 text-brand">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            </div>
+            <span class="rounded-full bg-brand/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brand">Pillar 04</span>
+          </div>
+          <h3 class="mt-6 font-display text-[20px] font-extrabold text-ink group-hover:text-brand transition">Payment Gateway</h3>
+          <p class="mt-2.5 text-[14px] leading-relaxed text-body">
+            High-converting checkout suite supporting cards with RBI tokenization, one-tap mobile UPI Intent, 50+ NetBanking banks, and BNPL.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-2 text-[11.5px] font-medium text-slate-600">
+            <span class="rounded-md bg-slate-100 px-2 py-0.5">UPI Intent</span>
+            <span class="rounded-md bg-slate-100 px-2 py-0.5">Card Tokenization</span>
+            <span class="rounded-md bg-slate-100 px-2 py-0.5">&gt; 94% SR</span>
+          </div>
+        </div>
+        <div class="mt-6 flex items-center gap-1.5 text-[13.5px] font-semibold text-brand">
+          Explore Payment Gateway <span class="arrow transition-transform group-hover:translate-x-1">&rarr;</span>
+        </div>
+      </a>
+
+      <!-- Pillar 5: Enterprise UPI Switch -->
+      <a href="/upi-switch" data-reveal data-delay="240" class="group card-lift relative flex flex-col justify-between rounded-3xl border border-slate-200/80 bg-gradient-to-b from-white to-[#F8FCFF] p-7 shadow-sm transition hover:border-brand/40 hover:shadow-xl sm:col-span-2 lg:col-span-2">
+        <div>
+          <div class="flex items-center justify-between">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10 text-brand">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            </div>
+            <span class="rounded-full bg-brand/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brand">Pillar 05</span>
+          </div>
+          <h3 class="mt-6 font-display text-[20px] font-extrabold text-ink group-hover:text-brand transition">Enterprise UPI Switch</h3>
+          <p class="mt-2.5 text-[14px] leading-relaxed text-body">
+            Carrier-grade Active-Active UPI 2.0 switching engine engineered for 100,000+ TPS and sub-80ms internal latency. Powers UPI AutoPay, Credit on UPI (RuPay), Soundbox notification rails, and bank CBS connections with zero RTO.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-2 text-[11.5px] font-medium text-slate-600">
+            <span class="rounded-md bg-slate-100 px-2 py-0.5">100k+ TPS</span>
+            <span class="rounded-md bg-slate-100 px-2 py-0.5">Active-Active DR</span>
+            <span class="rounded-md bg-slate-100 px-2 py-0.5">Credit on UPI</span>
+            <span class="rounded-md bg-slate-100 px-2 py-0.5">Soundbox Rails</span>
+          </div>
+        </div>
+        <div class="mt-6 flex items-center gap-1.5 text-[13.5px] font-semibold text-brand">
+          Explore Enterprise UPI Switch <span class="arrow transition-transform group-hover:translate-x-1">&rarr;</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
