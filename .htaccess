@@ -1,5 +1,11 @@
 Options -Indexes
 
+# Set HTTPS indicator from proxy headers (Cloudflare / Coolify / Traefik)
+SetEnvIf X-Forwarded-Proto "^https$" HTTPS=on
+
+# Disable Apache mod_dir trailing slash redirect to eliminate HTTP downgrade loop
+DirectorySlash Off
+
 # Serve index.php as default directory file
 DirectoryIndex index.php index.html
 
@@ -9,22 +15,24 @@ Redirect 301 /index.html /
 # Enable rewrite engine
 RewriteEngine On
 
+# Force HTTPS if requested via plain HTTP behind reverse proxy
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 # Route Microsoft 365 Exchange Daily Banner Requests
 RewriteRule ^email-banner\.png$ api/daily-banner.php [L,QSA]
 RewriteRule ^assets/email-banner\.png$ api/daily-banner.php [L,QSA]
 
-# Allow actual files and directories through unchanged
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
+# Allow actual static files through unchanged (css, js, images, svg, pdf, txt, xml)
+RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [L]
 
-# Route /slug → /slug/index.php (e.g. /bbps → /bbps/index.php)
-RewriteCond %{REQUEST_FILENAME}/index.php -f
-RewriteRule ^([^/]+)/?$ $1/index.php [L]
+# Route directory or clean URL /slug or /slug/ directly to index.php with zero redirects
+RewriteCond %{DOCUMENT_ROOT}/$1/index.php -f
+RewriteRule ^(.*)/?$ $1/index.php [L]
 
-# Route /slug/ → /slug/index.php
-RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_URI}/index.php -f
-RewriteRule ^(.+?)/?$ $1/index.php [L]
+RewriteCond %{REQUEST_FILENAME}/index.php -f
+RewriteRule ^(.*)/?$ $1/index.php [L]
 
 # Security headers
 <IfModule mod_headers.c>
