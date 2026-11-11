@@ -6,6 +6,50 @@
 function get_all_blogs() {
     $static_blogs = [
         [
+            'slug' => 'ai-chargeback-arbitration-prevention-engine',
+            'url' => '/blog/ai-chargeback-arbitration-prevention-engine',
+            'title' => 'Real-Time AI Chargeback Defense: Visa CE 3.0 & Automated Dispute Arbitration',
+            'image' => '/assets/blog/blog_chargeback_defense_handwritten.jpg',
+            'category' => 'Fraud Defense • Dispute Switch',
+            'read_time' => '10 min read',
+            'date' => '11 Nov 2026',
+            'timestamp' => strtotime('2026-11-11 11:30:00'),
+            'description' => "Technical guide to engineering real-time chargeback deflection engines — Visa Compelling Evidence 3.0 (CE 3.0), Ethoca and Verifi pre-dispute API webhooks, digital footprint correlation graphs, and automated merchant liability shifts."
+        ],
+        [
+            'slug' => 'pos-terminal-firmware-remote-key-injection',
+            'url' => '/blog/pos-terminal-firmware-remote-key-injection',
+            'title' => 'SmartPOS Terminal Fleet Security: Remote Key Injection (RKI) & DUKPT',
+            'image' => '/assets/blog/blog_pos_remote_key_injection_handwritten.jpg',
+            'category' => 'POS Engineering • Hardware Security',
+            'read_time' => '9 min read',
+            'date' => '10 Nov 2026',
+            'timestamp' => strtotime('2026-11-10 11:30:00'),
+            'description' => "Technical guide to securing large-scale Android SmartPOS terminal fleets — TR-34 Remote Key Injection (RKI), ANSI X9.24 DUKPT key derivation, active hardware tamper mesh circuits, and PCI PTS 6.x compliance."
+        ],
+        [
+            'slug' => 'iso-20022-cbs-migration-pacs008-pacs002',
+            'url' => '/blog/iso-20022-cbs-migration-pacs008-pacs002',
+            'title' => 'ISO 20022 Core Banking Migration: Translating MT103 to MX pacs.008 Rails',
+            'image' => '/assets/blog/blog_iso20022_cbs_migration_handwritten.jpg',
+            'category' => 'Core Banking • ISO 20022',
+            'read_time' => '11 min read',
+            'date' => '08 Nov 2026',
+            'timestamp' => strtotime('2026-11-08 11:30:00'),
+            'description' => "An in-depth engineering blueprint of ISO 20022 MX message migration for enterprise bank switches — converting unformatted SWIFT MT103 telegraphic blocks into structured pacs.008 XML payloads with real-time sanctions screening."
+        ],
+        [
+            'slug' => 'upi-icd-interoperable-cash-deposit-atms',
+            'url' => '/blog/upi-icd-interoperable-cash-deposit-atms',
+            'title' => 'UPI-ICD (Interoperable Cash Deposit): ATM Cash-In Rails & ISO 8583 Architecture',
+            'image' => '/assets/blog/blog_upi_icd_cash_deposit_handwritten.jpg',
+            'category' => 'ATM Rails • Cash-In Architecture',
+            'read_time' => '10 min read',
+            'date' => '06 Nov 2026',
+            'timestamp' => strtotime('2026-11-06 11:30:00'),
+            'description' => "A comprehensive engineering breakdown of NPCI's UPI Interoperable Cash Deposit (UPI-ICD) rails at Cash Recycler ATMs — cardless dynamic QR authentication, physical note validation sensors, ISO 8583 cash-in messages, and instant CBS balance updates."
+        ],
+        [
             'slug' => 'aadhaar-facerd-passive-liveness-ekyc',
             'url' => '/blog/aadhaar-facerd-passive-liveness-ekyc',
             'title' => 'Aadhaar FaceRD 2.0 & Passive 3D AI Liveness: Zero-Sensor Spoof Prevention in Digital Onboarding',
@@ -473,12 +517,23 @@ function get_all_blogs() {
                     }
 
                     // Extract Date
-                    $mtime = filemtime($dir . '/index.php');
-                    $date = date('d M Y', $mtime);
+                    $date = '';
                     if (preg_match('/<!--\s*Last Updated:\s*([0-9]{1,2}\s+[A-Za-z]+\s+[0-9]{4})/i', $content, $m)) {
                         $date = trim($m[1]);
                     } elseif (preg_match('/"datePublished":\s*"(.*?)"/i', $content, $m)) {
                         $date = trim($m[1]);
+                    }
+
+                    $timestamp = 0;
+                    if (!empty($date)) {
+                        $ts = strtotime($date);
+                        if ($ts !== false && $ts > 0) {
+                            $timestamp = $ts;
+                        }
+                    }
+                    if (!$timestamp) {
+                        $timestamp = 1577836800; // Older baseline epoch (2020) so unregistered folders never precede current
+                        if (empty($date)) $date = '12 Aug 2026';
                     }
 
                     $dynamic_blogs[] = [
@@ -489,7 +544,7 @@ function get_all_blogs() {
                         'category' => 'Engineering & Architecture',
                         'read_time' => '8 min read',
                         'date' => $date,
-                        'timestamp' => $mtime,
+                        'timestamp' => $timestamp,
                         'description' => $desc
                     ];
                 }
@@ -497,12 +552,15 @@ function get_all_blogs() {
         }
     }
 
-    // Merge static and dynamically discovered blogs
-    $all_blogs = array_merge($dynamic_blogs, $static_blogs);
+    // Merge static and dynamically discovered blogs (static takes precedence)
+    $all_blogs = array_merge($static_blogs, $dynamic_blogs);
 
     // Sort by timestamp descending
     usort($all_blogs, function($a, $b) {
-        return ($b['timestamp'] ?? 0) - ($a['timestamp'] ?? 0);
+        $tsA = (int)($a['timestamp'] ?? 0);
+        $tsB = (int)($b['timestamp'] ?? 0);
+        if ($tsA === $tsB) return 0;
+        return ($tsB > $tsA) ? 1 : -1;
     });
 
     return $all_blogs;

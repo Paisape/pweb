@@ -76,8 +76,8 @@
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="https://portal.paisape.in/login" class="hidden md:inline-flex rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brandDk hover:-translate-y-0.5">Login</a>
-        <a href="https://portal.paisape.in/signup" class="hidden md:inline-flex rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-ink shadow-sm transition hover:border-brand hover:text-brand hover:-translate-y-0.5">Sign Up</a>
+        <a href="https://portal.paisape.in/login" class="hidden md:inline-flex rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-ink shadow-sm transition hover:border-brand hover:text-brand hover:-translate-y-0.5">Login</a>
+        <a href="https://portal.paisape.in/signup" class="hidden md:inline-flex rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white shadow-md shadow-brand/20 transition hover:bg-brandDk hover:-translate-y-0.5">Sign Up</a>
         <a href="/contact" class="hidden md:inline-flex rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand/30 transition hover:-translate-y-0.5 hover:bg-brandDk">Talk to Sales</a>
         <button id="burger" aria-label="Open menu" aria-expanded="false" class="md:hidden rounded-xl border border-slate-200 bg-white p-2.5 text-ink">
           <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>

@@ -177,6 +177,98 @@
 
     <div id="grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
+      <!-- Real-Time AI Chargeback Defense: Visa CE 3.0 & Automated Dispute Arbitration -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
+        <a href="/blog/ai-chargeback-arbitration-prevention-engine" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_chargeback_defense_handwritten.jpg" alt="Real-Time AI Chargeback Defense Visa CE 3.0 Blueprint" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">Fraud Defense &bull; Dispute Switch</span>
+            <span class="text-body/50">10 min read</span>
+          </div>
+          <a href="/blog/ai-chargeback-arbitration-prevention-engine">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">Real-Time AI Chargeback Defense: Visa CE 3.0 &amp; Automated Dispute Arbitration</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            Technical guide to engineering real-time chargeback deflection engines — Visa Compelling Evidence 3.0 (CE 3.0), Ethoca and Verifi pre-dispute API webhooks, digital footprint correlation graphs, and automated merchant liability shifts.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">11 Nov 2026</span>
+            <a href="/blog/ai-chargeback-arbitration-prevention-engine" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- SmartPOS Terminal Fleet Security: Remote Key Injection (RKI) & DUKPT -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="engineering" data-reveal data-delay="0">
+        <a href="/blog/pos-terminal-firmware-remote-key-injection" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_pos_remote_key_injection_handwritten.jpg" alt="SmartPOS Terminal Fleet Security Remote Key Injection Blueprint" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">POS Engineering &bull; Hardware Security</span>
+            <span class="text-body/50">9 min read</span>
+          </div>
+          <a href="/blog/pos-terminal-firmware-remote-key-injection">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">SmartPOS Terminal Fleet Security: Remote Key Injection (RKI) &amp; DUKPT</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            Technical guide to securing large-scale Android SmartPOS terminal fleets — TR-34 Remote Key Injection (RKI), ANSI X9.24 DUKPT key derivation, active hardware tamper mesh circuits, and PCI PTS 6.x compliance.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">10 Nov 2026</span>
+            <a href="/blog/pos-terminal-firmware-remote-key-injection" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ISO 20022 Core Banking Migration: Translating MT103 to MX pacs.008 Rails -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="orchestration" data-reveal data-delay="0">
+        <a href="/blog/iso-20022-cbs-migration-pacs008-pacs002" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_iso20022_cbs_migration_handwritten.jpg" alt="ISO 20022 Core Banking Migration pacs.008 Blueprint" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">Core Banking &bull; ISO 20022</span>
+            <span class="text-body/50">11 min read</span>
+          </div>
+          <a href="/blog/iso-20022-cbs-migration-pacs008-pacs002">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">ISO 20022 Core Banking Migration: Translating MT103 to MX pacs.008 Rails</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            An in-depth engineering blueprint of ISO 20022 MX message migration for enterprise bank switches — converting unformatted SWIFT MT103 telegraphic blocks into structured pacs.008 XML payloads with real-time sanctions screening.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">08 Nov 2026</span>
+            <a href="/blog/iso-20022-cbs-migration-pacs008-pacs002" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- UPI-ICD (Interoperable Cash Deposit): ATM Cash-In Rails & ISO 8583 Architecture -->
+      <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="upi" data-reveal data-delay="0">
+        <a href="/blog/upi-icd-interoperable-cash-deposit-atms" class="block overflow-hidden h-48 bg-slate-100">
+          <img src="/assets/blog/blog_upi_icd_cash_deposit_handwritten.jpg" alt="UPI-ICD Interoperable Cash Deposit ATM Architecture Blueprint" class="h-full w-full object-cover transition duration-500 hover:scale-105" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+            <span class="text-brand">ATM Rails &bull; Cash-In Architecture</span>
+            <span class="text-body/50">10 min read</span>
+          </div>
+          <a href="/blog/upi-icd-interoperable-cash-deposit-atms">
+            <h3 class="mt-3 font-display text-[16px] font-bold leading-snug text-ink hover:text-brand">UPI-ICD (Interoperable Cash Deposit): ATM Cash-In Rails &amp; ISO 8583 Architecture</h3>
+          </a>
+          <p class="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-body">
+            A comprehensive engineering breakdown of NPCI's UPI Interoperable Cash Deposit (UPI-ICD) rails at Cash Recycler ATMs — cardless dynamic QR authentication, physical note validation sensors, ISO 8583 cash-in messages, and instant CBS balance updates.
+          </p>
+          <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[12px] text-body/70">06 Nov 2026</span>
+            <a href="/blog/upi-icd-interoperable-cash-deposit-atms" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand">Read &rarr;</a>
+          </div>
+        </div>
+      </article>
+
       <!-- Aadhaar FaceRD 2.0 & Passive 3D AI Liveness -->
       <article class="post card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm" data-cat="compliance" data-reveal data-delay="0">
         <a href="/blog/aadhaar-facerd-passive-liveness-ekyc" class="block overflow-hidden h-48 bg-slate-100">
