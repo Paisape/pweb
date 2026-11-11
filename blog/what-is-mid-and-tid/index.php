@@ -375,5 +375,6 @@ document.addEventListener('DOMContentLoaded', function(){
 </script>
 
 <?php include_once __DIR__ . '/../../includes/footer.php'; ?>
+<script src="/js/main.js"></script>
 </body>
 </html>

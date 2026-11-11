@@ -445,5 +445,6 @@
 </main>
 
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+<script src="/js/main.js"></script>
 </body>
 </html>

@@ -215,5 +215,6 @@
     btnEn.className = 'rounded-lg px-4 py-1.5 text-xs font-extrabold text-ink hover:text-brand transition';
   });
 </script>
+<script src="/js/main.js"></script>
 </body>
 </html>
