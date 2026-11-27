@@ -6,3 +6,4 @@ config.php
 .env
 .agents/
 GEMINI.md
+dist/

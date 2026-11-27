@@ -1,0 +1,4 @@
+# Cloudflare Pages Redirects
+/payment-orchestration  /payment-orchestrator  301
+/payouts                /payout                301
+/admin                  https://portal.paisape.in/login 302
