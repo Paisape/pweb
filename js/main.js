@@ -352,4 +352,30 @@
     applyFilters();
   }
 
+  /* ---------------------------------------------------------------------
+     Industry Solutions Tabs Switcher
+     --------------------------------------------------------------------- */
+  var indTabs = document.querySelectorAll('.ind-tab');
+  if (indTabs.length) {
+    indTabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var target = tab.dataset.target;
+        indTabs.forEach(function (t) {
+          t.classList.remove('active', 'bg-brand', 'text-white');
+          t.classList.add('bg-white', 'text-ink');
+        });
+        tab.classList.add('active', 'bg-brand', 'text-white');
+        tab.classList.remove('bg-white', 'text-ink');
+
+        document.querySelectorAll('.ind-panel').forEach(function (panel) {
+          if (panel.id === 'panel-' + target) {
+            panel.classList.remove('hidden');
+          } else {
+            panel.classList.add('hidden');
+          }
+        });
+      });
+    });
+  }
+
 })();

@@ -72,7 +72,7 @@
           "UPI Intent Checkout",
           "Credit & Debit Card Tokenization",
           "NetBanking Aggregation",
-          "PCI DSS v4.0 Level 1"
+          "PCI DSS v4.0 Ready"
         ]
       },
       {
@@ -101,7 +101,7 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "PCI DSS v4.0 CoFT Tokenization",
+                "name": "RBI-Compliant CoFT Tokenization",
                 "description": "Certified card-on-file token vault enabling secure 1-click repeat checkouts."
               }
             },
@@ -141,7 +141,7 @@
             "name": "Is Paisape Payment Gateway secure?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Paisape is certified PCI DSS v4.0 Level 1, ISO 27001:2022, and ISO 9001:2015. Card data is tokenized according to RBI guidelines, and all API calls require HMAC-SHA256 signatures."
+              "text": "Yes. Paisape is certified ISO 27001:2022 and ISO 9001:2015, with PCI DSS v4.0 assessment currently in progress. Card data is tokenized according to RBI directives, and all API calls require HMAC-SHA256 signatures."
             }
           }
         ]
@@ -217,8 +217,8 @@
         <p class="mt-1 text-[13px] font-medium text-ink2">Payment Options</p>
       </div>
       <div class="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm">
-        <p class="font-display text-3xl font-extrabold text-ink">PCI DSS L1</p>
-        <p class="mt-1 text-[13px] font-medium text-ink2">Highest Security</p>
+        <p class="font-display text-3xl font-extrabold text-ink">PCI DSS v4.0</p>
+        <p class="mt-1 text-[13px] font-medium text-ink2">Assessment in Progress</p>
       </div>
     </div>
   </div>

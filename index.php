@@ -51,7 +51,7 @@
         "Neobanking APIs",
         "Payment Gateway",
         "UPI Switch",
-        "PCI DSS v4.0 Tokenization",
+        "PCI DSS v4.0 Assessment in Progress",
         "ISO 27001 Certified Security"
       ],
       "hasOfferCatalog": {
@@ -115,7 +115,7 @@
           "name": "What is Paisape?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Paisape is India's leading enterprise financial infrastructure platform offering five core solutions: Payment Orchestrator, Instant Payout Rails, Connected Banking, Payment Gateway, and Active-Active UPI Switch. It delivers 99.999% uptime, sub-80ms latency, and 100k+ TPS throughput with PCI DSS v4.0 Level 1 and ISO 27001:2022 certifications."
+            "text": "Paisape is India's leading enterprise financial infrastructure platform offering five core solutions: Payment Orchestrator, Instant Payout Rails, Connected Banking, Payment Gateway, and Active-Active UPI Switch. It delivers 99.999% uptime, sub-80ms latency, and 100k+ TPS throughput with ISO 27001:2022 and ISO 9001:2015 certifications, PCI DSS v4.0 assessment in progress, and 100% in-country data localization."
           }
         },
         {
@@ -195,141 +195,436 @@
 <main id="main">
 
 <!-- ================= HERO ================= -->
-<section class="relative overflow-hidden bg-gradient-to-b from-[#EAF4FD] via-[#F4FAFE] to-white pt-36 pb-16 md:pt-44 md:pb-10">
-  <div class="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-brand/10 blur-3xl"></div>
-  <div class="pointer-events-none absolute -left-32 top-40 h-[380px] w-[380px] rounded-full bg-brand/[0.07] blur-3xl"></div>
+<section class="relative overflow-hidden bg-gradient-to-b from-[#EAF4FD] via-[#F4FAFE] to-white pt-24 pb-10 md:pt-[104px] md:pb-14">
+  <div class="pointer-events-none absolute -right-40 -top-40 h-[480px] w-[480px] rounded-full bg-brand/10 blur-3xl"></div>
+  <div class="pointer-events-none absolute -left-32 top-32 h-[340px] w-[340px] rounded-full bg-brand/[0.07] blur-3xl"></div>
 
-  <div class="relative mx-auto grid max-w-site items-center gap-14 px-5 lg:grid-cols-[1.05fr_.95fr]">
-    <div>
-      <p data-reveal class="mb-5 inline-flex items-center gap-2 rounded-full border border-brand/20 bg-white/70 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-brand backdrop-blur">
-        <span class="relative flex h-2 w-2">
-          <span class="absolute inline-flex h-full w-full rounded-full bg-brand animate-ring"></span>
-          <span class="relative inline-flex h-2 w-2 rounded-full bg-brand"></span>
-        </span>
-        Integrated with 8+ Gateways
-      </p>
+  <!-- Hero Header (Centered Compact to Fit Above the Fold) -->
+  <div class="relative mx-auto max-w-5xl text-center px-5">
+    <p data-reveal class="mb-2.5 inline-flex items-center gap-2 rounded-full border border-brand/20 bg-white/85 px-3.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-brand backdrop-blur shadow-xs">
+      <span class="relative flex h-2 w-2">
+        <span class="absolute inline-flex h-full w-full rounded-full bg-brand animate-ping opacity-75"></span>
+        <span class="relative inline-flex h-2 w-2 rounded-full bg-brand"></span>
+      </span>
+      Integrated with 8+ Gateways
+    </p>
 
-      <h1 class="font-display text-[38px] font-extrabold leading-[1.12] tracking-tight text-ink sm:text-[46px] lg:text-[52px]">
-        <span data-reveal data-delay="60" class="block">Payment Orchestration Platform</span>
-        <span data-reveal data-delay="160" class="block">for Every Payment Rail</span>
-        <span data-reveal data-delay="260" class="block text-brand">Intelligent Routing for India.</span>
-      </h1>
+    <h1 class="font-display text-[28px] font-extrabold leading-[1.12] tracking-tight text-ink sm:text-[38px] lg:text-[42px]">
+      Payment Orchestration <span class="text-brand">for Every Payment Rail.</span>
+    </h1>
 
-      <p data-reveal data-delay="360" class="mt-6 max-w-xl text-[15.5px] leading-relaxed text-body">
-        A unified financial API layer that streamlines payments, payouts and complex cash flows &mdash; with smart
-        dynamic routing, automated retries and real-time reconciliation built in. Stop losing revenue to false
-        declines and single points of failure.
-      </p>
+    <p data-reveal data-delay="120" class="mt-2 max-w-2xl mx-auto text-[13.5px] sm:text-[15px] leading-snug text-body">
+      A unified financial API layer that streamlines payments, payouts and complex cash flows &mdash; with smart dynamic routing, automated retries and real-time reconciliation built in.
+    </p>
 
-      <div data-reveal data-delay="460" class="mt-8 flex flex-wrap items-center gap-4">
-        <a href="/contact" class="group inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[15px] font-semibold text-white shadow-xl shadow-brand/30 transition hover:-translate-y-1 hover:bg-brandDk">
-          Talk to Sales <svg class="arrow h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="#developers" class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-7 py-3.5 text-[15px] font-semibold text-ink transition hover:-translate-y-1 hover:border-brand hover:text-brand">
-          Read the docs
-        </a>
+    <div data-reveal data-delay="200" class="mt-3.5 flex flex-wrap items-center justify-center gap-3">
+      <a href="/contact" class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand px-5 py-2.5 text-[12.5px] font-bold text-white shadow-lg shadow-brand/25 transition hover:bg-brandDk hover:-translate-y-0.5">
+        <span>Talk to Sales</span>
+        <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="/payment-orchestrator" class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-5 py-2.5 text-[12.5px] font-bold text-ink shadow-xs transition hover:border-slate-300 hover:bg-slate-50">
+        Read the docs
+      </a>
+    </div>
+  </div>
+
+  <!-- Mobile Compact Hero Ecosystem (< 640px) -->
+  <div class="sm:hidden relative mx-auto max-w-sm px-4 mt-6">
+    <div class="rounded-3xl border border-white/90 bg-white/90 p-4 shadow-xl backdrop-blur space-y-3">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+        <div class="flex items-center gap-2">
+          <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#07162C] border border-[#2BB5C4]/50">
+            <svg class="h-5 w-5" viewBox="0 0 32 32" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 5.5H17.2C22.2 5.5 25.5 8.5 25.5 13.1C25.5 17.7 22.2 20.7 17.2 20.7H12.5V26.5H8V8.2L6.5 6.8V5.5ZM12.5 9.6V16.6H16.9C19.5 16.6 21 15.2 21 13.1C21 11 19.5 9.6 16.9 9.6H12.5Z" fill="#2BB5C4"/><path d="M22.5 23.2L26 26.5H22.5V23.2Z" fill="#38BDF8"/></svg>
+          </div>
+          <div>
+            <div class="text-[11px] font-extrabold text-ink">Paisape Orchestrator</div>
+            <div class="text-[9.5px] font-semibold text-emerald-600">99.6% Live Success Rate</div>
+          </div>
+        </div>
+        <span class="rounded-full bg-emerald-50 border border-emerald-200 px-2 py-0.5 text-[9.5px] font-bold text-emerald-700">+14.2% Uplift</span>
+      </div>
+      <div class="grid grid-cols-3 gap-2 text-center">
+        <div class="rounded-xl bg-slate-50 border border-slate-100 p-2">
+          <div class="text-[10px] font-bold text-ink">PayU</div>
+          <div class="text-[9px] text-emerald-600 font-semibold">58ms</div>
+        </div>
+        <div class="rounded-xl bg-slate-50 border border-slate-100 p-2">
+          <div class="text-[10px] font-bold text-ink">Easebuzz</div>
+          <div class="text-[9px] text-emerald-600 font-semibold">Active</div>
+        </div>
+        <div class="rounded-xl bg-slate-50 border border-slate-100 p-2">
+          <div class="text-[10px] font-bold text-ink">Zaakpay</div>
+          <div class="text-[9px] text-emerald-600 font-semibold">Active</div>
+        </div>
+      </div>
+      <div class="flex items-center justify-between rounded-xl bg-slate-900 px-3.5 py-2.5 text-white">
+        <div>
+          <div class="text-[10px] text-sky-300 font-semibold">Instant UPI • Cards • NB</div>
+          <div class="text-[11.5px] font-extrabold">₹2,499 Checkout Demo</div>
+        </div>
+        <span class="rounded-lg bg-brand px-2.5 py-1 text-[10px] font-bold">Sub-80ms</span>
       </div>
     </div>
+  </div>
 
-    <div data-reveal="right" data-delay="240" class="relative">
-      <div class="animate-float rounded-3xl border border-white bg-white/80 p-4 shadow-[0_30px_70px_-30px_rgba(22,35,59,.35)] backdrop-blur">
-        
-        <!-- Tabs Header -->
-        <div class="flex border-b border-slate-100 mb-4 pb-2 text-center">
-          <button id="tab-stats" class="flex-1 text-[11px] font-extrabold uppercase tracking-wider text-slate-400 pb-2 hover:text-ink transition duration-300 outline-none">Live Stats</button>
-          <button id="tab-sim" class="flex-1 text-[11px] font-extrabold uppercase tracking-wider text-brand border-b-2 border-brand pb-2 outline-none transition duration-300">Orchestrator Sim</button>
-        </div>
+  <!-- Hero Diagram Stage (1180x430 Wide Canvas with Proportional Auto-Scale on >= 640px) -->
+  <div class="hidden sm:block relative mx-auto max-w-[1000px] px-3 sm:px-6 mt-4 sm:mt-5">
+    <div id="hero-graphic" class="relative w-full aspect-[1180/430] overflow-visible select-none">
+      <div id="hero-stage" class="absolute left-1/2 top-0 w-[1180px] h-[430px] -translate-x-1/2 origin-top pointer-events-auto">
 
-        <!-- Panel 1: Live Stats -->
-        <div id="panel-stats" class="hidden space-y-3">
-          <div class="grid grid-cols-3 gap-3">
-            <div class="rounded-xl border border-slate-100 bg-white px-3.5 py-3">
-              <p class="text-[10px] font-medium uppercase tracking-wide text-body/70">Total Volume</p>
-              <p class="mt-1 font-display text-[15px] font-bold text-ink" data-count="571351" data-prefix="&#8377;" data-format="in">&#8377;0</p>
-            </div>
-            <div class="rounded-xl border border-slate-100 bg-white px-3.5 py-3">
-              <p class="text-[10px] font-medium uppercase tracking-wide text-body/70">Total Revenue</p>
-              <p class="mt-1 font-display text-[15px] font-bold text-ink" data-count="1461.49" data-prefix="&#8377;" data-dec="2">&#8377;0</p>
-            </div>
-            <div class="rounded-xl border border-slate-100 bg-white px-3.5 py-3">
-              <p class="text-[10px] font-medium uppercase tracking-wide text-body/70">Active Merchants</p>
-              <p class="mt-1 font-display text-[15px] font-bold text-ink" data-count="20">0</p>
-            </div>
-          </div>
+        <!-- Ambient Glow behind Stage -->
+        <div class="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[300px] w-[760px] rounded-full bg-gradient-to-r from-brand/10 via-cyan-400/10 to-indigo-500/10 blur-3xl"></div>
 
-          <div class="mt-3 grid grid-cols-2 gap-3">
-            <div class="donut flex items-center justify-center rounded-xl border border-slate-100 bg-white py-7">
-              <svg viewBox="0 0 100 100" class="h-28 w-28 -rotate-90" aria-hidden="true">
-                <circle cx="50" cy="50" r="35" fill="none" stroke="#EAF2F9" stroke-width="13"/>
-                <circle class="val" cx="50" cy="50" r="35" fill="none" stroke="#1F5FE0" stroke-width="13" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="flex flex-col justify-center gap-3.5 rounded-xl border border-slate-100 bg-white px-5 py-7">
-              <span class="bar h-2 w-[92%] rounded-full bg-[#1F5FE0]" style="transition-delay:.35s"></span>
-              <span class="bar h-2 w-[68%] rounded-full bg-brand/70" style="transition-delay:.5s"></span>
-              <span class="bar h-2 w-[80%] rounded-full bg-slate-200" style="transition-delay:.65s"></span>
-              <span class="bar h-2 w-[46%] rounded-full bg-slate-200" style="transition-delay:.8s"></span>
-            </div>
-          </div>
+        <!-- Technical PCB Circuit Traces & Glowing Signal Pulses -->
+        <svg class="absolute inset-0 h-[430px] w-[1180px] pointer-events-none" viewBox="0 0 1180 430" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="pcbGlow" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="3.5" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
 
-          <div class="mt-3 flex items-center justify-between rounded-xl bg-mist px-4 py-2.5">
-            <span class="text-[11px] font-semibold text-ink">Routing decision</span>
-            <span class="flex items-center gap-1.5 text-[11px] font-semibold text-emerald-600">
-              <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> PSP switched in 42&nbsp;ms
-            </span>
-          </div>
-        </div>
+          <!-- Solid Technical PCB Traces (45-deg precision routing) -->
+          <!-- 1. Phone -> Center 3D Chip -->
+          <path id="pcb-path-1" d="M 290 278 L 435 278 L 470 242 L 530 242" stroke="#0EA5E9" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <!-- 2. Center 3D Chip -> Dynamic Routing Card -->
+          <path id="pcb-path-2" d="M 565 182 L 565 120 L 535 90 L 490 90" stroke="#0EA5E9" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <!-- 3. Dynamic Routing -> Success Uplift -->
+          <path id="pcb-path-3" d="M 485 242 L 455 272 L 455 315 L 430 315" stroke="#10B981" stroke-opacity="0.4" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+          <!-- 4. Center 3D Chip -> Paisape Console Dashboard -->
+          <path id="pcb-path-4" d="M 615 182 L 615 120 L 645 90 L 700 90" stroke="#0066FF" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <!-- 5. Center 3D Chip -> Bank Rails Isometric Network -->
+          <path id="pcb-path-5" d="M 650 250 L 695 250 L 730 295 L 775 295" stroke="#0EA5E9" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 
-        <!-- Panel 2: Orchestrator Sim -->
-        <div id="panel-sim" class="space-y-4 min-h-[220px] flex flex-col justify-between">
-          <div class="flex items-center justify-between">
-            <span class="text-[12px] font-bold text-ink font-display">Primary Gateway</span>
-            <label class="relative inline-flex items-center cursor-pointer select-none">
-              <input type="checkbox" id="gw-toggle" class="sr-only peer" checked>
-              <div class="w-9 h-5 bg-red-500 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-emerald-500"></div>
-              <span id="gw-status-text" class="ml-2 text-[10px] font-bold uppercase text-emerald-600">Online</span>
-            </label>
-          </div>
-          
-          <!-- Path Simulation Visuals -->
-          <div class="relative mt-6 flex items-center justify-between px-2">
-            <!-- User Node -->
-            <div class="flex flex-col items-center z-10">
-              <div class="h-10 w-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-ink font-bold text-[10px] shadow-sm">User</div>
-            </div>
-            
-            <!-- Connection Line 1 -->
-            <div class="flex-1 h-[3px] bg-slate-100 mx-1 relative overflow-hidden">
-              <div id="sim-line-1" class="absolute top-0 left-0 h-full w-0 bg-brand transition-all duration-[600ms] ease-out"></div>
-            </div>
-            
-            <!-- Orchestrator Switch Node -->
-            <div class="flex flex-col items-center z-10">
-              <div class="h-10 w-10 rounded-full bg-brandLt border border-brand/20 flex items-center justify-center text-brand font-bold text-[10px] relative shadow-sm">
-                Switch
-                <span id="sim-spinner" class="absolute -top-1 -right-1 h-3.5 w-3.5 rounded-full border-2 border-brand border-t-transparent animate-spin hidden"></span>
+          <!-- Subtle Animated Energy Overlay on Traces -->
+          <path d="M 290 278 L 435 278 L 470 242 L 530 242" stroke="#38BDF8" stroke-width="2" stroke-dasharray="14 42" class="animate-circuit-dash opacity-80" />
+          <path d="M 565 182 L 565 120 L 535 90 L 490 90" stroke="#10B981" stroke-width="2" stroke-dasharray="12 38" class="animate-circuit-dash opacity-75" />
+          <path d="M 615 182 L 615 120 L 645 90 L 700 90" stroke="#38BDF8" stroke-width="2" stroke-dasharray="12 38" class="animate-circuit-dash opacity-80" />
+          <path d="M 650 250 L 695 250 L 730 295 L 775 295" stroke="#38BDF8" stroke-width="2" stroke-dasharray="14 42" class="animate-circuit-dash opacity-80" />
+
+          <!-- PCB Via Rings (Hollow Technical Node Rings like UrbanRupee) -->
+          <!-- Via 1 (Left trace) -->
+          <g transform="translate(410, 278)">
+            <circle r="8" fill="#E0F2FE" stroke="#0EA5E9" stroke-width="1.5" />
+            <circle r="3.5" fill="#0284C7" />
+          </g>
+          <!-- Via 2 (Top-Left Routing) -->
+          <g transform="translate(535, 90)">
+            <circle r="7" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5" />
+            <circle r="3" fill="#059669" />
+          </g>
+          <!-- Via 3 (Top-Right Console) -->
+          <g transform="translate(645, 90)">
+            <circle r="7" fill="#EFF6FF" stroke="#0066FF" stroke-width="1.5" />
+            <circle r="3" fill="#0066FF" />
+          </g>
+          <!-- Via 4 (Bottom-Right Bank Rails) -->
+          <g transform="translate(695, 250)">
+            <circle r="8" fill="#E0F2FE" stroke="#0EA5E9" stroke-width="1.5" />
+            <circle r="3.5" fill="#0284C7" />
+          </g>
+
+          <!-- Traveling Glowing Signal Pulses -->
+          <circle r="4.5" fill="#38BDF8" filter="url(#pcbGlow)">
+            <animateMotion path="M 290 278 L 435 278 L 470 242 L 530 242" dur="2.2s" repeatCount="indefinite" />
+          </circle>
+          <circle r="4" fill="#10B981" filter="url(#pcbGlow)">
+            <animateMotion path="M 565 182 L 565 120 L 535 90 L 490 90" dur="1.9s" begin="0.6s" repeatCount="indefinite" />
+          </circle>
+          <circle r="4" fill="#0066FF" filter="url(#pcbGlow)">
+            <animateMotion path="M 615 182 L 615 120 L 645 90 L 700 90" dur="2.1s" begin="0.3s" repeatCount="indefinite" />
+          </circle>
+          <circle r="4.5" fill="#0EA5E9" filter="url(#pcbGlow)">
+            <animateMotion path="M 650 250 L 695 250 L 730 295 L 775 295" dur="2.3s" begin="1s" repeatCount="indefinite" />
+          </circle>
+        </svg>
+
+        <!-- 1. LEFT NODE: Smartphone Checkout Mockup -->
+        <div class="absolute left-[75px] top-[15px] w-[215px] rounded-[32px] bg-slate-900 p-2 shadow-[0_20px_50px_-15px_rgba(15,23,42,.35)] border-[3.5px] border-slate-800 transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+          <!-- Screen Inside -->
+          <div class="rounded-[24px] bg-white p-2.5 flex flex-col justify-between text-slate-800 min-h-[355px]">
+            <div>
+              <!-- Notch & Status -->
+              <div class="flex items-center justify-between px-1 pt-0.5 mb-2">
+                <span class="text-[9px] font-bold text-slate-400">9:41</span>
+                <div class="h-3.5 w-14 rounded-full bg-slate-900"></div>
+                <div class="flex items-center gap-1">
+                  <span class="h-1.5 w-1.5 rounded-full bg-slate-400"></span>
+                  <span class="h-1.5 w-1.5 rounded-full bg-slate-400"></span>
+                </div>
+              </div>
+
+              <!-- Header & Order Item -->
+              <div class="pb-2 border-b border-slate-100 flex items-center justify-between">
+                <div>
+                  <div class="text-[11px] font-extrabold text-ink">Checkout</div>
+                  <div class="text-[8.5px] text-slate-400">Order #8492</div>
+                </div>
+                <span class="rounded bg-emerald-50 px-1.5 py-0.5 text-[8.5px] font-bold text-emerald-600 flex items-center gap-0.5">
+                  <svg class="h-2.5 w-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 256-bit
+                </span>
+              </div>
+
+              <!-- Cart Summary Box -->
+              <div class="mt-2.5 rounded-xl bg-slate-50 border border-slate-100 p-2 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <div class="flex h-7 w-7 items-center justify-center rounded-lg bg-brand/10 text-brand font-bold text-xs">
+                    🎧
+                  </div>
+                  <div class="leading-tight">
+                    <div class="text-[10px] font-bold text-ink">Pro Wireless Audio</div>
+                    <div class="text-[8px] text-slate-400">Qty: 1 • In Stock</div>
+                  </div>
+                </div>
+                <span class="text-[11px] font-black text-ink">₹2,499</span>
+              </div>
+
+              <!-- Payment Methods List (Interactive) -->
+              <div id="hero-pay-methods" class="mt-3 space-y-1.5">
+                <!-- UPI (Active Option) -->
+                <button type="button" data-rail="upi" data-gateway="PayU" data-latency="58ms" data-sr="99.6%" class="hero-pay-opt w-full text-left flex items-center justify-between rounded-xl border-2 border-brand bg-brand/[0.04] p-2 shadow-xs transition cursor-pointer">
+                  <div class="flex items-center gap-2">
+                    <div class="opt-radio flex h-4.5 w-4.5 items-center justify-center rounded-full bg-brand text-white text-[8px] font-black">✓</div>
+                    <div>
+                      <div class="text-[10px] font-bold text-ink leading-tight">Instant UPI Intent</div>
+                      <div class="text-[8px] text-slate-500">Google Pay, PhonePe, Paytm</div>
+                    </div>
+                  </div>
+                  <span class="rounded bg-emerald-100 px-1.5 py-0.5 text-[7.5px] font-extrabold text-emerald-700">FASTEST</span>
+                </button>
+
+                <!-- Cards Option -->
+                <button type="button" data-rail="cards" data-gateway="Easebuzz" data-latency="64ms" data-sr="99.2%" class="hero-pay-opt w-full text-left flex items-center justify-between rounded-xl border border-slate-100 bg-white p-2 opacity-90 hover:border-slate-200 transition cursor-pointer">
+                  <div class="flex items-center gap-2">
+                    <div class="opt-radio h-2.5 w-2.5 rounded-full border-2 border-slate-300"></div>
+                    <div class="text-[9.5px] font-semibold text-slate-700">Cards (Tokenized)</div>
+                  </div>
+                  <span class="text-[8px] text-slate-400 font-medium">RuPay / Visa</span>
+                </button>
+
+                <!-- Net Banking -->
+                <button type="button" data-rail="nb" data-gateway="Zaakpay" data-latency="72ms" data-sr="98.9%" class="hero-pay-opt w-full text-left flex items-center justify-between rounded-xl border border-slate-100 bg-white p-2 opacity-90 hover:border-slate-200 transition cursor-pointer">
+                  <div class="flex items-center gap-2">
+                    <div class="opt-radio h-2.5 w-2.5 rounded-full border-2 border-slate-300"></div>
+                    <div class="text-[9.5px] font-semibold text-slate-700">Net Banking</div>
+                  </div>
+                  <span class="text-[8px] text-slate-400 font-medium">All Banks</span>
+                </button>
+
+                <!-- Cardless EMI -->
+                <button type="button" data-rail="emi" data-gateway="PayU" data-latency="61ms" data-sr="99.4%" class="hero-pay-opt w-full text-left flex items-center justify-between rounded-xl border border-slate-100 bg-white p-2 opacity-90 hover:border-slate-200 transition cursor-pointer">
+                  <div class="flex items-center gap-2">
+                    <div class="opt-radio h-2.5 w-2.5 rounded-full border-2 border-slate-300"></div>
+                    <div class="text-[9.5px] font-semibold text-slate-700">Cardless EMI</div>
+                  </div>
+                  <span class="text-[8px] text-slate-400 font-medium">0% Cost</span>
+                </button>
               </div>
             </div>
-            
-            <!-- Connection Line 2 -->
-            <div class="flex-1 h-[3px] bg-slate-100 mx-1 relative overflow-hidden">
-              <div id="sim-line-2" class="absolute top-0 left-0 h-full w-0 bg-emerald-500 transition-all duration-[600ms] ease-out"></div>
+
+            <!-- Pay CTA -->
+            <div class="mt-3 pt-1 border-t border-slate-100">
+              <button type="button" id="hero-pay-btn" class="flex w-full items-center justify-center gap-1.5 rounded-xl bg-brand py-2.5 text-[11px] font-extrabold text-white shadow-md shadow-brand/30 transition hover:bg-brandDk active:scale-[0.98] cursor-pointer">
+                <span id="hero-pay-label">Pay ₹2,499</span>
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
             </div>
-            
-            <!-- Destination Node -->
-            <div class="flex flex-col items-center z-10 w-16">
-              <div id="sim-target" class="h-10 w-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-ink font-bold text-[9px] text-center leading-tight shadow-sm transition-all duration-300">Gateway A</div>
-              <span id="sim-target-label" class="text-[8px] font-extrabold uppercase text-slate-400 mt-1.5 tracking-wider">Primary</span>
+          </div>
+        </div>
+
+        <!-- 2. TOP-CENTER FLOATING: Dynamic Routing Card -->
+        <div id="hero-routing-card" class="absolute left-[310px] top-[16px] w-[185px] rounded-2xl border border-white/90 bg-white/95 p-3 shadow-[0_15px_35px_-10px_rgba(15,35,70,.15)] backdrop-blur-md animate-hero-float transition-all duration-300">
+          <div class="flex items-center justify-between pb-1.5 border-b border-slate-100">
+            <span class="text-[9.5px] font-extrabold uppercase text-slate-600">Dynamic Routing</span>
+            <span class="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          </div>
+          
+          <div class="mt-2.5 flex items-center gap-2.5">
+            <!-- Circular 99.6% Meter -->
+            <div class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-emerald-50 border-[2.5px] border-emerald-400">
+              <span id="hero-sr-meter" class="text-[10px] font-black text-emerald-700 leading-none">99.6%</span>
+            </div>
+            <!-- Live PSP Pings -->
+            <div class="space-y-1 text-[8.5px] leading-tight flex-1">
+              <div id="gw-row-PayU" class="flex items-center justify-between font-bold text-slate-700 rounded px-1 py-0.5 bg-emerald-50/70 transition">
+                <span class="flex items-center gap-1"><span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> PayU</span>
+                <span class="gw-stat text-emerald-700 font-bold">58ms</span>
+              </div>
+              <div id="gw-row-Easebuzz" class="flex items-center justify-between font-bold text-slate-700 rounded px-1 py-0.5 transition">
+                <span class="flex items-center gap-1"><span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Easebuzz</span>
+                <span class="gw-stat text-emerald-600 font-semibold">Active</span>
+              </div>
+              <div id="gw-row-Zaakpay" class="flex items-center justify-between font-bold text-slate-700 rounded px-1 py-0.5 transition">
+                <span class="flex items-center gap-1"><span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Zaakpay</span>
+                <span class="gw-stat text-emerald-600 font-semibold">Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. BOTTOM-CENTER FLOATING: Success Uplift Pill -->
+        <div class="absolute left-[305px] top-[295px] rounded-2xl border border-emerald-200/80 bg-emerald-50/95 px-3 py-2 shadow-lg backdrop-blur flex items-center gap-2 animate-hero-float-delay">
+          <span class="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500 text-white text-[10px] font-black shadow-xs">✓</span>
+          <div>
+            <div class="text-[10px] font-black text-emerald-900 leading-tight">Success Uplift +14.2%</div>
+            <div class="text-[8px] font-medium text-emerald-700">Zero Customer Drop-offs</div>
+          </div>
+        </div>
+
+        <!-- 4. CENTER NODE: True 3D Stacked Isometric Switcher Microchip -->
+        <div class="absolute left-[590px] top-[242px] -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center justify-center">
+          <div class="relative flex h-36 w-40 items-center justify-center group">
+            <!-- Pulsing Radial Glow -->
+            <div class="absolute inset-2 rounded-full bg-gradient-to-tr from-[#0066FF] to-[#2BB5C4] opacity-30 blur-2xl animate-pulse"></div>
+
+            <!-- 3D Isometric Stacked Silicon Processor SVG -->
+            <svg class="relative h-36 w-40 drop-shadow-[0_18px_28px_rgba(7,22,44,0.38)] transition-transform duration-300 group-hover:scale-105 group-hover:-translate-y-1" viewBox="0 0 180 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="isoTop" x1="20" y1="20" x2="160" y2="100" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#0B2A4A" />
+                  <stop offset="50%" stop-color="#071C36" />
+                  <stop offset="100%" stop-color="#041022" />
+                </linearGradient>
+                <linearGradient id="isoLeft" x1="18" y1="60" x2="90" y2="145" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#06172B" />
+                  <stop offset="100%" stop-color="#030B17" />
+                </linearGradient>
+                <linearGradient id="isoRight" x1="90" y1="90" x2="162" y2="145" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#0B2848" />
+                  <stop offset="100%" stop-color="#051324" />
+                </linearGradient>
+                <linearGradient id="cyanEdge" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#0066FF" />
+                  <stop offset="50%" stop-color="#38BDF8" />
+                  <stop offset="100%" stop-color="#2BB5C4" />
+                </linearGradient>
+              </defs>
+
+              <!-- Bottom Stacked Plate (Layer 3) -->
+              <path d="M90 144L20 106V96L90 134L160 96V106L90 144Z" fill="#030D1B" stroke="#0EA5E9" stroke-opacity="0.45" stroke-width="0.9"/>
+              <path d="M90 134L20 96L90 58L160 96L90 134Z" fill="#061930" stroke="#38BDF8" stroke-opacity="0.4" stroke-width="1"/>
+
+              <!-- Middle Stacked Plate (Layer 2) -->
+              <path d="M90 124L20 86V76L90 114L160 76V86L90 124Z" fill="#041224" stroke="#0EA5E9" stroke-opacity="0.6" stroke-width="0.9"/>
+              <path d="M90 114L20 76L90 38L160 76L90 114Z" fill="#08203D" stroke="#38BDF8" stroke-opacity="0.65" stroke-width="1.1"/>
+
+              <!-- Top Main Processor Plate (Layer 1) -->
+              <path d="M90 102L18 63V51L90 90L162 51V63L90 102Z" fill="url(#isoLeft)" stroke="url(#cyanEdge)" stroke-width="1"/>
+              <path d="M90 90L18 51L90 12L162 51L90 90Z" fill="url(#isoTop)" stroke="url(#cyanEdge)" stroke-width="1.4"/>
+
+              <!-- Etched Isometric PCB Traces on Top Surface -->
+              <path d="M90 20V32M90 70V82M42 51H58M122 51H138" stroke="#38BDF8" stroke-opacity="0.55" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M56 32L70 40M124 32L110 40M56 70L70 62M124 70L110 62" stroke="#2BB5C4" stroke-opacity="0.65" stroke-width="1.2" stroke-linecap="round"/>
+              <circle cx="56" cy="32" r="1.8" fill="#38BDF8"/>
+              <circle cx="124" cy="32" r="1.8" fill="#38BDF8"/>
+              <circle cx="56" cy="70" r="1.8" fill="#38BDF8"/>
+              <circle cx="124" cy="70" r="1.8" fill="#38BDF8"/>
+
+              <!-- Raised Center Silicon Die (Isometric) -->
+              <path d="M90 70L58 52V46L90 64L122 46V52L90 70Z" fill="#05162B" stroke="#2BB5C4" stroke-width="0.9"/>
+              <path d="M90 64L58 46L90 28L122 46L90 64Z" fill="#0D2F4F" stroke="#38BDF8" stroke-width="1.3"/>
+
+              <!-- Official Paisape Geometric P Mark Centered on Isometric Die -->
+              <g transform="translate(90, 46) scale(1, 0.58) rotate(-45) translate(-16, -16)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 5.5H17.2C22.2 5.5 25.5 8.5 25.5 13.1C25.5 17.7 22.2 20.7 17.2 20.7H12.5V26.5H8V8.2L6.5 6.8V5.5ZM12.5 9.6V16.6H16.9C19.5 16.6 21 15.2 21 13.1C21 11 19.5 9.6 16.9 9.6H12.5Z" fill="#2BB5C4"/>
+                <path d="M22.5 23.2L26 26.5H22.5V23.2Z" fill="#38BDF8"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 5. TOP-RIGHT NODE: Unified Console Dashboard Mockup -->
+        <div class="absolute left-[700px] top-[16px] w-[240px] rounded-2xl border border-white/90 bg-white/95 p-3.5 shadow-[0_15px_35px_-10px_rgba(15,35,70,.15)] backdrop-blur-md animate-hero-float-delay">
+          <div class="flex items-center justify-between pb-1.5 border-b border-slate-100">
+            <span class="text-[9px] font-extrabold uppercase tracking-wider text-brand">PAISAPE CONSOLE</span>
+            <span class="rounded bg-emerald-50 border border-emerald-100 px-1.5 py-0.2 text-[8px] font-bold text-emerald-700">98.6% SR</span>
+          </div>
+
+          <!-- Quick Metrics -->
+          <div class="mt-2.5 grid grid-cols-2 gap-2">
+            <div class="rounded-xl bg-slate-50 border border-slate-100 p-1.5">
+              <div class="text-[7.5px] text-slate-400 font-semibold uppercase">Total Successes</div>
+              <div class="text-[13px] font-black text-ink mt-0.5">24,780 <span class="text-[8px] font-bold text-emerald-500">↑ 12%</span></div>
+            </div>
+            <div class="rounded-xl bg-slate-50 border border-slate-100 p-1.5">
+              <div class="text-[7.5px] text-slate-400 font-semibold uppercase">Gross Volume</div>
+              <div class="text-[13px] font-black text-brand mt-0.5">₹12.6 Cr</div>
             </div>
           </div>
 
-          <div class="space-y-3 pt-2">
-            <div id="sim-message" class="rounded-xl bg-mist px-4 py-2.5 text-center min-h-[44px] flex items-center justify-center">
-              <p class="text-[11px] font-semibold text-ink2 leading-relaxed">Toggle Gateway status above, then click pay to test routing.</p>
+          <!-- 7-Day Bar Chart -->
+          <div class="mt-2.5 pt-1.5 border-t border-slate-100">
+            <div class="flex items-center justify-between text-[7.5px] text-slate-400 font-semibold mb-1.5">
+              <span>Weekly Transaction Volume</span>
+              <span class="text-emerald-600 font-bold">+18.4%</span>
             </div>
-            <button id="sim-btn" class="w-full rounded-xl bg-brand py-3 text-xs font-bold text-white shadow-lg shadow-brand/20 hover:bg-brandDk active:scale-[0.98] transition">
-              Simulate UPI Payment (₹1,000)
-            </button>
+            <div class="flex items-end justify-between gap-1.5 h-9 px-1.5 bg-slate-50 rounded-lg pt-1">
+              <div class="w-2.5 rounded-t bg-brand/35 h-[45%]"></div>
+              <div class="w-2.5 rounded-t bg-brand/45 h-[65%]"></div>
+              <div class="w-2.5 rounded-t bg-brand/55 h-[50%]"></div>
+              <div class="w-2.5 rounded-t bg-brand/65 h-[75%]"></div>
+              <div class="w-2.5 rounded-t bg-brand/75 h-[90%]"></div>
+              <div class="w-2.5 rounded-t bg-brand h-[100%] shadow-xs"></div>
+              <div class="w-2.5 rounded-t bg-brand h-[85%]"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. BOTTOM-RIGHT NODE: Isometric Bank Rails Diamond Network (UrbanRupee Style) -->
+        <div class="absolute left-[745px] top-[210px] w-[265px] h-[195px] flex items-center justify-center animate-hero-float">
+          <!-- Glowing Diamond SVG Circuit Mesh connecting the 4 Banks -->
+          <svg class="absolute inset-0 h-full w-full pointer-events-none" viewBox="0 0 265 195" fill="none">
+            <path d="M 132 34 L 222 97 L 132 160 L 42 97 Z" stroke="#0EA5E9" stroke-opacity="0.45" stroke-width="1.5" stroke-dasharray="4 4" class="animate-circuit-dash" />
+            <path d="M 132 34 L 132 160 M 42 97 L 222 97" stroke="#0EA5E9" stroke-opacity="0.22" stroke-width="1" />
+          </svg>
+
+          <!-- Center 3D Rotating Badge (Front: Security Shield, Back: Official Paisape Icon) -->
+          <div class="relative z-20 h-11 w-11 [perspective:600px]">
+            <div class="relative h-full w-full animate-coin-flip [transform-style:preserve-3d]">
+              <!-- Front Face: Security Shield -->
+              <div class="absolute inset-0 flex items-center justify-center rounded-xl bg-gradient-to-tr from-[#0066FF] to-[#2BB5C4] text-white shadow-[0_8px_20px_rgba(0,102,255,0.35)] border border-white/40 [backface-visibility:hidden]">
+                <svg class="h-5.5 w-5.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <!-- Back Face: Official Paisape Icon -->
+              <div class="absolute inset-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-[#07162C] to-[#0D2E42] border border-[#2BB5C4]/70 shadow-[0_8px_20px_rgba(43,181,196,0.35)] [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                <svg class="h-6.5 w-6.5" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 5.5H17.2C22.2 5.5 25.5 8.5 25.5 13.1C25.5 17.7 22.2 20.7 17.2 20.7H12.5V26.5H8V8.2L6.5 6.8V5.5ZM12.5 9.6V16.6H16.9C19.5 16.6 21 15.2 21 13.1C21 11 19.5 9.6 16.9 9.6H12.5Z" fill="#2BB5C4"/>
+                  <path d="M22.5 23.2L26 26.5H22.5V23.2Z" fill="#38BDF8"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Top Node: HDFC Bank -->
+          <div class="absolute top-1 left-1/2 -translate-x-1/2 flex flex-col items-center">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-b from-[#0E2B4C] to-[#06182C] text-sky-300 shadow-lg border border-sky-400/30">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/></svg>
+            </div>
+            <span class="mt-1 rounded-md bg-white/95 border border-slate-200/80 px-1.5 py-0.2 text-[8px] font-extrabold text-slate-700 shadow-xs">HDFC Bank</span>
+          </div>
+
+          <!-- Left Node: ICICI Bank -->
+          <div class="absolute left-0 top-1/2 -translate-y-1/2 flex flex-col items-center">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-b from-[#0E2B4C] to-[#06182C] text-sky-300 shadow-lg border border-sky-400/30">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/></svg>
+            </div>
+            <span class="mt-1 rounded-md bg-white/95 border border-slate-200/80 px-1.5 py-0.2 text-[8px] font-extrabold text-slate-700 shadow-xs">ICICI</span>
+          </div>
+
+          <!-- Right Node: Axis Bank -->
+          <div class="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col items-center">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-b from-[#0E2B4C] to-[#06182C] text-sky-300 shadow-lg border border-sky-400/30">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/></svg>
+            </div>
+            <span class="mt-1 rounded-md bg-white/95 border border-slate-200/80 px-1.5 py-0.2 text-[8px] font-extrabold text-slate-700 shadow-xs">Axis Bank</span>
+          </div>
+
+          <!-- Bottom Node: NPCI / UPI 2.0 -->
+          <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-b from-[#0E2B4C] to-[#06182C] text-cyan-300 shadow-lg border border-cyan-400/30">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/></svg>
+            </div>
+            <span class="mt-1 rounded-md bg-white/95 border border-slate-200/80 px-1.5 py-0.2 text-[8px] font-extrabold text-slate-700 shadow-xs">NPCI / UPI 2.0</span>
           </div>
         </div>
 
@@ -338,43 +633,216 @@
   </div>
 </section>
 
+<!-- Inline Responsive Scaling & Animation Script for Hero Diagram -->
+<style>
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-7px); }
+}
+@keyframes heroFloatDelay {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-9px); }
+}
+@keyframes circuitDash {
+  to { stroke-dashoffset: -36; }
+}
+@keyframes coinFlip3D {
+  0%, 20% { transform: rotateY(0deg); }
+  45%, 70% { transform: rotateY(180deg); }
+  95%, 100% { transform: rotateY(360deg); }
+}
+.animate-hero-float {
+  animation: heroFloat 4.2s ease-in-out infinite;
+}
+.animate-hero-float-delay {
+  animation: heroFloatDelay 4.8s ease-in-out infinite 0.7s;
+}
+.animate-circuit-dash {
+  animation: circuitDash 1.4s linear infinite;
+}
+.animate-coin-flip {
+  animation: coinFlip3D 4.5s ease-in-out infinite;
+}
+</style>
+<script>
+(function() {
+  function fitHeroStage() {
+    var graphic = document.getElementById('hero-graphic');
+    var stage = document.getElementById('hero-stage');
+    if (!graphic || !stage) return;
+    var containerWidth = graphic.clientWidth || 1000;
+    if (containerWidth === 0) return;
+    var scale = Math.min(1, containerWidth / 1180);
+    stage.style.transform = 'translateX(-50%) scale(' + scale + ')';
+    graphic.style.height = Math.round(430 * scale) + 'px';
+  }
+  window.addEventListener('resize', fitHeroStage);
+  window.addEventListener('DOMContentLoaded', fitHeroStage);
+  setTimeout(fitHeroStage, 100);
+
+  // Interactive Phone Payment Options -> Dynamic Routing Highlight
+  var opts = document.querySelectorAll('.hero-pay-opt');
+  var srMeter = document.getElementById('hero-sr-meter');
+  var payBtn = document.getElementById('hero-pay-btn');
+  var payLabel = document.getElementById('hero-pay-label');
+  var gateways = ['PayU', 'Easebuzz', 'Zaakpay'];
+
+  function selectPayOpt(opt) {
+    opts.forEach(function(o) {
+      o.classList.remove('border-2', 'border-brand', 'bg-brand/[0.04]', 'shadow-xs');
+      o.classList.add('border', 'border-slate-100', 'bg-white', 'opacity-90');
+      var radio = o.querySelector('.opt-radio');
+      if (radio) {
+        radio.className = 'opt-radio h-2.5 w-2.5 rounded-full border-2 border-slate-300';
+        radio.textContent = '';
+      }
+    });
+    opt.classList.remove('border', 'border-slate-100', 'bg-white', 'opacity-90');
+    opt.classList.add('border-2', 'border-brand', 'bg-brand/[0.04]', 'shadow-xs');
+    var activeRadio = opt.querySelector('.opt-radio');
+    if (activeRadio) {
+      activeRadio.className = 'opt-radio flex h-4.5 w-4.5 items-center justify-center rounded-full bg-brand text-white text-[8px] font-black';
+      activeRadio.textContent = '✓';
+    }
+
+    var gw = opt.getAttribute('data-gateway');
+    var lat = opt.getAttribute('data-latency');
+    var sr = opt.getAttribute('data-sr');
+    if (srMeter && sr) srMeter.textContent = sr;
+
+    gateways.forEach(function(name) {
+      var row = document.getElementById('gw-row-' + name);
+      if (!row) return;
+      var stat = row.querySelector('.gw-stat');
+      if (name === gw) {
+        row.classList.add('bg-emerald-50/80', 'ring-1', 'ring-emerald-300/60');
+        if (stat) {
+          stat.textContent = lat;
+          stat.className = 'gw-stat text-emerald-700 font-bold';
+        }
+      } else {
+        row.classList.remove('bg-emerald-50/80', 'ring-1', 'ring-emerald-300/60');
+        if (stat) {
+          stat.textContent = 'Active';
+          stat.className = 'gw-stat text-emerald-600 font-semibold';
+        }
+      }
+    });
+  }
+
+  opts.forEach(function(opt) {
+    opt.addEventListener('click', function() { selectPayOpt(opt); });
+  });
+
+  if (payBtn && payLabel) {
+    payBtn.addEventListener('click', function() {
+      payLabel.textContent = 'Routed in 58ms ✓';
+      payBtn.classList.remove('bg-brand', 'hover:bg-brandDk');
+      payBtn.classList.add('bg-emerald-500');
+      setTimeout(function() {
+        payLabel.textContent = 'Pay ₹2,499';
+        payBtn.classList.remove('bg-emerald-500');
+        payBtn.classList.add('bg-brand', 'hover:bg-brandDk');
+      }, 1500);
+    });
+  }
+})();
+</script>
+
 <!-- ================= CERTIFICATIONS & TRUST BADGES BAR ================= -->
-<section class="border-y border-slate-100 bg-white">
-  <div class="mx-auto grid max-w-site grid-cols-2 divide-y divide-slate-100 sm:grid-cols-4 sm:divide-y-0 sm:divide-x">
-    
-    <!-- Column 1: PayU Certified Partner -->
-    <div data-reveal class="p-6 flex items-center justify-center">
-      <a href="https://pmny.in/er1smJcqj6z5" target="_blank" rel="noopener" aria-label="PayU Certified Partner Verification" class="transition hover:scale-105">
-        <img src="https://partner.payu.in/packs/media/icons/certified-partner-9aa55562.png" alt="PayU Certified Partner" class="h-11 w-auto drop-shadow-sm" width="80" height="80" />
-      </a>
+<section class="border-y border-slate-100 bg-gradient-to-b from-white via-slate-50/40 to-white py-3.5">
+  <div class="mx-auto max-w-site px-5">
+    <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-2 mb-3">
+      <div class="flex items-center gap-2">
+        <span class="relative flex h-2 w-2">
+          <span class="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping"></span>
+          <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+        </span>
+        <span class="text-[11px] font-bold uppercase tracking-[0.18em] text-ink2">Accredited &amp; Compliant Infrastructure</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-amber-50 border border-amber-200/80 px-2.5 py-0.5 text-amber-700 text-[11px] font-semibold">
+          <span class="h-1.5 w-1.5 rounded-full bg-amber-500 animate-pulse"></span> PCI DSS v4.0 Assessment in Progress
+        </span>
+        <span class="hidden sm:inline-flex items-center gap-1.5 text-slate-600 text-[11.5px] font-semibold">
+          <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> 100% In-Country Data Localization
+        </span>
+      </div>
     </div>
 
-    <!-- Column 2: ISO 9001:2015 QMS -->
-    <div data-reveal data-delay="80" class="p-6 flex items-center justify-center">
-      <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" aria-label="ISO 9001:2015 Certification" class="transition hover:scale-105">
-        <img src="/assets/iso-9001-logo.svg" alt="ISO 9001:2015 QMS Certified" class="h-11 w-auto shadow-sm rounded-xl" width="160" height="50" />
-      </a>
+    <!-- Official Gateway Partnerships -->
+    <div class="mb-3.5">
+      <div class="flex items-center justify-between mb-2.5">
+        <p class="text-[10.5px] font-bold uppercase tracking-[0.15em] text-slate-400">Official Gateway Partnerships</p>
+        <span class="text-[11px] font-medium text-emerald-600 flex items-center gap-1">
+          <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          Direct Commercial Integrations
+        </span>
+      </div>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
+        <!-- PayU -->
+        <a href="https://pmny.in/er1smJcqj6z5" target="_blank" rel="noopener" aria-label="PayU Official Partner Verification" class="group flex items-center justify-center rounded-xl border border-slate-200/80 bg-white h-16 p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md">
+          <img src="/assets/payu-logo.svg" alt="PayU" class="h-7 w-auto object-contain transition group-hover:scale-105" width="103" height="56" />
+        </a>
+
+        <!-- Easebuzz -->
+        <div class="group flex items-center justify-center rounded-xl border border-slate-200/80 bg-white h-16 p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md">
+          <img src="/assets/easebuzz-logo.svg" alt="Easebuzz" class="h-6.5 w-auto object-contain transition group-hover:scale-105" width="191" height="28" />
+        </div>
+
+        <!-- Zaakpay -->
+        <div class="group flex items-center justify-center rounded-xl border border-slate-200/80 bg-white h-16 p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md">
+          <img src="/assets/zaakpay-logo.svg" alt="Zaakpay" class="h-7 w-auto object-contain transition group-hover:scale-105" width="142" height="53" />
+        </div>
+      </div>
     </div>
 
-    <!-- Column 3: ISO 27001:2022 ISMS -->
-    <div data-reveal data-delay="160" class="p-6 flex items-center justify-center">
-      <a href="https://www.iafcertsearch.org/certification/EMahmahDvCLJcoeJoGLB1BaY" target="_blank" rel="noopener" aria-label="ISO 27001:2022 Certification" class="transition hover:scale-105">
-        <img src="/assets/iso-27001-logo.svg" alt="ISO 27001:2022 ISMS Certified" class="h-11 w-auto shadow-sm rounded-xl" width="170" height="50" />
-      </a>
-    </div>
+    <!-- Government & Standard Accreditations -->
+    <div>
+      <p class="text-[10.5px] font-bold uppercase tracking-[0.15em] text-slate-400 mb-2.5">Accreditations &amp; Quality Certifications</p>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
+        <!-- ISO 9001:2015 QMS -->
+        <a href="https://www.iafcertsearch.org/certification/RC4pwKgEYuifFY9MQAMuaxjM" target="_blank" rel="noopener" aria-label="ISO 9001:2015 Certification" class="group flex items-center justify-center sm:justify-start rounded-xl border border-slate-200/80 bg-white p-3 shadow-sm transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md">
+          <div class="flex items-center gap-3">
+            <img src="/assets/iso-9001-logo.svg" alt="ISO 9001:2015 QMS Certified" class="h-8 w-auto object-contain transition group-hover:scale-105" width="160" height="50" />
+            <div>
+              <div class="text-[13px] font-bold text-ink">ISO 9001:2015</div>
+              <div class="text-[11px] text-slate-500">Quality Management System</div>
+            </div>
+          </div>
+          
+        </a>
 
-    <!-- Column 4: DPIIT Recognized Startup -->
-    <div data-reveal data-delay="240" class="p-6 flex items-center justify-center">
-      <a href="/assets/startup-india-certificate.pdf" target="_blank" rel="noopener" aria-label="DPIIT Recognized Startup Certification DIPP282292" class="transition hover:scale-105">
-        <img src="/assets/startup-india-logo.svg" alt="DPIIT Recognized Startup DIPP282292" class="h-11 w-auto shadow-sm rounded-xl" width="195" height="50" />
-      </a>
-    </div>
+        <!-- ISO 27001:2022 ISMS -->
+        <a href="https://www.iafcertsearch.org/certification/EMahmahDvCLJcoeJoGLB1BaY" target="_blank" rel="noopener" aria-label="ISO 27001:2022 Certification" class="group flex items-center justify-center sm:justify-start rounded-xl border border-slate-200/80 bg-white p-3 shadow-sm transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md">
+          <div class="flex items-center gap-3">
+            <img src="/assets/iso-27001-logo.svg" alt="ISO 27001:2022 ISMS Certified" class="h-8 w-auto object-contain transition group-hover:scale-105" width="170" height="50" />
+            <div>
+              <div class="text-[13px] font-bold text-ink">ISO 27001:2022</div>
+              <div class="text-[11px] text-slate-500">Info Security Management</div>
+            </div>
+          </div>
+          
+        </a>
 
+        <!-- DPIIT Recognized Startup -->
+        <a href="/assets/startup-india-certificate.pdf" target="_blank" rel="noopener" aria-label="DPIIT Recognized Startup Certification DIPP282292" class="group flex items-center justify-center sm:justify-start rounded-xl border border-slate-200/80 bg-white p-3 shadow-sm transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md">
+          <div class="flex items-center gap-3">
+            <img src="/assets/startup-india-logo.svg" alt="DPIIT Recognized Startup DIPP282292" class="h-8 w-auto object-contain transition group-hover:scale-105" width="195" height="50" />
+            <div>
+              <div class="text-[13px] font-bold text-ink">Startup India</div>
+              <div class="text-[11px] text-slate-500">DIPP282292 Recognized</div>
+            </div>
+          </div>
+          
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ================= DUAL MARQUEE ================= -->
-<section class="space-y-3 bg-white py-6" aria-label="Supported payment methods and industries">
+<section class="space-y-2 bg-white py-3" aria-label="Supported payment methods and industries">
   <!-- row 1: payment method pills -->
   <div class="marquee overflow-hidden py-1">
     <div class="track animate-marquee-l gap-3 pr-3">
@@ -390,6 +858,14 @@
         <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
           <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           PayU
+        </span>
+        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-indigo-200 bg-indigo-50/70 px-4 py-2 text-[13px] font-semibold text-indigo-900">
+          <svg class="h-3.5 w-3.5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          Easebuzz
+        </span>
+        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-sky-200 bg-sky-50/70 px-4 py-2 text-[13px] font-semibold text-sky-900">
+          <svg class="h-3.5 w-3.5 text-sky-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          Zaakpay
         </span>
         <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
           <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -450,7 +926,7 @@
 
 
 <!-- ================= 5 CORE ENTERPRISE INFRASTRUCTURE PILLARS ================= -->
-<section id="core-pillars" class="relative overflow-hidden bg-white py-16 md:py-24 border-b border-slate-100">
+<section id="core-pillars" class="relative overflow-hidden bg-white pt-8 pb-10 md:pt-10 md:pb-12 border-b border-slate-100">
   <div class="mx-auto max-w-site px-5">
     <div class="text-center max-w-3xl mx-auto">
       <p data-reveal class="mb-3 text-[11px] font-bold uppercase tracking-[0.24em] text-brand">
@@ -464,7 +940,7 @@
       </p>
     </div>
 
-    <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <!-- Pillar 1: Payment Orchestrator -->
       <a href="/payment-orchestrator" data-reveal data-delay="0" class="group card-lift relative flex flex-col justify-between rounded-3xl border border-slate-200/80 bg-gradient-to-b from-white to-[#F8FCFF] p-7 shadow-sm transition hover:border-brand/40 hover:shadow-xl">
         <div>
@@ -476,7 +952,7 @@
           </div>
           <h3 class="mt-6 font-display text-[20px] font-extrabold text-ink group-hover:text-brand transition">Payment Orchestrator</h3>
           <p class="mt-2.5 text-[14px] leading-relaxed text-body">
-            Multi-acquirer smart dynamic routing, automated cascading fallbacks, and unified PCI DSS v4.0 token vault. Boost checkout success rates by up to 14%.
+            Multi-acquirer smart dynamic routing, automated cascading fallbacks, and unified card token vault (PCI DSS v4.0 assessment in progress). Boost checkout success rates by up to 14%.
           </p>
           <div class="mt-5 flex flex-wrap gap-2 text-[11.5px] font-medium text-slate-600">
             <span class="rounded-md bg-slate-100 px-2 py-0.5">8+ Gateways</span>
@@ -590,7 +1066,7 @@
 </section>
 
 <!-- ================= SOLUTIONS ================= -->
-<section id="solutions" class="bg-gradient-to-b from-white via-[#F5FAFE] to-white pt-10 pb-16 md:pt-12 md:pb-20">
+<section id="solutions" class="bg-gradient-to-b from-white via-[#F5FAFE] to-white pt-6 pb-8 md:pt-8 md:pb-10">
   <div class="mx-auto max-w-site px-5">
     <p data-reveal class="mb-3 text-center text-[11px] font-bold uppercase tracking-[0.24em] text-brand">
       <span class="mr-2 inline-block h-px w-6 align-middle bg-brand"></span>Our Solutions
@@ -599,7 +1075,7 @@
       Everything you need to move money across India
     </h2>
 
-    <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
       <article data-reveal data-delay="0" class="card-lift rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
         <div class="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brandLt text-brand">
           <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg>
@@ -669,7 +1145,224 @@
 </section>
 
 <!-- ================= CHALLENGES ================= -->
-<section id="challenges" class="bg-white pt-10 pb-16 md:pt-12 md:pb-20">
+
+<!-- ================= INDUSTRY SOLUTIONS TABS ================= -->
+<section id="industry-solutions" class="bg-slate-50 border-y border-slate-100 py-8 md:py-12">
+  <div class="mx-auto max-w-site px-5">
+    <div class="text-center max-w-3xl mx-auto">
+      <p data-reveal class="mb-3 text-[11px] font-bold uppercase tracking-[0.24em] text-brand">
+        <span class="mr-2 inline-block h-px w-6 align-middle bg-brand"></span>Tailored Architecture
+      </p>
+      <h2 data-reveal data-delay="80" class="font-display text-[30px] font-extrabold leading-tight tracking-tight text-ink sm:text-[38px]">
+        Engineered for High-Growth Sectors
+      </h2>
+      <p data-reveal data-delay="160" class="mt-4 text-[15px] leading-relaxed text-body">
+        Select your business model to explore how Paisape optimizes transaction success rates, automates disbursals, and streamlines multi-bank treasury.
+      </p>
+    </div>
+
+    <!-- Industry Tabs Nav -->
+    <div class="mt-10 flex flex-wrap justify-center gap-2 sm:gap-3" role="tablist">
+      <button class="ind-tab active rounded-full px-5 py-2.5 text-[13.5px] font-bold transition shadow-sm bg-brand text-white" data-target="ecommerce">
+        E-Commerce &amp; D2C
+      </button>
+      <button class="ind-tab rounded-full px-5 py-2.5 text-[13.5px] font-semibold transition bg-white text-ink hover:text-brand border border-slate-200" data-target="fintech">
+        Fintech &amp; NBFCs
+      </button>
+      <button class="ind-tab rounded-full px-5 py-2.5 text-[13.5px] font-semibold transition bg-white text-ink hover:text-brand border border-slate-200" data-target="gig">
+        On-Demand &amp; Logistics
+      </button>
+      <button class="ind-tab rounded-full px-5 py-2.5 text-[13.5px] font-semibold transition bg-white text-ink hover:text-brand border border-slate-200" data-target="b2b">
+        B2B &amp; Marketplaces
+      </button>
+    </div>
+
+    <!-- Industry Panels Container -->
+    <div class="mt-8 max-w-4xl mx-auto">
+      <!-- Panel 1: E-Commerce -->
+      <div id="panel-ecommerce" class="ind-panel rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-10 shadow-sm">
+        <div class="grid gap-8 md:grid-cols-[1.2fr_.8fr] items-center">
+          <div>
+            <span class="rounded-md bg-brand/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brand">Retail &amp; Direct-to-Consumer</span>
+            <h3 class="mt-3 font-display text-[22px] font-extrabold text-ink sm:text-[26px]">Zero Cart Abandonment &amp; Instant Refunds</h3>
+            <p class="mt-3 text-[14.5px] leading-relaxed text-body">
+              Maximize checkout conversions with seamless 1-tap mobile UPI Intent and RBI-compliant card tokenization. Automate instant returns and cod-to-prepaid conversions with smart cascading payment fallbacks.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <div class="flex items-center gap-2 text-[13px] font-semibold text-ink">
+                <svg class="h-4 w-4 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                +14% Checkout Conversion
+              </div>
+              <div class="flex items-center gap-2 text-[13px] font-semibold text-ink">
+                <svg class="h-4 w-4 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Instant Sub-5s Refunds
+              </div>
+            </div>
+            <div class="mt-7">
+              <a href="/payment-gateway" class="inline-flex items-center gap-2 text-[14px] font-bold text-brand hover:text-brandDk">
+                Explore Payment Gateway <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-slate-100 bg-[#0C1524] p-5 text-white shadow-xl">
+            <p class="text-[11px] font-mono text-slate-400 border-b border-slate-800 pb-2">Checkout Metrics (D2C)</p>
+            <div class="mt-4 space-y-3">
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-300">UPI Intent Success Rate</span>
+                <span class="font-bold text-emerald-400 font-mono">94.8%</span>
+              </div>
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-300">Avg Checkout Speed</span>
+                <span class="font-bold text-brand font-mono">&lt; 1.8s</span>
+              </div>
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-300">Card Retry Fallback</span>
+                <span class="font-bold text-emerald-400 font-mono">Recovered (82%)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 2: Fintech & NBFCs -->
+      <div id="panel-fintech" class="ind-panel hidden rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-10 shadow-sm">
+        <div class="grid gap-8 md:grid-cols-[1.2fr_.8fr] items-center">
+          <div>
+            <span class="rounded-md bg-purple-50 text-purple-700 px-3 py-1 text-[11px] font-bold uppercase tracking-wider">Digital Lending &amp; Credit</span>
+            <h3 class="mt-3 font-display text-[22px] font-extrabold text-ink sm:text-[26px]">Instant 24x7 Disbursals &amp; UPI AutoPay</h3>
+            <p class="mt-3 text-[14.5px] leading-relaxed text-body">
+              Disburse micro-loans and credit limits in under 2 seconds via IMPS and UPI directly into borrower accounts. Automate monthly EMI collections with high-throughput UPI AutoPay recurring mandate rails.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <div class="flex items-center gap-2 text-[13px] font-semibold text-ink">
+                <svg class="h-4 w-4 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                50,000 Payouts / Min
+              </div>
+              <div class="flex items-center gap-2 text-[13px] font-semibold text-ink">
+                <svg class="h-4 w-4 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Penny Drop Validation
+              </div>
+            </div>
+            <div class="mt-7">
+              <a href="/payout" class="inline-flex items-center gap-2 text-[14px] font-bold text-brand hover:text-brandDk">
+                Explore Instant Payout Rails <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-slate-100 bg-[#0C1524] p-5 text-white shadow-xl">
+            <p class="text-[11px] font-mono text-slate-400 border-b border-slate-800 pb-2">Lending Rails Health</p>
+            <div class="mt-4 space-y-3">
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-300">IMPS Disbursal Latency</span>
+                <span class="font-bold text-emerald-400 font-mono">1.2 sec</span>
+              </div>
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-300">Penny Drop Accuracy</span>
+                <span class="font-bold text-brand font-mono">99.98%</span>
+              </div>
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-300">AutoPay Execution SLA</span>
+                <span class="font-bold text-emerald-400 font-mono">99.99%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 3: Gig Economy -->
+      <div id="panel-gig" class="ind-panel hidden rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-10 shadow-sm">
+        <div class="grid gap-8 md:grid-cols-[1.2fr_.8fr] items-center">
+          <div>
+            <span class="rounded-md bg-orange-50 text-orange-700 px-3 py-1 text-[11px] font-bold uppercase tracking-wider">Mobility, Delivery &amp; Gig Economy</span>
+            <h3 class="mt-3 font-display text-[22px] font-extrabold text-ink sm:text-[26px]">Real-Time Driver &amp; Seller Payouts</h3>
+            <p class="mt-3 text-[14.5px] leading-relaxed text-body">
+              Enable riders, drivers, and partners to withdraw on-demand earnings 24x7x365, including bank holidays and weekends. Maintain compliant escrow balances with automated bank splits.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <div class="flex items-center gap-2 text-[13px] font-semibold text-ink">
+                <svg class="h-4 w-4 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Zero Queue Rejections
+              </div>
+              <div class="flex items-center gap-2 text-[13px] font-semibold text-ink">
+                <svg class="h-4 w-4 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Nodal Account Splitting
+              </div>
+            </div>
+            <div class="mt-7">
+              <a href="/upi-switch" class="inline-flex items-center gap-2 text-[14px] font-bold text-brand hover:text-brandDk">
+                Explore UPI Switch Rails <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-slate-100 bg-[#0C1524] p-5 text-white shadow-xl">
+            <p class="text-[11px] font-mono text-slate-400 border-b border-slate-800 pb-2">On-Demand Disbursal Stream</p>
+            <div class="mt-4 space-y-3">
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-300">Peak Concurrency Capacity</span>
+                <span class="font-bold text-emerald-400 font-mono">100k+ TPS</span>
+              </div>
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-300">UPI Payout Confirmation</span>
+                <span class="font-bold text-brand font-mono">&lt; 1.5s</span>
+              </div>
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-300">Multi-Bank Fallback</span>
+                <span class="font-bold text-emerald-400 font-mono">Active-Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 4: B2B -->
+      <div id="panel-b2b" class="ind-panel hidden rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-10 shadow-sm">
+        <div class="grid gap-8 md:grid-cols-[1.2fr_.8fr] items-center">
+          <div>
+            <span class="rounded-md bg-emerald-50 text-emerald-700 px-3 py-1 text-[11px] font-bold uppercase tracking-wider">Enterprise &amp; Wholesale</span>
+            <h3 class="mt-3 font-display text-[22px] font-extrabold text-ink sm:text-[26px]">Smart Virtual Accounts &amp; ERP Treasury</h3>
+            <p class="mt-3 text-[14.5px] leading-relaxed text-body">
+              Assign dedicated virtual account numbers to each distributor and buyer. Inbound NEFT, RTGS, and IMPS payments automatically reconcile open ERP invoices in SAP, Tally, and Zoho.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <div class="flex items-center gap-2 text-[13px] font-semibold text-ink">
+                <svg class="h-4 w-4 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                100% Automated Reconciliation
+              </div>
+              <div class="flex items-center gap-2 text-[13px] font-semibold text-ink">
+                <svg class="h-4 w-4 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Direct ERP Connectors
+              </div>
+            </div>
+            <div class="mt-7">
+              <a href="/connected-banking" class="inline-flex items-center gap-2 text-[14px] font-bold text-brand hover:text-brandDk">
+                Explore Connected Banking <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-slate-100 bg-[#0C1524] p-5 text-white shadow-xl">
+            <p class="text-[11px] font-mono text-slate-400 border-b border-slate-800 pb-2">Virtual Account Telemetry</p>
+            <div class="mt-4 space-y-3">
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-300">ERP Invoice Match Rate</span>
+                <span class="font-bold text-emerald-400 font-mono">100.0%</span>
+              </div>
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-300">Manual Recon Reduction</span>
+                <span class="font-bold text-brand font-mono">-98.5%</span>
+              </div>
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-300">Webhook Notification</span>
+                <span class="font-bold text-emerald-400 font-mono">&lt; 80ms</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="challenges" class="bg-white pt-6 pb-8 md:pt-8 md:pb-10">
   <div class="mx-auto max-w-site px-5">
     <h2 data-reveal class="mx-auto max-w-2xl text-center font-display text-[27px] font-extrabold leading-tight tracking-tight text-ink sm:text-[34px]">
       Payment Infrastructure Challenges<br class="hidden sm:block"> &amp; Our Solutions
@@ -723,7 +1416,7 @@
 </section>
 
 <!-- ================= ROI CALCULATOR ================= -->
-<section id="roi-calculator" class="bg-slate-50 border-t border-slate-100 pt-12 pb-4">
+<section id="roi-calculator" class="bg-slate-50 border-t border-slate-100 pt-8 pb-4">
   <div class="mx-auto max-w-site px-5">
     <p class="mb-3 text-center text-[11px] font-bold uppercase tracking-[0.24em] text-brand">
       <span class="mr-2 inline-block h-px w-6 align-middle bg-brand"></span>Maximize Revenue
@@ -768,20 +1461,44 @@
       </div>
 
       <!-- Right side: Savings summary card -->
-      <div class="bg-gradient-to-b from-[#EAF4FD] to-white rounded-2xl border border-white p-6 flex flex-col justify-between shadow-sm">
+      <div class="bg-gradient-to-b from-[#EAF4FD] to-white rounded-2xl border border-white p-6 sm:p-7 flex flex-col justify-between shadow-md">
         <div class="space-y-4">
-          <h3 class="text-xs font-bold uppercase tracking-wider text-body/70">Estimated Recovery Impact</h3>
+          <div class="flex items-center justify-between">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">Estimated Recovery Impact</h3>
+            <span class="rounded-full bg-emerald-100/80 px-2.5 py-0.5 text-[10.5px] font-bold text-emerald-800">+13.4% Uplift</span>
+          </div>
+          
           <div>
-            <p class="text-[11px] font-semibold text-slate-500">Additional Successes (Annually)</p>
+            <p class="text-[11px] font-semibold text-slate-500">Additional Recovered Transactions (Annually)</p>
             <p id="roi-additional-txs" class="text-2xl font-extrabold text-ink font-display mt-0.5">3.6 Lakhs+</p>
           </div>
+
           <div>
             <p class="text-[11px] font-semibold text-slate-500">Estimated Annual Recovered Revenue</p>
             <p id="roi-recovered-rev" class="text-3xl font-extrabold text-brand font-display mt-0.5">₹36 Lakhs</p>
           </div>
+
+          <!-- Comparison Bar -->
+          <div class="pt-2 border-t border-slate-200/60 space-y-2">
+            <div class="flex justify-between text-[11px] font-medium text-slate-600">
+              <span>Single Acquirer Standard:</span>
+              <span class="font-bold text-slate-700">~85.0% SR</span>
+            </div>
+            <div class="flex justify-between text-[11px] font-medium text-emerald-700">
+              <span class="font-bold">With Paisape Smart Dynamic Routing:</span>
+              <span class="font-extrabold text-emerald-600">98.4% SR</span>
+            </div>
+            <div class="h-2 w-full rounded-full bg-slate-200 overflow-hidden flex">
+              <div class="h-full bg-slate-400" style="width: 85%"></div>
+              <div class="h-full bg-emerald-500 animate-pulse" style="width: 13.4%"></div>
+            </div>
+          </div>
         </div>
-        <div class="mt-6 pt-5 border-t border-slate-200/50 flex items-center justify-between">
-          <span class="text-[10px] font-semibold text-slate-500 leading-tight">Based on average +6% optimization with smart failover routing rules.</span>
+
+        <div class="mt-6 pt-4 border-t border-slate-200/50">
+          <a href="/contact" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand py-3 text-xs font-bold text-white shadow-lg shadow-brand/25 transition hover:bg-brandDk hover:-translate-y-0.5">
+            Claim Free Gateway Audit &amp; Demo <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
         </div>
       </div>
     </div>
@@ -789,7 +1506,7 @@
 </section>
 
 <!-- ================= DEVELOPER EXPERIENCE ================= -->
-<section id="developers" class="border-y border-slate-100 bg-gradient-to-b from-[#F3F9FE] to-white pt-8 pb-16 md:pb-20">
+<section id="developers" class="border-y border-slate-100 bg-gradient-to-b from-[#F3F9FE] to-white pt-6 pb-10 md:pb-12">
   <div class="mx-auto max-w-site px-5">
     <p data-reveal class="mb-3 text-center text-[11px] font-bold uppercase tracking-[0.24em] text-brand">&mdash; Developer Experience &mdash;</p>
     <h2 data-reveal data-delay="80" class="text-center font-display text-[27px] font-extrabold tracking-tight text-ink sm:text-[34px]">
@@ -889,7 +1606,7 @@
 </section>
 
 <!-- ================= ABOUT PAISAPE SECTION ================= -->
-<section id="about-paisape" class="py-12 bg-slate-50 border-t border-slate-100 relative overflow-hidden">
+<section id="about-paisape" class="py-8 md:py-10 bg-slate-50 border-t border-slate-100 relative overflow-hidden">
   <div class="mx-auto max-w-site px-5">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       
@@ -1002,15 +1719,15 @@
   </div>
 </section>
 
-<section class="border-t border-slate-100 bg-white py-14">
+<section class="border-t border-slate-100 bg-white py-8">
   <p data-reveal class="mb-8 px-5 text-center text-[10.5px] font-bold uppercase tracking-[0.22em] text-brand/80">
     Powering secure transactions across modern enterprises, financial institutions, and digital platforms.
   </p>
   <div class="marquee">
     <div class="track animate-marquee-slow gap-12 pr-12">
       <div class="flex shrink-0 items-center gap-12 pr-12" data-mq-group>
-        <span class="whitespace-nowrap font-display text-[17px] font-bold text-slate-400 transition hover:text-ink">Easebuzz</span>
-        <span class="whitespace-nowrap font-display text-[17px] font-bold text-slate-400 transition hover:text-ink">Zaakpay</span>
+        <span class="whitespace-nowrap font-display text-[17px] font-extrabold text-indigo-600 transition hover:text-indigo-800 inline-flex items-center gap-1.5"><svg class="h-4 w-4 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Easebuzz Partner</span>
+        <span class="whitespace-nowrap font-display text-[17px] font-extrabold text-[#0082FB] transition hover:text-blue-700 inline-flex items-center gap-1.5"><svg class="h-4 w-4 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Zaakpay Partner</span>
         <span class="whitespace-nowrap font-display text-[17px] font-bold text-slate-400 transition hover:text-ink">PhonePe</span>
         <span class="whitespace-nowrap font-display text-[17px] font-bold text-slate-400 transition hover:text-ink">Cashfree</span>
         <span class="whitespace-nowrap font-display text-[17px] font-bold text-slate-400 transition hover:text-ink">IDFC FIRST Bank</span>
@@ -1028,7 +1745,7 @@
 </main>
 
 <!-- ================= LATEST BLOGS ================= -->
-<section id="latest-blogs" class="bg-white border-t border-slate-100 pt-12 pb-16">
+<section id="latest-blogs" class="bg-white border-t border-slate-100 pt-8 pb-10">
   <div class="mx-auto max-w-site px-5">
     <div class="flex flex-col items-center justify-center text-center">
       <p class="mb-3 text-center text-[11px] font-bold uppercase tracking-[0.24em] text-brand">

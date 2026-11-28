@@ -74,7 +74,7 @@
           "Payment Orchestration",
           "Multi-Gateway Smart Routing",
           "Cascading Fallbacks",
-          "PCI DSS v4.0 Tokenization"
+          "RBI CoFT Tokenization"
         ]
       },
       {
@@ -111,7 +111,7 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "PCI DSS v4.0 CoFT Token Vault",
+                "name": "RBI-Compliant CoFT Token Vault",
                 "description": "RBI-compliant card tokenization vault interoperable across all connected payment processors."
               }
             }
@@ -143,7 +143,7 @@
             "name": "Does Paisape support RBI card tokenization (CoFT)?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Paisape features a certified PCI DSS v4.0 Level 1 token vault fully compliant with Reserve Bank of India (RBI) Card-on-File Tokenization (CoFT) mandates, allowing customers to save card tokens that can be routed across any integrated acquirer."
+              "text": "Yes. Paisape features an RBI-compliant Card-on-File Tokenization (CoFT) vault with PCI DSS v4.0 assessment in progress, allowing customers to save card tokens that can be routed across any integrated acquirer."
             }
           },
           {
@@ -151,7 +151,7 @@
             "name": "Can I integrate my existing payment gateway accounts?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Paisape's Payment Orchestrator supports Bring-Your-Own-Gateway (BYOG). You connect your existing merchant IDs from PayU, Razorpay, Cashfree, BillDesk, Paytm, CCavenue, or direct bank acquirers with zero lock-in."
+              "text": "Yes. Paisape's Payment Orchestrator supports Bring-Your-Own-Gateway (BYOG). You connect your existing merchant IDs from PayU, Easebuzz, Zaakpay, Razorpay, Cashfree, BillDesk, Paytm, CCavenue, or direct bank acquirers with zero lock-in."
             }
           }
         ]
@@ -200,7 +200,7 @@
     </h1>
 
     <p class="mt-5 max-w-2xl text-[16px] leading-relaxed text-body sm:text-[17px]">
-      Route transactions across 8+ payment gateways with intelligent real-time rules, automated cascading fallbacks, and a unified PCI DSS v4.0 token vault. Eliminate downtime, cut processing fees, and increase checkout success rates by up to 14%.
+      Route transactions across 8+ payment gateways with intelligent real-time rules, automated cascading fallbacks, and a unified card token vault (PCI DSS v4.0 in progress). Eliminate downtime, cut processing fees, and increase checkout success rates by up to 14%.
     </p>
 
     <div class="mt-8 flex flex-wrap items-center gap-4">
@@ -275,7 +275,7 @@
         <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 text-brand">
           <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         </div>
-        <h3 class="mt-5 font-display text-[18px] font-bold text-ink">PCI DSS v4.0 CoFT Vault</h3>
+        <h3 class="mt-5 font-display text-[18px] font-bold text-ink">RBI-Compliant CoFT Vault</h3>
         <p class="mt-2 text-[14px] leading-relaxed text-body">
           RBI-compliant Card-on-File Tokenization vault keeps sensitive data secure while enabling multi-gateway token sharing for frictionless 1-click repeat checkouts.
         </p>
@@ -408,14 +408,14 @@
       <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
         <h3 class="font-display text-[17px] font-bold text-ink">Is Paisape compliant with RBI Tokenization rules?</h3>
         <p class="mt-2 text-[14.5px] leading-relaxed text-body">
-          Yes. Paisape is certified PCI DSS v4.0 Level 1 and provides a centralized Card-on-File Tokenization (CoFT) vault fully compliant with Reserve Bank of India directives. You maintain full ownership and flexibility over tokenized customer credentials across any gateway partner.
+          Yes. Paisape provides a centralized Card-on-File Tokenization (CoFT) vault fully compliant with Reserve Bank of India directives, backed by ISO 27001:2022 security and PCI DSS v4.0 assessment in progress. You maintain full ownership and flexibility over tokenized customer credentials across any gateway partner.
         </p>
       </div>
 
       <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
         <h3 class="font-display text-[17px] font-bold text-ink">Can I bring my own payment gateway accounts (BYOG)?</h3>
         <p class="mt-2 text-[14.5px] leading-relaxed text-body">
-          Absolutely. Paisape supports full Bring-Your-Own-Gateway (BYOG). You can connect existing merchant accounts with PayU, Razorpay, Cashfree, BillDesk, Paytm, CCavenue, or direct bank acquirers with no vendor lock-in.
+          Absolutely. Paisape supports full Bring-Your-Own-Gateway (BYOG). You can connect existing merchant accounts with PayU, Easebuzz, Zaakpay, Razorpay, Cashfree, BillDesk, Paytm, CCavenue, or direct bank acquirers with no vendor lock-in.
         </p>
       </div>
     </div>
