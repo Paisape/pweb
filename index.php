@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://paisape.in/assets/paisape-og-banner.jpg" />
 <meta property="og:url" content="https://paisape.in/" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="icon" type="image/svg+xml" href="/assets/paisape-logo.png" />
+<link rel="icon" type="image/svg+xml" href="/assets/paisape-icon.svg" />
 
 <!-- Structured Data: JSON-LD for AI Search & Generative Engine Optimization (GEO) -->
 <script type="application/ld+json">
@@ -233,8 +233,8 @@
     <div class="rounded-3xl border border-white/90 bg-white/90 p-4 shadow-xl backdrop-blur space-y-3">
       <div class="flex items-center justify-between border-b border-slate-100 pb-2">
         <div class="flex items-center gap-2">
-          <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#07162C] border border-[#2BB5C4]/50">
-            <svg class="h-5 w-5" viewBox="0 0 32 32" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 5.5H17.2C22.2 5.5 25.5 8.5 25.5 13.1C25.5 17.7 22.2 20.7 17.2 20.7H12.5V26.5H8V8.2L6.5 6.8V5.5ZM12.5 9.6V16.6H16.9C19.5 16.6 21 15.2 21 13.1C21 11 19.5 9.6 16.9 9.6H12.5Z" fill="#2BB5C4"/><path d="M22.5 23.2L26 26.5H22.5V23.2Z" fill="#38BDF8"/></svg>
+          <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#2BB5C4] to-[#0066FF] shadow-sm">
+            <svg class="h-5.5 w-5.5" viewBox="0 0 100 100" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M50 12L80 23V48C80 68 67.5 82.5 50 89C32.5 82.5 20 68 20 48V23L50 12ZM38 30V70H47.5V56H54C62.2 56 68 50.6 68 43.5C68 36.4 62.2 31 54 31H38ZM47.5 39.5H53.5C56.8 39.5 59 41.2 59 43.5C59 45.8 56.8 47.5 53.5 47.5H47.5V39.5Z" fill="#FFFFFF"/></svg>
           </div>
           <div>
             <div class="text-[11px] font-extrabold text-ink">Paisape Orchestrator</div>
@@ -302,40 +302,53 @@
           <path d="M 615 182 L 615 120 L 645 90 L 700 90" stroke="#38BDF8" stroke-width="2" stroke-dasharray="12 38" class="animate-circuit-dash opacity-80" />
           <path d="M 650 250 L 695 250 L 730 295 L 775 295" stroke="#38BDF8" stroke-width="2" stroke-dasharray="14 42" class="animate-circuit-dash opacity-80" />
 
-          <!-- PCB Via Rings (Hollow Technical Node Rings like UrbanRupee) -->
-          <!-- Via 1 (Left trace) -->
+          <!-- PCB Via Rings (Hollow Technical Node Rings with Pulse Halo) -->
           <g transform="translate(410, 278)">
+            <circle r="11" fill="none" stroke="#38BDF8" stroke-opacity="0.35" stroke-width="1" class="animate-ping" style="transform-box:fill-box;transform-origin:center;" />
             <circle r="8" fill="#E0F2FE" stroke="#0EA5E9" stroke-width="1.5" />
             <circle r="3.5" fill="#0284C7" />
           </g>
-          <!-- Via 2 (Top-Left Routing) -->
           <g transform="translate(535, 90)">
             <circle r="7" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5" />
             <circle r="3" fill="#059669" />
           </g>
-          <!-- Via 3 (Top-Right Console) -->
           <g transform="translate(645, 90)">
             <circle r="7" fill="#EFF6FF" stroke="#0066FF" stroke-width="1.5" />
             <circle r="3" fill="#0066FF" />
           </g>
-          <!-- Via 4 (Bottom-Right Bank Rails) -->
           <g transform="translate(695, 250)">
+            <circle r="11" fill="none" stroke="#38BDF8" stroke-opacity="0.35" stroke-width="1" class="animate-ping" style="transform-box:fill-box;transform-origin:center;animation-delay:1s;" />
             <circle r="8" fill="#E0F2FE" stroke="#0EA5E9" stroke-width="1.5" />
             <circle r="3.5" fill="#0284C7" />
           </g>
 
-          <!-- Traveling Glowing Signal Pulses -->
+          <!-- Traveling Glowing Signal Pulses (Dual Staggered High-TPS Packets) -->
           <circle r="4.5" fill="#38BDF8" filter="url(#pcbGlow)">
-            <animateMotion path="M 290 278 L 435 278 L 470 242 L 530 242" dur="2.2s" repeatCount="indefinite" />
+            <animateMotion path="M 290 278 L 435 278 L 470 242 L 530 242" dur="1.8s" repeatCount="indefinite" />
           </circle>
+          <circle r="3" fill="#BAE6FD" filter="url(#pcbGlow)">
+            <animateMotion path="M 290 278 L 435 278 L 470 242 L 530 242" dur="1.8s" begin="0.9s" repeatCount="indefinite" />
+          </circle>
+
           <circle r="4" fill="#10B981" filter="url(#pcbGlow)">
-            <animateMotion path="M 565 182 L 565 120 L 535 90 L 490 90" dur="1.9s" begin="0.6s" repeatCount="indefinite" />
+            <animateMotion path="M 565 182 L 565 120 L 535 90 L 490 90" dur="1.6s" begin="0.4s" repeatCount="indefinite" />
           </circle>
+          <circle r="2.8" fill="#A7F3D0" filter="url(#pcbGlow)">
+            <animateMotion path="M 565 182 L 565 120 L 535 90 L 490 90" dur="1.6s" begin="1.2s" repeatCount="indefinite" />
+          </circle>
+
           <circle r="4" fill="#0066FF" filter="url(#pcbGlow)">
-            <animateMotion path="M 615 182 L 615 120 L 645 90 L 700 90" dur="2.1s" begin="0.3s" repeatCount="indefinite" />
+            <animateMotion path="M 615 182 L 615 120 L 645 90 L 700 90" dur="1.7s" begin="0.2s" repeatCount="indefinite" />
           </circle>
+          <circle r="2.8" fill="#93C5FD" filter="url(#pcbGlow)">
+            <animateMotion path="M 615 182 L 615 120 L 645 90 L 700 90" dur="1.7s" begin="1.05s" repeatCount="indefinite" />
+          </circle>
+
           <circle r="4.5" fill="#0EA5E9" filter="url(#pcbGlow)">
-            <animateMotion path="M 650 250 L 695 250 L 730 295 L 775 295" dur="2.3s" begin="1s" repeatCount="indefinite" />
+            <animateMotion path="M 650 250 L 695 250 L 730 295 L 775 295" dur="1.9s" begin="0.6s" repeatCount="indefinite" />
+          </circle>
+          <circle r="3" fill="#67E8F9" filter="url(#pcbGlow)">
+            <animateMotion path="M 650 250 L 695 250 L 730 295 L 775 295" dur="1.9s" begin="1.55s" repeatCount="indefinite" />
           </circle>
         </svg>
 
@@ -473,7 +486,7 @@
 
         <!-- 4. CENTER NODE: True 3D Stacked Isometric Switcher Microchip -->
         <div class="absolute left-[590px] top-[242px] -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center justify-center">
-          <div class="relative flex h-36 w-40 items-center justify-center group">
+          <div class="relative flex h-36 w-40 items-center justify-center group animate-hero-float">
             <!-- Pulsing Radial Glow -->
             <div class="absolute inset-2 rounded-full bg-gradient-to-tr from-[#0066FF] to-[#2BB5C4] opacity-30 blur-2xl animate-pulse"></div>
 
@@ -524,10 +537,11 @@
               <path d="M90 70L58 52V46L90 64L122 46V52L90 70Z" fill="#05162B" stroke="#2BB5C4" stroke-width="0.9"/>
               <path d="M90 64L58 46L90 28L122 46L90 64Z" fill="#0D2F4F" stroke="#38BDF8" stroke-width="1.3"/>
 
-              <!-- Official Paisape Geometric P Mark Centered on Isometric Die -->
+              <!-- Official Paisape Option 6 Shield-P Mark Centered on Isometric Die -->
               <g transform="translate(90, 46) scale(1, 0.58) rotate(-45) translate(-16, -16)">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 5.5H17.2C22.2 5.5 25.5 8.5 25.5 13.1C25.5 17.7 22.2 20.7 17.2 20.7H12.5V26.5H8V8.2L6.5 6.8V5.5ZM12.5 9.6V16.6H16.9C19.5 16.6 21 15.2 21 13.1C21 11 19.5 9.6 16.9 9.6H12.5Z" fill="#2BB5C4"/>
-                <path d="M22.5 23.2L26 26.5H22.5V23.2Z" fill="#38BDF8"/>
+                <svg width="32" height="32" viewBox="0 0 100 100" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M50 10L82 22V48C82 69 68.5 84.5 50 91C31.5 84.5 18 69 18 48V22L50 10ZM37 29V71H47V56H54C62.8 56 69 50.2 69 42.5C69 34.8 62.8 29 54 29H37ZM47 38H53.5C57.1 38 59.5 39.8 59.5 42.5C59.5 45.2 57.1 47 53.5 47H47V38Z" fill="#38BDF8"/>
+                </svg>
               </g>
             </svg>
           </div>
@@ -544,7 +558,7 @@
           <div class="mt-2.5 grid grid-cols-2 gap-2">
             <div class="rounded-xl bg-slate-50 border border-slate-100 p-1.5">
               <div class="text-[7.5px] text-slate-400 font-semibold uppercase">Total Successes</div>
-              <div class="text-[13px] font-black text-ink mt-0.5">24,780 <span class="text-[8px] font-bold text-emerald-500">↑ 12%</span></div>
+              <div class="text-[13px] font-black text-ink mt-0.5"><span id="hero-tx-count">24,780</span> <span class="text-[8px] font-bold text-emerald-500">↑ 12%</span></div>
             </div>
             <div class="rounded-xl bg-slate-50 border border-slate-100 p-1.5">
               <div class="text-[7.5px] text-slate-400 font-semibold uppercase">Gross Volume</div>
@@ -552,20 +566,20 @@
             </div>
           </div>
 
-          <!-- 7-Day Bar Chart -->
+          <!-- 7-Day Bar Chart (Animated Wave) -->
           <div class="mt-2.5 pt-1.5 border-t border-slate-100">
             <div class="flex items-center justify-between text-[7.5px] text-slate-400 font-semibold mb-1.5">
               <span>Weekly Transaction Volume</span>
               <span class="text-emerald-600 font-bold">+18.4%</span>
             </div>
             <div class="flex items-end justify-between gap-1.5 h-9 px-1.5 bg-slate-50 rounded-lg pt-1">
-              <div class="w-2.5 rounded-t bg-brand/35 h-[45%]"></div>
-              <div class="w-2.5 rounded-t bg-brand/45 h-[65%]"></div>
-              <div class="w-2.5 rounded-t bg-brand/55 h-[50%]"></div>
-              <div class="w-2.5 rounded-t bg-brand/65 h-[75%]"></div>
-              <div class="w-2.5 rounded-t bg-brand/75 h-[90%]"></div>
-              <div class="w-2.5 rounded-t bg-brand h-[100%] shadow-xs"></div>
-              <div class="w-2.5 rounded-t bg-brand h-[85%]"></div>
+              <div class="w-2.5 rounded-t bg-brand/35 h-[45%] origin-bottom animate-bar-pulse" style="animation-delay:0s;"></div>
+              <div class="w-2.5 rounded-t bg-brand/45 h-[65%] origin-bottom animate-bar-pulse" style="animation-delay:0.2s;"></div>
+              <div class="w-2.5 rounded-t bg-brand/55 h-[50%] origin-bottom animate-bar-pulse" style="animation-delay:0.4s;"></div>
+              <div class="w-2.5 rounded-t bg-brand/65 h-[75%] origin-bottom animate-bar-pulse" style="animation-delay:0.6s;"></div>
+              <div class="w-2.5 rounded-t bg-brand/75 h-[90%] origin-bottom animate-bar-pulse" style="animation-delay:0.8s;"></div>
+              <div class="w-2.5 rounded-t bg-brand h-[100%] shadow-xs origin-bottom animate-bar-pulse" style="animation-delay:1s;"></div>
+              <div class="w-2.5 rounded-t bg-brand h-[85%] origin-bottom animate-bar-pulse" style="animation-delay:1.2s;"></div>
             </div>
           </div>
         </div>
@@ -576,6 +590,12 @@
           <svg class="absolute inset-0 h-full w-full pointer-events-none" viewBox="0 0 265 195" fill="none">
             <path d="M 132 34 L 222 97 L 132 160 L 42 97 Z" stroke="#0EA5E9" stroke-opacity="0.45" stroke-width="1.5" stroke-dasharray="4 4" class="animate-circuit-dash" />
             <path d="M 132 34 L 132 160 M 42 97 L 222 97" stroke="#0EA5E9" stroke-opacity="0.22" stroke-width="1" />
+            <circle r="3.5" fill="#38BDF8">
+              <animateMotion path="M 132 34 L 222 97 L 132 160 L 42 97 Z" dur="3.4s" repeatCount="indefinite" />
+            </circle>
+            <circle r="3" fill="#10B981">
+              <animateMotion path="M 132 160 L 42 97 L 132 34 L 222 97 Z" dur="3.4s" repeatCount="indefinite" />
+            </circle>
           </svg>
 
           <!-- Center 3D Rotating Badge (Front: Security Shield, Back: Official Paisape Icon) -->
@@ -585,11 +605,10 @@
               <div class="absolute inset-0 flex items-center justify-center rounded-xl bg-gradient-to-tr from-[#0066FF] to-[#2BB5C4] text-white shadow-[0_8px_20px_rgba(0,102,255,0.35)] border border-white/40 [backface-visibility:hidden]">
                 <svg class="h-5.5 w-5.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
               </div>
-              <!-- Back Face: Official Paisape Icon -->
-              <div class="absolute inset-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-[#07162C] to-[#0D2E42] border border-[#2BB5C4]/70 shadow-[0_8px_20px_rgba(43,181,196,0.35)] [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                <svg class="h-6.5 w-6.5" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 5.5H17.2C22.2 5.5 25.5 8.5 25.5 13.1C25.5 17.7 22.2 20.7 17.2 20.7H12.5V26.5H8V8.2L6.5 6.8V5.5ZM12.5 9.6V16.6H16.9C19.5 16.6 21 15.2 21 13.1C21 11 19.5 9.6 16.9 9.6H12.5Z" fill="#2BB5C4"/>
-                  <path d="M22.5 23.2L26 26.5H22.5V23.2Z" fill="#38BDF8"/>
+              <!-- Back Face: Official Paisape Option 6 Shield-P Icon -->
+              <div class="absolute inset-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-[#2BB5C4] to-[#0066FF] border border-white/40 shadow-[0_8px_20px_rgba(43,181,196,0.35)] [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                <svg class="h-7 w-7" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M50 10L82 22V48C82 69 68.5 84.5 50 91C31.5 84.5 18 69 18 48V22L50 10ZM37 29V71H47V56H54C62.8 56 69 50.2 69 42.5C69 34.8 62.8 29 54 29H37ZM47 38H53.5C57.1 38 59.5 39.8 59.5 42.5C59.5 45.2 57.1 47 53.5 47H47V38Z" fill="#FFFFFF"/>
                 </svg>
               </div>
             </div>
@@ -651,6 +670,10 @@
   45%, 70% { transform: rotateY(180deg); }
   95%, 100% { transform: rotateY(360deg); }
 }
+@keyframes barPulse {
+  0%, 100% { transform: scaleY(1); opacity: 0.9; }
+  50% { transform: scaleY(0.72); opacity: 1; }
+}
 .animate-hero-float {
   animation: heroFloat 4.2s ease-in-out infinite;
 }
@@ -662,6 +685,9 @@
 }
 .animate-coin-flip {
   animation: coinFlip3D 4.5s ease-in-out infinite;
+}
+.animate-bar-pulse {
+  animation: barPulse 2.4s ease-in-out infinite;
 }
 </style>
 <script>
@@ -680,12 +706,16 @@
   window.addEventListener('DOMContentLoaded', fitHeroStage);
   setTimeout(fitHeroStage, 100);
 
-  // Interactive Phone Payment Options -> Dynamic Routing Highlight
+  // Interactive Phone Payment Options -> Dynamic Routing Highlight + Auto Cycle
   var opts = document.querySelectorAll('.hero-pay-opt');
   var srMeter = document.getElementById('hero-sr-meter');
   var payBtn = document.getElementById('hero-pay-btn');
   var payLabel = document.getElementById('hero-pay-label');
+  var txCountEl = document.getElementById('hero-tx-count');
   var gateways = ['PayU', 'Easebuzz', 'Zaakpay'];
+  var currentIndex = 0;
+  var manualPauseUntil = 0;
+  var txBase = 24780;
 
   function selectPayOpt(opt) {
     opts.forEach(function(o) {
@@ -730,12 +760,29 @@
     });
   }
 
-  opts.forEach(function(opt) {
-    opt.addEventListener('click', function() { selectPayOpt(opt); });
+  opts.forEach(function(opt, idx) {
+    opt.addEventListener('click', function() {
+      currentIndex = idx;
+      manualPauseUntil = Date.now() + 8000;
+      selectPayOpt(opt);
+    });
   });
+
+  if (opts.length > 0) {
+    setInterval(function() {
+      if (Date.now() < manualPauseUntil) return;
+      currentIndex = (currentIndex + 1) % opts.length;
+      selectPayOpt(opts[currentIndex]);
+      if (txCountEl) {
+        txBase += 1;
+        txCountEl.textContent = txBase.toLocaleString('en-IN');
+      }
+    }, 3000);
+  }
 
   if (payBtn && payLabel) {
     payBtn.addEventListener('click', function() {
+      manualPauseUntil = Date.now() + 8000;
       payLabel.textContent = 'Routed in 58ms ✓';
       payBtn.classList.remove('bg-brand', 'hover:bg-brandDk');
       payBtn.classList.add('bg-emerald-500');
@@ -840,90 +887,6 @@
     </div>
   </div>
 </section>
-
-<!-- ================= DUAL MARQUEE ================= -->
-<section class="space-y-2 bg-white py-3" aria-label="Supported payment methods and industries">
-  <!-- row 1: payment method pills -->
-  <div class="marquee overflow-hidden py-1">
-    <div class="track animate-marquee-l gap-3 pr-3">
-      <div class="flex shrink-0 items-center gap-3 pr-3" data-mq-group>
-        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
-          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          Razorpay
-        </span>
-        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
-          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          Cashfree
-        </span>
-        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
-          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          PayU
-        </span>
-        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-indigo-200 bg-indigo-50/70 px-4 py-2 text-[13px] font-semibold text-indigo-900">
-          <svg class="h-3.5 w-3.5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          Easebuzz
-        </span>
-        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-sky-200 bg-sky-50/70 px-4 py-2 text-[13px] font-semibold text-sky-900">
-          <svg class="h-3.5 w-3.5 text-sky-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          Zaakpay
-        </span>
-        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
-          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          Scan &amp; Pay
-        </span>
-        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
-          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          NACH Mandates
-        </span>
-        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
-          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          Pay Later
-        </span>
-        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
-          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          PhonePe
-        </span>
-        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
-          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          Card EMI
-        </span>
-        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
-          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          Paytm
-        </span>
-        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
-          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          UPI Intent
-        </span>
-        <span class="flex items-center gap-2 whitespace-nowrap rounded-xl border border-[#D0E5FF] bg-[#F0F7FF] px-4 py-2 text-[13px] font-semibold text-[#1F385C]">
-          <svg class="h-3.5 w-3.5 text-[#0066FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          IMPS
-        </span>
-      </div>
-      <div class="flex shrink-0 items-center gap-3 pr-3" data-mq-clone aria-hidden="true"></div>
-    </div>
-  </div>
-  </div>
-  <!-- row 2: left to right -->
-  <div class="marquee">
-    <div class="track animate-marquee-r gap-8 pr-8">
-      <div class="flex shrink-0 gap-8 pr-8" data-mq-group>
-        <span class="whitespace-nowrap text-[12.5px] font-bold text-brand">+ Healthcare</span>
-        <span class="whitespace-nowrap text-[12.5px] font-bold text-brand">+ EdTech</span>
-        <span class="whitespace-nowrap text-[12.5px] font-bold text-brand">+ Travel &amp; Hospitality</span>
-        <span class="whitespace-nowrap text-[12.5px] font-bold text-brand">+ NBFC &amp; Lending</span>
-        <span class="whitespace-nowrap text-[12.5px] font-bold text-brand">+ SaaS &amp; Subscriptions</span>
-        <span class="whitespace-nowrap text-[12.5px] font-bold text-brand">+ Logistics</span>
-        <span class="whitespace-nowrap text-[12.5px] font-bold text-brand">+ Insurance</span>
-        <span class="whitespace-nowrap text-[12.5px] font-bold text-brand">+ Real Estate</span>
-        <span class="whitespace-nowrap text-[12.5px] font-bold text-brand">+ Automotive</span>
-        <span class="whitespace-nowrap text-[12.5px] font-bold text-brand">+ Food Delivery</span>
-      </div>
-      <div class="flex shrink-0 gap-8 pr-8" data-mq-clone aria-hidden="true"></div>
-    </div>
-  </div>
-</section>
-
 
 <!-- ================= 5 CORE ENTERPRISE INFRASTRUCTURE PILLARS ================= -->
 <section id="core-pillars" class="relative overflow-hidden bg-white pt-8 pb-10 md:pt-10 md:pb-12 border-b border-slate-100">
